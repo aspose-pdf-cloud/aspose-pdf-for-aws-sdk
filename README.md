@@ -1,4 +1,4 @@
-# Aspose.PDF for AWS Client DSKs
+# Aspose.PDF for AWS Client SDKs
 
   * [Getting Started with Aspose.PDF for AWS](#getting-started-with-asposepdf-for-aws)
     * [Steps](#steps)
