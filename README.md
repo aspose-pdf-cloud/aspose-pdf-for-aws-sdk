@@ -1,4 +1,4 @@
-# Aspose.PDF for AWS Client SDKs
+# Aspose.PDF for AWS
 
   * [Getting Started with Aspose.PDF for AWS](#getting-started-with-asposepdf-for-aws)
     * [Steps](#steps)
@@ -84,19 +84,24 @@ If you encounter any issues while using our API, please let us know by contactin
 We provide client SDKs for different programming languages to make it easier for you to integrate our API into your applications. These SDKs are designed to simplify the process of making requests to our API and handling responses. They abstract away many of the complexities of HTTP and JSON, allowing you to focus on your application's logic.
 
 
-#### .NET 6.0
+#### [.NET 6.0](https://github.com/aspose-pdf-cloud/aspose-pdf-for-aws-sdk/tree/main/dotnet-client)
 
 For .NET developers, we provide a client SDK that you can use to interact with our API. You can find the SDK on GitHub.
 
 
-#### Java 11 and above
+#### [Java 11](https://github.com/aspose-pdf-cloud/aspose-pdf-for-aws-sdk/tree/main/java-client)
 
 For Java developers, we provide a client SDK that you can use to interact with our API. You can find the SDK on GitHub.
 
 
-#### PHP 8.0
+#### [PHP 8.0](https://github.com/aspose-pdf-cloud/aspose-pdf-for-aws-sdk/tree/main/php-cLient)
 
 For PHP developers, we provide a client SDK that you can use to interact with our API. You can find the SDK on GitHub.
+
+
+#### [Kotlin 1.4.0](https://github.com/aspose-pdf-cloud/aspose-pdf-for-aws-sdk/tree/main/kotlin-client)
+
+For Kotlin developers, we provide a client SDK that you can use to interact with our API. You can find the SDK on GitHub.
 
 
 
@@ -332,7 +337,7 @@ Adjusting the heap hard limit can prevent out-of-memory (OOM) errors and avoid c
 
 **Supported formats:**
 
-| doc | powerpoint | tiff | word | pdf |
+| doc | pptx | tiff | docx | pdf |
 | --- | --- | --- | --- | --- |
 
 <details><summary>curl</summary>
@@ -769,7 +774,7 @@ try {
 
 **Supported formats:**
 
-| From/To | pdf | 7z | csv | doc | epub | excel | gz | html | jpg | latex | mhtml | png | powerpoint | svg | tar | tiff | txt | webp | word | zip | avi | mp4 | mpeg | base64 | psd | mkv | mov | tex | xps | xml | bmp | mpg | webm | wmv | mp3 | wav | mobi | flatopc | mht | pdfa1a | pdfa1b | pdfa2a | pdfa3a | ps | gif | ppt | ofd | json |
+| From/To | pdf | 7z | csv | doc | epub | xlsx | gz | html | jpg | latex | mhtml | png | pptx | svg | tar | tiff | txt | webp | docx | zip | avi | mp4 | mpeg | base64 | psd | mkv | mov | tex | xps | xml | bmp | mpg | webm | wmv | mp3 | wav | mobi | flatopc | mht | pdfa1a | pdfa1b | pdfa2a | pdfa3a | ps | gif | ppt | ofd | json |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 7z | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 | base64 | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
@@ -784,7 +789,7 @@ try {
 | emf | &#9745; |  |  |  |  | &#9745; |  |  |  |  |  | &#9745; | &#9745; | &#9745; |  | &#9745; |  |  | &#9745; |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 | eps | &#9745; |  | &#9745; | &#9745; |  | &#9745; |  | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; |  |  | &#9745; |  | &#9745; | &#9745; |  |  |  | &#9745; |  |  |  | &#9745; |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 | epub | &#9745; |  |  | &#9745; |  | &#9745; |  | &#9745; | &#9745; |  |  | &#9745; | &#9745; |  |  |  | &#9745; |  | &#9745; | &#9745; |  |  |  | &#9745; |  |  |  | &#9745; |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| excel | &#9745; | &#9745; |  |  | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  |  | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; |  |  |  | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| xlsx | &#9745; | &#9745; |  |  | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  |  | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; |  |  |  | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 | gif |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 | gz | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 | html | &#9745; |  |  |  |  |  |  |  | &#9745; |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
@@ -816,7 +821,7 @@ try {
 | wav |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; | &#9745; | &#9745; |  |  |  |  | &#9745; |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 | webp | &#9745; |  |  |  |  | &#9745; |  |  | &#9745; |  |  | &#9745; | &#9745; | &#9745; |  |  |  |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; |  |  |  |  | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |
 | webpage | &#9745; |  |  | &#9745; |  |  |  | &#9745; | &#9745; |  |  | &#9745; | &#9745; | &#9745; |  | &#9745; |  | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |
-| word | &#9745; | &#9745; | &#9745; |  | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; |  |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  |  | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; |  | &#9745; |  |  |  |  |  |  |  |  |  | &#9745; |  |  | &#9745; |  |  |
+| docx | &#9745; | &#9745; | &#9745; |  | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; |  |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  |  | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; |  | &#9745; |  |  |  |  |  |  |  |  |  | &#9745; |  |  | &#9745; |  |  |
 | xml | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; |  |  |  |  |  | &#9745; |  | &#9745; |  |  |  | &#9745; | &#9745; |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |
 | xps | &#9745; |  | &#9745; |  |  | &#9745; |  |  | &#9745; | &#9745; |  | &#9745; | &#9745; |  |  |  | &#9745; |  | &#9745; | &#9745; |  |  |  | &#9745; |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 | zip | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
@@ -928,7 +933,7 @@ try {
 
 **Supported formats:**
 
-| bmp | doc | html | jpg | pdf | png | powerpoint | ppt | svg | tiff | webp | word |
+| bmp | doc | html | jpg | pdf | png | pptx | ppt | svg | tiff | webp | docx |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
 <details><summary>curl</summary>
@@ -1258,7 +1263,7 @@ try {
 
 **Supported formats:**
 
-| doc | html | md | mht | mhtml | powerpoint | tex | word | pdf |
+| doc | html | md | mht | mhtml | pptx | tex | docx | pdf |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
 <details><summary>curl</summary>
@@ -1793,11 +1798,11 @@ try {
 
 **Supported formats:**
 
-| From/To | bmp | gif | jpg | pdf | tex | word | ofd | html | png | powerpoint | tiff | doc | excel | webp |
+| From/To | bmp | gif | jpg | pdf | tex | docx | ofd | html | png | pptx | tiff | doc | xlsx | webp |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | bmp | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |
 | doc |  |  |  | &#9745; |  |  | &#9745; |  |  |  |  |  |  |  |  |
-| excel |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |
+| xlsx |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |
 | gif |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; |  |  |  |  |  |
 | html |  |  | &#9745; | &#9745; |  | &#9745; |  |  | &#9745; | &#9745; | &#9745; |  |  |  |  |
 | jpg |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  |
@@ -1807,7 +1812,7 @@ try {
 | pptx |  |  | &#9745; | &#9745; |  |  |  |  | &#9745; |  | &#9745; |  | &#9745; |  |  |
 | tiff |  | &#9745; | &#9745; | &#9745; | &#9745; |  |  |  | &#9745; | &#9745; | &#9745; |  |  |  |  |
 | webp |  |  | &#9745; | &#9745; |  | &#9745; |  | &#9745; |  |  |  |  |  | &#9745; |  |
-| word |  |  |  | &#9745; | &#9745; |  | &#9745; |  |  | &#9745; |  |  |  |  |  |
+| docx |  |  |  | &#9745; | &#9745; |  | &#9745; |  |  | &#9745; |  |  |  |  |  |
 
 <details><summary>curl</summary>
 <pre><code>
@@ -1916,7 +1921,7 @@ try {
 
 **Supported formats:**
 
-| excel | jpg | powerpoint | tiff | word | pdf |
+| xlsx | jpg | pptx | tiff | docx | pdf |
 | --- | --- | --- | --- | --- | --- |
 
 <details><summary>curl</summary>
@@ -2136,7 +2141,7 @@ try {
 
 **Supported formats:**
 
-| epub | html | mhtml | powerpoint | pptx | pdf |
+| epub | html | mhtml | pptx | pptx | pdf |
 | --- | --- | --- | --- | --- | --- |
 
 <details><summary>curl</summary>
@@ -2246,7 +2251,7 @@ try {
 
 **Supported formats:**
 
-| doc | excel | md | powerpoint | srt | txt | word | xml | pdf |
+| doc | xlsx | md | pptx | srt | txt | docx | xml | pdf |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
 <details><summary>curl</summary>
@@ -2576,7 +2581,7 @@ try {
 
 **Supported formats:**
 
-| excel | pdf | powerpoint | tiff | word |
+| xlsx | pdf | pptx | tiff | docx |
 | --- | --- | --- | --- | --- |
 
 <details><summary>curl</summary>
@@ -2906,7 +2911,7 @@ try {
 
 **Supported formats:**
 
-| bmp | docx | gif | jpg | png | powerpoint | pptx | svg | tiff | word | pdf |
+| bmp | docx | gif | jpg | png | pptx | pptx | svg | tiff | docx | pdf |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
 <details><summary>curl</summary>
@@ -3016,7 +3021,7 @@ try {
 
 **Supported formats:**
 
-| doc | excel | powerpoint | word | ble | ble/bmp | ble/doc | ble/image | ble/jpg | ble/png | ble/powerpoint | ble/word | pdf |
+| doc | xlsx | pptx | docx | ble | ble/bmp | ble/doc | ble/image | ble/jpg | ble/png | ble/powerpoint | ble/word | pdf |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
 <details><summary>curl</summary>
@@ -3126,7 +3131,7 @@ try {
 
 **Supported formats:**
 
-| bmp | doc | image | jpg | png | powerpoint | word | pdf |
+| bmp | doc | image | jpg | png | pptx | docx | pdf |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 
 <details><summary>curl</summary>
@@ -3561,12 +3566,29 @@ try {
 </code></pre>
 </details>
 
+### **Translate document.**
+- Translate the provided files.
+
+<details><summary>curl</summary>
+<pre><code>
+curl -X POST 'http://localhost:5252/pdf/webapi/translate?source=value&target=value' -F 'files=@file.pdf'
+</code></pre>
+</details>
+<details><summary>php</summary>
+</details>
+<details><summary>dotnet</summary>
+</details>
+<details><summary>java</summary>
+</details>
+<details><summary>kotlin</summary>
+</details>
+
 ### **Unlock document.**
 - Attempts to unlock a document with an password and associated files.
 
 **Supported formats:**
 
-| powerpoint | pptx | pdf |
+| pptx | pptx | pdf |
 | --- | --- | --- |
 
 <details><summary>curl</summary>
