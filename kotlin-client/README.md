@@ -9,13 +9,13 @@
 
 First, create the gradle wrapper script:
 
-```
+```shell
 gradle wrapper
 ```
 
 Then, run:
 
-```
+```shell
 ./gradlew check assemble
 ```
 

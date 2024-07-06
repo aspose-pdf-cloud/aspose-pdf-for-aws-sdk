@@ -15,16 +15,16 @@ PHP 5.5 and later
 
 To install the bindings via [Composer](http://getcomposer.org/), add the following to `composer.json`:
 
-```
+```json
 {
   "repositories": [
     {
       "type": "git",
-      "url": "https://github.com/git_user_id/git_repo_id.git"
+      "url": "https://github.com/aspose-pdf-cloud/aspose-pdf-for-aws-sdk/php-cLient"
     }
   ],
   "require": {
-    "git_user_id/git_repo_id": "*@dev"
+    "aspose-pdf-cloud/aspose-pdf-for-aws-sdk": "*@dev"
   }
 }
 ```
@@ -43,7 +43,7 @@ Download the files and include `autoload.php`:
 
 To run the unit tests:
 
-```
+```shell
 composer install
 ./vendor/bin/phpunit
 ```
