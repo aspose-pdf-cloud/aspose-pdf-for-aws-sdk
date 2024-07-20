@@ -2344,14 +2344,14 @@ export class ApiService {
      * Splits the provided documents based on the specified split type and page rage to spit.
      * @param files 
      * @param splitType The type of splitting to be performed.
-     * @param pars Optional page rage for the splitting operation.
+     * @param pairs Optional page rage for the splitting operation.
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public pdfWebapiSplitdocPostForm(files?: Array<Blob>, splitType?: SplitDocType, pars?: string, observe?: 'body', reportProgress?: boolean): Observable<FileResponse>;
-    public pdfWebapiSplitdocPostForm(files?: Array<Blob>, splitType?: SplitDocType, pars?: string, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<FileResponse>>;
-    public pdfWebapiSplitdocPostForm(files?: Array<Blob>, splitType?: SplitDocType, pars?: string, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<FileResponse>>;
-    public pdfWebapiSplitdocPostForm(files?: Array<Blob>, splitType?: SplitDocType, pars?: string, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
+    public pdfWebapiSplitdocPostForm(files?: Array<Blob>, splitType?: SplitDocType, pairs?: string, observe?: 'body', reportProgress?: boolean): Observable<FileResponse>;
+    public pdfWebapiSplitdocPostForm(files?: Array<Blob>, splitType?: SplitDocType, pairs?: string, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<FileResponse>>;
+    public pdfWebapiSplitdocPostForm(files?: Array<Blob>, splitType?: SplitDocType, pairs?: string, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<FileResponse>>;
+    public pdfWebapiSplitdocPostForm(files?: Array<Blob>, splitType?: SplitDocType, pairs?: string, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
 
 
 
@@ -2360,8 +2360,8 @@ export class ApiService {
         if (splitType !== undefined && splitType !== null) {
             queryParameters = queryParameters.set('splitType', <any>splitType);
         }
-        if (pars !== undefined && pars !== null) {
-            queryParameters = queryParameters.set('pars', <any>pars);
+        if (pairs !== undefined && pairs !== null) {
+            queryParameters = queryParameters.set('pairs', <any>pairs);
         }
 
         let headers = this.defaultHeaders;

@@ -4150,13 +4150,13 @@ public class ApiApi {
      * Build call for pdfWebapiSplitdocPost
      * @param files  (optional)
      * @param splitType The type of splitting to be performed. (optional)
-     * @param pars Optional page rage for the splitting operation. (optional)
+     * @param pairs Optional page rage for the splitting operation. (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call pdfWebapiSplitdocPostCall(List<File> files, SplitDocType splitType, String pars, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call pdfWebapiSplitdocPostCall(List<File> files, SplitDocType splitType, String pairs, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -4166,8 +4166,8 @@ public class ApiApi {
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
         if (splitType != null)
         localVarQueryParams.addAll(apiClient.parameterToPair("splitType", splitType));
-        if (pars != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("pars", pars));
+        if (pairs != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("pairs", pairs));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -4204,9 +4204,9 @@ public class ApiApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call pdfWebapiSplitdocPostValidateBeforeCall(List<File> files, SplitDocType splitType, String pars, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call pdfWebapiSplitdocPostValidateBeforeCall(List<File> files, SplitDocType splitType, String pairs, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
-        com.squareup.okhttp.Call call = pdfWebapiSplitdocPostCall(files, splitType, pars, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = pdfWebapiSplitdocPostCall(files, splitType, pairs, progressListener, progressRequestListener);
         return call;
 
         
@@ -4220,12 +4220,12 @@ public class ApiApi {
      * Splits the provided documents based on the specified split type and page rage to spit.
      * @param files  (optional)
      * @param splitType The type of splitting to be performed. (optional)
-     * @param pars Optional page rage for the splitting operation. (optional)
+     * @param pairs Optional page rage for the splitting operation. (optional)
      * @return FileResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public FileResponse pdfWebapiSplitdocPost(List<File> files, SplitDocType splitType, String pars) throws ApiException {
-        ApiResponse<FileResponse> resp = pdfWebapiSplitdocPostWithHttpInfo(files, splitType, pars);
+    public FileResponse pdfWebapiSplitdocPost(List<File> files, SplitDocType splitType, String pairs) throws ApiException {
+        ApiResponse<FileResponse> resp = pdfWebapiSplitdocPostWithHttpInfo(files, splitType, pairs);
         return resp.getData();
     }
 
@@ -4234,12 +4234,12 @@ public class ApiApi {
      * Splits the provided documents based on the specified split type and page rage to spit.
      * @param files  (optional)
      * @param splitType The type of splitting to be performed. (optional)
-     * @param pars Optional page rage for the splitting operation. (optional)
+     * @param pairs Optional page rage for the splitting operation. (optional)
      * @return ApiResponse&lt;FileResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<FileResponse> pdfWebapiSplitdocPostWithHttpInfo(List<File> files, SplitDocType splitType, String pars) throws ApiException {
-        com.squareup.okhttp.Call call = pdfWebapiSplitdocPostValidateBeforeCall(files, splitType, pars, null, null);
+    public ApiResponse<FileResponse> pdfWebapiSplitdocPostWithHttpInfo(List<File> files, SplitDocType splitType, String pairs) throws ApiException {
+        com.squareup.okhttp.Call call = pdfWebapiSplitdocPostValidateBeforeCall(files, splitType, pairs, null, null);
         Type localVarReturnType = new TypeToken<FileResponse>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -4249,12 +4249,12 @@ public class ApiApi {
      * Splits the provided documents based on the specified split type and page rage to spit.
      * @param files  (optional)
      * @param splitType The type of splitting to be performed. (optional)
-     * @param pars Optional page rage for the splitting operation. (optional)
+     * @param pairs Optional page rage for the splitting operation. (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call pdfWebapiSplitdocPostAsync(List<File> files, SplitDocType splitType, String pars, final ApiCallback<FileResponse> callback) throws ApiException {
+    public com.squareup.okhttp.Call pdfWebapiSplitdocPostAsync(List<File> files, SplitDocType splitType, String pairs, final ApiCallback<FileResponse> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -4275,7 +4275,7 @@ public class ApiApi {
             };
         }
 
-        com.squareup.okhttp.Call call = pdfWebapiSplitdocPostValidateBeforeCall(files, splitType, pars, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = pdfWebapiSplitdocPostValidateBeforeCall(files, splitType, pairs, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<FileResponse>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

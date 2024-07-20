@@ -628,12 +628,12 @@ namespace Example
             var apiInstance = new ApiApi();
             var files = new List<FileParameter>(); // List<FileParameter> |  (optional) 
             var splitType = SplitDocType.OddEven; // SplitDocType | The type of splitting to be performed. (optional) 
-            var pars = pars_example;  // string | Optional page rage for the splitting operation. (optional) 
+            var pairs = pairs_example;  // string | Optional page rage for the splitting operation. (optional) 
 
             try
             {
                 // Split document.
-                FileResponse result = apiInstance.PdfWebapiSplitdocPost(files, splitType, pars);
+                FileResponse result = apiInstance.PdfWebapiSplitdocPost(files, splitType, pairs);
                 Debug.WriteLine(result);
             }
             catch (Exception e)

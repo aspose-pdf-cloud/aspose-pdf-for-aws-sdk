@@ -1639,7 +1639,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **pdfWebapiSplitdocPost**
-> \Swagger\Client\Model\FileResponse pdfWebapiSplitdocPost($files, $split_type, $pars)
+> \Swagger\Client\Model\FileResponse pdfWebapiSplitdocPost($files, $split_type, $pairs)
 
 Split document.
 
@@ -1657,10 +1657,10 @@ $apiInstance = new Swagger\Client\Api\ApiApi(
 );
 $files = array("files_example"); // string[] | 
 $split_type = new \Swagger\Client\Model\SplitDocType(); // \Swagger\Client\Model\SplitDocType | The type of splitting to be performed.
-$pars = "pars_example"; // string | Optional page rage for the splitting operation.
+$pairs = "pairs_example"; // string | Optional page rage for the splitting operation.
 
 try {
-    $result = $apiInstance->pdfWebapiSplitdocPost($files, $split_type, $pars);
+    $result = $apiInstance->pdfWebapiSplitdocPost($files, $split_type, $pairs);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ApiApi->pdfWebapiSplitdocPost: ', $e->getMessage(), PHP_EOL;

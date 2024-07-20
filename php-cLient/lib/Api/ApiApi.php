@@ -8802,15 +8802,15 @@ class ApiApi
      *
      * @param  string[] $files files (optional)
      * @param  \Swagger\Client\Model\SplitDocType $split_type The type of splitting to be performed. (optional)
-     * @param  string $pars Optional page rage for the splitting operation. (optional)
+     * @param  string $pairs Optional page rage for the splitting operation. (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\Model\FileResponse
      */
-    public function pdfWebapiSplitdocPost($files = null, $split_type = null, $pars = null)
+    public function pdfWebapiSplitdocPost($files = null, $split_type = null, $pairs = null)
     {
-        list($response) = $this->pdfWebapiSplitdocPostWithHttpInfo($files, $split_type, $pars);
+        list($response) = $this->pdfWebapiSplitdocPostWithHttpInfo($files, $split_type, $pairs);
         return $response;
     }
 
@@ -8821,16 +8821,16 @@ class ApiApi
      *
      * @param  string[] $files (optional)
      * @param  \Swagger\Client\Model\SplitDocType $split_type The type of splitting to be performed. (optional)
-     * @param  string $pars Optional page rage for the splitting operation. (optional)
+     * @param  string $pairs Optional page rage for the splitting operation. (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\FileResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function pdfWebapiSplitdocPostWithHttpInfo($files = null, $split_type = null, $pars = null)
+    public function pdfWebapiSplitdocPostWithHttpInfo($files = null, $split_type = null, $pairs = null)
     {
         $returnType = '\Swagger\Client\Model\FileResponse';
-        $request = $this->pdfWebapiSplitdocPostRequest($files, $split_type, $pars);
+        $request = $this->pdfWebapiSplitdocPostRequest($files, $split_type, $pairs);
 
         try {
             $options = $this->createHttpClientOption();
@@ -8898,14 +8898,14 @@ class ApiApi
      *
      * @param  string[] $files (optional)
      * @param  \Swagger\Client\Model\SplitDocType $split_type The type of splitting to be performed. (optional)
-     * @param  string $pars Optional page rage for the splitting operation. (optional)
+     * @param  string $pairs Optional page rage for the splitting operation. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function pdfWebapiSplitdocPostAsync($files = null, $split_type = null, $pars = null)
+    public function pdfWebapiSplitdocPostAsync($files = null, $split_type = null, $pairs = null)
     {
-        return $this->pdfWebapiSplitdocPostAsyncWithHttpInfo($files, $split_type, $pars)
+        return $this->pdfWebapiSplitdocPostAsyncWithHttpInfo($files, $split_type, $pairs)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -8920,15 +8920,15 @@ class ApiApi
      *
      * @param  string[] $files (optional)
      * @param  \Swagger\Client\Model\SplitDocType $split_type The type of splitting to be performed. (optional)
-     * @param  string $pars Optional page rage for the splitting operation. (optional)
+     * @param  string $pairs Optional page rage for the splitting operation. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function pdfWebapiSplitdocPostAsyncWithHttpInfo($files = null, $split_type = null, $pars = null)
+    public function pdfWebapiSplitdocPostAsyncWithHttpInfo($files = null, $split_type = null, $pairs = null)
     {
         $returnType = '\Swagger\Client\Model\FileResponse';
-        $request = $this->pdfWebapiSplitdocPostRequest($files, $split_type, $pars);
+        $request = $this->pdfWebapiSplitdocPostRequest($files, $split_type, $pairs);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -8972,12 +8972,12 @@ class ApiApi
      *
      * @param  string[] $files (optional)
      * @param  \Swagger\Client\Model\SplitDocType $split_type The type of splitting to be performed. (optional)
-     * @param  string $pars Optional page rage for the splitting operation. (optional)
+     * @param  string $pairs Optional page rage for the splitting operation. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function pdfWebapiSplitdocPostRequest($files = null, $split_type = null, $pars = null)
+    protected function pdfWebapiSplitdocPostRequest($files = null, $split_type = null, $pairs = null)
     {
 
         $resourcePath = 'http://localhost:5000/pdf/webapi/splitdoc';
@@ -8992,8 +8992,8 @@ class ApiApi
             $queryParams['splitType'] = ObjectSerializer::toQueryValue($split_type, null);
         }
         // query params
-        if ($pars !== null) {
-            $queryParams['pars'] = ObjectSerializer::toQueryValue($pars, null);
+        if ($pairs !== null) {
+            $queryParams['pairs'] = ObjectSerializer::toQueryValue($pairs, null);
         }
 
 

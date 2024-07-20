@@ -2016,7 +2016,7 @@ No authorization required
 
 <a name="pdfwebapisplitdocpost"></a>
 # **PdfWebapiSplitdocPost**
-> FileResponse PdfWebapiSplitdocPost (List<FileParameter> files, SplitDocType splitType, string pars)
+> FileResponse PdfWebapiSplitdocPost (List<FileParameter> files, SplitDocType splitType, string pairs)
 
 Split document.
 
@@ -2040,12 +2040,12 @@ namespace Example
             var apiInstance = new ApiApi();
             var files = new List<FileParameter>(); // List<FileParameter> |  (optional) 
             var splitType = SplitDocType.AllPages; // SplitDocType | The type of splitting to be performed. (optional) 
-            var pars = pars_example;  // string | Optional page rage for the splitting operation. (optional) 
+            var pairs = pairs_example;  // string | Optional page rage for the splitting operation. (optional) 
 
             try
             {
                 // Split document.
-                FileResponse result = apiInstance.PdfWebapiSplitdocPost(files, splitType, pars);
+                FileResponse result = apiInstance.PdfWebapiSplitdocPost(files, splitType, pairs);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2063,7 +2063,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **files** | [**List<FileParameter>**](byte[].md)|  | [optional] 
  **splitType** | [**SplitDocType**](.md)| The type of splitting to be performed. | [optional] 
- **pars** | **string**| Optional page rage for the splitting operation. | [optional] 
+ **pairs** | **string**| Optional page rage for the splitting operation. | [optional] 
 
 ### Return type
 

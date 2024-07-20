@@ -3344,7 +3344,7 @@ try {
 
 <details><summary>curl</summary>
 <pre><code>
-curl -X POST 'http://localhost:5252/pdf/webapi/splitdoc?inputType=value&splitType=value&pars=value' -F 'files=@file.pdf'
+curl -X POST 'http://localhost:5252/pdf/webapi/splitdoc?inputType=value&splitType=value&pairs=value' -F 'files=@file.pdf'
 </code></pre>
 </details>
 <details><summary>php</summary>
@@ -3454,7 +3454,7 @@ try {
 
 <details><summary>curl</summary>
 <pre><code>
-curl -X POST 'http://localhost:5252/pdf/webapi/splitdoc?inputType=value&splitType=value&pars=value' -F 'files=@file.pdf'
+curl -X POST 'http://localhost:5252/pdf/webapi/splitdoc?inputType=value&splitType=value&pairs=value' -F 'files=@file.pdf'
 </code></pre>
 </details>
 <details><summary>php</summary>

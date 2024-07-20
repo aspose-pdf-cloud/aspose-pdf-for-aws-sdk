@@ -1188,7 +1188,7 @@ class ApiApi(basePath: kotlin.String = "/") : ApiClient(basePath) {
      * Splits the provided documents based on the specified split type and page rage to spit.
      * @param files  (optional)
      * @param splitType The type of splitting to be performed. (optional)
-     * @param pars Optional page rage for the splitting operation. (optional)
+     * @param pairs Optional page rage for the splitting operation. (optional)
      * @return FileResponse
      */
     @Suppress("UNCHECKED_CAST")
@@ -1198,8 +1198,8 @@ class ApiApi(basePath: kotlin.String = "/") : ApiClient(basePath) {
             if (splitType != null) {
                 put("splitType", listOf(splitType.toString()))
             }
-            if (pars != null) {
-                put("pars", listOf(pars.toString()))
+            if (pairs != null) {
+                put("pairs", listOf(pairs.toString()))
             }
         }
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf("Content-Type" to "multipart/form-data")

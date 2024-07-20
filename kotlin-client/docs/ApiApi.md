@@ -1582,7 +1582,7 @@ No authorization required
 
 <a name="pdfWebapiSplitdocPost"></a>
 # **pdfWebapiSplitdocPost**
-> FileResponse pdfWebapiSplitdocPost(files, splitType, pars)
+> FileResponse pdfWebapiSplitdocPost(files, splitType, pairs)
 
 Split document.
 
@@ -1597,9 +1597,9 @@ Splits the provided documents based on the specified split type and page rage to
 val apiInstance = ApiApi()
 val files : kotlin.Array<kotlin.Array<kotlin.Byte>> =  // kotlin.Array<kotlin.Array<kotlin.Byte>> | 
 val splitType : SplitDocType =  // SplitDocType | The type of splitting to be performed.
-val pars : kotlin.String = pars_example // kotlin.String | Optional page rage for the splitting operation.
+val pairs : kotlin.String = pairs_example // kotlin.String | Optional page rage for the splitting operation.
 try {
-    val result : FileResponse = apiInstance.pdfWebapiSplitdocPost(files, splitType, pars)
+    val result : FileResponse = apiInstance.pdfWebapiSplitdocPost(files, splitType, pairs)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ApiApi#pdfWebapiSplitdocPost")

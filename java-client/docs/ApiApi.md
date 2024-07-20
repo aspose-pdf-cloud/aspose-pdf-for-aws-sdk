@@ -1524,7 +1524,7 @@ No authorization required
 
 <a name="pdfWebapiSplitdocPost"></a>
 # **pdfWebapiSplitdocPost**
-> FileResponse pdfWebapiSplitdocPost(files, splitType, pars)
+> FileResponse pdfWebapiSplitdocPost(files, splitType, pairs)
 
 Split document.
 
@@ -1540,9 +1540,9 @@ Splits the provided documents based on the specified split type and page rage to
 ApiApi apiInstance = new ApiApi();
 List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
 SplitDocType splitType = SplitDocType.ODDEVEN; // SplitDocType | The type of splitting to be performed.
-String pars = "pars_example"; // String | Optional page rage for the splitting operation.
+String pairs = "pairs_example"; // String | Optional page rage for the splitting operation.
 try {
-    FileResponse result = apiInstance.pdfWebapiSplitdocPost(files, splitType, pars);
+    FileResponse result = apiInstance.pdfWebapiSplitdocPost(files, splitType, pairs);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ApiApi#pdfWebapiSplitdocPost");
@@ -1556,7 +1556,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **files** | [**List&lt;File&gt;**](File.md)|  | [optional]
  **splitType** | [**SplitDocType**](.md)| The type of splitting to be performed. | [optional]
- **pars** | **String**| Optional page rage for the splitting operation. | [optional]
+ **pairs** | **String**| Optional page rage for the splitting operation. | [optional]
 
 ### Return type
 

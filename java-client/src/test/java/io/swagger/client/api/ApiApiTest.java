@@ -588,8 +588,8 @@ public class ApiApiTest {
     public void pdfWebapiSplitdocPostTest() throws Exception {
         List<File> files = Arrays.asList(new File("/home/tigra/Service/TestData/test.pdf"));
         SplitDocType splitType = SplitDocType.ODDEVEN;
-        String pars = "1";
-        FileResponse response = api.pdfWebapiSplitdocPost(files, splitType, pars);
+        String pairs = "1";
+        FileResponse response = api.pdfWebapiSplitdocPost(files, splitType, pairs);
         System.out.println(response);
         // TODO: test validations
     }

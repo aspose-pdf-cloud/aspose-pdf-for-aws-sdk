@@ -279,9 +279,9 @@ namespace IO.Swagger.Api
         /// </summary>
         /// <param name="files"></param>
         /// <param name="splitType">The type of splitting to be performed.</param>
-        /// <param name="pars">Optional page rage for the splitting operation.</param>
+        /// <param name="pairs">Optional page rage for the splitting operation.</param>
         /// <returns>FileResponse</returns>
-        FileResponse PdfWebapiSplitdocPost (List<FileParameter> files, SplitDocType splitType, string pars);
+        FileResponse PdfWebapiSplitdocPost (List<FileParameter> files, SplitDocType splitType, string pairs);
         /// <summary>
         /// Split image. Splits the provided images into smaller parts based on the specified parameters.
         /// </summary>
@@ -1548,9 +1548,9 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
         /// </summary>
         /// <param name="files"></param>
         /// <param name="splitType">The type of splitting to be performed.</param>
-        /// <param name="pars">Optional page rage for the splitting operation.</param>
+        /// <param name="pairs">Optional page rage for the splitting operation.</param>
         /// <returns>FileResponse</returns>
-        public FileResponse PdfWebapiSplitdocPost (List<FileParameter> files, SplitDocType splitType, string pars)
+        public FileResponse PdfWebapiSplitdocPost (List<FileParameter> files, SplitDocType splitType, string pairs)
         {
     
             var path = "/pdf/webapi/splitdoc";
@@ -1563,7 +1563,7 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
             String postBody = null;
     
              if (splitType != null) queryParams.Add("splitType", ApiClient.ParameterToString(splitType)); // query parameter
- if (pars != null) queryParams.Add("pars", ApiClient.ParameterToString(pars)); // query parameter
+ if (pairs != null) queryParams.Add("pairs", ApiClient.ParameterToString(pairs)); // query parameter
                         if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // file parameters
 
             // authentication setting, if any
