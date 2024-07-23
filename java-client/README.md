@@ -15,7 +15,7 @@ Aspose.Pdf RestApi provides a comprehensive set of endpoints for various PDF-rel
 
 Building the API client library requires:
 
-1. Java 1.7+
+1. Java 21+
 2. Maven/Gradle
 
 ## Installation
