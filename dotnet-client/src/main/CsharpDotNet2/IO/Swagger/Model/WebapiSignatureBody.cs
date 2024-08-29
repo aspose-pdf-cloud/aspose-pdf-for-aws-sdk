@@ -40,6 +40,13 @@ namespace IO.Swagger.Model {
     [JsonProperty(PropertyName = "files")]
     public List<byte[]> Files { get; set; }
 
+    /// <summary>
+    /// Gets or Sets DocumentPassword
+    /// </summary>
+    [DataMember(Name="documentPassword", EmitDefaultValue=false)]
+    [JsonProperty(PropertyName = "documentPassword")]
+    public string DocumentPassword { get; set; }
+
 
     /// <summary>
     /// Get the string presentation of the object
@@ -52,6 +59,7 @@ namespace IO.Swagger.Model {
       sb.Append("  Text: ").Append(Text).Append("\n");
       sb.Append("  TextColor: ").Append(TextColor).Append("\n");
       sb.Append("  Files: ").Append(Files).Append("\n");
+      sb.Append("  DocumentPassword: ").Append(DocumentPassword).Append("\n");
       sb.Append("}\n");
       return sb.ToString();
     }

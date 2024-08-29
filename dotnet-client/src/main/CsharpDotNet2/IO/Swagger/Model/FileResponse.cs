@@ -61,14 +61,6 @@ namespace IO.Swagger.Model {
     public List<FileSafeResult> SharedFiles { get; set; }
 
     /// <summary>
-    /// Get or set Files
-    /// </summary>
-    /// <value>Get or set Files</value>
-    [DataMember(Name="files", EmitDefaultValue=false)]
-    [JsonProperty(PropertyName = "files")]
-    public List<string> Files { get; set; }
-
-    /// <summary>
     /// Gets or Sets FileProcessingErrorCode
     /// </summary>
     [DataMember(Name="fileProcessingErrorCode", EmitDefaultValue=false)]
@@ -115,6 +107,13 @@ namespace IO.Swagger.Model {
     [JsonProperty(PropertyName = "appInstanceId")]
     public string AppInstanceId { get; set; }
 
+    /// <summary>
+    /// Gets or Sets ErrorCallStack
+    /// </summary>
+    [DataMember(Name="errorCallStack", EmitDefaultValue=false)]
+    [JsonProperty(PropertyName = "errorCallStack")]
+    public string ErrorCallStack { get; set; }
+
 
     /// <summary>
     /// Get the string presentation of the object
@@ -129,13 +128,13 @@ namespace IO.Swagger.Model {
       sb.Append("  Locked: ").Append(Locked).Append("\n");
       sb.Append("  Updated: ").Append(Updated).Append("\n");
       sb.Append("  SharedFiles: ").Append(SharedFiles).Append("\n");
-      sb.Append("  Files: ").Append(Files).Append("\n");
       sb.Append("  FileProcessingErrorCode: ").Append(FileProcessingErrorCode).Append("\n");
       sb.Append("  FileCount: ").Append(FileCount).Append("\n");
       sb.Append("  FileName: ").Append(FileName).Append("\n");
       sb.Append("  FolderName: ").Append(FolderName).Append("\n");
       sb.Append("  ResultData: ").Append(ResultData).Append("\n");
       sb.Append("  AppInstanceId: ").Append(AppInstanceId).Append("\n");
+      sb.Append("  ErrorCallStack: ").Append(ErrorCallStack).Append("\n");
       sb.Append("}\n");
       return sb.ToString();
     }

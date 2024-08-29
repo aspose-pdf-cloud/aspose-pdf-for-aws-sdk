@@ -11,14 +11,7 @@ namespace IO.Swagger.Model {
   /// 
   /// </summary>
   [DataContract]
-  public class WebapiFormfillerBody {
-    /// <summary>
-    /// Gets or Sets Files
-    /// </summary>
-    [DataMember(Name="files", EmitDefaultValue=false)]
-    [JsonProperty(PropertyName = "files")]
-    public List<byte[]> Files { get; set; }
-
+  public class TranslationSource {
 
     /// <summary>
     /// Get the string presentation of the object
@@ -26,8 +19,7 @@ namespace IO.Swagger.Model {
     /// <returns>String presentation of the object</returns>
     public override string ToString()  {
       var sb = new StringBuilder();
-      sb.Append("class WebapiFormfillerBody {\n");
-      sb.Append("  Files: ").Append(Files).Append("\n");
+      sb.Append("class TranslationSource {\n");
       sb.Append("}\n");
       return sb.ToString();
     }

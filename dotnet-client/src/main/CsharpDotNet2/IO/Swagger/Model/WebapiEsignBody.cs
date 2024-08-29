@@ -20,11 +20,32 @@ namespace IO.Swagger.Model {
     public string Passw { get; set; }
 
     /// <summary>
+    /// Gets or Sets Initials
+    /// </summary>
+    [DataMember(Name="initials", EmitDefaultValue=false)]
+    [JsonProperty(PropertyName = "initials")]
+    public string Initials { get; set; }
+
+    /// <summary>
+    /// Gets or Sets Invite
+    /// </summary>
+    [DataMember(Name="invite", EmitDefaultValue=false)]
+    [JsonProperty(PropertyName = "invite")]
+    public string Invite { get; set; }
+
+    /// <summary>
     /// Gets or Sets Files
     /// </summary>
     [DataMember(Name="files", EmitDefaultValue=false)]
     [JsonProperty(PropertyName = "files")]
     public List<byte[]> Files { get; set; }
+
+    /// <summary>
+    /// Gets or Sets DocumentPassword
+    /// </summary>
+    [DataMember(Name="documentPassword", EmitDefaultValue=false)]
+    [JsonProperty(PropertyName = "documentPassword")]
+    public string DocumentPassword { get; set; }
 
 
     /// <summary>
@@ -35,7 +56,10 @@ namespace IO.Swagger.Model {
       var sb = new StringBuilder();
       sb.Append("class WebapiEsignBody {\n");
       sb.Append("  Passw: ").Append(Passw).Append("\n");
+      sb.Append("  Initials: ").Append(Initials).Append("\n");
+      sb.Append("  Invite: ").Append(Invite).Append("\n");
       sb.Append("  Files: ").Append(Files).Append("\n");
+      sb.Append("  DocumentPassword: ").Append(DocumentPassword).Append("\n");
       sb.Append("}\n");
       return sb.ToString();
     }

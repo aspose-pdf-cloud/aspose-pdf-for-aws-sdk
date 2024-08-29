@@ -19,6 +19,13 @@ namespace IO.Swagger.Model {
     [JsonProperty(PropertyName = "files")]
     public List<byte[]> Files { get; set; }
 
+    /// <summary>
+    /// Gets or Sets DocumentPassword
+    /// </summary>
+    [DataMember(Name="documentPassword", EmitDefaultValue=false)]
+    [JsonProperty(PropertyName = "documentPassword")]
+    public string DocumentPassword { get; set; }
+
 
     /// <summary>
     /// Get the string presentation of the object
@@ -28,6 +35,7 @@ namespace IO.Swagger.Model {
       var sb = new StringBuilder();
       sb.Append("class WebapiExtractBody {\n");
       sb.Append("  Files: ").Append(Files).Append("\n");
+      sb.Append("  DocumentPassword: ").Append(DocumentPassword).Append("\n");
       sb.Append("}\n");
       return sb.ToString();
     }

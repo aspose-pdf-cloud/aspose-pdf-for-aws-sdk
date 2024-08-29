@@ -12,9 +12,10 @@ namespace IO.Swagger.Api
     public interface IApiApi
     {
         /// <summary>
-        /// Add page numbers to document. Adds page numbers to the provided documents with the specified alignment, starting number, and format.
+        /// Add Page Numbers to Document. Adds page numbers to your documents based on specified alignment, starting number, and format. The service ensures that page numbers are accurately applied, improving the readability and professionalism of your documents. It supports various formats, including DOC, PPTX, TIFF, DOCX, and PDF, to cater to your specific requirements.
         /// </summary>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <param name="vAlignment">The vertical alignment of the page numbers.</param>
         /// <param name="hAlignment">The horizontal alignment of the page numbers.</param>
         /// <param name="startingNumber">The starting number for the page numbers.</param>
@@ -24,31 +25,35 @@ namespace IO.Swagger.Api
         /// <param name="fontSize">The font size of the page numbers.</param>
         /// <param name="format">The format of the page numbers.</param>
         /// <returns>FileResponse</returns>
-        FileResponse PdfWebapiAddnumberPost (List<FileParameter> files, PageNumberVerticalAlign vAlignment, PageNumberHorizontalAlign hAlignment, int? startingNumber, int? sNumber, int? fNumber, int? margin, int? fontSize, string format);
+        FileResponse PdfWebapiAddnumberPost (List<FileParameter> files, PageNumberVerticalAlign vAlignment, PageNumberHorizontalAlign hAlignment, int? startingNumber, int? sNumber, int? fNumber, int? margin, int? fontSize, string format, string documentPassword = null);
         /// <summary>
-        ///  
+        /// Change Fonts in Provided Files. Updates the fonts in your documents according to specified replacements.  Provide the font replacement details as a JSON string and upload your files using multipart/form-data.The service processes these requests asynchronously using Kafka, ensuring efficient handling of your files.
         /// </summary>
         /// <param name="fontReplacementsJson"></param>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <returns>FileResponse</returns>
-        FileResponse PdfWebapiChangeFontsPost (string fontReplacementsJson, List<FileParameter> files);
+        FileResponse PdfWebapiChangeFontsPost (string fontReplacementsJson, List<FileParameter> files, string documentPassword = null);
         /// <summary>
-        /// Compare documents text. Compare provided files and create document with marked changes.
+        /// Compare documents text. Compares the text of the provided documents and highlights the differences. Upload the files you want to compare, and the service will analyze them to detect any changes in the text. The result is a new document that clearly marks all text variations, making it easy to review and understand the modifications between the original and updated versions.
         /// </summary>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <returns>FileResponse</returns>
-        FileResponse PdfWebapiComparisonPost (List<FileParameter> files);
+        FileResponse PdfWebapiComparisonPost (List<FileParameter> files, string documentPassword = null);
         /// <summary>
-        /// Compress document. Compresses the provided files using the specified compression level.
+        /// Compress Document. Compresses the provided documents to reduce their file size based on the specified compression level. Upload the documents and choose the desired compression level. The service will reduce the file sizes while maintaining quality, resulting in compressed files that are easier to handle and share, saving storage space and reducing upload and download times.
         /// </summary>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <param name="compressType">The level of compression to use.</param>
         /// <returns>FileResponse</returns>
-        FileResponse PdfWebapiCompressPost (List<FileParameter> files, CompressType compressType);
+        FileResponse PdfWebapiCompressPost (List<FileParameter> files,  CompressType compressType, string documentPassword = null);
         /// <summary>
-        /// Convert document to another format. Converts the provided files from one format to another.
+        /// Convert Document to Another Format. Converts documents from one format to another seamlessly. Upload the files you need to convert and specify the target format. The service will handle the conversion process efficiently, ensuring that the resulting document is ready for use in the desired format and compatible with various applications and systems.
         /// </summary>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <param name="inputType">The format of the input files.</param>
         /// <param name="outputType">The desired format for the output files.</param>
         /// <param name="xmlType">The type of XML conversion to perform, if applicable.</param>
@@ -57,18 +62,20 @@ namespace IO.Swagger.Api
         /// <param name="isToSingle">Indicates whether the conversion should result in a single file, if applicable.</param>
         /// <param name="separator">The separator to use when converting, if applicable.</param>
         /// <returns>FileResponse</returns>
-        FileResponse PdfWebapiConvertPost (List<FileParameter> files, string inputType, string outputType, XmlType xmlType, string xmlTag, int? fontSise, bool? isToSingle, string separator);
+        FileResponse PdfWebapiConvertPost (List<FileParameter> files, string inputType, string outputType, XmlType xmlType, string xmlTag, int? fontSise, bool? isToSingle, string separator, string documentPassword = null);
         /// <summary>
-        /// Convert web page to document. Converts a web page to the specified output format.
+        /// Convert Web Page to Document. Converts a web page to a document in the specified output format. Provide the URL of the web page and choose the desired format for conversion. The service will create a document that mirrors the content and layout of the original web page, ensuring it is well-formatted and suitable for your needs.
         /// </summary>
         /// <param name="webPage"></param>
+        /// <param name="documentPassword"></param>
         /// <param name="outputType">The desired format for the output file.</param>
         /// <returns>FileResponse</returns>
-        FileResponse PdfWebapiConvertWebpagePost (string webPage, string outputType);
+        FileResponse PdfWebapiConvertWebpagePost (string webPage, string outputType, string documentPassword = null);
         /// <summary>
-        /// Crop document. Crops the provided files to the specified dimensions.
+        /// Crop Document. Crops the provided document to the specified dimensions by removing unwanted areas. Upload the document and specify the dimensions for cropping. The service will adjust the file accordingly, resulting in a precisely cropped document that meets your requirements.
         /// </summary>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <param name="inputType">The format of the input files.</param>
         /// <param name="top">The number of pixels to crop from the top.</param>
         /// <param name="right">The number of pixels to crop from the right.</param>
@@ -76,7 +83,7 @@ namespace IO.Swagger.Api
         /// <param name="left">The number of pixels to crop from the left.</param>
         /// <param name="outputType">The desired format for the output files.</param>
         /// <returns>FileResponse</returns>
-        FileResponse PdfWebapiCropPost (List<FileParameter> files, string inputType, int? top, int? right, int? bottom, int? left, string outputType);
+        FileResponse PdfWebapiCropPost (List<FileParameter> files,  string inputType, int? top, int? right, int? bottom, int? left, string outputType, string documentPassword = null);
         /// <summary>
         /// File download. Downloads processed file.
         /// </summary>
@@ -85,32 +92,30 @@ namespace IO.Swagger.Api
         /// <returns></returns>
         void PdfWebapiDownloadIdGet (string id, string file);
         /// <summary>
-        /// Sign document with certificate. Electronically signs the provided documents with the specified certificate.
+        /// Sign Document with Certificate. Applies a digital signature to the provided document using the specified certificate. Upload the document and provide the certificate details, and the service will securely apply the signature, ensuring that the document is authenticated and legally binding.
         /// </summary>
         /// <param name="passw"></param>
+        /// <param name="initials"></param>
+        /// <param name="invite"></param>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <param name="inputType">The format of the input files.</param>
         /// <returns>FileResponse</returns>
-        FileResponse PdfWebapiEsignPost (string passw, List<FileParameter> files, string inputType);
+        FileResponse PdfWebapiEsignPost (string passw, string initials, string invite, List<FileParameter> files, string inputType, string documentPassword = null);
         /// <summary>
-        /// Extract tables from document. Extracts tables from the provided documents and converts them to the specified output format.
+        /// Extract Tables from Document. Extracts tables from the provided document and converts them into the specified output format. Upload the document containing the tables and choose the format you prefer. The service will extract the tables and deliver them in the selected format, facilitating easier data usage and analysis.
         /// </summary>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <param name="inputType">The format of the input files.</param>
         /// <param name="outputType">The desired format for the output files.</param>
         /// <returns>FileResponse</returns>
-        FileResponse PdfWebapiExtractPost (List<FileParameter> files, string inputType, string outputType);
+        FileResponse PdfWebapiExtractPost (List<FileParameter> files,  string inputType, string outputType, string documentPassword = null);
         /// <summary>
-        /// Fill form. Fills a form with the provided files.
+        /// Make GIF. Creates a GIF from a collection of images, ensuring smooth transitions and cohesive animation. Upload the images you want to include, and the service will generate a GIF based on your specifications. This service is ideal for animating a series of product shots, creating engaging social media content, or other animation needs.
         /// </summary>
         /// <param name="files"></param>
-        /// <param name="fileName">The name of the file to fill the form with.</param>
-        /// <returns>FileResponse</returns>
-        FileResponse PdfWebapiFormFillerPost (List<FileParameter> files, string fileName);
-        /// <summary>
-        /// Make GIF. Creates a GIF from the provided images.
-        /// </summary>
-        /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <param name="keepImagesAsIs">Indicates whether the images should be kept as is.</param>
         /// <param name="resizeToImage">The index of the image to resize the other images to.</param>
         /// <param name="streched"></param>
@@ -118,27 +123,29 @@ namespace IO.Swagger.Api
         /// <param name="height">The height of the GIF.</param>
         /// <param name="frameTimes">The times for each frame in the GIF.</param>
         /// <returns>FileResponse</returns>
-        FileResponse PdfWebapiGifPost (List<FileParameter> files, bool? keepImagesAsIs, int? resizeToImage, bool? streched, int? width, int? height, string frameTimes);
+        FileResponse PdfWebapiGifPost (List<FileParameter> files, bool? keepImagesAsIs, int? resizeToImage, bool? streched, int? width, int? height, string frameTimes, string documentPassword = null);
         /// <summary>
-        /// Calculate document hash. Calculate hashes of provided files using the specified algorithm.
+        /// Calculate Document Hash. Calculates the hash values for the provided documents using the specified hashing algorithm. Upload the documents and choose the desired algorithm, and the service will generate hash values for each file. This process helps verify that the documents have not been altered or corrupted, ensuring data integrity.
         /// </summary>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <param name="inputType">The format of the input files.</param>
         /// <param name="outputType">The desired format for the output files.</param>
         /// <param name="alg">The hashing algorithm to use.</param>
         /// <returns>FileResponse</returns>
-        FileResponse PdfWebapiHashPost (List<FileParameter> files, string inputType, string outputType, HashAlgorithm alg);
+        FileResponse PdfWebapiHashPost (List<FileParameter> files,  string inputType, string outputType, HashAlgorithm alg, string documentPassword = null);
         /// <summary>
-        /// Lock document. Locks a document with the provided password and optional files.
+        /// Lock document. Locks the provided document with a specified password to restrict access to authorized users only. Upload the file and provide a password, and the service will apply the password protection to secure the document. Optionally, you can include additional files to further enhance the security of the document.
         /// </summary>
+        /// <param name="password"></param>
         /// <param name="files"></param>
-        /// <param name="passw">The password required to lock the resource.</param>
         /// <returns>FileResponse</returns>
-        FileResponse PdfWebapiLockPost (List<FileParameter> files, string passw);
+        FileResponse PdfWebapiLockPost (string password, List<FileParameter> files);
         /// <summary>
-        /// Merge documents. Merges the provided files into a single document or image, with options for orientation and page size.
+        /// Merge Documents. Merges multiple documents or images into a single file based on specified preferences for orientation and page size. Upload the files you want to consolidate and define your formatting preferences. This service will combine the files into one, ensuring that the final document or image meets your requirements.
         /// </summary>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <param name="inputType">The format of the input files.</param>
         /// <param name="outputType">The desired format for the output file.</param>
         /// <param name="mergeType">Type of merger operation.</param>
@@ -147,35 +154,39 @@ namespace IO.Swagger.Api
         /// <param name="pageSize">The page size for the output file, if applicable.</param>
         /// <param name="dcIsLandscape">Indicates whether the output file should be in landscape orientation.</param>
         /// <returns>FileResponse</returns>
-        FileResponse PdfWebapiMergePost (List<FileParameter> files, string inputType, string outputType, MergeImageType mergeType, int? horizontal, int? vertical, PageSize pageSize, bool? dcIsLandscape);
+        FileResponse PdfWebapiMergePost (List<FileParameter> files,  string inputType, string outputType, MergeImageType mergeType, int? horizontal, int? vertical, PageSize pageSize, bool? dcIsLandscape, string documentPassword = null);
         /// <summary>
-        /// Read and change document metadata. Performs metadata operations on the provided files.
+        /// Read and Change Document Metadata. Reads and updates the metadata of the provided documents based on specified operations. Upload the documents and define the metadata changes you need. This service will read the existing metadata, apply the changes, and ensure that your files contain accurate and updated information.
         /// </summary>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <param name="operation">The operation to perform on the metadata.</param>
         /// <param name="folder">The folder where the files are located.</param>
         /// <param name="name">The name of the file to perform the operation on.</param>
         /// <returns>FileResponse</returns>
-        FileResponse PdfWebapiMetadataPost (List<FileParameter> files, MetadataOperation operation, string folder, string name);
+        FileResponse PdfWebapiMetadataPost (List<FileParameter> files,  MetadataOperation operation, string folder, string name, string documentPassword = null);
         /// <summary>
-        /// Organize document pages. Organizes the provided documents by removing or moving specified pages.
+        /// Organize Document Pages. Reorganizes the pages of the provided document based on your instructions. Upload the document and specify which pages to remove or move, and the service will rearrange the pages accordingly, ensuring that the document is organized as you require.
         /// </summary>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <param name="inputType">The format of the input files.</param>
         /// <param name="remove">The pages to remove from the document.</param>
         /// <param name="move">The pages to move within the document.</param>
         /// <returns>FileResponse</returns>
-        FileResponse PdfWebapiOrganizePost (List<FileParameter> files, string inputType, string remove, string move);
+        FileResponse PdfWebapiOrganizePost (List<FileParameter> files,  string inputType, string remove, string move, string documentPassword = null);
         /// <summary>
-        /// Parse document. Parses the provided files using a parser service.
+        /// Parse Document. Analyses and extracts relevant content from the provided document files. The parsing service organizes the data within your documents to make it accessible and tailored to your specific requirements.
         /// </summary>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <returns>FileResponse</returns>
-        FileResponse PdfWebapiParsePost (List<FileParameter> files);
+        FileResponse PdfWebapiParsePost (List<FileParameter> files, string documentPassword = null);
         /// <summary>
-        /// Redact document text. Redacts specified text from the provided documents, with options to search case-sensitively, target in text, comments, and metadata.
+        /// Redact Document Text. Redacts sensitive information from the provided documents by removing specified text, comments, and metadata. You can specify the text to be redacted and use case-sensitive search to ensure thorough removal. This service helps maintain confidentiality and security by ensuring that sensitive information is completely removed.
         /// </summary>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <param name="searchQuery">The text to search for and redact.</param>
         /// <param name="replaceText">The text to replace the found text with.</param>
         /// <param name="caseSensitive">Indicates whether the search should be case-sensitive.</param>
@@ -183,7 +194,7 @@ namespace IO.Swagger.Api
         /// <param name="comments">Indicates whether comments should be redacted.</param>
         /// <param name="metadata">Indicates whether metadata should be redacted.</param>
         /// <returns>FileResponse</returns>
-        FileResponse PdfWebapiRedactPost (List<FileParameter> files, string searchQuery, string replaceText, bool? caseSensitive, bool? text, bool? comments, bool? metadata);
+        FileResponse PdfWebapiRedactPost (List<FileParameter> files,  string searchQuery, string replaceText, bool? caseSensitive, bool? text, bool? comments, bool? metadata, string documentPassword = null);
         /// <summary>
         /// Remove stored files. Removes processed files from storage.
         /// </summary>
@@ -191,13 +202,14 @@ namespace IO.Swagger.Api
         /// <returns>FileResponse</returns>
         FileResponse PdfWebapiRemoveIdPost (string id);
         /// <summary>
-        /// Remove document annotations. Removes annotations from the provided documents.
+        /// Remove Document Annotations. Removes all annotations, including comments, highlights, and markup, from the provided documents. By specifying the documents, this service ensures that they are cleaned of any annotations, resulting in a clean and annotation-free file.
         /// </summary>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <returns>FileResponse</returns>
-        FileResponse PdfWebapiRemovePost (List<FileParameter> files);
+        FileResponse PdfWebapiRemovePost (List<FileParameter> files, string documentPassword = null);
         /// <summary>
-        /// Removes document watermark. Removes a watermark from the document pages.
+        /// Remove Document Watermark. Removes an unwanted watermark from all pages of the provided document. Submit the document, and this service will efficiently eliminate the watermark, resulting in a clean version of the file without the watermark.
         /// </summary>
         /// <param name="watermarkText"></param>
         /// <param name="top"></param>
@@ -205,28 +217,32 @@ namespace IO.Swagger.Api
         /// <param name="bottom"></param>
         /// <param name="right"></param>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <param name="isAllPages">Indicates whether the watermark should be removed from all pages.</param>
         /// <param name="watermarkType">The type of watermark to remove.</param>
         /// <param name="removeRange">The range of pages to remove the watermark from.</param>
         /// <returns>FileResponse</returns>
-        FileResponse PdfWebapiRemoveWatermarkPost (string watermarkText, int? top, int? left, int? bottom, int? right, List<FileParameter> files, bool? isAllPages, WatermarkType watermarkType, string removeRange);
+        FileResponse PdfWebapiRemoveWatermarkPost (string watermarkText, int? top, int? left, int? bottom, int? right, List<FileParameter> files, bool? isAllPages, WatermarkType watermarkType, string removeRange, string documentPassword = null);
         /// <summary>
-        /// Remove pages from document. Removes specified pages from the provided files.
+        /// Remove Pages from Document. Removes specified pages from the provided document, leaving only the pages you want to keep. Simply provide the document and specify which pages to remove, and the service will process the file accordingly.
         /// </summary>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <param name="removeRange">The range of pages to remove from the files.</param>
         /// <returns>FileResponse</returns>
-        FileResponse PdfWebapiRemovepagesPost (List<FileParameter> files, string removeRange);
+        FileResponse PdfWebapiRemovepagesPost (List<FileParameter> files, string removeRange, string documentPassword = null);
         /// <summary>
-        /// Repair document. Repairs the provided files.
+        /// Repair Document. Repairs a corrupted or error-ridden document by identifying and fixing issues. Upload the problematic file, and this service will restore it to a usable state.
         /// </summary>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <returns>FileResponse</returns>
-        FileResponse PdfWebapiRepairPost (List<FileParameter> files);
+        FileResponse PdfWebapiRepairPost (List<FileParameter> files, string documentPassword = null);
         /// <summary>
-        /// Resize document. Resizes the provided files to the specified dimensions or using a preset size.
+        /// Resize Document. Resizes the document to fit the specified dimensions or preset sizes. Provide the file and specify the desired dimensions, or select from available preset sizes to adjust the document accordingly.
         /// </summary>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <param name="inputType">The format of the input files.</param>
         /// <param name="outputType">The desired format for the output files.</param>
         /// <param name="resizeType">The type of resizing to apply.</param>
@@ -238,60 +254,66 @@ namespace IO.Swagger.Api
         /// <param name="useProportions">Indicates whether to maintain the aspect ratio when resizing.</param>
         /// <param name="pageSize">The page size to use for the resized files.</param>
         /// <returns>FileResponse</returns>
-        FileResponse PdfWebapiResizePost (List<FileParameter> files, string inputType, string outputType, ResizeType resizeType, ResizePresetType presetType, ResizePresetSize presetSize, int? width, int? height, int? percentage, bool? useProportions, ResizePageSize pageSize);
+        FileResponse PdfWebapiResizePost (List<FileParameter> files,  string inputType, string outputType, ResizeType resizeType, ResizePresetType presetType, ResizePresetSize presetSize, int? width, int? height, int? percentage, bool? useProportions, ResizePageSize pageSize, string documentPassword = null);
         /// <summary>
-        /// Rotate document. Rotates the provided files by a specified angle, with options for rotation type and page number.
+        /// Rotate Document. Rotates the document by a specified angle, allowing for adjustment of the document&#x27;s orientation. You can choose the type of rotation and target specific pages to ensure the document is aligned according to your needs.
         /// </summary>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <param name="angle">The angle by which to rotate the files.</param>
         /// <param name="rotateType">The type of rotation to perform.</param>
         /// <param name="pageNum">The page number to rotate, if applicable.</param>
         /// <returns>FileResponse</returns>
-        FileResponse PdfWebapiRotatePost (List<FileParameter> files, RotateAngle angle, RotateType rotateType, string pageNum);
+        FileResponse PdfWebapiRotatePost (List<FileParameter> files, RotateAngle angle, RotateType rotateType, string pageNum, string documentPassword = null);
         /// <summary>
-        /// Search document text. Searches the provided files for the specified query and makr found text with yellow background.
+        /// Search Document Text. Searches the provided documents for the specified query and highlights the found text with a yellow background. This service helps you quickly locate and review relevant sections of your documents.
         /// </summary>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <param name="query">The text to search for within the files.</param>
         /// <returns>FileResponse</returns>
-        FileResponse PdfWebapiSearchPost (List<FileParameter> files, string query);
+        FileResponse PdfWebapiSearchPost (List<FileParameter> files, string query, string documentPassword = null);
         /// <summary>
-        /// Make scanned pdf searchable. Converts the provided files into a searchable PDF format for the specified language.
+        /// Make Scanned PDF Searchable. Converts scanned PDFs into a searchable PDF format by recognizing and indexing text. This service ensures that you can easily search through your documents by making the text searchable in the specified language.
         /// </summary>
         /// <param name="files"></param>
         /// <param name="lang">The language of the files to be converted.</param>
         /// <returns>FileResponse</returns>
         FileResponse PdfWebapiSearchablePost (List<FileParameter> files, string lang);
         /// <summary>
-        /// Add signature to document. Adds a signature, text and image to the provided documents.
+        /// Add Signature to Document. Adds a signature to the provided documents, allowing for the insertion of both text and image signatures. This service ensures that your documents are properly signed and authenticated according to your specifications.
         /// </summary>
         /// <param name="image"></param>
         /// <param name="text"></param>
         /// <param name="textColor"></param>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <param name="inputType">The format of the input files.</param>
         /// <param name="outputType">The desired format for the output files.</param>
         /// <param name="signatureType">The type of signature to add.</param>
         /// <returns>FileResponse</returns>
-        FileResponse PdfWebapiSignaturePost (string image, string text, string textColor, List<FileParameter> files, string inputType, string outputType, SignatureType signatureType);
+        FileResponse PdfWebapiSignaturePost (string image, string text, string textColor, List<FileParameter> files, string inputType, string outputType, SignatureType signatureType, string documentPassword = null);
         /// <summary>
-        /// Split document. Splits the provided documents based on the specified split type and page rage to spit.
+        /// Split Document. Splits a document into smaller parts based on specified criteria, such as type or page range. This service ensures that each segment meets your exact requirements, simplifying document management and organization.
         /// </summary>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
+        /// <param name="inputType">The format of the input files.</param>
         /// <param name="splitType">The type of splitting to be performed.</param>
         /// <param name="pairs">Optional page rage for the splitting operation.</param>
         /// <returns>FileResponse</returns>
-        FileResponse PdfWebapiSplitdocPost (List<FileParameter> files, SplitDocType splitType, string pairs);
+        FileResponse PdfWebapiSplitdocPost (List<FileParameter> files, string inputType, SplitDocType splitType, string pairs, string documentPassword = null);
         /// <summary>
-        /// Split image. Splits the provided images into smaller parts based on the specified parameters.
+        /// Split Image. Splits large images into smaller sections according to the specified parameters, making it easier to handle and process image data.
         /// </summary>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <param name="splitType">The type of splitting to be performed.</param>
         /// <param name="vertical">The number of vertical splits to create.</param>
         /// <param name="horizontal">The number of horizontal splits to create.</param>
         /// <param name="outputType">The desired output format for the split images.</param>
         /// <returns>FileResponse</returns>
-        FileResponse PdfWebapiSplitimagePost (List<FileParameter> files, SplitImageType splitType, int? vertical, int? horizontal, string outputType);
+        FileResponse PdfWebapiSplitimagePost (List<FileParameter> files, SplitImageType splitType, int? vertical, int? horizontal, string outputType, string documentPassword = null);
         /// <summary>
         /// Processing status. Retrieves the status of a processing.
         /// </summary>
@@ -299,23 +321,25 @@ namespace IO.Swagger.Api
         /// <returns>FileResponse</returns>
         FileResponse PdfWebapiStatusIdPost (string id);
         /// <summary>
-        /// Unlock document. Attempts to unlock a document with an password and associated files.
+        /// Unlock Document. Attempts to unlock a password-protected document, using any associated files if necessary, to grant access to the content.
         /// </summary>
+        /// <param name="password"></param>
         /// <param name="files"></param>
-        /// <param name="passw">The password used in locked document.</param>
         /// <returns>FileResponse</returns>
-        FileResponse PdfWebapiUnlockPost (List<FileParameter> files, string passw);
+        FileResponse PdfWebapiUnlockPost (string password, List<FileParameter> files);
         /// <summary>
-        /// Verify document certificate. Verifies the electronic signature of the provided files.
+        /// Verify Document Certificate. Verifies the electronic signature of the provided document to ensure its authenticity and integrity. This service checks the digital certificates in the document to confirm their validity and trustworthiness.
         /// </summary>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <param name="inputType">The format of the input files.</param>
         /// <returns>FileResponse</returns>
-        FileResponse PdfWebapiVerifyEsignPost (List<FileParameter> files, string inputType);
+        FileResponse PdfWebapiVerifyEsignPost (List<FileParameter> files, string inputType, string documentPassword = null);
         /// <summary>
-        /// Add watermark to document. Adds a watermark to the provided files.
+        /// Add Watermark to Document. Adds a watermark to the provided documents, helping to protect and identify them. This service ensures that the watermark is applied according to your specifications, enhancing the security and ownership of your content.
         /// </summary>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <param name="inputType">The format of the input files.</param>
         /// <param name="outputType">The desired format for the output files.</param>
         /// <param name="isColored">Indicate is watermark will be in color or grayscale.</param>
@@ -334,21 +358,23 @@ namespace IO.Swagger.Api
         /// <param name="pageFrom">The starting page number for the watermark.</param>
         /// <param name="pageTo">The ending page number for the watermark.</param>
         /// <returns>FileResponse</returns>
-        FileResponse PdfWebapiWatermarkPost (List<FileParameter> files, string inputType, string outputType, bool? isColored, bool? isText, string text, string name, int? size, bool? bold, bool? italic, bool? underlined, string color, bool? isBackground, int? rotation, float? transparency, bool? layer, int? pageFrom, int? pageTo);
+        FileResponse PdfWebapiWatermarkPost (List<FileParameter> files, string inputType, string outputType, bool? isColored, bool? isText, string text, string name, int? size, bool? bold, bool? italic, bool? underlined, string color, bool? isBackground, int? rotation, float? transparency, bool? layer, int? pageFrom, int? pageTo, string documentPassword = null);
         /// <summary>
-        /// Count words and chars in document. Counts the words in the provided files within the specified page range.
+        /// Count Words and Characters in Document. Counts the words and characters in the provided documents within the specified page range. This service helps you accurately determine the length and content density of your documents, ensuring compliance with any required specifications or limits.
         /// </summary>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <param name="pageRange">The range of pages to count words in.</param>
         /// <returns>FileResponse</returns>
-        FileResponse PdfWebapiWordcounterPost (List<FileParameter> files, string pageRange);
+        FileResponse PdfWebapiWordcounterPost (List<FileParameter> files, string pageRange, string documentPassword = null);
         /// <summary>
-        /// Convert XFA format to a another format. Converts the provided documents from XFA format to a different format.
+        /// Convert XFA Format to Another Format. Converts XFA documents to the specified format, ensuring seamless compatibility and usability. This service supports a wide range of target formats, allowing users to choose the most suitable format for their specific needs. The conversion process maintains the integrity of the original document while adapting it to the desired format, making it ideal for editing, sharing, or archiving..
         /// </summary>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <param name="inputType">The format of the input files.</param>
         /// <returns>FileResponse</returns>
-        FileResponse PdfWebapiXfaconvertPost (List<FileParameter> files, string inputType);
+        FileResponse PdfWebapiXfaconvertPost (List<FileParameter> files, string inputType, string documentPassword = null);
     }
   
     /// <summary>
@@ -405,9 +431,10 @@ namespace IO.Swagger.Api
         public ApiClient ApiClient {get; set;}
     
         /// <summary>
-        /// Add page numbers to document. Adds page numbers to the provided documents with the specified alignment, starting number, and format.
+        /// Add Page Numbers to Document. Adds page numbers to your documents based on specified alignment, starting number, and format. The service ensures that page numbers are accurately applied, improving the readability and professionalism of your documents. It supports various formats, including DOC, PPTX, TIFF, DOCX, and PDF, to cater to your specific requirements.
         /// </summary>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <param name="vAlignment">The vertical alignment of the page numbers.</param>
         /// <param name="hAlignment">The horizontal alignment of the page numbers.</param>
         /// <param name="startingNumber">The starting number for the page numbers.</param>
@@ -417,7 +444,7 @@ namespace IO.Swagger.Api
         /// <param name="fontSize">The font size of the page numbers.</param>
         /// <param name="format">The format of the page numbers.</param>
         /// <returns>FileResponse</returns>
-        public FileResponse PdfWebapiAddnumberPost (List<FileParameter> files, PageNumberVerticalAlign vAlignment, PageNumberHorizontalAlign hAlignment, int? startingNumber, int? sNumber, int? fNumber, int? margin, int? fontSize, string format)
+        public FileResponse PdfWebapiAddnumberPost (List<FileParameter> files, PageNumberVerticalAlign vAlignment, PageNumberHorizontalAlign hAlignment, int? startingNumber, int? sNumber, int? fNumber, int? margin, int? fontSize, string format, string documentPassword = null)
         {
     
             var path = "/pdf/webapi/addnumber";
@@ -438,6 +465,7 @@ namespace IO.Swagger.Api
  if (fontSize != null) queryParams.Add("fontSize", ApiClient.ParameterToString(fontSize)); // query parameter
  if (format != null) queryParams.Add("format", ApiClient.ParameterToString(format)); // query parameter
                         if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // file parameters
+if (documentPassword != null) formParams.Add("documentPassword", ApiClient.ParameterToString(documentPassword)); // form parameter
 
             // authentication setting, if any
             String[] authSettings = new String[] {  };
@@ -454,12 +482,13 @@ namespace IO.Swagger.Api
         }
     
         /// <summary>
-        ///  
+        /// Change Fonts in Provided Files. Updates the fonts in your documents according to specified replacements.  Provide the font replacement details as a JSON string and upload your files using multipart/form-data.The service processes these requests asynchronously using Kafka, ensuring efficient handling of your files.
         /// </summary>
         /// <param name="fontReplacementsJson"></param>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <returns>FileResponse</returns>
-        public FileResponse PdfWebapiChangeFontsPost (string fontReplacementsJson, List<FileParameter> files)
+        public FileResponse PdfWebapiChangeFontsPost (string fontReplacementsJson, List<FileParameter> files, string documentPassword = null)
         {
     
             var path = "/pdf/webapi/change-fonts";
@@ -473,6 +502,7 @@ namespace IO.Swagger.Api
     
                                     if (fontReplacementsJson != null) formParams.Add("fontReplacementsJson", ApiClient.ParameterToString(fontReplacementsJson)); // form parameter
 if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // file parameters
+if (documentPassword != null) formParams.Add("documentPassword", ApiClient.ParameterToString(documentPassword)); // form parameter
 
             // authentication setting, if any
             String[] authSettings = new String[] {  };
@@ -489,11 +519,12 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
         }
     
         /// <summary>
-        /// Compare documents text. Compare provided files and create document with marked changes.
+        /// Compare documents text. Compares the text of the provided documents and highlights the differences. Upload the files you want to compare, and the service will analyze them to detect any changes in the text. The result is a new document that clearly marks all text variations, making it easy to review and understand the modifications between the original and updated versions.
         /// </summary>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <returns>FileResponse</returns>
-        public FileResponse PdfWebapiComparisonPost (List<FileParameter> files)
+        public FileResponse PdfWebapiComparisonPost (List<FileParameter> files, string documentPassword = null)
         {
     
             var path = "/pdf/webapi/comparison";
@@ -506,6 +537,7 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
             String postBody = null;
     
                                     if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // file parameters
+if (documentPassword != null) formParams.Add("documentPassword", ApiClient.ParameterToString(documentPassword)); // form parameter
 
             // authentication setting, if any
             String[] authSettings = new String[] {  };
@@ -522,12 +554,13 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
         }
     
         /// <summary>
-        /// Compress document. Compresses the provided files using the specified compression level.
+        /// Compress Document. Compresses the provided documents to reduce their file size based on the specified compression level. Upload the documents and choose the desired compression level. The service will reduce the file sizes while maintaining quality, resulting in compressed files that are easier to handle and share, saving storage space and reducing upload and download times.
         /// </summary>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <param name="compressType">The level of compression to use.</param>
         /// <returns>FileResponse</returns>
-        public FileResponse PdfWebapiCompressPost (List<FileParameter> files, CompressType compressType)
+        public FileResponse PdfWebapiCompressPost (List<FileParameter> files, CompressType compressType, string documentPassword = null)
         {
     
             var path = "/pdf/webapi/compress";
@@ -541,6 +574,7 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
     
              if (compressType != null) queryParams.Add("compressType", ApiClient.ParameterToString(compressType)); // query parameter
                         if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // file parameters
+if (documentPassword != null) formParams.Add("documentPassword", ApiClient.ParameterToString(documentPassword)); // form parameter
 
             // authentication setting, if any
             String[] authSettings = new String[] {  };
@@ -557,9 +591,10 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
         }
     
         /// <summary>
-        /// Convert document to another format. Converts the provided files from one format to another.
+        /// Convert Document to Another Format. Converts documents from one format to another seamlessly. Upload the files you need to convert and specify the target format. The service will handle the conversion process efficiently, ensuring that the resulting document is ready for use in the desired format and compatible with various applications and systems.
         /// </summary>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <param name="inputType">The format of the input files.</param>
         /// <param name="outputType">The desired format for the output files.</param>
         /// <param name="xmlType">The type of XML conversion to perform, if applicable.</param>
@@ -568,7 +603,7 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
         /// <param name="isToSingle">Indicates whether the conversion should result in a single file, if applicable.</param>
         /// <param name="separator">The separator to use when converting, if applicable.</param>
         /// <returns>FileResponse</returns>
-        public FileResponse PdfWebapiConvertPost (List<FileParameter> files, string inputType, string outputType, XmlType xmlType, string xmlTag, int? fontSise, bool? isToSingle, string separator)
+        public FileResponse PdfWebapiConvertPost (List<FileParameter> files, string inputType, string outputType, XmlType xmlType, string xmlTag, int? fontSise, bool? isToSingle, string separator, string documentPassword = null)
         {
     
             var path = "/pdf/webapi/convert";
@@ -588,6 +623,7 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
  if (isToSingle != null) queryParams.Add("isToSingle", ApiClient.ParameterToString(isToSingle)); // query parameter
  if (separator != null) queryParams.Add("separator", ApiClient.ParameterToString(separator)); // query parameter
                         if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // file parameters
+if (documentPassword != null) formParams.Add("documentPassword", ApiClient.ParameterToString(documentPassword)); // form parameter
 
             // authentication setting, if any
             String[] authSettings = new String[] {  };
@@ -604,12 +640,13 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
         }
     
         /// <summary>
-        /// Convert web page to document. Converts a web page to the specified output format.
+        /// Convert Web Page to Document. Converts a web page to a document in the specified output format. Provide the URL of the web page and choose the desired format for conversion. The service will create a document that mirrors the content and layout of the original web page, ensuring it is well-formatted and suitable for your needs.
         /// </summary>
         /// <param name="webPage"></param>
+        /// <param name="documentPassword"></param>
         /// <param name="outputType">The desired format for the output file.</param>
         /// <returns>FileResponse</returns>
-        public FileResponse PdfWebapiConvertWebpagePost (string webPage, string outputType)
+        public FileResponse PdfWebapiConvertWebpagePost (string webPage, string outputType, string documentPassword = null)
         {
     
             var path = "/pdf/webapi/convert-webpage";
@@ -623,6 +660,7 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
     
              if (outputType != null) queryParams.Add("outputType", ApiClient.ParameterToString(outputType)); // query parameter
                         if (webPage != null) formParams.Add("webPage", ApiClient.ParameterToString(webPage)); // form parameter
+if (documentPassword != null) formParams.Add("documentPassword", ApiClient.ParameterToString(documentPassword)); // form parameter
 
             // authentication setting, if any
             String[] authSettings = new String[] {  };
@@ -639,9 +677,10 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
         }
     
         /// <summary>
-        /// Crop document. Crops the provided files to the specified dimensions.
+        /// Crop Document. Crops the provided document to the specified dimensions by removing unwanted areas. Upload the document and specify the dimensions for cropping. The service will adjust the file accordingly, resulting in a precisely cropped document that meets your requirements.
         /// </summary>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <param name="inputType">The format of the input files.</param>
         /// <param name="top">The number of pixels to crop from the top.</param>
         /// <param name="right">The number of pixels to crop from the right.</param>
@@ -649,7 +688,7 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
         /// <param name="left">The number of pixels to crop from the left.</param>
         /// <param name="outputType">The desired format for the output files.</param>
         /// <returns>FileResponse</returns>
-        public FileResponse PdfWebapiCropPost (List<FileParameter> files, string inputType, int? top, int? right, int? bottom, int? left, string outputType)
+        public FileResponse PdfWebapiCropPost (List<FileParameter> files, string inputType, int? top, int? right, int? bottom, int? left, string outputType, string documentPassword = null)
         {
     
             var path = "/pdf/webapi/crop";
@@ -668,6 +707,7 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
  if (left != null) queryParams.Add("left", ApiClient.ParameterToString(left)); // query parameter
  if (outputType != null) queryParams.Add("outputType", ApiClient.ParameterToString(outputType)); // query parameter
                         if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // file parameters
+if (documentPassword != null) formParams.Add("documentPassword", ApiClient.ParameterToString(documentPassword)); // form parameter
 
             // authentication setting, if any
             String[] authSettings = new String[] {  };
@@ -721,13 +761,16 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
         }
     
         /// <summary>
-        /// Sign document with certificate. Electronically signs the provided documents with the specified certificate.
+        /// Sign Document with Certificate. Applies a digital signature to the provided document using the specified certificate. Upload the document and provide the certificate details, and the service will securely apply the signature, ensuring that the document is authenticated and legally binding.
         /// </summary>
         /// <param name="passw"></param>
+        /// <param name="initials"></param>
+        /// <param name="invite"></param>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <param name="inputType">The format of the input files.</param>
         /// <returns>FileResponse</returns>
-        public FileResponse PdfWebapiEsignPost (string passw, List<FileParameter> files, string inputType)
+        public FileResponse PdfWebapiEsignPost (string passw, string initials, string invite, List<FileParameter> files, string inputType, string documentPassword = null)
         {
     
             var path = "/pdf/webapi/esign";
@@ -741,7 +784,10 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
     
              if (inputType != null) queryParams.Add("inputType", ApiClient.ParameterToString(inputType)); // query parameter
                         if (passw != null) formParams.Add("passw", ApiClient.ParameterToString(passw)); // form parameter
+if (initials != null) formParams.Add("initials", ApiClient.ParameterToString(initials)); // form parameter
+if (invite != null) formParams.Add("invite", ApiClient.ParameterToString(invite)); // form parameter
 if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // file parameters
+if (documentPassword != null) formParams.Add("documentPassword", ApiClient.ParameterToString(documentPassword)); // form parameter
 
             // authentication setting, if any
             String[] authSettings = new String[] {  };
@@ -758,13 +804,14 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
         }
     
         /// <summary>
-        /// Extract tables from document. Extracts tables from the provided documents and converts them to the specified output format.
+        /// Extract Tables from Document. Extracts tables from the provided document and converts them into the specified output format. Upload the document containing the tables and choose the format you prefer. The service will extract the tables and deliver them in the selected format, facilitating easier data usage and analysis.
         /// </summary>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <param name="inputType">The format of the input files.</param>
         /// <param name="outputType">The desired format for the output files.</param>
         /// <returns>FileResponse</returns>
-        public FileResponse PdfWebapiExtractPost (List<FileParameter> files, string inputType, string outputType)
+        public FileResponse PdfWebapiExtractPost (List<FileParameter> files, string inputType, string outputType, string documentPassword = null)
         {
     
             var path = "/pdf/webapi/extract";
@@ -779,6 +826,7 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
              if (inputType != null) queryParams.Add("inputType", ApiClient.ParameterToString(inputType)); // query parameter
  if (outputType != null) queryParams.Add("outputType", ApiClient.ParameterToString(outputType)); // query parameter
                         if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // file parameters
+if (documentPassword != null) formParams.Add("documentPassword", ApiClient.ParameterToString(documentPassword)); // form parameter
 
             // authentication setting, if any
             String[] authSettings = new String[] {  };
@@ -795,44 +843,10 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
         }
     
         /// <summary>
-        /// Fill form. Fills a form with the provided files.
+        /// Make GIF. Creates a GIF from a collection of images, ensuring smooth transitions and cohesive animation. Upload the images you want to include, and the service will generate a GIF based on your specifications. This service is ideal for animating a series of product shots, creating engaging social media content, or other animation needs.
         /// </summary>
         /// <param name="files"></param>
-        /// <param name="fileName">The name of the file to fill the form with.</param>
-        /// <returns>FileResponse</returns>
-        public FileResponse PdfWebapiFormFillerPost (List<FileParameter> files, string fileName)
-        {
-    
-            var path = "/pdf/webapi/form-filler";
-            path = path.Replace("{format}", "json");
-                
-            var queryParams = new Dictionary<String, String>();
-            var headerParams = new Dictionary<String, String>();
-            var formParams = new Dictionary<String, String>();
-            var fileParams = new Dictionary<String, FileParameter>();
-            String postBody = null;
-    
-             if (fileName != null) queryParams.Add("fileName", ApiClient.ParameterToString(fileName)); // query parameter
-                        if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // file parameters
-
-            // authentication setting, if any
-            String[] authSettings = new String[] {  };
-    
-            // make the HTTP request
-            RestResponse response = (RestResponse) ApiClient.CallApi(path, Method.Post, queryParams, postBody, headerParams, formParams, fileParams, authSettings);
-    
-            if (((int)response.StatusCode) >= 400)
-                throw new ApiException ((int)response.StatusCode, "Error calling PdfWebapiFormFillerPost: " + response.Content, response.Content);
-            else if (((int)response.StatusCode) == 0)
-                throw new ApiException ((int)response.StatusCode, "Error calling PdfWebapiFormFillerPost: " + response.ErrorMessage, response.ErrorMessage);
-    
-            return (FileResponse) ApiClient.Deserialize(response.Content, typeof(FileResponse), response.Headers);
-        }
-    
-        /// <summary>
-        /// Make GIF. Creates a GIF from the provided images.
-        /// </summary>
-        /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <param name="keepImagesAsIs">Indicates whether the images should be kept as is.</param>
         /// <param name="resizeToImage">The index of the image to resize the other images to.</param>
         /// <param name="streched"></param>
@@ -840,7 +854,7 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
         /// <param name="height">The height of the GIF.</param>
         /// <param name="frameTimes">The times for each frame in the GIF.</param>
         /// <returns>FileResponse</returns>
-        public FileResponse PdfWebapiGifPost (List<FileParameter> files, bool? keepImagesAsIs, int? resizeToImage, bool? streched, int? width, int? height, string frameTimes)
+        public FileResponse PdfWebapiGifPost (List<FileParameter> files, bool? keepImagesAsIs, int? resizeToImage, bool? streched, int? width, int? height, string frameTimes, string documentPassword = null)
         {
     
             var path = "/pdf/webapi/gif";
@@ -859,6 +873,7 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
  if (height != null) queryParams.Add("height", ApiClient.ParameterToString(height)); // query parameter
  if (frameTimes != null) queryParams.Add("frameTimes", ApiClient.ParameterToString(frameTimes)); // query parameter
                         if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // file parameters
+if (documentPassword != null) formParams.Add("documentPassword", ApiClient.ParameterToString(documentPassword)); // form parameter
 
             // authentication setting, if any
             String[] authSettings = new String[] {  };
@@ -875,14 +890,15 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
         }
     
         /// <summary>
-        /// Calculate document hash. Calculate hashes of provided files using the specified algorithm.
+        /// Calculate Document Hash. Calculates the hash values for the provided documents using the specified hashing algorithm. Upload the documents and choose the desired algorithm, and the service will generate hash values for each file. This process helps verify that the documents have not been altered or corrupted, ensuring data integrity.
         /// </summary>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <param name="inputType">The format of the input files.</param>
         /// <param name="outputType">The desired format for the output files.</param>
         /// <param name="alg">The hashing algorithm to use.</param>
         /// <returns>FileResponse</returns>
-        public FileResponse PdfWebapiHashPost (List<FileParameter> files, string inputType, string outputType, HashAlgorithm alg)
+        public FileResponse PdfWebapiHashPost (List<FileParameter> files, string inputType, string outputType, HashAlgorithm alg, string documentPassword = null)
         {
     
             var path = "/pdf/webapi/hash";
@@ -898,6 +914,7 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
  if (outputType != null) queryParams.Add("outputType", ApiClient.ParameterToString(outputType)); // query parameter
  if (alg != null) queryParams.Add("alg", ApiClient.ParameterToString(alg)); // query parameter
                         if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // file parameters
+if (documentPassword != null) formParams.Add("documentPassword", ApiClient.ParameterToString(documentPassword)); // form parameter
 
             // authentication setting, if any
             String[] authSettings = new String[] {  };
@@ -914,12 +931,12 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
         }
     
         /// <summary>
-        /// Lock document. Locks a document with the provided password and optional files.
+        /// Lock document. Locks the provided document with a specified password to restrict access to authorized users only. Upload the file and provide a password, and the service will apply the password protection to secure the document. Optionally, you can include additional files to further enhance the security of the document.
         /// </summary>
+        /// <param name="password"></param>
         /// <param name="files"></param>
-        /// <param name="passw">The password required to lock the resource.</param>
         /// <returns>FileResponse</returns>
-        public FileResponse PdfWebapiLockPost (List<FileParameter> files, string passw)
+        public FileResponse PdfWebapiLockPost (string password, List<FileParameter> files)
         {
     
             var path = "/pdf/webapi/lock";
@@ -931,8 +948,8 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
     
-             if (passw != null) queryParams.Add("passw", ApiClient.ParameterToString(passw)); // query parameter
-                        if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // file parameters
+                                    if (password != null) formParams.Add("password", ApiClient.ParameterToString(password)); // form parameter
+if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // file parameters
 
             // authentication setting, if any
             String[] authSettings = new String[] {  };
@@ -949,9 +966,10 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
         }
     
         /// <summary>
-        /// Merge documents. Merges the provided files into a single document or image, with options for orientation and page size.
+        /// Merge Documents. Merges multiple documents or images into a single file based on specified preferences for orientation and page size. Upload the files you want to consolidate and define your formatting preferences. This service will combine the files into one, ensuring that the final document or image meets your requirements.
         /// </summary>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <param name="inputType">The format of the input files.</param>
         /// <param name="outputType">The desired format for the output file.</param>
         /// <param name="mergeType">Type of merger operation.</param>
@@ -960,7 +978,7 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
         /// <param name="pageSize">The page size for the output file, if applicable.</param>
         /// <param name="dcIsLandscape">Indicates whether the output file should be in landscape orientation.</param>
         /// <returns>FileResponse</returns>
-        public FileResponse PdfWebapiMergePost (List<FileParameter> files, string inputType, string outputType, MergeImageType mergeType, int? horizontal, int? vertical, PageSize pageSize, bool? dcIsLandscape)
+        public FileResponse PdfWebapiMergePost (List<FileParameter> files, string inputType, string outputType, MergeImageType mergeType, int? horizontal, int? vertical, PageSize pageSize, bool? dcIsLandscape, string documentPassword = null)
         {
     
             var path = "/pdf/webapi/merge";
@@ -980,6 +998,7 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
  if (pageSize != null) queryParams.Add("pageSize", ApiClient.ParameterToString(pageSize)); // query parameter
  if (dcIsLandscape != null) queryParams.Add("dc_isLandscape", ApiClient.ParameterToString(dcIsLandscape)); // query parameter
                         if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // file parameters
+if (documentPassword != null) formParams.Add("documentPassword", ApiClient.ParameterToString(documentPassword)); // form parameter
 
             // authentication setting, if any
             String[] authSettings = new String[] {  };
@@ -996,14 +1015,15 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
         }
     
         /// <summary>
-        /// Read and change document metadata. Performs metadata operations on the provided files.
+        /// Read and Change Document Metadata. Reads and updates the metadata of the provided documents based on specified operations. Upload the documents and define the metadata changes you need. This service will read the existing metadata, apply the changes, and ensure that your files contain accurate and updated information.
         /// </summary>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <param name="operation">The operation to perform on the metadata.</param>
         /// <param name="folder">The folder where the files are located.</param>
         /// <param name="name">The name of the file to perform the operation on.</param>
         /// <returns>FileResponse</returns>
-        public FileResponse PdfWebapiMetadataPost (List<FileParameter> files, MetadataOperation operation, string folder, string name)
+        public FileResponse PdfWebapiMetadataPost (List<FileParameter> files, MetadataOperation operation, string folder, string name, string documentPassword = null)
         {
     
             var path = "/pdf/webapi/metadata";
@@ -1019,6 +1039,7 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
  if (folder != null) queryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
  if (name != null) queryParams.Add("name", ApiClient.ParameterToString(name)); // query parameter
                         if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // file parameters
+if (documentPassword != null) formParams.Add("documentPassword", ApiClient.ParameterToString(documentPassword)); // form parameter
 
             // authentication setting, if any
             String[] authSettings = new String[] {  };
@@ -1035,14 +1056,15 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
         }
     
         /// <summary>
-        /// Organize document pages. Organizes the provided documents by removing or moving specified pages.
+        /// Organize Document Pages. Reorganizes the pages of the provided document based on your instructions. Upload the document and specify which pages to remove or move, and the service will rearrange the pages accordingly, ensuring that the document is organized as you require.
         /// </summary>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <param name="inputType">The format of the input files.</param>
         /// <param name="remove">The pages to remove from the document.</param>
         /// <param name="move">The pages to move within the document.</param>
         /// <returns>FileResponse</returns>
-        public FileResponse PdfWebapiOrganizePost (List<FileParameter> files, string inputType, string remove, string move)
+        public FileResponse PdfWebapiOrganizePost (List<FileParameter> files, string inputType, string remove, string move, string documentPassword = null)
         {
     
             var path = "/pdf/webapi/organize";
@@ -1058,6 +1080,7 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
  if (remove != null) queryParams.Add("remove", ApiClient.ParameterToString(remove)); // query parameter
  if (move != null) queryParams.Add("move", ApiClient.ParameterToString(move)); // query parameter
                         if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // file parameters
+if (documentPassword != null) formParams.Add("documentPassword", ApiClient.ParameterToString(documentPassword)); // form parameter
 
             // authentication setting, if any
             String[] authSettings = new String[] {  };
@@ -1074,11 +1097,12 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
         }
     
         /// <summary>
-        /// Parse document. Parses the provided files using a parser service.
+        /// Parse Document. Analyses and extracts relevant content from the provided document files. The parsing service organizes the data within your documents to make it accessible and tailored to your specific requirements.
         /// </summary>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <returns>FileResponse</returns>
-        public FileResponse PdfWebapiParsePost (List<FileParameter> files)
+        public FileResponse PdfWebapiParsePost (List<FileParameter> files, string documentPassword = null)
         {
     
             var path = "/pdf/webapi/parse";
@@ -1091,6 +1115,7 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
             String postBody = null;
     
                                     if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // file parameters
+if (documentPassword != null) formParams.Add("documentPassword", ApiClient.ParameterToString(documentPassword)); // form parameter
 
             // authentication setting, if any
             String[] authSettings = new String[] {  };
@@ -1107,9 +1132,10 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
         }
     
         /// <summary>
-        /// Redact document text. Redacts specified text from the provided documents, with options to search case-sensitively, target in text, comments, and metadata.
+        /// Redact Document Text. Redacts sensitive information from the provided documents by removing specified text, comments, and metadata. You can specify the text to be redacted and use case-sensitive search to ensure thorough removal. This service helps maintain confidentiality and security by ensuring that sensitive information is completely removed.
         /// </summary>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <param name="searchQuery">The text to search for and redact.</param>
         /// <param name="replaceText">The text to replace the found text with.</param>
         /// <param name="caseSensitive">Indicates whether the search should be case-sensitive.</param>
@@ -1117,7 +1143,7 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
         /// <param name="comments">Indicates whether comments should be redacted.</param>
         /// <param name="metadata">Indicates whether metadata should be redacted.</param>
         /// <returns>FileResponse</returns>
-        public FileResponse PdfWebapiRedactPost (List<FileParameter> files, string searchQuery, string replaceText, bool? caseSensitive, bool? text, bool? comments, bool? metadata)
+        public FileResponse PdfWebapiRedactPost (List<FileParameter> files, string searchQuery, string replaceText, bool? caseSensitive, bool? text, bool? comments, bool? metadata, string documentPassword = null)
         {
     
             var path = "/pdf/webapi/redact";
@@ -1136,6 +1162,7 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
  if (comments != null) queryParams.Add("comments", ApiClient.ParameterToString(comments)); // query parameter
  if (metadata != null) queryParams.Add("metadata", ApiClient.ParameterToString(metadata)); // query parameter
                         if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // file parameters
+if (documentPassword != null) formParams.Add("documentPassword", ApiClient.ParameterToString(documentPassword)); // form parameter
 
             // authentication setting, if any
             String[] authSettings = new String[] {  };
@@ -1187,11 +1214,12 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
         }
     
         /// <summary>
-        /// Remove document annotations. Removes annotations from the provided documents.
+        /// Remove Document Annotations. Removes all annotations, including comments, highlights, and markup, from the provided documents. By specifying the documents, this service ensures that they are cleaned of any annotations, resulting in a clean and annotation-free file.
         /// </summary>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <returns>FileResponse</returns>
-        public FileResponse PdfWebapiRemovePost (List<FileParameter> files)
+        public FileResponse PdfWebapiRemovePost (List<FileParameter> files, string documentPassword = null)
         {
     
             var path = "/pdf/webapi/remove";
@@ -1204,6 +1232,7 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
             String postBody = null;
     
                                     if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // file parameters
+if (documentPassword != null) formParams.Add("documentPassword", ApiClient.ParameterToString(documentPassword)); // form parameter
 
             // authentication setting, if any
             String[] authSettings = new String[] {  };
@@ -1220,7 +1249,7 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
         }
     
         /// <summary>
-        /// Removes document watermark. Removes a watermark from the document pages.
+        /// Remove Document Watermark. Removes an unwanted watermark from all pages of the provided document. Submit the document, and this service will efficiently eliminate the watermark, resulting in a clean version of the file without the watermark.
         /// </summary>
         /// <param name="watermarkText"></param>
         /// <param name="top"></param>
@@ -1228,11 +1257,12 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
         /// <param name="bottom"></param>
         /// <param name="right"></param>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <param name="isAllPages">Indicates whether the watermark should be removed from all pages.</param>
         /// <param name="watermarkType">The type of watermark to remove.</param>
         /// <param name="removeRange">The range of pages to remove the watermark from.</param>
         /// <returns>FileResponse</returns>
-        public FileResponse PdfWebapiRemoveWatermarkPost (string watermarkText, int? top, int? left, int? bottom, int? right, List<FileParameter> files, bool? isAllPages, WatermarkType watermarkType, string removeRange)
+        public FileResponse PdfWebapiRemoveWatermarkPost (string watermarkText, int? top, int? left, int? bottom, int? right, List<FileParameter> files, bool? isAllPages, WatermarkType watermarkType, string removeRange, string documentPassword = null)
         {
     
             var path = "/pdf/webapi/remove-watermark";
@@ -1253,6 +1283,7 @@ if (left != null) formParams.Add("left", ApiClient.ParameterToString(left)); // 
 if (bottom != null) formParams.Add("bottom", ApiClient.ParameterToString(bottom)); // form parameter
 if (right != null) formParams.Add("right", ApiClient.ParameterToString(right)); // form parameter
 if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // file parameters
+if (documentPassword != null) formParams.Add("documentPassword", ApiClient.ParameterToString(documentPassword)); // form parameter
 
             // authentication setting, if any
             String[] authSettings = new String[] {  };
@@ -1269,12 +1300,13 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
         }
     
         /// <summary>
-        /// Remove pages from document. Removes specified pages from the provided files.
+        /// Remove Pages from Document. Removes specified pages from the provided document, leaving only the pages you want to keep. Simply provide the document and specify which pages to remove, and the service will process the file accordingly.
         /// </summary>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <param name="removeRange">The range of pages to remove from the files.</param>
         /// <returns>FileResponse</returns>
-        public FileResponse PdfWebapiRemovepagesPost (List<FileParameter> files, string removeRange)
+        public FileResponse PdfWebapiRemovepagesPost (List<FileParameter> files, string removeRange, string documentPassword = null)
         {
     
             var path = "/pdf/webapi/removepages";
@@ -1288,6 +1320,7 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
     
              if (removeRange != null) queryParams.Add("removeRange", ApiClient.ParameterToString(removeRange)); // query parameter
                         if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // file parameters
+if (documentPassword != null) formParams.Add("documentPassword", ApiClient.ParameterToString(documentPassword)); // form parameter
 
             // authentication setting, if any
             String[] authSettings = new String[] {  };
@@ -1304,11 +1337,12 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
         }
     
         /// <summary>
-        /// Repair document. Repairs the provided files.
+        /// Repair Document. Repairs a corrupted or error-ridden document by identifying and fixing issues. Upload the problematic file, and this service will restore it to a usable state.
         /// </summary>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <returns>FileResponse</returns>
-        public FileResponse PdfWebapiRepairPost (List<FileParameter> files)
+        public FileResponse PdfWebapiRepairPost (List<FileParameter> files, string documentPassword = null)
         {
     
             var path = "/pdf/webapi/repair";
@@ -1321,6 +1355,7 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
             String postBody = null;
     
                                     if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // file parameters
+if (documentPassword != null) formParams.Add("documentPassword", ApiClient.ParameterToString(documentPassword)); // form parameter
 
             // authentication setting, if any
             String[] authSettings = new String[] {  };
@@ -1337,9 +1372,10 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
         }
     
         /// <summary>
-        /// Resize document. Resizes the provided files to the specified dimensions or using a preset size.
+        /// Resize Document. Resizes the document to fit the specified dimensions or preset sizes. Provide the file and specify the desired dimensions, or select from available preset sizes to adjust the document accordingly.
         /// </summary>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <param name="inputType">The format of the input files.</param>
         /// <param name="outputType">The desired format for the output files.</param>
         /// <param name="resizeType">The type of resizing to apply.</param>
@@ -1351,7 +1387,7 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
         /// <param name="useProportions">Indicates whether to maintain the aspect ratio when resizing.</param>
         /// <param name="pageSize">The page size to use for the resized files.</param>
         /// <returns>FileResponse</returns>
-        public FileResponse PdfWebapiResizePost (List<FileParameter> files, string inputType, string outputType, ResizeType resizeType, ResizePresetType presetType, ResizePresetSize presetSize, int? width, int? height, int? percentage, bool? useProportions, ResizePageSize pageSize)
+        public FileResponse PdfWebapiResizePost (List<FileParameter> files, string inputType, string outputType, ResizeType resizeType, ResizePresetType presetType, ResizePresetSize presetSize, int? width, int? height, int? percentage, bool? useProportions, ResizePageSize pageSize, string documentPassword = null)
         {
     
             var path = "/pdf/webapi/resize";
@@ -1374,6 +1410,7 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
  if (useProportions != null) queryParams.Add("useProportions", ApiClient.ParameterToString(useProportions)); // query parameter
  if (pageSize != null) queryParams.Add("pageSize", ApiClient.ParameterToString(pageSize)); // query parameter
                         if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // file parameters
+if (documentPassword != null) formParams.Add("documentPassword", ApiClient.ParameterToString(documentPassword)); // form parameter
 
             // authentication setting, if any
             String[] authSettings = new String[] {  };
@@ -1390,14 +1427,15 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
         }
     
         /// <summary>
-        /// Rotate document. Rotates the provided files by a specified angle, with options for rotation type and page number.
+        /// Rotate Document. Rotates the document by a specified angle, allowing for adjustment of the document&#x27;s orientation. You can choose the type of rotation and target specific pages to ensure the document is aligned according to your needs.
         /// </summary>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <param name="angle">The angle by which to rotate the files.</param>
         /// <param name="rotateType">The type of rotation to perform.</param>
         /// <param name="pageNum">The page number to rotate, if applicable.</param>
         /// <returns>FileResponse</returns>
-        public FileResponse PdfWebapiRotatePost (List<FileParameter> files, RotateAngle angle, RotateType rotateType, string pageNum)
+        public FileResponse PdfWebapiRotatePost (List<FileParameter> files, RotateAngle angle, RotateType rotateType, string pageNum, string documentPassword = null)
         {
     
             var path = "/pdf/webapi/rotate";
@@ -1413,6 +1451,7 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
  if (rotateType != null) queryParams.Add("rotateType", ApiClient.ParameterToString(rotateType)); // query parameter
  if (pageNum != null) queryParams.Add("pageNum", ApiClient.ParameterToString(pageNum)); // query parameter
                         if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // file parameters
+if (documentPassword != null) formParams.Add("documentPassword", ApiClient.ParameterToString(documentPassword)); // form parameter
 
             // authentication setting, if any
             String[] authSettings = new String[] {  };
@@ -1429,12 +1468,13 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
         }
     
         /// <summary>
-        /// Search document text. Searches the provided files for the specified query and makr found text with yellow background.
+        /// Search Document Text. Searches the provided documents for the specified query and highlights the found text with a yellow background. This service helps you quickly locate and review relevant sections of your documents.
         /// </summary>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <param name="query">The text to search for within the files.</param>
         /// <returns>FileResponse</returns>
-        public FileResponse PdfWebapiSearchPost (List<FileParameter> files, string query)
+        public FileResponse PdfWebapiSearchPost (List<FileParameter> files, string query, string documentPassword = null)
         {
     
             var path = "/pdf/webapi/search";
@@ -1448,6 +1488,7 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
     
              if (query != null) queryParams.Add("query", ApiClient.ParameterToString(query)); // query parameter
                         if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // file parameters
+if (documentPassword != null) formParams.Add("documentPassword", ApiClient.ParameterToString(documentPassword)); // form parameter
 
             // authentication setting, if any
             String[] authSettings = new String[] {  };
@@ -1464,7 +1505,7 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
         }
     
         /// <summary>
-        /// Make scanned pdf searchable. Converts the provided files into a searchable PDF format for the specified language.
+        /// Make Scanned PDF Searchable. Converts scanned PDFs into a searchable PDF format by recognizing and indexing text. This service ensures that you can easily search through your documents by making the text searchable in the specified language.
         /// </summary>
         /// <param name="files"></param>
         /// <param name="lang">The language of the files to be converted.</param>
@@ -1499,17 +1540,18 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
         }
     
         /// <summary>
-        /// Add signature to document. Adds a signature, text and image to the provided documents.
+        /// Add Signature to Document. Adds a signature to the provided documents, allowing for the insertion of both text and image signatures. This service ensures that your documents are properly signed and authenticated according to your specifications.
         /// </summary>
         /// <param name="image"></param>
         /// <param name="text"></param>
         /// <param name="textColor"></param>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <param name="inputType">The format of the input files.</param>
         /// <param name="outputType">The desired format for the output files.</param>
         /// <param name="signatureType">The type of signature to add.</param>
         /// <returns>FileResponse</returns>
-        public FileResponse PdfWebapiSignaturePost (string image, string text, string textColor, List<FileParameter> files, string inputType, string outputType, SignatureType signatureType)
+        public FileResponse PdfWebapiSignaturePost (string image, string text, string textColor, List<FileParameter> files, string inputType, string outputType, SignatureType signatureType, string documentPassword = null)
         {
     
             var path = "/pdf/webapi/signature";
@@ -1528,6 +1570,7 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
 if (text != null) formParams.Add("text", ApiClient.ParameterToString(text)); // form parameter
 if (textColor != null) formParams.Add("textColor", ApiClient.ParameterToString(textColor)); // form parameter
 if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // file parameters
+if (documentPassword != null) formParams.Add("documentPassword", ApiClient.ParameterToString(documentPassword)); // form parameter
 
             // authentication setting, if any
             String[] authSettings = new String[] {  };
@@ -1544,13 +1587,15 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
         }
     
         /// <summary>
-        /// Split document. Splits the provided documents based on the specified split type and page rage to spit.
+        /// Split Document. Splits a document into smaller parts based on specified criteria, such as type or page range. This service ensures that each segment meets your exact requirements, simplifying document management and organization.
         /// </summary>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
+        /// <param name="inputType">The format of the input files.</param>
         /// <param name="splitType">The type of splitting to be performed.</param>
         /// <param name="pairs">Optional page rage for the splitting operation.</param>
         /// <returns>FileResponse</returns>
-        public FileResponse PdfWebapiSplitdocPost (List<FileParameter> files, SplitDocType splitType, string pairs)
+        public FileResponse PdfWebapiSplitdocPost (List<FileParameter> files, string inputType, SplitDocType splitType, string pairs, string documentPassword = null)
         {
     
             var path = "/pdf/webapi/splitdoc";
@@ -1562,9 +1607,11 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
     
-             if (splitType != null) queryParams.Add("splitType", ApiClient.ParameterToString(splitType)); // query parameter
+             if (inputType != null) queryParams.Add("inputType", ApiClient.ParameterToString(inputType)); // query parameter
+ if (splitType != null) queryParams.Add("splitType", ApiClient.ParameterToString(splitType)); // query parameter
  if (pairs != null) queryParams.Add("pairs", ApiClient.ParameterToString(pairs)); // query parameter
                         if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // file parameters
+if (documentPassword != null) formParams.Add("documentPassword", ApiClient.ParameterToString(documentPassword)); // form parameter
 
             // authentication setting, if any
             String[] authSettings = new String[] {  };
@@ -1581,15 +1628,16 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
         }
     
         /// <summary>
-        /// Split image. Splits the provided images into smaller parts based on the specified parameters.
+        /// Split Image. Splits large images into smaller sections according to the specified parameters, making it easier to handle and process image data.
         /// </summary>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <param name="splitType">The type of splitting to be performed.</param>
         /// <param name="vertical">The number of vertical splits to create.</param>
         /// <param name="horizontal">The number of horizontal splits to create.</param>
         /// <param name="outputType">The desired output format for the split images.</param>
         /// <returns>FileResponse</returns>
-        public FileResponse PdfWebapiSplitimagePost (List<FileParameter> files, SplitImageType splitType, int? vertical, int? horizontal, string outputType)
+        public FileResponse PdfWebapiSplitimagePost (List<FileParameter> files, SplitImageType splitType, int? vertical, int? horizontal, string outputType, string documentPassword = null)
         {
     
             var path = "/pdf/webapi/splitimage";
@@ -1606,6 +1654,7 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
  if (horizontal != null) queryParams.Add("horizontal", ApiClient.ParameterToString(horizontal)); // query parameter
  if (outputType != null) queryParams.Add("outputType", ApiClient.ParameterToString(outputType)); // query parameter
                         if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // file parameters
+if (documentPassword != null) formParams.Add("documentPassword", ApiClient.ParameterToString(documentPassword)); // form parameter
 
             // authentication setting, if any
             String[] authSettings = new String[] {  };
@@ -1657,12 +1706,12 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
         }
     
         /// <summary>
-        /// Unlock document. Attempts to unlock a document with an password and associated files.
+        /// Unlock Document. Attempts to unlock a password-protected document, using any associated files if necessary, to grant access to the content.
         /// </summary>
+        /// <param name="password"></param>
         /// <param name="files"></param>
-        /// <param name="passw">The password used in locked document.</param>
         /// <returns>FileResponse</returns>
-        public FileResponse PdfWebapiUnlockPost (List<FileParameter> files, string passw)
+        public FileResponse PdfWebapiUnlockPost (string password, List<FileParameter> files)
         {
     
             var path = "/pdf/webapi/unlock";
@@ -1674,8 +1723,8 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
             var fileParams = new Dictionary<String, FileParameter>();
             String postBody = null;
     
-             if (passw != null) queryParams.Add("passw", ApiClient.ParameterToString(passw)); // query parameter
-                        if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // file parameters
+                                    if (password != null) formParams.Add("password", ApiClient.ParameterToString(password)); // form parameter
+if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // file parameters
 
             // authentication setting, if any
             String[] authSettings = new String[] {  };
@@ -1692,12 +1741,13 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
         }
     
         /// <summary>
-        /// Verify document certificate. Verifies the electronic signature of the provided files.
+        /// Verify Document Certificate. Verifies the electronic signature of the provided document to ensure its authenticity and integrity. This service checks the digital certificates in the document to confirm their validity and trustworthiness.
         /// </summary>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <param name="inputType">The format of the input files.</param>
         /// <returns>FileResponse</returns>
-        public FileResponse PdfWebapiVerifyEsignPost (List<FileParameter> files, string inputType)
+        public FileResponse PdfWebapiVerifyEsignPost (List<FileParameter> files, string inputType, string documentPassword = null)
         {
     
             var path = "/pdf/webapi/verify_esign";
@@ -1711,6 +1761,7 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
     
              if (inputType != null) queryParams.Add("inputType", ApiClient.ParameterToString(inputType)); // query parameter
                         if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // file parameters
+if (documentPassword != null) formParams.Add("documentPassword", ApiClient.ParameterToString(documentPassword)); // form parameter
 
             // authentication setting, if any
             String[] authSettings = new String[] {  };
@@ -1727,9 +1778,10 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
         }
     
         /// <summary>
-        /// Add watermark to document. Adds a watermark to the provided files.
+        /// Add Watermark to Document. Adds a watermark to the provided documents, helping to protect and identify them. This service ensures that the watermark is applied according to your specifications, enhancing the security and ownership of your content.
         /// </summary>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <param name="inputType">The format of the input files.</param>
         /// <param name="outputType">The desired format for the output files.</param>
         /// <param name="isColored">Indicate is watermark will be in color or grayscale.</param>
@@ -1748,7 +1800,7 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
         /// <param name="pageFrom">The starting page number for the watermark.</param>
         /// <param name="pageTo">The ending page number for the watermark.</param>
         /// <returns>FileResponse</returns>
-        public FileResponse PdfWebapiWatermarkPost (List<FileParameter> files, string inputType, string outputType, bool? isColored, bool? isText, string text, string name, int? size, bool? bold, bool? italic, bool? underlined, string color, bool? isBackground, int? rotation, float? transparency, bool? layer, int? pageFrom, int? pageTo)
+        public FileResponse PdfWebapiWatermarkPost (List<FileParameter> files, string inputType, string outputType, bool? isColored, bool? isText, string text, string name, int? size, bool? bold, bool? italic, bool? underlined, string color, bool? isBackground, int? rotation, float? transparency, bool? layer, int? pageFrom, int? pageTo, string documentPassword = null)
         {
     
             var path = "/pdf/webapi/watermark";
@@ -1778,6 +1830,7 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
  if (pageFrom != null) queryParams.Add("pageFrom", ApiClient.ParameterToString(pageFrom)); // query parameter
  if (pageTo != null) queryParams.Add("pageTo", ApiClient.ParameterToString(pageTo)); // query parameter
                         if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // file parameters
+if (documentPassword != null) formParams.Add("documentPassword", ApiClient.ParameterToString(documentPassword)); // form parameter
 
             // authentication setting, if any
             String[] authSettings = new String[] {  };
@@ -1794,12 +1847,13 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
         }
     
         /// <summary>
-        /// Count words and chars in document. Counts the words in the provided files within the specified page range.
+        /// Count Words and Characters in Document. Counts the words and characters in the provided documents within the specified page range. This service helps you accurately determine the length and content density of your documents, ensuring compliance with any required specifications or limits.
         /// </summary>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <param name="pageRange">The range of pages to count words in.</param>
         /// <returns>FileResponse</returns>
-        public FileResponse PdfWebapiWordcounterPost (List<FileParameter> files, string pageRange)
+        public FileResponse PdfWebapiWordcounterPost (List<FileParameter> files, string pageRange, string documentPassword = null)
         {
     
             var path = "/pdf/webapi/wordcounter";
@@ -1813,6 +1867,7 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
     
              if (pageRange != null) queryParams.Add("pageRange", ApiClient.ParameterToString(pageRange)); // query parameter
                         if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // file parameters
+if (documentPassword != null) formParams.Add("documentPassword", ApiClient.ParameterToString(documentPassword)); // form parameter
 
             // authentication setting, if any
             String[] authSettings = new String[] {  };
@@ -1829,12 +1884,13 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
         }
     
         /// <summary>
-        /// Convert XFA format to a another format. Converts the provided documents from XFA format to a different format.
+        /// Convert XFA Format to Another Format. Converts XFA documents to the specified format, ensuring seamless compatibility and usability. This service supports a wide range of target formats, allowing users to choose the most suitable format for their specific needs. The conversion process maintains the integrity of the original document while adapting it to the desired format, making it ideal for editing, sharing, or archiving..
         /// </summary>
         /// <param name="files"></param>
+        /// <param name="documentPassword"></param>
         /// <param name="inputType">The format of the input files.</param>
         /// <returns>FileResponse</returns>
-        public FileResponse PdfWebapiXfaconvertPost (List<FileParameter> files, string inputType)
+        public FileResponse PdfWebapiXfaconvertPost (List<FileParameter> files, string inputType, string documentPassword = null)
         {
     
             var path = "/pdf/webapi/xfaconvert";
@@ -1848,6 +1904,7 @@ if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // 
     
              if (inputType != null) queryParams.Add("inputType", ApiClient.ParameterToString(inputType)); // query parameter
                         if (files != null) fileParams = files.ToDictionary(f => f.FileName, f => f); // file parameters
+if (documentPassword != null) formParams.Add("documentPassword", ApiClient.ParameterToString(documentPassword)); // form parameter
 
             // authentication setting, if any
             String[] authSettings = new String[] {  };
