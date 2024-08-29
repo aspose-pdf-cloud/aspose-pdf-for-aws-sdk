@@ -1,4 +1,4 @@
-# io.swagger.client - Kotlin client library for Aspose.Pdf RestApi
+# io.swagger.client - Kotlin client library for Aspose.PDF for AWS
 
 ## Requires
 
@@ -9,13 +9,13 @@
 
 First, create the gradle wrapper script:
 
-```shell
+```
 gradle wrapper
 ```
 
 Then, run:
 
-```shell
+```
 ./gradlew check assemble
 ```
 
@@ -35,43 +35,42 @@ All URIs are relative to */*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*ApiApi* | [**pdfWebapiAddnumberPost**](docs/ApiApi.md#pdfwebapiaddnumberpost) | **POST** /pdf/webapi/addnumber | Add page numbers to document.
-*ApiApi* | [**pdfWebapiChangeFontsPost**](docs/ApiApi.md#pdfwebapichangefontspost) | **POST** /pdf/webapi/change-fonts | 
+*ApiApi* | [**pdfWebapiAddnumberPost**](docs/ApiApi.md#pdfwebapiaddnumberpost) | **POST** /pdf/webapi/addnumber | Add Page Numbers to Document.
+*ApiApi* | [**pdfWebapiChangeFontsPost**](docs/ApiApi.md#pdfwebapichangefontspost) | **POST** /pdf/webapi/change-fonts | Change Fonts in Provided Files.
 *ApiApi* | [**pdfWebapiComparisonPost**](docs/ApiApi.md#pdfwebapicomparisonpost) | **POST** /pdf/webapi/comparison | Compare documents text.
-*ApiApi* | [**pdfWebapiCompressPost**](docs/ApiApi.md#pdfwebapicompresspost) | **POST** /pdf/webapi/compress | Compress document.
-*ApiApi* | [**pdfWebapiConvertPost**](docs/ApiApi.md#pdfwebapiconvertpost) | **POST** /pdf/webapi/convert | Convert document to another format.
-*ApiApi* | [**pdfWebapiConvertWebpagePost**](docs/ApiApi.md#pdfwebapiconvertwebpagepost) | **POST** /pdf/webapi/convert-webpage | Convert web page to document.
-*ApiApi* | [**pdfWebapiCropPost**](docs/ApiApi.md#pdfwebapicroppost) | **POST** /pdf/webapi/crop | Crop document.
+*ApiApi* | [**pdfWebapiCompressPost**](docs/ApiApi.md#pdfwebapicompresspost) | **POST** /pdf/webapi/compress | Compress Document.
+*ApiApi* | [**pdfWebapiConvertPost**](docs/ApiApi.md#pdfwebapiconvertpost) | **POST** /pdf/webapi/convert | Convert Document to Another Format.
+*ApiApi* | [**pdfWebapiConvertWebpagePost**](docs/ApiApi.md#pdfwebapiconvertwebpagepost) | **POST** /pdf/webapi/convert-webpage | Convert Web Page to Document.
+*ApiApi* | [**pdfWebapiCropPost**](docs/ApiApi.md#pdfwebapicroppost) | **POST** /pdf/webapi/crop | Crop Document.
 *ApiApi* | [**pdfWebapiDownloadIdGet**](docs/ApiApi.md#pdfwebapidownloadidget) | **GET** /pdf/webapi/download/{id} | File download.
-*ApiApi* | [**pdfWebapiEsignPost**](docs/ApiApi.md#pdfwebapiesignpost) | **POST** /pdf/webapi/esign | Sign document with certificate.
-*ApiApi* | [**pdfWebapiExtractPost**](docs/ApiApi.md#pdfwebapiextractpost) | **POST** /pdf/webapi/extract | Extract tables from document.
-*ApiApi* | [**pdfWebapiFormFillerPost**](docs/ApiApi.md#pdfwebapiformfillerpost) | **POST** /pdf/webapi/form-filler | Fill form.
+*ApiApi* | [**pdfWebapiEsignPost**](docs/ApiApi.md#pdfwebapiesignpost) | **POST** /pdf/webapi/esign | Sign Document with Certificate.
+*ApiApi* | [**pdfWebapiExtractPost**](docs/ApiApi.md#pdfwebapiextractpost) | **POST** /pdf/webapi/extract | Extract Tables from Document.
 *ApiApi* | [**pdfWebapiGifPost**](docs/ApiApi.md#pdfwebapigifpost) | **POST** /pdf/webapi/gif | Make GIF.
-*ApiApi* | [**pdfWebapiHashPost**](docs/ApiApi.md#pdfwebapihashpost) | **POST** /pdf/webapi/hash | Calculate document hash.
+*ApiApi* | [**pdfWebapiHashPost**](docs/ApiApi.md#pdfwebapihashpost) | **POST** /pdf/webapi/hash | Calculate Document Hash.
 *ApiApi* | [**pdfWebapiLockPost**](docs/ApiApi.md#pdfwebapilockpost) | **POST** /pdf/webapi/lock | Lock document.
-*ApiApi* | [**pdfWebapiMergePost**](docs/ApiApi.md#pdfwebapimergepost) | **POST** /pdf/webapi/merge | Merge documents.
-*ApiApi* | [**pdfWebapiMetadataPost**](docs/ApiApi.md#pdfwebapimetadatapost) | **POST** /pdf/webapi/metadata | Read and change document metadata.
-*ApiApi* | [**pdfWebapiOrganizePost**](docs/ApiApi.md#pdfwebapiorganizepost) | **POST** /pdf/webapi/organize | Organize document pages.
-*ApiApi* | [**pdfWebapiParsePost**](docs/ApiApi.md#pdfwebapiparsepost) | **POST** /pdf/webapi/parse | Parse document.
-*ApiApi* | [**pdfWebapiRedactPost**](docs/ApiApi.md#pdfwebapiredactpost) | **POST** /pdf/webapi/redact | Redact document text.
+*ApiApi* | [**pdfWebapiMergePost**](docs/ApiApi.md#pdfwebapimergepost) | **POST** /pdf/webapi/merge | Merge Documents.
+*ApiApi* | [**pdfWebapiMetadataPost**](docs/ApiApi.md#pdfwebapimetadatapost) | **POST** /pdf/webapi/metadata | Read and Change Document Metadata.
+*ApiApi* | [**pdfWebapiOrganizePost**](docs/ApiApi.md#pdfwebapiorganizepost) | **POST** /pdf/webapi/organize | Organize Document Pages.
+*ApiApi* | [**pdfWebapiParsePost**](docs/ApiApi.md#pdfwebapiparsepost) | **POST** /pdf/webapi/parse | Parse Document.
+*ApiApi* | [**pdfWebapiRedactPost**](docs/ApiApi.md#pdfwebapiredactpost) | **POST** /pdf/webapi/redact | Redact Document Text.
 *ApiApi* | [**pdfWebapiRemoveIdPost**](docs/ApiApi.md#pdfwebapiremoveidpost) | **POST** /pdf/webapi/remove/{id} | Remove stored files.
-*ApiApi* | [**pdfWebapiRemovePost**](docs/ApiApi.md#pdfwebapiremovepost) | **POST** /pdf/webapi/remove | Remove document annotations.
-*ApiApi* | [**pdfWebapiRemoveWatermarkPost**](docs/ApiApi.md#pdfwebapiremovewatermarkpost) | **POST** /pdf/webapi/remove-watermark | Removes document watermark.
-*ApiApi* | [**pdfWebapiRemovepagesPost**](docs/ApiApi.md#pdfwebapiremovepagespost) | **POST** /pdf/webapi/removepages | Remove pages from document.
-*ApiApi* | [**pdfWebapiRepairPost**](docs/ApiApi.md#pdfwebapirepairpost) | **POST** /pdf/webapi/repair | Repair document.
-*ApiApi* | [**pdfWebapiResizePost**](docs/ApiApi.md#pdfwebapiresizepost) | **POST** /pdf/webapi/resize | Resize document.
-*ApiApi* | [**pdfWebapiRotatePost**](docs/ApiApi.md#pdfwebapirotatepost) | **POST** /pdf/webapi/rotate | Rotate document.
-*ApiApi* | [**pdfWebapiSearchPost**](docs/ApiApi.md#pdfwebapisearchpost) | **POST** /pdf/webapi/search | Search document text.
-*ApiApi* | [**pdfWebapiSearchablePost**](docs/ApiApi.md#pdfwebapisearchablepost) | **POST** /pdf/webapi/searchable | Make scanned pdf searchable.
-*ApiApi* | [**pdfWebapiSignaturePost**](docs/ApiApi.md#pdfwebapisignaturepost) | **POST** /pdf/webapi/signature | Add signature to document.
-*ApiApi* | [**pdfWebapiSplitdocPost**](docs/ApiApi.md#pdfwebapisplitdocpost) | **POST** /pdf/webapi/splitdoc | Split document.
-*ApiApi* | [**pdfWebapiSplitimagePost**](docs/ApiApi.md#pdfwebapisplitimagepost) | **POST** /pdf/webapi/splitimage | Split image.
+*ApiApi* | [**pdfWebapiRemovePost**](docs/ApiApi.md#pdfwebapiremovepost) | **POST** /pdf/webapi/remove | Remove Document Annotations.
+*ApiApi* | [**pdfWebapiRemoveWatermarkPost**](docs/ApiApi.md#pdfwebapiremovewatermarkpost) | **POST** /pdf/webapi/remove-watermark | Remove Document Watermark.
+*ApiApi* | [**pdfWebapiRemovepagesPost**](docs/ApiApi.md#pdfwebapiremovepagespost) | **POST** /pdf/webapi/removepages | Remove Pages from Document.
+*ApiApi* | [**pdfWebapiRepairPost**](docs/ApiApi.md#pdfwebapirepairpost) | **POST** /pdf/webapi/repair | Repair Document.
+*ApiApi* | [**pdfWebapiResizePost**](docs/ApiApi.md#pdfwebapiresizepost) | **POST** /pdf/webapi/resize | Resize Document.
+*ApiApi* | [**pdfWebapiRotatePost**](docs/ApiApi.md#pdfwebapirotatepost) | **POST** /pdf/webapi/rotate | Rotate Document.
+*ApiApi* | [**pdfWebapiSearchPost**](docs/ApiApi.md#pdfwebapisearchpost) | **POST** /pdf/webapi/search | Search Document Text.
+*ApiApi* | [**pdfWebapiSearchablePost**](docs/ApiApi.md#pdfwebapisearchablepost) | **POST** /pdf/webapi/searchable | Make Scanned PDF Searchable.
+*ApiApi* | [**pdfWebapiSignaturePost**](docs/ApiApi.md#pdfwebapisignaturepost) | **POST** /pdf/webapi/signature | Add Signature to Document.
+*ApiApi* | [**pdfWebapiSplitdocPost**](docs/ApiApi.md#pdfwebapisplitdocpost) | **POST** /pdf/webapi/splitdoc | Split Document.
+*ApiApi* | [**pdfWebapiSplitimagePost**](docs/ApiApi.md#pdfwebapisplitimagepost) | **POST** /pdf/webapi/splitimage | Split Image.
 *ApiApi* | [**pdfWebapiStatusIdPost**](docs/ApiApi.md#pdfwebapistatusidpost) | **POST** /pdf/webapi/status/{id} | Processing status.
-*ApiApi* | [**pdfWebapiUnlockPost**](docs/ApiApi.md#pdfwebapiunlockpost) | **POST** /pdf/webapi/unlock | Unlock document.
-*ApiApi* | [**pdfWebapiVerifyEsignPost**](docs/ApiApi.md#pdfwebapiverifyesignpost) | **POST** /pdf/webapi/verify_esign | Verify document certificate.
-*ApiApi* | [**pdfWebapiWatermarkPost**](docs/ApiApi.md#pdfwebapiwatermarkpost) | **POST** /pdf/webapi/watermark | Add watermark to document.
-*ApiApi* | [**pdfWebapiWordcounterPost**](docs/ApiApi.md#pdfwebapiwordcounterpost) | **POST** /pdf/webapi/wordcounter | Count words and chars in document.
-*ApiApi* | [**pdfWebapiXfaconvertPost**](docs/ApiApi.md#pdfwebapixfaconvertpost) | **POST** /pdf/webapi/xfaconvert | Convert XFA format to a another format.
+*ApiApi* | [**pdfWebapiUnlockPost**](docs/ApiApi.md#pdfwebapiunlockpost) | **POST** /pdf/webapi/unlock | Unlock Document.
+*ApiApi* | [**pdfWebapiVerifyEsignPost**](docs/ApiApi.md#pdfwebapiverifyesignpost) | **POST** /pdf/webapi/verify_esign | Verify Document Certificate.
+*ApiApi* | [**pdfWebapiWatermarkPost**](docs/ApiApi.md#pdfwebapiwatermarkpost) | **POST** /pdf/webapi/watermark | Add Watermark to Document.
+*ApiApi* | [**pdfWebapiWordcounterPost**](docs/ApiApi.md#pdfwebapiwordcounterpost) | **POST** /pdf/webapi/wordcounter | Count Words and Characters in Document.
+*ApiApi* | [**pdfWebapiXfaconvertPost**](docs/ApiApi.md#pdfwebapixfaconvertpost) | **POST** /pdf/webapi/xfaconvert | Convert XFA Format to Another Format.
 
 <a name="documentation-for-models"></a>
 ## Documentation for Models
@@ -97,6 +96,7 @@ Class | Method | HTTP request | Description
  - [io.swagger.client.models.SignatureType](docs/SignatureType.md)
  - [io.swagger.client.models.SplitDocType](docs/SplitDocType.md)
  - [io.swagger.client.models.SplitImageType](docs/SplitImageType.md)
+ - [io.swagger.client.models.TranslationSource](docs/TranslationSource.md)
  - [io.swagger.client.models.WatermarkType](docs/WatermarkType.md)
  - [io.swagger.client.models.WebapiAddnumberBody](docs/WebapiAddnumberBody.md)
  - [io.swagger.client.models.WebapiChangefontsBody](docs/WebapiChangefontsBody.md)
@@ -107,7 +107,6 @@ Class | Method | HTTP request | Description
  - [io.swagger.client.models.WebapiCropBody](docs/WebapiCropBody.md)
  - [io.swagger.client.models.WebapiEsignBody](docs/WebapiEsignBody.md)
  - [io.swagger.client.models.WebapiExtractBody](docs/WebapiExtractBody.md)
- - [io.swagger.client.models.WebapiFormfillerBody](docs/WebapiFormfillerBody.md)
  - [io.swagger.client.models.WebapiGifBody](docs/WebapiGifBody.md)
  - [io.swagger.client.models.WebapiHashBody](docs/WebapiHashBody.md)
  - [io.swagger.client.models.WebapiLockBody](docs/WebapiLockBody.md)

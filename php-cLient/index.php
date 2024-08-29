@@ -390,10 +390,10 @@ $apiInstance = new Swagger\Client\Api\ApiApi(
 //////////////////////// OK ///////////////////////////////////////////////
 //$files = array("test.pdf"); // string[] |
 //$split_type = 1; // int | The type of splitting to be performed.
-//$pairs = "1"; // string | Optional page rage for the splitting operation.
+//$pars = "1"; // string | Optional page rage for the splitting operation.
 //
 //try {
-//    $result = $apiInstance->pdfWebapiSplitdocPost($files, $split_type, $pairs);
+//    $result = $apiInstance->pdfWebapiSplitdocPost($files, $split_type, $pars);
 //    print_r($result);
 //} catch (Exception $e) {
 //    echo 'Exception when calling ApiApi->pdfWebapiSplitdocPost: ', $e->getMessage(), PHP_EOL;

@@ -9,3 +9,4 @@ Name | Type | Description | Notes
 **bottom** | **Integer** |  |  [optional]
 **right** | **Integer** |  |  [optional]
 **files** | [**List&lt;File&gt;**](File.md) |  |  [optional]
+**documentPassword** | **String** |  |  [optional]

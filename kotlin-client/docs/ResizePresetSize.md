@@ -10,7 +10,7 @@
     * `TWITTERPOST` (value: `"Twitter_Post"`)
     * `YOUTUBETHUMBNAIL` (value: `"Youtube_Thumbnail"`)
     * `PINTERESTPIN` (value: `"Pinterest_Pin"`)
-    * `LINEDINSHAREDIMAGE` (value: `"LinedIn_Shared_Image"`)
+    * `LINKEDINSHAREDIMAGE` (value: `"LinkedIn_Shared_Image"`)
     * `SNAPCHATSTORY` (value: `"Snapchat_Story"`)
     * `STANDARDWIDESCREEN` (value: `"Standard_Widescreen"`)
     * `STANDARDIPHONE` (value: `"Standard_iPhone"`)
