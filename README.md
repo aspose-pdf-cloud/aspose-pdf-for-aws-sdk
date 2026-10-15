@@ -1,105 +1,4 @@
-# Aspose.PDF for AWS Client SDKs
-
-
-  * [Pricing](#pricing)
-
-  * [Getting Started with Aspose.PDF for AWS](#getting-started-with-asposepdf-for-aws)
-    * [Reporting Issues](#reporting-issues)
-    * [Steps](#steps)
-
-  * [Using Swagger UI](#using-swagger-ui)
-
-  * [Conversion PDF to DOCX example](#conversion-pdf-to-docx-example)
-
-  * [Error Handling](#error-handling)
-
-  * [Installation](#installation)
-
-  * [Creating an AWS S3 Bucket](#creating-an-aws-s3-bucket)
-
-  * [Setup Container](#setup-container)
-
-  * [Environment Variables](#environment-variables)
-
-  * [Deploy Container on Amazon ECS](#deploy-container-on-amazon-ecs)
-
-  * [Deploy Container on Amazon EKS](#deploy-container-on-amazon-eks)
-
-  * [Monitoring Health of Instance](#monitoring-health-of-instance)
-
-  * [Handling Sensitive Customer Information](#handling-sensitive-customer-information)
-
-  * [Change Ports on ECS](#change-ports-on-ecs)
-  * [Changing Ports on EKS](#changing-ports-on-eks)
-
-  * [Setting Up HTTPS Certificate](#setting-up-https-certificate)
-
-  * [Document with Passwords](#document-with-passwords)
-
-  * [File Uploads via External and Internal Links](#file-uploads-via-external-and-internal-links)
-
-  * [AWS S3 File Storage Structure](#aws-s3-file-storage-structure)
-
-  * [Using Encrypted File Storage](#using-encrypted-file-storage)
-
-  * [Immediate Remove of processed files](#immediate-remove-of-processed-files)
-
-  * [Securing S3 Bucket](#securing-s3-bucket)
-
-  * [Rotating HTTPS Certificates on ECS](#rotating-https-certificates-on-ecs)
-
-  * [Integrating AWS Key Management Service on ECS](#integrating-aws-key-management-service-on-ecs)
-
-  * [Rotating HTTPS Certificates on EKS](#rotating-https-certificates-on-eks)
-
-  * [Integrating AWS Key Management Service on EKS](#integrating-aws-key-management-service-on-eks)
-
-  * [Client SDKs](#client-sdks)
-    * [[.NET 6.0](https://github.com/aspose-pdf-cloud/aspose-pdf-for-aws-sdk/tree/main/dotnet-client)](#net-60httpsgithubcomaspose-pdf-cloudaspose-pdf-for-aws-sdktreemaindotnet-client)
-    * [[Java 11](https://github.com/aspose-pdf-cloud/aspose-pdf-for-aws-sdk/tree/main/java-client)](#java-11httpsgithubcomaspose-pdf-cloudaspose-pdf-for-aws-sdktreemainjava-client)
-    * [[PHP 5.5](https://github.com/aspose-pdf-cloud/aspose-pdf-for-aws-sdk/tree/main/php-cLient)](#php-55httpsgithubcomaspose-pdf-cloudaspose-pdf-for-aws-sdktreemainphp-client)
-    * [[Kotlin 1.4.0](https://github.com/aspose-pdf-cloud/aspose-pdf-for-aws-sdk/tree/main/kotlin-client)](#kotlin-140httpsgithubcomaspose-pdf-cloudaspose-pdf-for-aws-sdktreemainkotlin-client)
-
-  * [Release Notes](#release-notes)
-    * [Support](#support)
-
-  * [**Version:** 1 **Release Date:** 1 Jul 2024](#version-1-release-date-1-jul-2024)
-
-
-  * [**Aspose.PDF for AWS Features**](#asposepdf-for-aws-features)
-    * [**Add Page Numbers to Document.**](#add-page-numbers-to-document)
-    * [**Change Fonts in Provided Files.**](#change-fonts-in-provided-files)
-    * [**Compare documents text.**](#compare-documents-text)
-    * [**Compress Document.**](#compress-document)
-    * [**Convert Document to Another Format.**](#convert-document-to-another-format)
-    * [**Convert Web Page to Document.**](#convert-web-page-to-document)
-    * [**Crop Document.**](#crop-document)
-    * [**Sign Document with Certificate.**](#sign-document-with-certificate)
-    * [**Extract Tables from Document.**](#extract-tables-from-document)
-    * [**Make GIF.**](#make-gif)
-    * [**Calculate Document Hash.**](#calculate-document-hash)
-    * [**Lock document.**](#lock-document)
-    * [**Merge Documents.**](#merge-documents)
-    * [**Read and Change Document Metadata.**](#read-and-change-document-metadata)
-    * [**Organize Document Pages.**](#organize-document-pages)
-    * [**Parse Document.**](#parse-document)
-    * [**Redact Document Text.**](#redact-document-text)
-    * [**Remove Document Annotations.**](#remove-document-annotations)
-    * [**Remove Document Watermark.**](#remove-document-watermark)
-    * [**Remove Pages from Document.**](#remove-pages-from-document)
-    * [**Repair Document.**](#repair-document)
-    * [**Resize Document.**](#resize-document)
-    * [**Rotate Document.**](#rotate-document)
-    * [**Search Document Text.**](#search-document-text)
-    * [**Make Scanned PDF Searchable.**](#make-scanned-pdf-searchable)
-    * [**Add Signature to Document.**](#add-signature-to-document)
-    * [**Split Document.**](#split-document)
-    * [**Split Image.**](#split-image)
-    * [**Unlock Document.**](#unlock-document)
-    * [**Verify Document Certificate.**](#verify-document-certificate)
-    * [**Add Watermark to Document.**](#add-watermark-to-document)
-    * [**Count Words and Characters in Document.**](#count-words-and-characters-in-document)
-    * [**Convert XFA Format to Another Format.**](#convert-xfa-format-to-another-format)
+# Aspose.PDF for AWS
 
 
 [Aspose.PDF for AWS](https://aws.amazon.com/marketplace/pp/prodview-zc64pent6p6lo) offers a modern solution for organizations looking to enhance their document processing capabilities. Whether it's converting formats, merging files, splitting documents, extracting data, or reordering content, our RESTful API, built on the powerful [Aspose.PDF .NET library](https://docs.aspose.com/pdf/net/) and optimized Linux packages, provides a streamlined and efficient approach.
@@ -108,7 +7,111 @@ Recognizing the need for continuous improvement, many organizations explore ways
 
 Users can quickly begin utilizing the API through the intuitive Swagger UI, facilitating manual document tasks without requiring extensive technical expertise. For developers, integrating the API into existing systems is straightforward with support for popular programming languages like [.NET](https://dotnet.microsoft.com), [Java](https://www.java.com), [PHP](https://www.php.net), and [Kotlin](https://kotlinlang.org).
 
-Organizations looking to optimize their document processing can find real value in the pay-as-you-go model offered by Aspose.PDF for AWS. With no need for a initial payment to get started, you only pay for the resources you actually use to process. This flexibility makes it easier to scale your operations as demand fluctuates, ensuring that you’re not overpaying for unused capacity. By using [Aspose.PDF for AWS](https://aws.amazon.com/marketplace/pp/prodview-zc64pent6p6lo), your organization can efficiently manage document workflows, adjust quickly to changing needs.
+Organizations looking to optimize their document processing can find real value in the pay-as-you-go model offered by Aspose.PDF for AWS. With no need for a initial payment to get started, you only pay for the resources you actually use to process. This flexibility makes it easier to scale your operations as demand fluctuates, ensuring that you're not overpaying for unused capacity. By using [Aspose.PDF for AWS](https://aws.amazon.com/marketplace/pp/prodview-zc64pent6p6lo), your organization can efficiently manage document workflows, adjust quickly to changing needs.
+
+## Aspose.PDF for AWS Trial
+
+You can start using **Aspose.PDF for AWS** right away in **trial mode**. 
+Just works when you launch configured the container. 
+
+### What to expect in trial mode:
+- Some advanced APIs and formats have evaluation watermark
+- Document size is [limited](https://docs.aspose.com/pdf/net/licensing/#limitation-of-an-evaluation-version) (about **4 pages, 4 elements per page**).
+- The container runs for **one hour at a time**. Want more time? Just restart the container.
+
+Trial mode is perfect for exploring features and checking if the product fits your needs.  
+
+### APIs and formats that need no license at all
+
+Several endpoints never touch the Aspose.PDF engine — they are built on image, archive and
+cryptography libraries instead. These are **not affected by the evaluation limitations at all**:
+no evaluation watermark, no 4-page limit, no element-per-page limit. You can use them **fully and
+indefinitely in trial mode**.
+
+**Whole APIs — license-free for every supported input:**
+
+| API | Endpoint | Formats |
+| --- | --- | --- |
+| Hash generator | `/webapi/hash` | any input file; MD5, SHA1, SHA256, SHA384, SHA512 |
+| GIF builder | `/webapi/gif` | bmp, gif, jpg, png, tiff → animated gif |
+| Image splitter | `/webapi/splitimage` | bmp, gif, jpg, png, tiff |
+
+**APIs that are license-free for particular input formats** — the listed formats are handled by the
+image/text pipeline, while the remaining formats of the same endpoint go through the Aspose.PDF
+engine and are subject to the usual trial limitations:
+
+| API | Endpoint | License-free formats | Needs a license |
+| --- | --- | --- | --- |
+| Image resize | `/webapi/resize` | apng, bmp, gif, jpg, png, tiff, webp | svg, pdf, eps |
+| Image crop | `/webapi/crop` | gif, webp | svg, pdf |
+| Rotate | `/webapi/rotate` | svg | pdf, docx, pptx, and raster images |
+| Content parser | `/webapi/parse` | docx, xlsx, xls, pptx | pdf, epub, html, mhtml |
+| Word counter | `/webapi/wordcounter` | txt | pdf, docx, xlsx, pptx |
+
+**Merge** is license-free whenever nothing is rendered into a document:
+
+| Merge | License-free |
+| --- | --- |
+| image → image | jpg, png, bmp, gif, webp input with **jpg, png or webp** output (for example jpg → jpg) |
+| tiff → tiff | jpg, png, bmp, gif, tiff, tif input with **tiff** output |
+| archive → archive | any of zip, 7z, tar, gz, bz2, rar into any other |
+
+Merging into pdf, docx, doc, pptx, xlsx, tex, html or ofd builds the result with the Aspose.PDF
+engine and is subject to the trial limitations.
+
+Everything else — document conversion, split of documents, compress, watermark, redaction, e-sign,
+OCR/searchable, table extraction, comparison, repair, lock/unlock and page numbering — runs through
+the Aspose.PDF engine and is subject to the trial limitations until billing is enabled.
+
+Two things still apply to the license-free endpoints: the **one-hour container lifetime** of trial
+mode (restart the container to continue), and, if the container has no `MeterUsage` permission, the
+error described below.
+
+### Why Enable Billing?  
+
+- No evaluation watermark
+- Process **unlimited pages**  
+- Access **advanced APIs and features**  
+- Unlock **all supported formats**  
+- Run containers continuously without trial limits  
+
+### If You See an Error on trial 
+
+Without the right permission, you may see an error like this:  
+
+```bash
+arn:aws:sts::111111111:assumed-role/ecsInstanceRole/i-22222222 is not authorized to perform: aws-marketplace:MeterUsage
+```
+
+This simply means the IAM role of container doesn't have the **MeterUsage** action to bill. Add the policy above, restart, and you're good to go to full version.  
+
+## Billing
+
+When you're ready to move beyond trial, enable **metered billing**. This unlocks full document processing and all supported APIs.  
+
+By default, AWS roles don't allow billing. You'll need to give your container permission to call the AWS **MeterUsage API**.  
+
+### How to enable billing:
+
+1. Open the [IAM Console](https://console.aws.amazon.com/iam/).  
+2. Find the IAM role used by your ECS/EKS instance (often called `ecsInstanceRole`).  
+3. Add this policy to the role (new policy or inline):  
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "aws-marketplace:MeterUsage",
+      "Resource": "*"
+    }
+  ]
+}
+```  
+
+4. Save the role and restart your container.  
+5. Done — billing is active and your container is no longer limited to trial mode.  
 
 ## Pricing
 
@@ -403,8 +406,8 @@ It handles scaling and operations, letting you focus on your application.
 
 > __When to Use EKS__
 
-- **Advanced Configurations:** If your application needs complex configurations or you’re already using Kubernetes, EKS provides the flexibility and features you need.
-It’s ideal for hybrid or multi-cloud environments and leverages the full Kubernetes ecosystem.
+- **Advanced Configurations:** If your application needs complex configurations or you're already using Kubernetes, EKS provides the flexibility and features you need.
+It's ideal for hybrid or multi-cloud environments and leverages the full Kubernetes ecosystem.
 
 Both ECS and EKS offer robust scaling. 
 ECS uses AWS [Auto Scaling](https://docs.aws.amazon.com/whitepapers/latest/containers-on-aws/scaling.html) for effortless scaling. 
@@ -439,7 +442,7 @@ This guide walks you through creating a new [Amazon S3 bucket](https://aws.amazo
 
 4. **Configure Bucket Settings:**
    - **Object Ownership:** Choose whether the bucket will use ACLs (default) or bucket owner enforced settings.
-   - **Block Public Access Settings:** Configure the bucket’s public access settings. It's recommended to block all public access unless needed.
+   - **Block Public Access Settings:** Configure the bucket's public access settings. It's recommended to block all public access unless needed.
    - **Bucket Versioning:** Decide if you want to enable versioning (optional).
    - **Tags:** Add tags to the bucket if necessary.
    - **Default Encryption:** You can enable default encryption for all objects stored in the bucket.
@@ -467,7 +470,7 @@ In result, a new S3 bucket is created and ready for use.
 
 4. **Review and Create the User:**
    - Review the settings and click **Create user**.
-   - Make sure to download or securely store the user’s access key ID and secret access key, as you will not be able to view the secret key again.
+   - Make sure to download or securely store the user's access key ID and secret access key, as you will not be able to view the secret key again.
 
 In result, an IAM user with programmatic access to S3 is created.
 
@@ -553,7 +556,7 @@ To address these challenges, we have implemented the following environment varia
    
 3. **Robustness and Reliability**:
    - **COMPlus_GCHeapHardLimit**: Managed to control memory usage, preventing memory leaks and ensuring system stability under varying workloads.
-   - **OMP_THREAD_LIMIT**: Set the maximum number of threads for Tesseract OCR.
+   - **OMP_THREAD_LIMIT**: Set the maximum number of threads for OCR.
 
 4. **Security**
    - **KEY_ENCRYPTION**: Enable AWS Key Management Service for AWS S3 environment variables
@@ -561,6 +564,23 @@ To address these challenges, we have implemented the following environment varia
    
 Environment variables are configured separately for each deployment environment (development, staging, production), streamlining the deployment process and simplifying configuration updates without altering the core application code.
 
+### Default Storage Behavior
+
+By default, the application uses **Local File Storage** for storing and managing your files. This means:
+
+- All processed files are stored on container local file system
+- No S3 storage credentials are required
+- Files are saved to a local directory on your container
+
+If you want to use AWS S3 instead of local storage for your application files, configure the following environment variables
+
+#### Troubleshooting
+
+> "Access Denied" Errors with S3
+
+- Verify your AWS credentials are correct
+- Ensure your IAM user/role has `s3:PutObject`, `s3:GetObject`, `s3:DeleteObject` permissions
+- Check that the bucket exists and is accessible from your region
 
 ### Environment Variables
 
@@ -646,12 +666,22 @@ Define the maximum number of tasks that can be processed simultaneously. If the 
 
 **OMP_THREAD_LIMIT**
 
-This option useful for use with searchable pdf endpoint and Tesseract.
+This option useful for use with searchable pdf endpoint.
 
 **Default Value:** 1
 
 
-Set the number of threads for Tesseract to optimize performance. Adjusting the OMP_THREAD_LIMIT can improve processing efficiency based on your system resources and workload. Change this value if you encounter performance issues or need to optimize resource utilization, ensuring better performance and more efficient processing.
+Set the number of threads the OCR engine uses to optimize performance. Adjusting the OMP_THREAD_LIMIT can improve processing efficiency based on your system resources and workload. Change this value if you encounter performance issues or need to optimize resource utilization, ensuring better performance and more efficient processing.
+
+
+**OCR_ENGINE**
+
+OCR engine used by the searchable PDF endpoint.
+
+**Default Value:** rapidocr
+
+
+`rapidocr` (PP-OCRv5 models on ONNX Runtime) or `paddleocr` (PP-OCRv5 models on Paddle Inference). Both handle Latin, Cyrillic, Greek, Arabic, Thai, Devanagari, Tamil, Telugu, Chinese, Japanese and Korean text; the `lang` parameter of the endpoint selects the model. Change this value only if one engine gives better results on your documents.
 
 
 **COMPlus_GCHeapHardLimit**
@@ -1230,7 +1260,7 @@ data:
     [OUTPUT]
         Name                cloudwatch_logs
         Match               *
-        region              us-east-`
+        region              us-east-1
         log_group_name      /eks/aspose_pdf
         log_stream_prefix   eks-
         auto_create_group   true
@@ -1616,7 +1646,7 @@ To ensure secure processing, a password is required to unlock encrypted document
 
 Our API supports the **documentPassword** form parameter across all endpoints, allowing you to specify the necessary password for your documents. In the current version, when submitting multiple documents in a single request, the same password must be used for all. If your documents have different passwords, you can achieve this by running multiple concurrent API calls, each handling one document at a time with its specific password.
 
-This approach provides you with a secure and flexible way to process encrypted documents across all our REST API endpoints, ensuring that your operations run smoothly, whether you’re working with single or multiple documents.
+This approach provides you with a secure and flexible way to process encrypted documents across all our REST API endpoints, ensuring that your operations run smoothly, whether you're working with single or multiple documents.
 
 
 
@@ -2398,6 +2428,19 @@ This release of Aspose.PDF for AWS is designed to enhance your document processi
 
 
 ---
+### **Version:** 2 **Release Date:** 2025
+
+> __What's New__
+
+**Local File Storage by Default.** Input and processing files are now stored locally by default. This allows the Aspose.PDF for AWS container to run without any additional Amazon S3 configuration. S3 integration remains optional.
+
+**Unlimited Trial Mode.** Introduced a trial mode without time limitations. You can test document workflows without restrictions after enabling billing on your AWS release, with no additional costs during evaluation.
+
+**Aspose.PDF Library Update.** Updated the Aspose.PDF library to the latest version, enabling access to new features, improvements, and fixes.
+
+**Aspose applications Backend Platform updated to the latest release.**
+
+---
 ### **Version:** 1 **Release Date:** 1 Jul 2024
 
 > __Features__
@@ -2459,8 +2502,8 @@ This release of Aspose.PDF for AWS is designed to enhance your document processi
 [Java Client](https://github.com/aspose-pdf-cloud/aspose-pdf-for-aws-sdk/tree/main/java-client)	
 [Kotlin Client](https://github.com/aspose-pdf-cloud/aspose-pdf-for-aws-sdk/tree/main/kotlin-client)	
 
-### **Add Page Numbers to Document.**
-- Adds page numbers to your documents based on specified alignment, starting number, and format. The service ensures that page numbers are accurately applied, improving the readability and professionalism of your documents. It supports various formats, including DOC, PPTX, TIFF, DOCX, and PDF, to cater to your specific requirements.
+### **Add page numbers to document.**
+- Adds page numbers to the provided documents with the specified alignment, starting number, and format.
 
 **Supported formats:**
 
@@ -2474,7 +2517,7 @@ curl -X POST 'http://localhost:5252/pdf/webapi/addnumber?vAlignment=value&hAlign
 </details>
 <details><summary>php</summary>
 <pre><code>
-<?php
+&lt;?php
 require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
 
 $apiInstance = new Swagger\\Client\\Api\\ApiApi(
@@ -2483,4049 +2526,15 @@ $apiInstance = new Swagger\\Client\\Api\\ApiApi(
     new GuzzleHttp\\Client()
 );
 $files = array("files\_example"); // string[] | 
-$document\_password = "document\_password\_example"; // string | 
-$v\_alignment = new \\Swagger\\Client\\Model\\PageNumberVerticalAlign(); // \\Swagger\\Client\\Model\\PageNumberVerticalAlign | The vertical alignment of the page numbers.
-$h\_alignment = new \\Swagger\\Client\\Model\\PageNumberHorizontalAlign(); // \\Swagger\\Client\\Model\\PageNumberHorizontalAlign | The horizontal alignment of the page numbers.
-$starting\_number = 56; // int | The starting number for the page numbers.
-$s\_number = 56; // int | The number of the first page to start numbering from.
-$f\_number = 56; // int | The number of the last page to end numbering at.
-$margin = 56; // int | The margin around the page numbers.
-$font\_size = 56; // int | The font size of the page numbers.
-$format = "format\_example"; // string | The format of the page numbers.
-
-try {
-    $result = $apiInstance->pdfWebapiAddnumberPost($files, $document\_password, $v\_alignment, $h\_alignment, $starting\_number, $s\_number, $f\_number, $margin, $font\_size, $format);
-    print\_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ApiApi->pdfWebapiAddnumberPost: ', $e->getMessage(), PHP\_EOL;
-}
-?>
-</code></pre>
-</details>
-<details><summary>dotnet</summary>
-<pre><code>
-using System;
-using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
-
-namespace Example
-{
-    public class PdfWebapiAddnumberPostExample
-    {
-        public void main()
-        {
-
-            var apiInstance = new ApiApi();
-            var files = new List<FileParameter>(); // List<FileParameter> |  (optional) 
-            var documentPassword = documentPassword\_example;  // string |  (optional) 
-            var vAlignment = PageNumberVerticalAlign.B; // PageNumberVerticalAlign | The vertical alignment of the page numbers. (optional) 
-            var hAlignment = PageNumberHorizontalAlign.C; // PageNumberHorizontalAlign | The horizontal alignment of the page numbers. (optional) 
-            var startingNumber = 56;  // int? | The starting number for the page numbers. (optional) 
-            var sNumber = 56;  // int? | The number of the first page to start numbering from. (optional) 
-            var fNumber = 56;  // int? | The number of the last page to end numbering at. (optional) 
-            var margin = 56;  // int? | The margin around the page numbers. (optional) 
-            var fontSize = 56;  // int? | The font size of the page numbers. (optional) 
-            var format = format\_example;  // string | The format of the page numbers. (optional) 
-
-            try
-            {
-                // Add Page Numbers to Document.
-                FileResponse result = apiInstance.PdfWebapiAddnumberPost(files, documentPassword, vAlignment, hAlignment, startingNumber, sNumber, fNumber, margin, fontSize, format);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ApiApi.PdfWebapiAddnumberPost: " + e.Message );
-            }
-        }
-    }
-}
-</code></pre>
-</details>
-<details><summary>java</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.ApiApi;
-
-
-ApiApi apiInstance = new ApiApi();
-List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-String documentPassword = "documentPassword\_example"; // String | 
-PageNumberVerticalAlign vAlignment = PageNumberVerticalAlign.B; // PageNumberVerticalAlign | The vertical alignment of the page numbers.
-PageNumberHorizontalAlign hAlignment = PageNumberHorizontalAlign.C; // PageNumberHorizontalAlign | The horizontal alignment of the page numbers.
-Integer startingNumber = 56; // Integer | The starting number for the page numbers.
-Integer sNumber = 56; // Integer | The number of the first page to start numbering from.
-Integer fNumber = 56; // Integer | The number of the last page to end numbering at.
-Integer margin = 56; // Integer | The margin around the page numbers.
-Integer fontSize = 56; // Integer | The font size of the page numbers.
-String format = "format\_example"; // String | The format of the page numbers.
-try {
-    FileResponse result = apiInstance.pdfWebapiAddnumberPost(files, documentPassword, vAlignment, hAlignment, startingNumber, sNumber, fNumber, margin, fontSize, format);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ApiApi#pdfWebapiAddnumberPost");
-    e.printStackTrace();
-}
-</code></pre>
-</details>
-<details><summary>kotlin</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.infrastructure.\*
-//import io.swagger.client.models.\*;
-
-val apiInstance = ApiApi()
-val files : kotlin.Array<kotlin.Array<kotlin.Byte>> =  // kotlin.Array<kotlin.Array<kotlin.Byte>> | 
-val documentPassword : kotlin.String = documentPassword\_example // kotlin.String | 
-val vAlignment : PageNumberVerticalAlign =  // PageNumberVerticalAlign | The vertical alignment of the page numbers.
-val hAlignment : PageNumberHorizontalAlign =  // PageNumberHorizontalAlign | The horizontal alignment of the page numbers.
-val startingNumber : kotlin.Int = 56 // kotlin.Int | The starting number for the page numbers.
-val sNumber : kotlin.Int = 56 // kotlin.Int | The number of the first page to start numbering from.
-val fNumber : kotlin.Int = 56 // kotlin.Int | The number of the last page to end numbering at.
-val margin : kotlin.Int = 56 // kotlin.Int | The margin around the page numbers.
-val fontSize : kotlin.Int = 56 // kotlin.Int | The font size of the page numbers.
-val format : kotlin.String = format\_example // kotlin.String | The format of the page numbers.
-try {
-    val result : FileResponse = apiInstance.pdfWebapiAddnumberPost(files, documentPassword, vAlignment, hAlignment, startingNumber, sNumber, fNumber, margin, fontSize, format)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ApiApi#pdfWebapiAddnumberPost")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ApiApi#pdfWebapiAddnumberPost")
-    e.printStackTrace()
-}
-</code></pre>
-</details>
-
-### **Change Fonts in Provided Files.**
-- Updates the fonts in your documents according to specified replacements.
-Provide the font replacement details as a JSON string and upload your files using multipart/form-data.The service processes these requests asynchronously using Kafka, ensuring efficient handling of your files.
-
-<details><summary>curl</summary>
-<pre><code>
-curl -X POST 'http://localhost:5252/pdf/webapi/change-fonts' -F 'files=@file.pdf'
-</code></pre>
-</details>
-<details><summary>php</summary>
-<pre><code>
-<?php
-require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
-
-$apiInstance = new Swagger\\Client\\Api\\ApiApi(
-    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
-    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
-    new GuzzleHttp\\Client()
-);
-$font\_replacements\_json = "font\_replacements\_json\_example"; // string | 
-$files = array("files\_example"); // string[] | 
-$document\_password = "document\_password\_example"; // string | 
-
-try {
-    $result = $apiInstance->pdfWebapiChangeFontsPost($font\_replacements\_json, $files, $document\_password);
-    print\_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ApiApi->pdfWebapiChangeFontsPost: ', $e->getMessage(), PHP\_EOL;
-}
-?>
-</code></pre>
-</details>
-<details><summary>dotnet</summary>
-<pre><code>
-using System;
-using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
-
-namespace Example
-{
-    public class PdfWebapiChangeFontsPostExample
-    {
-        public void main()
-        {
-
-            var apiInstance = new ApiApi();
-            var fontReplacementsJson = fontReplacementsJson\_example;  // string |  (optional) 
-            var files = new List<FileParameter>(); // List<FileParameter> |  (optional) 
-            var documentPassword = documentPassword\_example;  // string |  (optional) 
-
-            try
-            {
-                // Change Fonts in Provided Files.
-                FileResponse result = apiInstance.PdfWebapiChangeFontsPost(fontReplacementsJson, files, documentPassword);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ApiApi.PdfWebapiChangeFontsPost: " + e.Message );
-            }
-        }
-    }
-}
-</code></pre>
-</details>
-<details><summary>java</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.ApiApi;
-
-
-ApiApi apiInstance = new ApiApi();
-String fontReplacementsJson = "fontReplacementsJson\_example"; // String | 
-List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-String documentPassword = "documentPassword\_example"; // String | 
-try {
-    FileResponse result = apiInstance.pdfWebapiChangeFontsPost(fontReplacementsJson, files, documentPassword);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ApiApi#pdfWebapiChangeFontsPost");
-    e.printStackTrace();
-}
-</code></pre>
-</details>
-<details><summary>kotlin</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.infrastructure.\*
-//import io.swagger.client.models.\*;
-
-val apiInstance = ApiApi()
-val fontReplacementsJson : kotlin.String = fontReplacementsJson\_example // kotlin.String | 
-val files : kotlin.Array<kotlin.Array<kotlin.Byte>> =  // kotlin.Array<kotlin.Array<kotlin.Byte>> | 
-val documentPassword : kotlin.String = documentPassword\_example // kotlin.String | 
-try {
-    val result : FileResponse = apiInstance.pdfWebapiChangeFontsPost(fontReplacementsJson, files, documentPassword)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ApiApi#pdfWebapiChangeFontsPost")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ApiApi#pdfWebapiChangeFontsPost")
-    e.printStackTrace()
-}
-</code></pre>
-</details>
-
-### **Compare documents text.**
-- Compares the text of the provided documents and highlights the differences. Upload the files you want to compare, and the service will analyze them to detect any changes in the text. The result is a new document that clearly marks all text variations, making it easy to review and understand the modifications between the original and updated versions.
-
-**Supported formats:**
-
-| pdf |
-| --- |
-
-<details><summary>curl</summary>
-<pre><code>
-curl -X POST 'http://localhost:5252/pdf/webapi/comparison' -F 'files=@file.pdf'
-</code></pre>
-</details>
-<details><summary>php</summary>
-<pre><code>
-<?php
-require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
-
-$apiInstance = new Swagger\\Client\\Api\\ApiApi(
-    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
-    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
-    new GuzzleHttp\\Client()
-);
-$files = array("files\_example"); // string[] | 
-$document\_password = "document\_password\_example"; // string | 
-
-try {
-    $result = $apiInstance->pdfWebapiComparisonPost($files, $document\_password);
-    print\_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ApiApi->pdfWebapiComparisonPost: ', $e->getMessage(), PHP\_EOL;
-}
-?>
-</code></pre>
-</details>
-<details><summary>dotnet</summary>
-<pre><code>
-using System;
-using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
-
-namespace Example
-{
-    public class PdfWebapiComparisonPostExample
-    {
-        public void main()
-        {
-
-            var apiInstance = new ApiApi();
-            var files = new List<FileParameter>(); // List<FileParameter> |  (optional) 
-            var documentPassword = documentPassword\_example;  // string |  (optional) 
-
-            try
-            {
-                // Compare documents text.
-                FileResponse result = apiInstance.PdfWebapiComparisonPost(files, documentPassword);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ApiApi.PdfWebapiComparisonPost: " + e.Message );
-            }
-        }
-    }
-}
-</code></pre>
-</details>
-<details><summary>java</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.ApiApi;
-
-
-ApiApi apiInstance = new ApiApi();
-List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-String documentPassword = "documentPassword\_example"; // String | 
-try {
-    FileResponse result = apiInstance.pdfWebapiComparisonPost(files, documentPassword);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ApiApi#pdfWebapiComparisonPost");
-    e.printStackTrace();
-}
-</code></pre>
-</details>
-<details><summary>kotlin</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.infrastructure.\*
-//import io.swagger.client.models.\*;
-
-val apiInstance = ApiApi()
-val files : kotlin.Array<kotlin.Array<kotlin.Byte>> =  // kotlin.Array<kotlin.Array<kotlin.Byte>> | 
-val documentPassword : kotlin.String = documentPassword\_example // kotlin.String | 
-try {
-    val result : FileResponse = apiInstance.pdfWebapiComparisonPost(files, documentPassword)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ApiApi#pdfWebapiComparisonPost")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ApiApi#pdfWebapiComparisonPost")
-    e.printStackTrace()
-}
-</code></pre>
-</details>
-
-### **Compress Document.**
-- Compresses the provided documents to reduce their file size based on the specified compression level. Upload the documents and choose the desired compression level. The service will reduce the file sizes while maintaining quality, resulting in compressed files that are easier to handle and share, saving storage space and reducing upload and download times.
-
-**Supported formats:**
-
-| bmp | epub | image | jpg | png | docx | pdf |
-| --- | --- | --- | --- | --- | --- | --- |
-
-<details><summary>curl</summary>
-<pre><code>
-curl -X POST 'http://localhost:5252/pdf/webapi/compress?compressType=value' -F 'files=@file.pdf'
-</code></pre>
-</details>
-<details><summary>php</summary>
-<pre><code>
-<?php
-require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
-
-$apiInstance = new Swagger\\Client\\Api\\ApiApi(
-    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
-    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
-    new GuzzleHttp\\Client()
-);
-$files = array("files\_example"); // string[] | 
-$document\_password = "document\_password\_example"; // string | 
-$compress\_type = new \\Swagger\\Client\\Model\\CompressType(); // \\Swagger\\Client\\Model\\CompressType | The level of compression to use.
-
-try {
-    $result = $apiInstance->pdfWebapiCompressPost($files, $document\_password, $compress\_type);
-    print\_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ApiApi->pdfWebapiCompressPost: ', $e->getMessage(), PHP\_EOL;
-}
-?>
-</code></pre>
-</details>
-<details><summary>dotnet</summary>
-<pre><code>
-using System;
-using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
-
-namespace Example
-{
-    public class PdfWebapiCompressPostExample
-    {
-        public void main()
-        {
-
-            var apiInstance = new ApiApi();
-            var files = new List<FileParameter>(); // List<FileParameter> |  (optional) 
-            var compressType = CompressType.Low; // CompressType | The level of compression to use. (optional) 
-            var documentPassword = documentPassword\_example;  // string |  (optional) 
-            
-            try
-            {
-                // Compress Document.
-                FileResponse result = apiInstance.PdfWebapiCompressPost(files, documentPassword, compressType);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ApiApi.PdfWebapiCompressPost: " + e.Message );
-            }
-        }
-    }
-}
-</code></pre>
-</details>
-<details><summary>java</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.ApiApi;
-
-
-ApiApi apiInstance = new ApiApi();
-List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-CompressType compressType = CompressType.HIGH; // CompressType | The level of compression to use.
-String documentPassword = "documentPassword\_example"; // String | 
-try {
-    FileResponse result = apiInstance.pdfWebapiCompressPost(files, documentPassword, compressType);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ApiApi#pdfWebapiCompressPost");
-    e.printStackTrace();
-}
-</code></pre>
-</details>
-<details><summary>kotlin</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.infrastructure.\*
-//import io.swagger.client.models.\*;
-
-val apiInstance = ApiApi()
-val files : kotlin.Array<kotlin.Array<kotlin.Byte>> =  // kotlin.Array<kotlin.Array<kotlin.Byte>> | 
-val documentPassword : kotlin.String = documentPassword\_example // kotlin.String | 
-val compressType : CompressType =  // CompressType | The level of compression to use.
-try {
-    val result : FileResponse = apiInstance.pdfWebapiCompressPost(files, documentPassword, compressType)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ApiApi#pdfWebapiCompressPost")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ApiApi#pdfWebapiCompressPost")
-    e.printStackTrace()
-}
-</code></pre>
-</details>
-
-### **Convert Document to Another Format.**
-- Converts documents from one format to another seamlessly. Upload the files you need to convert and specify the target format. The service will handle the conversion process efficiently, ensuring that the resulting document is ready for use in the desired format and compatible with various applications and systems.
-
-**Supported formats:**
-
-| From/To | avi | djvu | file | flac | flv | m4a | m4p | m4v | mkv | mov | mp2 | mp3 | mp4 | mpeg | mpg | mpv | ogg | pdf | ps | wav | webm | webp | wma | wmv | 7z | csv | doc | docx | epub | xlsx | gz | html | jpg | latex | mhtml | png | pptx | svg | tar | tiff | txt | zip | base64 | bz2 | psd | bmp | gif | mobi | tex | xps | xml | mht | flatopc | kindle | pdfa1a | pdfa1b | pdfa2a | pdfa3a | emf | ppt | ofd | json |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 7z | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| base64 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; | &#9745; |  |  | &#9745; |  |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| bmp | &#9745; |  |  |  | &#9745; |  |  |  | &#9745; | &#9745; |  |  | &#9745; | &#9745; | &#9745; |  |  | &#9745; |  |  | &#9745; | &#9745; |  | &#9745; |  |  |  | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; |  |  | &#9745; | &#9745; | &#9745; |  |  | &#9745; |  | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| bz2 | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| cdr |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  | &#9745; |  |  |  |  |  | &#9745; |  | &#9745; |  |  | &#9745; | &#9745; | &#9745; |  | &#9745; |  |  |  | &#9745; | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| dcm |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  | &#9745; |  |  |  |  |  | &#9745; |  |  |  |  |  |  | &#9745; |  | &#9745; |  |  |  | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| dicom |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  | &#9745; |  |  |  |  |  | &#9745; |  |  |  |  |  | &#9745; | &#9745; |  | &#9745; |  |  |  | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| djvu |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  | &#9745; |  | &#9745; | &#9745; | &#9745; |  | &#9745; |  | &#9745; |  |  | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| doc |  |  |  |  |  |  |  |  | &#9745; | &#9745; |  |  | &#9745; | &#9745; |  |  |  | &#9745; |  |  |  |  |  |  |  | &#9745; |  | &#9745; | &#9745; |  |  | &#9745; | &#9745; | &#9745; |  | &#9745; |  | &#9745; |  |  |  |  | &#9745; | &#9745; | &#9745; |  |  |  |  |  | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| dwg |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| emf |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  | &#9745; |  |  |  |  |  | &#9745; |  | &#9745; |  |  |  |  |  | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; |  | &#9745; |  | &#9745; |  | &#9745; |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| eps |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  | &#9745; | &#9745; | &#9745; |  | &#9745; |  | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; |  |  | &#9745; | &#9745; | &#9745; | &#9745; |  |  |  |  |  | &#9745; |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| epub |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  | &#9745; | &#9745; |  | &#9745; |  | &#9745; | &#9745; |  |  | &#9745; | &#9745; | &#9745; |  |  |  | &#9745; | &#9745; | &#9745; | &#9745; |  |  |  |  |  | &#9745; |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| xlsx |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; | &#9745; |  |  |  | &#9745; |  |  |  |  |  |  | &#9745; |  |  | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; |  |  |  |  |  | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| gif |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| gz | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| html |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| jpg | &#9745; |  |  |  | &#9745; |  |  |  | &#9745; | &#9745; |  |  | &#9745; | &#9745; | &#9745; |  |  | &#9745; |  |  | &#9745; | &#9745; |  | &#9745; | &#9745; |  | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; |  |  |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; |  | &#9745; |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| json |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| kindle |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| latex |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; |  |  | &#9745; | &#9745; | &#9745; | &#9745; |  |  | &#9745; | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| md |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| mht |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; |  |  | &#9745; | &#9745; | &#9745; | &#9745; |  |  | &#9745; | &#9745; |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| mhtml |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; |  |  | &#9745; | &#9745; | &#9745; | &#9745; |  |  | &#9745; | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| mov | &#9745; |  |  |  |  |  |  |  |  |  |  | &#9745; | &#9745; |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| mp3 | &#9745; |  |  |  |  |  |  |  |  | &#9745; |  |  | &#9745; |  |  |  |  |  |  | &#9745; |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| mp4 | &#9745; |  |  |  |  |  |  |  |  | &#9745; |  | &#9745; |  |  |  |  |  |  |  | &#9745; |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| odt |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| oxps |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  | &#9745; |  | &#9745; |  |  | &#9745; |  |  |  |  | &#9745; |  |  |  |  | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| pages |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  | &#9745; |  |  |  |  |  |  |  | &#9745; |  | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; |  |  | &#9745; | &#9745; | &#9745; |  |  |  |  |  | &#9745; |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| pcl |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; |  | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |
-| pdf | &#9745; |  |  |  |  |  |  |  | &#9745; | &#9745; |  |  | &#9745; | &#9745; | &#9745; |  |  |  | &#9745; |  | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  |  | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  |
-| png | &#9745; |  |  |  | &#9745; |  |  |  | &#9745; | &#9745; |  |  | &#9745; | &#9745; | &#9745; |  |  | &#9745; |  |  | &#9745; | &#9745; |  | &#9745; | &#9745; |  |  | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; |  |  |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| ppt | &#9745; |  |  |  | &#9745; |  |  |  | &#9745; | &#9745; |  |  | &#9745; | &#9745; | &#9745; |  |  | &#9745; |  |  | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; |  | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |
-| pptx | &#9745; |  |  |  | &#9745; |  |  |  | &#9745; | &#9745; |  |  | &#9745; | &#9745; | &#9745; |  |  | &#9745; |  |  | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; |  | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| ps |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  | &#9745; |  | &#9745; |  | &#9745; |  | &#9745; | &#9745; |  |  | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  |  |  |  |  | &#9745; |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| psd |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  | &#9745; |  | &#9745; | &#9745; |  | &#9745; | &#9745; |  | &#9745; |  |  | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| rar | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; |  | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  | &#9745; | &#9745; |  |  |  |  |
-| rtf |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| srt |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; |  |  |  | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| svg | &#9745; |  |  |  | &#9745; |  |  |  | &#9745; | &#9745; |  |  | &#9745; | &#9745; | &#9745; |  |  | &#9745; |  |  | &#9745; | &#9745; |  | &#9745; |  | &#9745; | &#9745; | &#9745; |  | &#9745; |  | &#9745; | &#9745; |  |  | &#9745; | &#9745; | &#9745; |  |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  |  | &#9745; |  |  | &#9745; |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| tar | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| tex |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; |  |  | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| tiff | &#9745; |  |  |  | &#9745; |  |  |  | &#9745; | &#9745; |  |  | &#9745; | &#9745; | &#9745; |  |  | &#9745; |  |  | &#9745; | &#9745; |  | &#9745; |  |  |  | &#9745; |  | &#9745; |  | &#9745; | &#9745; |  |  | &#9745; | &#9745; | &#9745; | &#9745; |  |  |  | &#9745; | &#9745; | &#9745; |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| txt |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; |  |  | &#9745; |  |  | &#9745; |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| wav | &#9745; |  |  |  |  |  |  |  |  | &#9745; |  | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| webp | &#9745; |  |  |  | &#9745; |  |  |  | &#9745; | &#9745; |  |  | &#9745; | &#9745; | &#9745; |  |  | &#9745; |  |  | &#9745; |  |  | &#9745; | &#9745; |  | &#9745; | &#9745; |  | &#9745; | &#9745; |  | &#9745; |  |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| webpage |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  | &#9745; |  |  |  |  | &#9745; |  |  |  |  | &#9745; | &#9745; |  |  | &#9745; | &#9745; |  | &#9745; |  | &#9745; |  | &#9745; |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |
-| docx | &#9745; |  |  |  |  |  |  |  |  | &#9745; |  |  | &#9745; | &#9745; | &#9745; |  |  | &#9745; | &#9745; |  |  |  |  | &#9745; | &#9745; | &#9745; |  |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; |  |  | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; |  |  | &#9745; |  |  | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |
-| xml |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; |  |  |  |  |  | &#9745; | &#9745; |  | &#9745; |  |  | &#9745; | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |
-| xps |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  | &#9745; |  | &#9745; |  | &#9745; |  |  | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; |  |  |  | &#9745; | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |
-| zip | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-
-<details><summary>curl</summary>
-<pre><code>
-curl -X POST 'http://localhost:5252/pdf/webapi/convert?inputType=value&outputType=value&xmlType=value&xmlTag=value&fontSise=value&isToSingle=value&separator=value' -F 'files=@file.pdf'
-</code></pre>
-</details>
-<details><summary>php</summary>
-<pre><code>
-<?php
-require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
-
-$apiInstance = new Swagger\\Client\\Api\\ApiApi(
-    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
-    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
-    new GuzzleHttp\\Client()
-);
-$files = array("files\_example"); // string[] | 
-$document\_password = "document\_password\_example"; // string | 
-$input\_type = "input\_type\_example"; // string | The format of the input files.
-$output\_type = "output\_type\_example"; // string | The desired format for the output files.
-$xml\_type = new \\Swagger\\Client\\Model\\XmlType(); // \\Swagger\\Client\\Model\\XmlType | The type of XML conversion to perform, if applicable.
-$xml\_tag = "xml\_tag\_example"; // string | The XML tag to use for conversion, if applicable.
-$font\_sise = 56; // int | 
-$is\_to\_single = true; // bool | Indicates whether the conversion should result in a single file, if applicable.
-$separator = "separator\_example"; // string | The separator to use when converting, if applicable.
-
-try {
-    $result = $apiInstance->pdfWebapiConvertPost($files, $document\_password, $input\_type, $output\_type, $xml\_type, $xml\_tag, $font\_sise, $is\_to\_single, $separator);
-    print\_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ApiApi->pdfWebapiConvertPost: ', $e->getMessage(), PHP\_EOL;
-}
-?>
-</code></pre>
-</details>
-<details><summary>dotnet</summary>
-<pre><code>
-using System;
-using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
-
-namespace Example
-{
-    public class PdfWebapiConvertPostExample
-    {
-        public void main()
-        {
-
-            var apiInstance = new ApiApi();
-            var files = new List<FileParameter>(); // List<FileParameter> |  (optional) 
-            var documentPassword = documentPassword\_example;  // string |  (optional) 
-            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
-            var outputType = outputType\_example;  // string | The desired format for the output files. (optional) 
-            var xmlType = XmlType.APS; // XmlType | The type of XML conversion to perform, if applicable. (optional) 
-            var xmlTag = xmlTag\_example;  // string | The XML tag to use for conversion, if applicable. (optional) 
-            var fontSise = 56;  // int? |  (optional) 
-            var isToSingle = true;  // bool? | Indicates whether the conversion should result in a single file, if applicable. (optional) 
-            var separator = separator\_example;  // string | The separator to use when converting, if applicable. (optional) 
-
-            try
-            {
-                // Convert Document to Another Format.
-                FileResponse result = apiInstance.PdfWebapiConvertPost(files, documentPassword, inputType, outputType, xmlType, xmlTag, fontSise, isToSingle, separator);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ApiApi.PdfWebapiConvertPost: " + e.Message );
-            }
-        }
-    }
-}
-</code></pre>
-</details>
-<details><summary>java</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.ApiApi;
-
-
-ApiApi apiInstance = new ApiApi();
-List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-String documentPassword = "documentPassword\_example"; // String | 
-String inputType = "inputType\_example"; // String | The format of the input files.
-String outputType = "outputType\_example"; // String | The desired format for the output files.
-XmlType xmlType = XmlType.APS; // XmlType | The type of XML conversion to perform, if applicable.
-String xmlTag = "xmlTag\_example"; // String | The XML tag to use for conversion, if applicable.
-Integer fontSise = 56; // Integer | 
-Boolean isToSingle = true; // Boolean | Indicates whether the conversion should result in a single file, if applicable.
-String separator = "separator\_example"; // String | The separator to use when converting, if applicable.
-try {
-    FileResponse result = apiInstance.pdfWebapiConvertPost(files, documentPassword, inputType, outputType, xmlType, xmlTag, fontSise, isToSingle, separator);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ApiApi#pdfWebapiConvertPost");
-    e.printStackTrace();
-}
-</code></pre>
-</details>
-<details><summary>kotlin</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.infrastructure.\*
-//import io.swagger.client.models.\*;
-
-val apiInstance = ApiApi()
-val files : kotlin.Array<kotlin.Array<kotlin.Byte>> =  // kotlin.Array<kotlin.Array<kotlin.Byte>> | 
-val documentPassword : kotlin.String = documentPassword\_example // kotlin.String | 
-val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
-val outputType : kotlin.String = outputType\_example // kotlin.String | The desired format for the output files.
-val xmlType : XmlType =  // XmlType | The type of XML conversion to perform, if applicable.
-val xmlTag : kotlin.String = xmlTag\_example // kotlin.String | The XML tag to use for conversion, if applicable.
-val fontSise : kotlin.Int = 56 // kotlin.Int | 
-val isToSingle : kotlin.Boolean = true // kotlin.Boolean | Indicates whether the conversion should result in a single file, if applicable.
-val separator : kotlin.String = separator\_example // kotlin.String | The separator to use when converting, if applicable.
-try {
-    val result : FileResponse = apiInstance.pdfWebapiConvertPost(files, documentPassword, inputType, outputType, xmlType, xmlTag, fontSise, isToSingle, separator)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ApiApi#pdfWebapiConvertPost")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ApiApi#pdfWebapiConvertPost")
-    e.printStackTrace()
-}
-</code></pre>
-</details>
-
-### **Convert Web Page to Document.**
-- Converts a web page to a document in the specified output format. Provide the URL of the web page and choose the desired format for conversion. The service will create a document that mirrors the content and layout of the original web page, ensuring it is well-formatted and suitable for your needs.
-
-**Supported formats:**
-
-| bmp | doc | html | jpg | pdf | png | pptx | ppt | svg | tiff | webp | docx |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-
-<details><summary>curl</summary>
-<pre><code>
-curl -X POST 'http://localhost:5252/pdf/webapi/convert-webpage?outputType=value' -F 'files=@file.pdf'
-</code></pre>
-</details>
-<details><summary>php</summary>
-<pre><code>
-<?php
-require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
-
-$apiInstance = new Swagger\\Client\\Api\\ApiApi(
-    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
-    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
-    new GuzzleHttp\\Client()
-);
-$web\_page = "web\_page\_example"; // string | 
-$document\_password = "document\_password\_example"; // string | 
-$output\_type = "output\_type\_example"; // string | The desired format for the output file.
-
-try {
-    $result = $apiInstance->pdfWebapiConvertWebpagePost($web\_page, $document\_password, $output\_type);
-    print\_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ApiApi->pdfWebapiConvertWebpagePost: ', $e->getMessage(), PHP\_EOL;
-}
-?>
-</code></pre>
-</details>
-<details><summary>dotnet</summary>
-<pre><code>
-using System;
-using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
-
-namespace Example
-{
-    public class PdfWebapiConvertWebpagePostExample
-    {
-        public void main()
-        {
-
-            var apiInstance = new ApiApi();
-            var webPage = webPage\_example;  // string |  (optional) 
-            var documentPassword = documentPassword\_example;  // string |  (optional) 
-            var outputType = outputType\_example;  // string | The desired format for the output file. (optional) 
-
-            try
-            {
-                // Convert Web Page to Document.
-                FileResponse result = apiInstance.PdfWebapiConvertWebpagePost(webPage, documentPassword, outputType);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ApiApi.PdfWebapiConvertWebpagePost: " + e.Message );
-            }
-        }
-    }
-}
-</code></pre>
-</details>
-<details><summary>java</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.ApiApi;
-
-
-ApiApi apiInstance = new ApiApi();
-String webPage = "webPage\_example"; // String | 
-String documentPassword = "documentPassword\_example"; // String | 
-String outputType = "outputType\_example"; // String | The desired format for the output file.
-try {
-    FileResponse result = apiInstance.pdfWebapiConvertWebpagePost(webPage, documentPassword, outputType);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ApiApi#pdfWebapiConvertWebpagePost");
-    e.printStackTrace();
-}
-</code></pre>
-</details>
-<details><summary>kotlin</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.infrastructure.\*
-//import io.swagger.client.models.\*;
-
-val apiInstance = ApiApi()
-val webPage : kotlin.String = webPage\_example // kotlin.String | 
-val documentPassword : kotlin.String = documentPassword\_example // kotlin.String | 
-val outputType : kotlin.String = outputType\_example // kotlin.String | The desired format for the output file.
-try {
-    val result : FileResponse = apiInstance.pdfWebapiConvertWebpagePost(webPage, documentPassword, outputType)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ApiApi#pdfWebapiConvertWebpagePost")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ApiApi#pdfWebapiConvertWebpagePost")
-    e.printStackTrace()
-}
-</code></pre>
-</details>
-
-### **Crop Document.**
-- Crops the provided document to the specified dimensions by removing unwanted areas. Upload the document and specify the dimensions for cropping. The service will adjust the file accordingly, resulting in a precisely cropped document that meets your requirements.
-
-**Supported formats:**
-
-| apng | bmp | gif | jpg | png | svg | webp | pdf |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-
-<details><summary>curl</summary>
-<pre><code>
-curl -X POST 'http://localhost:5252/pdf/webapi/crop?inputType=value&top=value&right=value&bottom=value&left=value&outputType=value' -F 'files=@file.pdf'
-</code></pre>
-</details>
-<details><summary>php</summary>
-<pre><code>
-<?php
-require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
-
-$apiInstance = new Swagger\\Client\\Api\\ApiApi(
-    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
-    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
-    new GuzzleHttp\\Client()
-);
-$files = array("files\_example"); // string[] | 
-$document\_password = "document\_password\_example"; // string | 
-$input\_type = "input\_type\_example"; // string | The format of the input files.
-$top = 56; // int | The number of pixels to crop from the top.
-$right = 56; // int | The number of pixels to crop from the right.
-$bottom = 56; // int | The number of pixels to crop from the bottom.
-$left = 56; // int | The number of pixels to crop from the left.
-$output\_type = "output\_type\_example"; // string | The desired format for the output files.
-
-try {
-    $result = $apiInstance->pdfWebapiCropPost($files, $document\_password, $input\_type, $top, $right, $bottom, $left, $output\_type);
-    print\_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ApiApi->pdfWebapiCropPost: ', $e->getMessage(), PHP\_EOL;
-}
-?>
-</code></pre>
-</details>
-<details><summary>dotnet</summary>
-<pre><code>
-using System;
-using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
-
-namespace Example
-{
-    public class PdfWebapiCropPostExample
-    {
-        public void main()
-        {
-
-            var apiInstance = new ApiApi();
-            var files = new List<FileParameter>(); // List<FileParameter> |  (optional) 
-            var documentPassword = documentPassword\_example;  // string |  (optional) 
-            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
-            var top = 56;  // int? | The number of pixels to crop from the top. (optional) 
-            var right = 56;  // int? | The number of pixels to crop from the right. (optional) 
-            var bottom = 56;  // int? | The number of pixels to crop from the bottom. (optional) 
-            var left = 56;  // int? | The number of pixels to crop from the left. (optional) 
-            var outputType = outputType\_example;  // string | The desired format for the output files. (optional) 
-
-            try
-            {
-                // Crop Document.
-                FileResponse result = apiInstance.PdfWebapiCropPost(files, documentPassword, inputType, top, right, bottom, left, outputType);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ApiApi.PdfWebapiCropPost: " + e.Message );
-            }
-        }
-    }
-}
-</code></pre>
-</details>
-<details><summary>java</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.ApiApi;
-
-
-ApiApi apiInstance = new ApiApi();
-List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-String documentPassword = "documentPassword\_example"; // String | 
-String inputType = "inputType\_example"; // String | The format of the input files.
-Integer top = 56; // Integer | The number of pixels to crop from the top.
-Integer right = 56; // Integer | The number of pixels to crop from the right.
-Integer bottom = 56; // Integer | The number of pixels to crop from the bottom.
-Integer left = 56; // Integer | The number of pixels to crop from the left.
-String outputType = "outputType\_example"; // String | The desired format for the output files.
-try {
-    FileResponse result = apiInstance.pdfWebapiCropPost(files, documentPassword, inputType, top, right, bottom, left, outputType);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ApiApi#pdfWebapiCropPost");
-    e.printStackTrace();
-}
-</code></pre>
-</details>
-<details><summary>kotlin</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.infrastructure.\*
-//import io.swagger.client.models.\*;
-
-val apiInstance = ApiApi()
-val files : kotlin.Array<kotlin.Array<kotlin.Byte>> =  // kotlin.Array<kotlin.Array<kotlin.Byte>> | 
-val documentPassword : kotlin.String = documentPassword\_example // kotlin.String | 
-val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
-val top : kotlin.Int = 56 // kotlin.Int | The number of pixels to crop from the top.
-val right : kotlin.Int = 56 // kotlin.Int | The number of pixels to crop from the right.
-val bottom : kotlin.Int = 56 // kotlin.Int | The number of pixels to crop from the bottom.
-val left : kotlin.Int = 56 // kotlin.Int | The number of pixels to crop from the left.
-val outputType : kotlin.String = outputType\_example // kotlin.String | The desired format for the output files.
-try {
-    val result : FileResponse = apiInstance.pdfWebapiCropPost(files, documentPassword, inputType, top, right, bottom, left, outputType)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ApiApi#pdfWebapiCropPost")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ApiApi#pdfWebapiCropPost")
-    e.printStackTrace()
-}
-</code></pre>
-</details>
-
-### **Sign Document with Certificate.**
-- Applies a digital signature to the provided document using the specified certificate. Upload the document and provide the certificate details, and the service will securely apply the signature, ensuring that the document is authenticated and legally binding.
-
-**Supported formats:**
-
-| pdf |
-| --- |
-
-<details><summary>curl</summary>
-<pre><code>
-curl -X POST 'http://localhost:5252/pdf/webapi/esign?inputType=value' -F 'files=@file.pdf'
-</code></pre>
-</details>
-<details><summary>php</summary>
-<pre><code>
-<?php
-require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
-
-$apiInstance = new Swagger\\Client\\Api\\ApiApi(
-    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
-    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
-    new GuzzleHttp\\Client()
-);
-$passw = "passw\_example"; // string | 
-$initials = "initials\_example"; // string | 
-$invite = "invite\_example"; // string | 
-$files = array("files\_example"); // string[] | 
-$document\_password = "document\_password\_example"; // string | 
 $input\_type = "input\_type\_example"; // string | The format of the input files.
 
 try {
-    $result = $apiInstance->pdfWebapiEsignPost($passw, $initials, $invite, $files, $document\_password, $input\_type);
+    $result = $apiInstance-&gt;pdfWebapiXfaconvertPost($files, $input\_type);
     print\_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ApiApi->pdfWebapiEsignPost: ', $e->getMessage(), PHP\_EOL;
+    echo 'Exception when calling ApiApi-&gt;pdfWebapiXfaconvertPost: ', $e-&gt;getMessage(), PHP\_EOL;
 }
-?>
-</code></pre>
-</details>
-<details><summary>dotnet</summary>
-<pre><code>
-using System;
-using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
-
-namespace Example
-{
-    public class PdfWebapiEsignPostExample
-    {
-        public void main()
-        {
-
-            var apiInstance = new ApiApi();
-            var passw = passw\_example;  // string |  (optional) 
-            var files = new List<FileParameter>(); // List<FileParameter> |  (optional) 
-            var invite = invite\_example;  // string |  (optional) 
-            var documentPassword = documentPassword\_example;  // string |  (optional) 
-            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
-
-            try
-            {
-                // Sign Document with Certificate.
-                FileResponse result = apiInstance.PdfWebapiEsignPost(passw, initials, invite, files, documentPassword, inputType);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ApiApi.PdfWebapiEsignPost: " + e.Message );
-            }
-        }
-    }
-}
-</code></pre>
-</details>
-<details><summary>java</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.ApiApi;
-
-
-ApiApi apiInstance = new ApiApi();
-String passw = "passw\_example"; // String | 
-String initials = "initials\_example"; // String | 
-String invite = "invite\_example"; // String | 
-List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-String documentPassword = "documentPassword\_example"; // String | 
-String inputType = "inputType\_example"; // String | The format of the input files.
-try {
-    FileResponse result = apiInstance.pdfWebapiEsignPost(passw, initials, invite, files, documentPassword, inputType);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ApiApi#pdfWebapiEsignPost");
-    e.printStackTrace();
-}
-</code></pre>
-</details>
-<details><summary>kotlin</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.infrastructure.\*
-//import io.swagger.client.models.\*;
-
-val apiInstance = ApiApi()
-val passw : kotlin.String = passw\_example // kotlin.String | 
-val initials : kotlin.String = initials\_example // kotlin.String | 
-val invite : kotlin.String = invite\_example // kotlin.String | 
-val files : kotlin.Array<kotlin.Array<kotlin.Byte>> =  // kotlin.Array<kotlin.Array<kotlin.Byte>> | 
-val documentPassword : kotlin.String = documentPassword\_example // kotlin.String | 
-val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
-try {
-    val result : FileResponse = apiInstance.pdfWebapiEsignPost(passw, initials, invite, files, documentPassword, inputType)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ApiApi#pdfWebapiEsignPost")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ApiApi#pdfWebapiEsignPost")
-    e.printStackTrace()
-}
-</code></pre>
-</details>
-
-### **Extract Tables from Document.**
-- Extracts tables from the provided document and converts them into the specified output format. Upload the document containing the tables and choose the format you prefer. The service will extract the tables and deliver them in the selected format, facilitating easier data usage and analysis.
-
-**Supported formats:**
-
-| doc | html | md | mht | mhtml | pptx | tex | docx | pdf |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-
-<details><summary>curl</summary>
-<pre><code>
-curl -X POST 'http://localhost:5252/pdf/webapi/extract?inputType=value&outputType=value' -F 'files=@file.pdf'
-</code></pre>
-</details>
-<details><summary>php</summary>
-<pre><code>
-<?php
-require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
-
-$apiInstance = new Swagger\\Client\\Api\\ApiApi(
-    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
-    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
-    new GuzzleHttp\\Client()
-);
-$files = array("files\_example"); // string[] | 
-$document\_password = "document\_password\_example"; // string | 
-$input\_type = "input\_type\_example"; // string | The format of the input files.
-$output\_type = "output\_type\_example"; // string | The desired format for the output files.
-
-try {
-    $result = $apiInstance->pdfWebapiExtractPost($files, $document\_password, $input\_type, $output\_type);
-    print\_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ApiApi->pdfWebapiExtractPost: ', $e->getMessage(), PHP\_EOL;
-}
-?>
-</code></pre>
-</details>
-<details><summary>dotnet</summary>
-<pre><code>
-using System;
-using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
-
-namespace Example
-{
-    public class PdfWebapiExtractPostExample
-    {
-        public void main()
-        {
-
-            var apiInstance = new ApiApi();
-            var files = new List<FileParameter>(); // List<FileParameter> |  (optional) 
-            var documentPassword = documentPassword\_example;  // string |  (optional) 
-            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
-            var outputType = outputType\_example;  // string | The desired format for the output files. (optional) 
-
-            try
-            {
-                // Extract Tables from Document.
-                FileResponse result = apiInstance.PdfWebapiExtractPost(files, documentPassword, inputType, outputType);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ApiApi.PdfWebapiExtractPost: " + e.Message );
-            }
-        }
-    }
-}
-</code></pre>
-</details>
-<details><summary>java</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.ApiApi;
-
-
-ApiApi apiInstance = new ApiApi();
-List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-String documentPassword = "documentPassword\_example"; // String | 
-String inputType = "inputType\_example"; // String | The format of the input files.
-String outputType = "outputType\_example"; // String | The desired format for the output files.
-try {
-    FileResponse result = apiInstance.pdfWebapiExtractPost(files, documentPassword, inputType, outputType);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ApiApi#pdfWebapiExtractPost");
-    e.printStackTrace();
-}
-</code></pre>
-</details>
-<details><summary>kotlin</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.infrastructure.\*
-//import io.swagger.client.models.\*;
-
-val apiInstance = ApiApi()
-val files : kotlin.Array<kotlin.Array<kotlin.Byte>> =  // kotlin.Array<kotlin.Array<kotlin.Byte>> | 
-val documentPassword : kotlin.String = documentPassword\_example // kotlin.String | 
-val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
-val outputType : kotlin.String = outputType\_example // kotlin.String | The desired format for the output files.
-try {
-    val result : FileResponse = apiInstance.pdfWebapiExtractPost(files, documentPassword, inputType, outputType)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ApiApi#pdfWebapiExtractPost")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ApiApi#pdfWebapiExtractPost")
-    e.printStackTrace()
-}
-</code></pre>
-</details>
-
-### **Make GIF.**
-- Creates a GIF from a collection of images, ensuring smooth transitions and cohesive animation. Upload the images you want to include, and the service will generate a GIF based on your specifications. This service is ideal for animating a series of product shots, creating engaging social media content, or other animation needs.
-
-<details><summary>curl</summary>
-<pre><code>
-curl -X POST 'http://localhost:5252/pdf/webapi/gif?keepImagesAsIs=value&resizeToImage=value&streched=value&width=value&height=value&frameTimes=value' -F 'files=@file.pdf'
-</code></pre>
-</details>
-<details><summary>php</summary>
-<pre><code>
-<?php
-require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
-
-$apiInstance = new Swagger\\Client\\Api\\ApiApi(
-    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
-    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
-    new GuzzleHttp\\Client()
-);
-$files = array("files\_example"); // string[] | 
-$document\_password = "document\_password\_example"; // string | 
-$keep\_images\_as\_is = true; // bool | Indicates whether the images should be kept as is.
-$resize\_to\_image = 56; // int | The index of the image to resize the other images to.
-$streched = true; // bool | 
-$width = 56; // int | The width of the GIF.
-$height = 56; // int | The height of the GIF.
-$frame\_times = "frame\_times\_example"; // string | The times for each frame in the GIF.
-
-try {
-    $result = $apiInstance->pdfWebapiGifPost($files, $document\_password, $keep\_images\_as\_is, $resize\_to\_image, $streched, $width, $height, $frame\_times);
-    print\_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ApiApi->pdfWebapiGifPost: ', $e->getMessage(), PHP\_EOL;
-}
-?>
-</code></pre>
-</details>
-<details><summary>dotnet</summary>
-<pre><code>
-using System;
-using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
-
-namespace Example
-{
-    public class PdfWebapiGifPostExample
-    {
-        public void main()
-        {
-
-            var apiInstance = new ApiApi();
-            var files = new List<FileParameter>(); // List<FileParameter> |  (optional) 
-            var documentPassword = documentPassword\_example;  // string |  (optional) 
-            var keepImagesAsIs = true;  // bool? | Indicates whether the images should be kept as is. (optional) 
-            var resizeToImage = 56;  // int? | The index of the image to resize the other images to. (optional) 
-            var streched = true;  // bool? |  (optional) 
-            var width = 56;  // int? | The width of the GIF. (optional) 
-            var height = 56;  // int? | The height of the GIF. (optional) 
-            var frameTimes = frameTimes\_example;  // string | The times for each frame in the GIF. (optional) 
-
-            try
-            {
-                // Make GIF.
-                FileResponse result = apiInstance.PdfWebapiGifPost(files, documentPassword, keepImagesAsIs, resizeToImage, streched, width, height, frameTimes);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ApiApi.PdfWebapiGifPost: " + e.Message );
-            }
-        }
-    }
-}
-</code></pre>
-</details>
-<details><summary>java</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.ApiApi;
-
-
-ApiApi apiInstance = new ApiApi();
-List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-String documentPassword = "documentPassword\_example"; // String | 
-Boolean keepImagesAsIs = true; // Boolean | Indicates whether the images should be kept as is.
-Integer resizeToImage = 56; // Integer | The index of the image to resize the other images to.
-Boolean streched = true; // Boolean | 
-Integer width = 56; // Integer | The width of the GIF.
-Integer height = 56; // Integer | The height of the GIF.
-String frameTimes = "frameTimes\_example"; // String | The times for each frame in the GIF.
-try {
-    FileResponse result = apiInstance.pdfWebapiGifPost(files, documentPassword, keepImagesAsIs, resizeToImage, streched, width, height, frameTimes);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ApiApi#pdfWebapiGifPost");
-    e.printStackTrace();
-}
-</code></pre>
-</details>
-<details><summary>kotlin</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.infrastructure.\*
-//import io.swagger.client.models.\*;
-
-val apiInstance = ApiApi()
-val files : kotlin.Array<kotlin.Array<kotlin.Byte>> =  // kotlin.Array<kotlin.Array<kotlin.Byte>> | 
-val documentPassword : kotlin.String = documentPassword\_example // kotlin.String | 
-val keepImagesAsIs : kotlin.Boolean = true // kotlin.Boolean | Indicates whether the images should be kept as is.
-val resizeToImage : kotlin.Int = 56 // kotlin.Int | The index of the image to resize the other images to.
-val streched : kotlin.Boolean = true // kotlin.Boolean | 
-val width : kotlin.Int = 56 // kotlin.Int | The width of the GIF.
-val height : kotlin.Int = 56 // kotlin.Int | The height of the GIF.
-val frameTimes : kotlin.String = frameTimes\_example // kotlin.String | The times for each frame in the GIF.
-try {
-    val result : FileResponse = apiInstance.pdfWebapiGifPost(files, documentPassword, keepImagesAsIs, resizeToImage, streched, width, height, frameTimes)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ApiApi#pdfWebapiGifPost")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ApiApi#pdfWebapiGifPost")
-    e.printStackTrace()
-}
-</code></pre>
-</details>
-
-### **Calculate Document Hash.**
-- Calculates the hash values for the provided documents using the specified hashing algorithm. Upload the documents and choose the desired algorithm, and the service will generate hash values for each file. This process helps verify that the documents have not been altered or corrupted, ensuring data integrity.
-
-**Supported formats:**
-
-| md5 | sha1 | sha256 | sha384 | sha512 |
-| --- | --- | --- | --- | --- |
-
-<details><summary>curl</summary>
-<pre><code>
-curl -X POST 'http://localhost:5252/pdf/webapi/hash?inputType=value&outputType=value&alg=value' -F 'files=@file.pdf'
-</code></pre>
-</details>
-<details><summary>php</summary>
-<pre><code>
-<?php
-require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
-
-$apiInstance = new Swagger\\Client\\Api\\ApiApi(
-    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
-    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
-    new GuzzleHttp\\Client()
-);
-$files = array("files\_example"); // string[] | 
-$document\_password = "document\_password\_example"; // string | 
-$input\_type = "input\_type\_example"; // string | The format of the input files.
-$output\_type = "output\_type\_example"; // string | The desired format for the output files.
-$alg = new \\Swagger\\Client\\Model\\HashAlgorithm(); // \\Swagger\\Client\\Model\\HashAlgorithm | The hashing algorithm to use.
-
-try {
-    $result = $apiInstance->pdfWebapiHashPost($files, $document\_password, $input\_type, $output\_type, $alg);
-    print\_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ApiApi->pdfWebapiHashPost: ', $e->getMessage(), PHP\_EOL;
-}
-?>
-</code></pre>
-</details>
-<details><summary>dotnet</summary>
-<pre><code>
-using System;
-using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
-
-namespace Example
-{
-    public class PdfWebapiHashPostExample
-    {
-        public void main()
-        {
-
-            var apiInstance = new ApiApi();
-            var files = new List<FileParameter>(); // List<FileParameter> |  (optional) 
-            var documentPassword = documentPassword\_example;  // string |  (optional) 
-            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
-            var outputType = outputType\_example;  // string | The desired format for the output files. (optional) 
-            var alg = HashAlgorithm.SHA1; // HashAlgorithm | The hashing algorithm to use. (optional) 
-
-            try
-            {
-                // Calculate Document Hash.
-                FileResponse result = apiInstance.PdfWebapiHashPost(files, documentPassword, inputType, outputType, alg);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ApiApi.PdfWebapiHashPost: " + e.Message );
-            }
-        }
-    }
-}
-</code></pre>
-</details>
-<details><summary>java</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.ApiApi;
-
-
-ApiApi apiInstance = new ApiApi();
-List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-String documentPassword = "documentPassword\_example"; // String | 
-String inputType = "inputType\_example"; // String | The format of the input files.
-String outputType = "outputType\_example"; // String | The desired format for the output files.
-HashAlgorithm alg = HashAlgorithm.SHA1; // HashAlgorithm | The hashing algorithm to use.
-try {
-    FileResponse result = apiInstance.pdfWebapiHashPost(files, documentPassword, inputType, outputType, alg);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ApiApi#pdfWebapiHashPost");
-    e.printStackTrace();
-}
-</code></pre>
-</details>
-<details><summary>kotlin</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.infrastructure.\*
-//import io.swagger.client.models.\*;
-
-val apiInstance = ApiApi()
-val files : kotlin.Array<kotlin.Array<kotlin.Byte>> =  // kotlin.Array<kotlin.Array<kotlin.Byte>> | 
-val documentPassword : kotlin.String = documentPassword\_example // kotlin.String | 
-val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
-val outputType : kotlin.String = outputType\_example // kotlin.String | The desired format for the output files.
-val alg : HashAlgorithm =  // HashAlgorithm | The hashing algorithm to use.
-try {
-    val result : FileResponse = apiInstance.pdfWebapiHashPost(files, documentPassword, inputType, outputType, alg)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ApiApi#pdfWebapiHashPost")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ApiApi#pdfWebapiHashPost")
-    e.printStackTrace()
-}
-</code></pre>
-</details>
-
-### **Lock document.**
-- Locks the provided document with a specified password to restrict access to authorized users only. Upload the file and provide a password, and the service will apply the password protection to secure the document. Optionally, you can include additional files to further enhance the security of the document.
-
-**Supported formats:**
-
-| pdf |
-| --- |
-
-<details><summary>curl</summary>
-<pre><code>
-curl -X POST 'http://localhost:5252/pdf/webapi/lock' \\
-     -F 'files=@file.pdf' \\
-     -F 'documentPassword=value'
-</code></pre>
-</details>
-<details><summary>php</summary>
-<pre><code>
-<?php
-require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
-
-$apiInstance = new Swagger\\Client\\Api\\ApiApi(
-    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
-    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
-    new GuzzleHttp\\Client()
-);
-$password = "password\_example"; // string | 
-$files = array("files\_example"); // string[] | 
-
-try {
-    $result = $apiInstance->pdfWebapiLockPost($password, $files);
-    print\_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ApiApi->pdfWebapiLockPost: ', $e->getMessage(), PHP\_EOL;
-}
-?>
-</code></pre>
-</details>
-<details><summary>dotnet</summary>
-<pre><code>
-using System;
-using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
-
-namespace Example
-{
-    public class PdfWebapiLockPostExample
-    {
-        public void main()
-        {
-
-            var apiInstance = new ApiApi();
-            var files = new List<FileParameter>(); // List<FileParameter> |  (optional) 
-            var password = password\_example;  // string |  (optional) 
-            
-            try
-            {
-                // Lock document.
-                FileResponse result = apiInstance.PdfWebapiLockPost(password, files);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ApiApi.PdfWebapiLockPost: " + e.Message );
-            }
-        }
-    }
-}
-</code></pre>
-</details>
-<details><summary>java</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.ApiApi;
-
-
-ApiApi apiInstance = new ApiApi();
-String password = "password\_example"; // String | 
-List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-try {
-    FileResponse result = apiInstance.pdfWebapiLockPost(password, files);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ApiApi#pdfWebapiLockPost");
-    e.printStackTrace();
-}
-</code></pre>
-</details>
-<details><summary>kotlin</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.infrastructure.\*
-//import io.swagger.client.models.\*;
-
-val apiInstance = ApiApi()
-val password : kotlin.String = password\_example // kotlin.String | 
-val files : kotlin.Array<kotlin.Array<kotlin.Byte>> =  // kotlin.Array<kotlin.Array<kotlin.Byte>> | 
-try {
-    val result : FileResponse = apiInstance.pdfWebapiLockPost(password, files)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ApiApi#pdfWebapiLockPost")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ApiApi#pdfWebapiLockPost")
-    e.printStackTrace()
-}
-</code></pre>
-</details>
-
-### **Merge Documents.**
-- Merges multiple documents or images into a single file based on specified preferences for orientation and page size. Upload the files you want to consolidate and define your formatting preferences. This service will combine the files into one, ensuring that the final document or image meets your requirements.
-
-**Supported formats:**
-
-| From/To | bmp | docx | gif | jpg | pdf | pptx | tex | ofd | html | png | tiff | doc | xlsx | webp |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| bmp | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |
-| doc |  | &#9745; |  |  | &#9745; | &#9745; |  |  | &#9745; |  |  |  |  |  |  |  |  |
-| xlsx |  | &#9745; |  |  | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  |
-| gif |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; |  |  |  |  |  |
-| html |  | &#9745; |  | &#9745; | &#9745; | &#9745; |  | &#9745; |  |  | &#9745; | &#9745; | &#9745; |  |  |  |  |
-| jpg |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  |
-| pdf |  | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  |  |
-| png |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  |
-| ppt |  | &#9745; |  |  |  | &#9745; |  |  |  |  | &#9745; |  | &#9745; |  |  |  |  |
-| pptx |  | &#9745; |  | &#9745; | &#9745; | &#9745; |  |  |  |  | &#9745; |  | &#9745; |  | &#9745; |  |  |
-| tiff |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  |  |  | &#9745; | &#9745; | &#9745; |  |  |  |  |
-| webp |  | &#9745; |  | &#9745; | &#9745; | &#9745; |  | &#9745; |  | &#9745; |  |  |  |  |  | &#9745; |  |
-| docx |  | &#9745; |  |  | &#9745; | &#9745; | &#9745; |  | &#9745; |  |  | &#9745; |  |  |  |  |  |
-
-<details><summary>curl</summary>
-<pre><code>
-curl -X POST 'http://localhost:5252/pdf/webapi/merge?inputType=value&outputType=value&mergeType=value&horizontal=value&vertical=value&pageSize=value&dc\_isLandscape=value' -F 'files=@file.pdf'
-</code></pre>
-</details>
-<details><summary>php</summary>
-<pre><code>
-<?php
-require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
-
-$apiInstance = new Swagger\\Client\\Api\\ApiApi(
-    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
-    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
-    new GuzzleHttp\\Client()
-);
-$files = array("files\_example"); // string[] | 
-$document\_password = "document\_password\_example"; // string | 
-$input\_type = "input\_type\_example"; // string | The format of the input files.
-$output\_type = "output\_type\_example"; // string | The desired format for the output file.
-$merge\_type = new \\Swagger\\Client\\Model\\MergeImageType(); // \\Swagger\\Client\\Model\\MergeImageType | Type of merger operation.
-$horizontal = 56; // int | The number of images to merge horizontally, if applicable.
-$vertical = 56; // int | The number of images to merge vertically, if applicable.
-$page\_size = new \\Swagger\\Client\\Model\\PageSize(); // \\Swagger\\Client\\Model\\PageSize | The page size for the output file, if applicable.
-$dc\_is\_landscape = true; // bool | Indicates whether the output file should be in landscape orientation.
-
-try {
-    $result = $apiInstance->pdfWebapiMergePost($files, $document\_password, $input\_type, $output\_type, $merge\_type, $horizontal, $vertical, $page\_size, $dc\_is\_landscape);
-    print\_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ApiApi->pdfWebapiMergePost: ', $e->getMessage(), PHP\_EOL;
-}
-?>
-</code></pre>
-</details>
-<details><summary>dotnet</summary>
-<pre><code>
-using System;
-using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
-
-namespace Example
-{
-    public class PdfWebapiMergePostExample
-    {
-        public void main()
-        {
-
-            var apiInstance = new ApiApi();
-            var files = new List<FileParameter>(); // List<FileParameter> |  (optional) 
-            var documentPassword = documentPassword\_example;  // string |  (optional) 
-            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
-            var outputType = outputType\_example;  // string | The desired format for the output file. (optional) 
-            var mergeType = MergeImageType.Vertical; // MergeImageType | Type of merger operation. (optional) 
-            var horizontal = 56;  // int? | The number of images to merge horizontally, if applicable. (optional) 
-            var vertical = 56;  // int? | The number of images to merge vertically, if applicable. (optional) 
-            var pageSize = PageSize.A4; // PageSize | The page size for the output file, if applicable. (optional) 
-            var dcIsLandscape = true;  // bool? | Indicates whether the output file should be in landscape orientation. (optional) 
-
-            try
-            {
-                // Merge Documents.
-                FileResponse result = apiInstance.PdfWebapiMergePost(files, documentPassword, inputType, outputType, mergeType, horizontal, vertical, pageSize, dcIsLandscape);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ApiApi.PdfWebapiMergePost: " + e.Message );
-            }
-        }
-    }
-}
-</code></pre>
-</details>
-<details><summary>java</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.ApiApi;
-
-
-ApiApi apiInstance = new ApiApi();
-List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-String documentPassword = "documentPassword\_example"; // String | 
-String inputType = "inputType\_example"; // String | The format of the input files.
-String outputType = "outputType\_example"; // String | The desired format for the output file.
-MergeImageType mergeType = MergeImageType.VERTICAL; // MergeImageType | Type of merger operation.
-Integer horizontal = 56; // Integer | The number of images to merge horizontally, if applicable.
-Integer vertical = 56; // Integer | The number of images to merge vertically, if applicable.
-PageSize pageSize = PageSize.A4; // PageSize | The page size for the output file, if applicable.
-Boolean dcIsLandscape = true; // Boolean | Indicates whether the output file should be in landscape orientation.
-try {
-    FileResponse result = apiInstance.pdfWebapiMergePost(files, documentPassword, inputType, outputType, mergeType, horizontal, vertical, pageSize, dcIsLandscape);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ApiApi#pdfWebapiMergePost");
-    e.printStackTrace();
-}
-</code></pre>
-</details>
-<details><summary>kotlin</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.infrastructure.\*
-//import io.swagger.client.models.\*;
-
-val apiInstance = ApiApi()
-val files : kotlin.Array<kotlin.Array<kotlin.Byte>> =  // kotlin.Array<kotlin.Array<kotlin.Byte>> | 
-val documentPassword : kotlin.String = documentPassword\_example // kotlin.String | 
-val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
-val outputType : kotlin.String = outputType\_example // kotlin.String | The desired format for the output file.
-val mergeType : MergeImageType =  // MergeImageType | Type of merger operation.
-val horizontal : kotlin.Int = 56 // kotlin.Int | The number of images to merge horizontally, if applicable.
-val vertical : kotlin.Int = 56 // kotlin.Int | The number of images to merge vertically, if applicable.
-val pageSize : PageSize =  // PageSize | The page size for the output file, if applicable.
-val dcIsLandscape : kotlin.Boolean = true // kotlin.Boolean | Indicates whether the output file should be in landscape orientation.
-try {
-    val result : FileResponse = apiInstance.pdfWebapiMergePost(files, documentPassword, inputType, outputType, mergeType, horizontal, vertical, pageSize, dcIsLandscape)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ApiApi#pdfWebapiMergePost")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ApiApi#pdfWebapiMergePost")
-    e.printStackTrace()
-}
-</code></pre>
-</details>
-
-### **Read and Change Document Metadata.**
-- Reads and updates the metadata of the provided documents based on specified operations. Upload the documents and define the metadata changes you need. This service will read the existing metadata, apply the changes, and ensure that your files contain accurate and updated information.
-
-**Supported formats:**
-
-| xlsx | jpg | pptx | tiff | docx | pdf |
-| --- | --- | --- | --- | --- | --- |
-
-<details><summary>curl</summary>
-<pre><code>
-curl -X POST 'http://localhost:5252/pdf/webapi/metadata?operation=value&folder=value&name=value' -F 'files=@file.pdf'
-</code></pre>
-</details>
-<details><summary>php</summary>
-<pre><code>
-<?php
-require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
-
-$apiInstance = new Swagger\\Client\\Api\\ApiApi(
-    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
-    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
-    new GuzzleHttp\\Client()
-);
-$files = array("files\_example"); // string[] | 
-$document\_password = "document\_password\_example"; // string | 
-$operation = new \\Swagger\\Client\\Model\\MetadataOperation(); // \\Swagger\\Client\\Model\\MetadataOperation | The operation to perform on the metadata.
-$folder = "folder\_example"; // string | The folder where the files are located.
-$name = "name\_example"; // string | The name of the file to perform the operation on.
-
-try {
-    $result = $apiInstance->pdfWebapiMetadataPost($files, $document\_password, $operation, $folder, $name);
-    print\_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ApiApi->pdfWebapiMetadataPost: ', $e->getMessage(), PHP\_EOL;
-}
-?>
-</code></pre>
-</details>
-<details><summary>dotnet</summary>
-<pre><code>
-using System;
-using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
-
-namespace Example
-{
-    public class PdfWebapiMetadataPostExample
-    {
-        public void main()
-        {
-
-            var apiInstance = new ApiApi();
-            var files = new List<FileParameter>(); // List<FileParameter> |  (optional) 
-            var operation = MetadataOperation.Get; // MetadataOperation | The operation to perform on the metadata. (optional) 
-            var documentPassword = documentPassword\_example;  // string |  (optional) 
-            var folder = folder\_example;  // string | The folder where the files are located. (optional) 
-            var name = name\_example;  // string | The name of the file to perform the operation on. (optional) 
-
-            try
-            {
-                // Read and Change Document Metadata.
-                FileResponse result = apiInstance.PdfWebapiMetadataPost(files, documentPassword, operation, folder, name);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ApiApi.PdfWebapiMetadataPost: " + e.Message );
-            }
-        }
-    }
-}
-</code></pre>
-</details>
-<details><summary>java</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.ApiApi;
-
-
-ApiApi apiInstance = new ApiApi();
-List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-String documentPassword = "documentPassword\_example"; // String | 
-MetadataOperation operation = new MetadataOperation(); // MetadataOperation | The operation to perform on the metadata.
-String folder = "folder\_example"; // String | The folder where the files are located.
-String name = "name\_example"; // String | The name of the file to perform the operation on.
-try {
-    FileResponse result = apiInstance.pdfWebapiMetadataPost(files, documentPassword, operation, folder, name);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ApiApi#pdfWebapiMetadataPost");
-    e.printStackTrace();
-}
-</code></pre>
-</details>
-<details><summary>kotlin</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.infrastructure.\*
-//import io.swagger.client.models.\*;
-
-val apiInstance = ApiApi()
-val files : kotlin.Array<kotlin.Array<kotlin.Byte>> =  // kotlin.Array<kotlin.Array<kotlin.Byte>> | 
-val documentPassword : kotlin.String = documentPassword\_example // kotlin.String | 
-val operation : MetadataOperation =  // MetadataOperation | The operation to perform on the metadata.
-val folder : kotlin.String = folder\_example // kotlin.String | The folder where the files are located.
-val name : kotlin.String = name\_example // kotlin.String | The name of the file to perform the operation on.
-try {
-    val result : FileResponse = apiInstance.pdfWebapiMetadataPost(files, documentPassword, operation, folder, name)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ApiApi#pdfWebapiMetadataPost")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ApiApi#pdfWebapiMetadataPost")
-    e.printStackTrace()
-}
-</code></pre>
-</details>
-
-### **Organize Document Pages.**
-- Reorganizes the pages of the provided document based on your instructions. Upload the document and specify which pages to remove or move, and the service will rearrange the pages accordingly, ensuring that the document is organized as you require.
-
-**Supported formats:**
-
-| pdf |
-| --- |
-
-<details><summary>curl</summary>
-<pre><code>
-curl -X POST 'http://localhost:5252/pdf/webapi/organize?inputType=value&remove=value&move=value' -F 'files=@file.pdf'
-</code></pre>
-</details>
-<details><summary>php</summary>
-<pre><code>
-<?php
-require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
-
-$apiInstance = new Swagger\\Client\\Api\\ApiApi(
-    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
-    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
-    new GuzzleHttp\\Client()
-);
-$files = array("files\_example"); // string[] | 
-$document\_password = "document\_password\_example"; // string | 
-$input\_type = "input\_type\_example"; // string | The format of the input files.
-$remove = "remove\_example"; // string | The pages to remove from the document.
-$move = "move\_example"; // string | The pages to move within the document.
-
-try {
-    $result = $apiInstance->pdfWebapiOrganizePost($files, $document\_password, $input\_type, $remove, $move);
-    print\_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ApiApi->pdfWebapiOrganizePost: ', $e->getMessage(), PHP\_EOL;
-}
-?>
-</code></pre>
-</details>
-<details><summary>dotnet</summary>
-<pre><code>
-using System;
-using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
-
-namespace Example
-{
-    public class PdfWebapiOrganizePostExample
-    {
-        public void main()
-        {
-
-            var apiInstance = new ApiApi();
-            var files = new List<FileParameter>(); // List<FileParameter> |  (optional) 
-            var documentPassword = documentPassword\_example;  // string |  (optional) 
-            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
-            var remove = remove\_example;  // string | The pages to remove from the document. (optional) 
-            var move = move\_example;  // string | The pages to move within the document. (optional) 
-
-            try
-            {
-                // Organize Document Pages.
-                FileResponse result = apiInstance.PdfWebapiOrganizePost(files, documentPassword, inputType, remove, move);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ApiApi.PdfWebapiOrganizePost: " + e.Message );
-            }
-        }
-    }
-}
-</code></pre>
-</details>
-<details><summary>java</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.ApiApi;
-
-
-ApiApi apiInstance = new ApiApi();
-List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-String documentPassword = "documentPassword\_example"; // String | 
-String inputType = "inputType\_example"; // String | The format of the input files.
-String remove = "remove\_example"; // String | The pages to remove from the document.
-String move = "move\_example"; // String | The pages to move within the document.
-try {
-    FileResponse result = apiInstance.pdfWebapiOrganizePost(files, documentPassword, inputType, remove, move);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ApiApi#pdfWebapiOrganizePost");
-    e.printStackTrace();
-}
-</code></pre>
-</details>
-<details><summary>kotlin</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.infrastructure.\*
-//import io.swagger.client.models.\*;
-
-val apiInstance = ApiApi()
-val files : kotlin.Array<kotlin.Array<kotlin.Byte>> =  // kotlin.Array<kotlin.Array<kotlin.Byte>> | 
-val documentPassword : kotlin.String = documentPassword\_example // kotlin.String | 
-val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
-val remove : kotlin.String = remove\_example // kotlin.String | The pages to remove from the document.
-val move : kotlin.String = move\_example // kotlin.String | The pages to move within the document.
-try {
-    val result : FileResponse = apiInstance.pdfWebapiOrganizePost(files, documentPassword, inputType, remove, move)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ApiApi#pdfWebapiOrganizePost")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ApiApi#pdfWebapiOrganizePost")
-    e.printStackTrace()
-}
-</code></pre>
-</details>
-
-### **Parse Document.**
-- Analyses and extracts relevant content from the provided document files. The parsing service organizes the data within your documents to make it accessible and tailored to your specific requirements.
-
-**Supported formats:**
-
-| epub | html | mhtml | pptx | pptx | pdf |
-| --- | --- | --- | --- | --- | --- |
-
-<details><summary>curl</summary>
-<pre><code>
-curl -X POST 'http://localhost:5252/pdf/webapi/parse' -F 'files=@file.pdf'
-</code></pre>
-</details>
-<details><summary>php</summary>
-<pre><code>
-<?php
-require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
-
-$apiInstance = new Swagger\\Client\\Api\\ApiApi(
-    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
-    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
-    new GuzzleHttp\\Client()
-);
-$files = array("files\_example"); // string[] | 
-$document\_password = "document\_password\_example"; // string | 
-
-try {
-    $result = $apiInstance->pdfWebapiParsePost($files, $document\_password);
-    print\_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ApiApi->pdfWebapiParsePost: ', $e->getMessage(), PHP\_EOL;
-}
-?>
-</code></pre>
-</details>
-<details><summary>dotnet</summary>
-<pre><code>
-using System;
-using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
-
-namespace Example
-{
-    public class PdfWebapiParsePostExample
-    {
-        public void main()
-        {
-
-            var apiInstance = new ApiApi();
-            var files = new List<FileParameter>(); // List<FileParameter> |  (optional) 
-            var documentPassword = documentPassword\_example;  // string |  (optional) 
-
-            try
-            {
-                // Parse Document.
-                FileResponse result = apiInstance.PdfWebapiParsePost(files, documentPassword);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ApiApi.PdfWebapiParsePost: " + e.Message );
-            }
-        }
-    }
-}
-</code></pre>
-</details>
-<details><summary>java</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.ApiApi;
-
-
-ApiApi apiInstance = new ApiApi();
-List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-String documentPassword = "documentPassword\_example"; // String | 
-try {
-    FileResponse result = apiInstance.pdfWebapiParsePost(files, documentPassword);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ApiApi#pdfWebapiParsePost");
-    e.printStackTrace();
-}
-</code></pre>
-</details>
-<details><summary>kotlin</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.infrastructure.\*
-//import io.swagger.client.models.\*;
-
-val apiInstance = ApiApi()
-val files : kotlin.Array<kotlin.Array<kotlin.Byte>> =  // kotlin.Array<kotlin.Array<kotlin.Byte>> | 
-val documentPassword : kotlin.String = documentPassword\_example // kotlin.String | 
-try {
-    val result : FileResponse = apiInstance.pdfWebapiParsePost(files, documentPassword)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ApiApi#pdfWebapiParsePost")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ApiApi#pdfWebapiParsePost")
-    e.printStackTrace()
-}
-</code></pre>
-</details>
-
-### **Redact Document Text.**
-- Redacts sensitive information from the provided documents by removing specified text, comments, and metadata. You can specify the text to be redacted and use case-sensitive search to ensure thorough removal. This service helps maintain confidentiality and security by ensuring that sensitive information is completely removed.
-
-**Supported formats:**
-
-| doc | xlsx | md | pptx | srt | txt | docx | xml | pdf |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-
-<details><summary>curl</summary>
-<pre><code>
-curl -X POST 'http://localhost:5252/pdf/webapi/redact?searchQuery=value&replaceText=value&caseSensitive=value&text=value&comments=value&metadata=value' -F 'files=@file.pdf'
-</code></pre>
-</details>
-<details><summary>php</summary>
-<pre><code>
-<?php
-require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
-
-$apiInstance = new Swagger\\Client\\Api\\ApiApi(
-    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
-    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
-    new GuzzleHttp\\Client()
-);
-$files = array("files\_example"); // string[] | 
-$document\_password = "document\_password\_example"; // string | 
-$search\_query = "search\_query\_example"; // string | The text to search for and redact.
-$replace\_text = "replace\_text\_example"; // string | The text to replace the found text with.
-$case\_sensitive = true; // bool | Indicates whether the search should be case-sensitive.
-$text = true; // bool | Indicates whether text should be redacted.
-$comments = true; // bool | Indicates whether comments should be redacted.
-$metadata = true; // bool | Indicates whether metadata should be redacted.
-
-try {
-    $result = $apiInstance->pdfWebapiRedactPost($files, $document\_password, $search\_query, $replace\_text, $case\_sensitive, $text, $comments, $metadata);
-    print\_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ApiApi->pdfWebapiRedactPost: ', $e->getMessage(), PHP\_EOL;
-}
-?>
-</code></pre>
-</details>
-<details><summary>dotnet</summary>
-<pre><code>
-using System;
-using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
-
-namespace Example
-{
-    public class PdfWebapiRedactPostExample
-    {
-        public void main()
-        {
-
-            var apiInstance = new ApiApi();
-            var files = new List<FileParameter>(); // List<FileParameter> |  (optional) 
-            var documentPassword = documentPassword\_example;  // string |  (optional) 
-            var searchQuery = searchQuery\_example;  // string | The text to search for and redact. (optional) 
-            var replaceText = replaceText\_example;  // string | The text to replace the found text with. (optional) 
-            var caseSensitive = true;  // bool? | Indicates whether the search should be case-sensitive. (optional) 
-            var text = true;  // bool? | Indicates whether text should be redacted. (optional) 
-            var comments = true;  // bool? | Indicates whether comments should be redacted. (optional) 
-            var metadata = true;  // bool? | Indicates whether metadata should be redacted. (optional) 
-
-            try
-            {
-                // Redact Document Text.
-                FileResponse result = apiInstance.PdfWebapiRedactPost(files, documentPassword, searchQuery, replaceText, caseSensitive, text, comments, metadata);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ApiApi.PdfWebapiRedactPost: " + e.Message );
-            }
-        }
-    }
-}
-</code></pre>
-</details>
-<details><summary>java</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.ApiApi;
-
-
-ApiApi apiInstance = new ApiApi();
-List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-String documentPassword = "documentPassword\_example"; // String | 
-String searchQuery = "searchQuery\_example"; // String | The text to search for and redact.
-String replaceText = "replaceText\_example"; // String | The text to replace the found text with.
-Boolean caseSensitive = true; // Boolean | Indicates whether the search should be case-sensitive.
-Boolean text = true; // Boolean | Indicates whether text should be redacted.
-Boolean comments = true; // Boolean | Indicates whether comments should be redacted.
-Boolean metadata = true; // Boolean | Indicates whether metadata should be redacted.
-try {
-    FileResponse result = apiInstance.pdfWebapiRedactPost(files, documentPassword, searchQuery, replaceText, caseSensitive, text, comments, metadata);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ApiApi#pdfWebapiRedactPost");
-    e.printStackTrace();
-}
-</code></pre>
-</details>
-<details><summary>kotlin</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.infrastructure.\*
-//import io.swagger.client.models.\*;
-
-val apiInstance = ApiApi()
-val files : kotlin.Array<kotlin.Array<kotlin.Byte>> =  // kotlin.Array<kotlin.Array<kotlin.Byte>> | 
-val documentPassword : kotlin.String = documentPassword\_example // kotlin.String | 
-val searchQuery : kotlin.String = searchQuery\_example // kotlin.String | The text to search for and redact.
-val replaceText : kotlin.String = replaceText\_example // kotlin.String | The text to replace the found text with.
-val caseSensitive : kotlin.Boolean = true // kotlin.Boolean | Indicates whether the search should be case-sensitive.
-val text : kotlin.Boolean = true // kotlin.Boolean | Indicates whether text should be redacted.
-val comments : kotlin.Boolean = true // kotlin.Boolean | Indicates whether comments should be redacted.
-val metadata : kotlin.Boolean = true // kotlin.Boolean | Indicates whether metadata should be redacted.
-try {
-    val result : FileResponse = apiInstance.pdfWebapiRedactPost(files, documentPassword, searchQuery, replaceText, caseSensitive, text, comments, metadata)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ApiApi#pdfWebapiRedactPost")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ApiApi#pdfWebapiRedactPost")
-    e.printStackTrace()
-}
-</code></pre>
-</details>
-
-### **Remove Document Annotations.**
-- Removes all annotations, including comments, highlights, and markup, from the provided documents. By specifying the documents, this service ensures that they are cleaned of any annotations, resulting in a clean and annotation-free file.
-
-**Supported formats:**
-
-| pdf |
-| --- |
-
-<details><summary>curl</summary>
-<pre><code>
-curl -X POST 'http://localhost:5252/pdf/webapi/remove' -F 'files=@file.pdf'
-</code></pre>
-</details>
-<details><summary>php</summary>
-<pre><code>
-<?php
-require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
-
-$apiInstance = new Swagger\\Client\\Api\\ApiApi(
-    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
-    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
-    new GuzzleHttp\\Client()
-);
-$files = array("files\_example"); // string[] | 
-$document\_password = "document\_password\_example"; // string | 
-
-try {
-    $result = $apiInstance->pdfWebapiRemovePost($files, $document\_password);
-    print\_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ApiApi->pdfWebapiRemovePost: ', $e->getMessage(), PHP\_EOL;
-}
-?>
-</code></pre>
-</details>
-<details><summary>dotnet</summary>
-<pre><code>
-using System;
-using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
-
-namespace Example
-{
-    public class PdfWebapiRemovePostExample
-    {
-        public void main()
-        {
-
-            var apiInstance = new ApiApi();
-            var files = new List<FileParameter>(); // List<FileParameter> |  (optional) 
-            var documentPassword = documentPassword\_example;  // string |  (optional) 
-
-            try
-            {
-                // Remove Document Annotations.
-                FileResponse result = apiInstance.PdfWebapiRemovePost(files, documentPassword);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ApiApi.PdfWebapiRemovePost: " + e.Message );
-            }
-        }
-    }
-}
-</code></pre>
-</details>
-<details><summary>java</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.ApiApi;
-
-
-ApiApi apiInstance = new ApiApi();
-List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-String documentPassword = "documentPassword\_example"; // String | 
-try {
-    FileResponse result = apiInstance.pdfWebapiRemovePost(files, documentPassword);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ApiApi#pdfWebapiRemovePost");
-    e.printStackTrace();
-}
-</code></pre>
-</details>
-<details><summary>kotlin</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.infrastructure.\*
-//import io.swagger.client.models.\*;
-
-val apiInstance = ApiApi()
-val files : kotlin.Array<kotlin.Array<kotlin.Byte>> =  // kotlin.Array<kotlin.Array<kotlin.Byte>> | 
-val documentPassword : kotlin.String = documentPassword\_example // kotlin.String | 
-try {
-    val result : FileResponse = apiInstance.pdfWebapiRemovePost(files, documentPassword)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ApiApi#pdfWebapiRemovePost")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ApiApi#pdfWebapiRemovePost")
-    e.printStackTrace()
-}
-</code></pre>
-</details>
-
-### **Remove Document Watermark.**
-- Removes an unwanted watermark from all pages of the provided document. Submit the document, and this service will efficiently eliminate the watermark, resulting in a clean version of the file without the watermark.
-
-**Supported formats:**
-
-| pdf |
-| --- |
-
-<details><summary>curl</summary>
-<pre><code>
-curl -X POST 'http://localhost:5252/pdf/webapi/remove-watermark?isAllPages=value&watermarkType=value&removeRange=value' -F 'files=@file.pdf'
-</code></pre>
-</details>
-<details><summary>php</summary>
-<pre><code>
-<?php
-require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
-
-$apiInstance = new Swagger\\Client\\Api\\ApiApi(
-    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
-    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
-    new GuzzleHttp\\Client()
-);
-$watermark\_text = "watermark\_text\_example"; // string | 
-$top = 56; // int | 
-$left = 56; // int | 
-$bottom = 56; // int | 
-$right = 56; // int | 
-$files = array("files\_example"); // string[] | 
-$document\_password = "document\_password\_example"; // string | 
-$is\_all\_pages = true; // bool | Indicates whether the watermark should be removed from all pages.
-$watermark\_type = new \\Swagger\\Client\\Model\\WatermarkType(); // \\Swagger\\Client\\Model\\WatermarkType | The type of watermark to remove.
-$remove\_range = "remove\_range\_example"; // string | The range of pages to remove the watermark from.
-
-try {
-    $result = $apiInstance->pdfWebapiRemoveWatermarkPost($watermark\_text, $top, $left, $bottom, $right, $files, $document\_password, $is\_all\_pages, $watermark\_type, $remove\_range);
-    print\_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ApiApi->pdfWebapiRemoveWatermarkPost: ', $e->getMessage(), PHP\_EOL;
-}
-?>
-</code></pre>
-</details>
-<details><summary>dotnet</summary>
-<pre><code>
-using System;
-using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
-
-namespace Example
-{
-    public class PdfWebapiRemoveWatermarkPostExample
-    {
-        public void main()
-        {
-
-            var apiInstance = new ApiApi();
-            var watermarkText = watermarkText\_example;  // string |  (optional) 
-            var top = 56;  // int? |  (optional) 
-            var left = 56;  // int? |  (optional) 
-            var bottom = 56;  // int? |  (optional) 
-            var right = 56;  // int? |  (optional) 
-            var files = new List<FileParameter>(); // List<FileParameter> |  (optional) 
-            var documentPassword = documentPassword\_example;  // string |  (optional) 
-            var isAllPages = true;  // bool? | Indicates whether the watermark should be removed from all pages. (optional) 
-            var watermarkType = WatermarkType.Artifact; // WatermarkType | The type of watermark to remove. (optional) 
-            var removeRange = removeRange\_example;  // string | The range of pages to remove the watermark from. (optional) 
-
-            try
-            {
-                // Remove Document Watermark.
-                FileResponse result = apiInstance.PdfWebapiRemoveWatermarkPost(watermarkText, top, left, bottom, right, files, documentPassword, isAllPages, watermarkType, removeRange);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ApiApi.PdfWebapiRemoveWatermarkPost: " + e.Message );
-            }
-        }
-    }
-}
-</code></pre>
-</details>
-<details><summary>java</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.ApiApi;
-
-
-ApiApi apiInstance = new ApiApi();
-String watermarkText = "watermarkText\_example"; // String | 
-Integer top = 56; // Integer | 
-Integer left = 56; // Integer | 
-Integer bottom = 56; // Integer | 
-Integer right = 56; // Integer | 
-List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-String documentPassword = "documentPassword\_example"; // String | 
-Boolean isAllPages = true; // Boolean | Indicates whether the watermark should be removed from all pages.
-WatermarkType watermarkType = new WatermarkType(); // WatermarkType | The type of watermark to remove.
-String removeRange = "removeRange\_example"; // String | The range of pages to remove the watermark from.
-try {
-    FileResponse result = apiInstance.pdfWebapiRemoveWatermarkPost(watermarkText, top, left, bottom, right, files, documentPassword, isAllPages, watermarkType, removeRange);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ApiApi#pdfWebapiRemoveWatermarkPost");
-    e.printStackTrace();
-}
-</code></pre>
-</details>
-<details><summary>kotlin</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.infrastructure.\*
-//import io.swagger.client.models.\*;
-
-val apiInstance = ApiApi()
-val watermarkText : kotlin.String = watermarkText\_example // kotlin.String | 
-val top : kotlin.Int = 56 // kotlin.Int | 
-val left : kotlin.Int = 56 // kotlin.Int | 
-val bottom : kotlin.Int = 56 // kotlin.Int | 
-val right : kotlin.Int = 56 // kotlin.Int | 
-val files : kotlin.Array<kotlin.Array<kotlin.Byte>> =  // kotlin.Array<kotlin.Array<kotlin.Byte>> | 
-val documentPassword : kotlin.String = documentPassword\_example // kotlin.String | 
-val isAllPages : kotlin.Boolean = true // kotlin.Boolean | Indicates whether the watermark should be removed from all pages.
-val watermarkType : WatermarkType =  // WatermarkType | The type of watermark to remove.
-val removeRange : kotlin.String = removeRange\_example // kotlin.String | The range of pages to remove the watermark from.
-try {
-    val result : FileResponse = apiInstance.pdfWebapiRemoveWatermarkPost(watermarkText, top, left, bottom, right, files, documentPassword, isAllPages, watermarkType, removeRange)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ApiApi#pdfWebapiRemoveWatermarkPost")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ApiApi#pdfWebapiRemoveWatermarkPost")
-    e.printStackTrace()
-}
-</code></pre>
-</details>
-
-### **Remove Pages from Document.**
-- Removes specified pages from the provided document, leaving only the pages you want to keep. Simply provide the document and specify which pages to remove, and the service will process the file accordingly.
-
-**Supported formats:**
-
-| xlsx | pdf | pptx | tiff | docx |
-| --- | --- | --- | --- | --- |
-
-<details><summary>curl</summary>
-<pre><code>
-curl -X POST 'http://localhost:5252/pdf/webapi/removepages?removeRange=value' -F 'files=@file.pdf'
-</code></pre>
-</details>
-<details><summary>php</summary>
-<pre><code>
-<?php
-require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
-
-$apiInstance = new Swagger\\Client\\Api\\ApiApi(
-    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
-    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
-    new GuzzleHttp\\Client()
-);
-$files = array("files\_example"); // string[] | 
-$document\_password = "document\_password\_example"; // string | 
-$remove\_range = "remove\_range\_example"; // string | The range of pages to remove from the files.
-
-try {
-    $result = $apiInstance->pdfWebapiRemovepagesPost($files, $document\_password, $remove\_range);
-    print\_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ApiApi->pdfWebapiRemovepagesPost: ', $e->getMessage(), PHP\_EOL;
-}
-?>
-</code></pre>
-</details>
-<details><summary>dotnet</summary>
-<pre><code>
-using System;
-using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
-
-namespace Example
-{
-    public class PdfWebapiRemovepagesPostExample
-    {
-        public void main()
-        {
-
-            var apiInstance = new ApiApi();
-            var files = new List<FileParameter>(); // List<FileParameter> |  (optional) 
-            var documentPassword = documentPassword\_example;  // string |  (optional) 
-            var removeRange = removeRange\_example;  // string | The range of pages to remove from the files. (optional) 
-
-            try
-            {
-                // Remove Pages from Document.
-                FileResponse result = apiInstance.PdfWebapiRemovepagesPost(files, documentPassword, removeRange);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ApiApi.PdfWebapiRemovepagesPost: " + e.Message );
-            }
-        }
-    }
-}
-</code></pre>
-</details>
-<details><summary>java</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.ApiApi;
-
-
-ApiApi apiInstance = new ApiApi();
-List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-String documentPassword = "documentPassword\_example"; // String | 
-String removeRange = "removeRange\_example"; // String | The range of pages to remove from the files.
-try {
-    FileResponse result = apiInstance.pdfWebapiRemovepagesPost(files, documentPassword, removeRange);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ApiApi#pdfWebapiRemovepagesPost");
-    e.printStackTrace();
-}
-</code></pre>
-</details>
-<details><summary>kotlin</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.infrastructure.\*
-//import io.swagger.client.models.\*;
-
-val apiInstance = ApiApi()
-val files : kotlin.Array<kotlin.Array<kotlin.Byte>> =  // kotlin.Array<kotlin.Array<kotlin.Byte>> | 
-val documentPassword : kotlin.String = documentPassword\_example // kotlin.String | 
-val removeRange : kotlin.String = removeRange\_example // kotlin.String | The range of pages to remove from the files.
-try {
-    val result : FileResponse = apiInstance.pdfWebapiRemovepagesPost(files, documentPassword, removeRange)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ApiApi#pdfWebapiRemovepagesPost")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ApiApi#pdfWebapiRemovepagesPost")
-    e.printStackTrace()
-}
-</code></pre>
-</details>
-
-### **Repair Document.**
-- Repairs a corrupted or error-ridden document by identifying and fixing issues. Upload the problematic file, and this service will restore it to a usable state.
-
-**Supported formats:**
-
-| pdf |
-| --- |
-
-<details><summary>curl</summary>
-<pre><code>
-curl -X POST 'http://localhost:5252/pdf/webapi/repair' -F 'files=@file.pdf'
-</code></pre>
-</details>
-<details><summary>php</summary>
-<pre><code>
-<?php
-require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
-
-$apiInstance = new Swagger\\Client\\Api\\ApiApi(
-    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
-    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
-    new GuzzleHttp\\Client()
-);
-$files = array("files\_example"); // string[] | 
-$document\_password = "document\_password\_example"; // string | 
-
-try {
-    $result = $apiInstance->pdfWebapiRepairPost($files, $document\_password);
-    print\_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ApiApi->pdfWebapiRepairPost: ', $e->getMessage(), PHP\_EOL;
-}
-?>
-</code></pre>
-</details>
-<details><summary>dotnet</summary>
-<pre><code>
-using System;
-using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
-
-namespace Example
-{
-    public class PdfWebapiRepairPostExample
-    {
-        public void main()
-        {
-
-            var apiInstance = new ApiApi();
-            var files = new List<FileParameter>(); // List<FileParameter> |  (optional) 
-            var documentPassword = documentPassword\_example;  // string |  (optional) 
-
-            try
-            {
-                // Repair Document.
-                FileResponse result = apiInstance.PdfWebapiRepairPost(files, documentPassword);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ApiApi.PdfWebapiRepairPost: " + e.Message );
-            }
-        }
-    }
-}
-</code></pre>
-</details>
-<details><summary>java</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.ApiApi;
-
-
-ApiApi apiInstance = new ApiApi();
-List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-String documentPassword = "documentPassword\_example"; // String | 
-try {
-    FileResponse result = apiInstance.pdfWebapiRepairPost(files, documentPassword);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ApiApi#pdfWebapiRepairPost");
-    e.printStackTrace();
-}
-</code></pre>
-</details>
-<details><summary>kotlin</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.infrastructure.\*
-//import io.swagger.client.models.\*;
-
-val apiInstance = ApiApi()
-val files : kotlin.Array<kotlin.Array<kotlin.Byte>> =  // kotlin.Array<kotlin.Array<kotlin.Byte>> | 
-val documentPassword : kotlin.String = documentPassword\_example // kotlin.String | 
-try {
-    val result : FileResponse = apiInstance.pdfWebapiRepairPost(files, documentPassword)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ApiApi#pdfWebapiRepairPost")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ApiApi#pdfWebapiRepairPost")
-    e.printStackTrace()
-}
-</code></pre>
-</details>
-
-### **Resize Document.**
-- Resizes the document to fit the specified dimensions or preset sizes. Provide the file and specify the desired dimensions, or select from available preset sizes to adjust the document accordingly.
-
-**Supported formats:**
-
-| apng | bmp | eps | gif | jpg | png | svg | tiff | webp | pdf |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-
-<details><summary>curl</summary>
-<pre><code>
-curl -X POST 'http://localhost:5252/pdf/webapi/resize?inputType=value&outputType=value&resizeType=value&presetType=value&presetSize=value&width=value&height=value&percentage=value&useProportions=value&pageSize=value' -F 'files=@file.pdf'
-</code></pre>
-</details>
-<details><summary>php</summary>
-<pre><code>
-<?php
-require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
-
-$apiInstance = new Swagger\\Client\\Api\\ApiApi(
-    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
-    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
-    new GuzzleHttp\\Client()
-);
-$files = array("files\_example"); // string[] | 
-$document\_password = "document\_password\_example"; // string | 
-$input\_type = "input\_type\_example"; // string | The format of the input files.
-$output\_type = "output\_type\_example"; // string | The desired format for the output files.
-$resize\_type = new \\Swagger\\Client\\Model\\ResizeType(); // \\Swagger\\Client\\Model\\ResizeType | The type of resizing to apply.
-$preset\_type = new \\Swagger\\Client\\Model\\ResizePresetType(); // \\Swagger\\Client\\Model\\ResizePresetType | The type of preset size to use for resizing.
-$preset\_size = new \\Swagger\\Client\\Model\\ResizePresetSize(); // \\Swagger\\Client\\Model\\ResizePresetSize | The preset size to use for resizing.
-$width = 56; // int | The desired width of the resized files.
-$height = 56; // int | The desired height of the resized files.
-$percentage = 56; // int | The percentage to resize the files by.
-$use\_proportions = true; // bool | Indicates whether to maintain the aspect ratio when resizing.
-$page\_size = new \\Swagger\\Client\\Model\\ResizePageSize(); // \\Swagger\\Client\\Model\\ResizePageSize | The page size to use for the resized files.
-
-try {
-    $result = $apiInstance->pdfWebapiResizePost($files, $document\_password, $input\_type, $output\_type, $resize\_type, $preset\_type, $preset\_size, $width, $height, $percentage, $use\_proportions, $page\_size);
-    print\_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ApiApi->pdfWebapiResizePost: ', $e->getMessage(), PHP\_EOL;
-}
-?>
-</code></pre>
-</details>
-<details><summary>dotnet</summary>
-<pre><code>
-using System;
-using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
-
-namespace Example
-{
-    public class PdfWebapiResizePostExample
-    {
-        public void main()
-        {
-
-            var apiInstance = new ApiApi();
-            var files = new List<FileParameter>(); // List<FileParameter> |  (optional) 
-            var documentPassword = documentPassword\_example;  // string |  (optional) 
-            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
-            var outputType = outputType\_example;  // string | The desired format for the output files. (optional) 
-            var resizeType = ResizeType.Percentage; // ResizeType | The type of resizing to apply. (optional) 
-            var presetType = ResizePresetType.Facebook; // ResizePresetType | The type of preset size to use for resizing. (optional) 
-            var presetSize = ResizePresetSize.Facebook\_Post; // ResizePresetSize | The preset size to use for resizing. (optional) 
-            var width = 56;  // int? | The desired width of the resized files. (optional) 
-            var height = 56;  // int? | The desired height of the resized files. (optional) 
-            var percentage = 56;  // int? | The percentage to resize the files by. (optional) 
-            var useProportions = true;  // bool? | Indicates whether to maintain the aspect ratio when resizing. (optional) 
-            var pageSize = ResizePageSize.A4; // ResizePageSize | The page size to use for the resized files. (optional) 
-
-            try
-            {
-                // Resize Document.
-                FileResponse result = apiInstance.PdfWebapiResizePost(files, documentPassword, inputType, outputType, resizeType, presetType, presetSize, width, height, percentage, useProportions, pageSize);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ApiApi.PdfWebapiResizePost: " + e.Message );
-            }
-        }
-    }
-}
-</code></pre>
-</details>
-<details><summary>java</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.ApiApi;
-
-
-ApiApi apiInstance = new ApiApi();
-List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-String documentPassword = "documentPassword\_example"; // String | 
-String inputType = "inputType\_example"; // String | The format of the input files.
-String outputType = "outputType\_example"; // String | The desired format for the output files.
-ResizeType resizeType = ResizeType.PERCENTAGE; // ResizeType | The type of resizing to apply.
-ResizePresetType presetType = ResizePresetType.FACEBOOK; // ResizePresetType | The type of preset size to use for resizing.
-ResizePresetSize presetSize = ResizePresetSize.FACEBOOK\_POST; // ResizePresetSize | The preset size to use for resizing.
-Integer width = 56; // Integer | The desired width of the resized files.
-Integer height = 56; // Integer | The desired height of the resized files.
-Integer percentage = 56; // Integer | The percentage to resize the files by.
-Boolean useProportions = true; // Boolean | Indicates whether to maintain the aspect ratio when resizing.
-ResizePageSize pageSize = ResizePageSize.A4; // ResizePageSize | The page size to use for the resized files.
-try {
-    FileResponse result = apiInstance.pdfWebapiResizePost(files, documentPassword, inputType, outputType, resizeType, presetType, presetSize, width, height, percentage, useProportions, pageSize);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ApiApi#pdfWebapiResizePost");
-    e.printStackTrace();
-}
-</code></pre>
-</details>
-<details><summary>kotlin</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.infrastructure.\*
-//import io.swagger.client.models.\*;
-
-val apiInstance = ApiApi()
-val files : kotlin.Array<kotlin.Array<kotlin.Byte>> =  // kotlin.Array<kotlin.Array<kotlin.Byte>> | 
-val documentPassword : kotlin.String = documentPassword\_example // kotlin.String | 
-val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
-val outputType : kotlin.String = outputType\_example // kotlin.String | The desired format for the output files.
-val resizeType : ResizeType =  // ResizeType | The type of resizing to apply.
-val presetType : ResizePresetType =  // ResizePresetType | The type of preset size to use for resizing.
-val presetSize : ResizePresetSize =  // ResizePresetSize | The preset size to use for resizing.
-val width : kotlin.Int = 56 // kotlin.Int | The desired width of the resized files.
-val height : kotlin.Int = 56 // kotlin.Int | The desired height of the resized files.
-val percentage : kotlin.Int = 56 // kotlin.Int | The percentage to resize the files by.
-val useProportions : kotlin.Boolean = true // kotlin.Boolean | Indicates whether to maintain the aspect ratio when resizing.
-val pageSize : ResizePageSize =  // ResizePageSize | The page size to use for the resized files.
-try {
-    val result : FileResponse = apiInstance.pdfWebapiResizePost(files, documentPassword, inputType, outputType, resizeType, presetType, presetSize, width, height, percentage, useProportions, pageSize)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ApiApi#pdfWebapiResizePost")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ApiApi#pdfWebapiResizePost")
-    e.printStackTrace()
-}
-</code></pre>
-</details>
-
-### **Rotate Document.**
-- Rotates the document by a specified angle, allowing for adjustment of the document's orientation. You can choose the type of rotation and target specific pages to ensure the document is aligned according to your needs.
-
-**Supported formats:**
-
-| bmp | docx | gif | jpg | pdf | png | pptx | pptx | svg | tiff | docx |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-
-<details><summary>curl</summary>
-<pre><code>
-curl -X POST 'http://localhost:5252/pdf/webapi/rotate?angle=value&rotateType=value&pageNum=value' -F 'files=@file.pdf'
-</code></pre>
-</details>
-<details><summary>php</summary>
-<pre><code>
-<?php
-require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
-
-$apiInstance = new Swagger\\Client\\Api\\ApiApi(
-    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
-    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
-    new GuzzleHttp\\Client()
-);
-$files = array("files\_example"); // string[] | 
-$document\_password = "document\_password\_example"; // string | 
-$angle = new \\Swagger\\Client\\Model\\RotateAngle(); // \\Swagger\\Client\\Model\\RotateAngle | The angle by which to rotate the files.
-$rotate\_type = new \\Swagger\\Client\\Model\\RotateType(); // \\Swagger\\Client\\Model\\RotateType | The type of rotation to perform.
-$page\_num = "page\_num\_example"; // string | The page number to rotate, if applicable.
-
-try {
-    $result = $apiInstance->pdfWebapiRotatePost($files, $document\_password, $angle, $rotate\_type, $page\_num);
-    print\_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ApiApi->pdfWebapiRotatePost: ', $e->getMessage(), PHP\_EOL;
-}
-?>
-</code></pre>
-</details>
-<details><summary>dotnet</summary>
-<pre><code>
-using System;
-using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
-
-namespace Example
-{
-    public class PdfWebapiRotatePostExample
-    {
-        public void main()
-        {
-
-            var apiInstance = new ApiApi();
-            var files = new List<FileParameter>(); // List<FileParameter> |  (optional) 
-            var angle = RotateAngle.On90; // RotateAngle | The angle by which to rotate the files. (optional) 
-            var documentPassword = documentPassword\_example;  // string |  (optional) 
-            var rotateType = RotateType.S; // RotateType | The type of rotation to perform. (optional) 
-            var pageNum = pageNum\_example;  // string | The page number to rotate, if applicable. (optional) 
-
-            try
-            {
-                // Rotate Document.
-                FileResponse result = apiInstance.PdfWebapiRotatePost(files, documentPassword, angle, rotateType, pageNum);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ApiApi.PdfWebapiRotatePost: " + e.Message );
-            }
-        }
-    }
-}
-</code></pre>
-</details>
-<details><summary>java</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.ApiApi;
-
-
-ApiApi apiInstance = new ApiApi();
-List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-RotateAngle angle = RotateAngle.ON90; // RotateAngle | The angle by which to rotate the files.
-String documentPassword = "documentPassword\_example"; // String | 
-RotateType rotateType = RotateType.A; // RotateType | The type of rotation to perform.
-String pageNum = "pageNum\_example"; // String | The page number to rotate, if applicable.
-try {
-    FileResponse result = apiInstance.pdfWebapiRotatePost(files, documentPassword, angle, rotateType, pageNum);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ApiApi#pdfWebapiRotatePost");
-    e.printStackTrace();
-}
-</code></pre>
-</details>
-<details><summary>kotlin</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.infrastructure.\*
-//import io.swagger.client.models.\*;
-
-val apiInstance = ApiApi()
-val files : kotlin.Array<kotlin.Array<kotlin.Byte>> =  // kotlin.Array<kotlin.Array<kotlin.Byte>> | 
-val documentPassword : kotlin.String = documentPassword\_example // kotlin.String | 
-val angle : RotateAngle =  // RotateAngle | The angle by which to rotate the files.
-val rotateType : RotateType =  // RotateType | The type of rotation to perform.
-val pageNum : kotlin.String = pageNum\_example // kotlin.String | The page number to rotate, if applicable.
-try {
-    val result : FileResponse = apiInstance.pdfWebapiRotatePost(files, documentPassword, angle, rotateType, pageNum)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ApiApi#pdfWebapiRotatePost")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ApiApi#pdfWebapiRotatePost")
-    e.printStackTrace()
-}
-</code></pre>
-</details>
-
-### **Search Document Text.**
-- Searches the provided documents for the specified query and highlights the found text with a yellow background. This service helps you quickly locate and review relevant sections of your documents.
-
-**Supported formats:**
-
-| doc | xlsx | pptx | docx | ble | pdf |
-| --- | --- | --- | --- | --- | --- |
-
-<details><summary>curl</summary>
-<pre><code>
-curl -X POST 'http://localhost:5252/pdf/webapi/search?query=value' -F 'files=@file.pdf'
-</code></pre>
-</details>
-<details><summary>php</summary>
-<pre><code>
-<?php
-require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
-
-$apiInstance = new Swagger\\Client\\Api\\ApiApi(
-    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
-    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
-    new GuzzleHttp\\Client()
-);
-$files = array("files\_example"); // string[] | 
-$document\_password = "document\_password\_example"; // string | 
-$query = "query\_example"; // string | The text to search for within the files.
-
-try {
-    $result = $apiInstance->pdfWebapiSearchPost($files, $document\_password, $query);
-    print\_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ApiApi->pdfWebapiSearchPost: ', $e->getMessage(), PHP\_EOL;
-}
-?>
-</code></pre>
-</details>
-<details><summary>dotnet</summary>
-<pre><code>
-using System;
-using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
-
-namespace Example
-{
-    public class PdfWebapiSearchPostExample
-    {
-        public void main()
-        {
-
-            var apiInstance = new ApiApi();
-            var files = new List<FileParameter>(); // List<FileParameter> |  (optional) 
-            var documentPassword = documentPassword\_example;  // string |  (optional) 
-            var query = query\_example;  // string | The text to search for within the files. (optional) 
-
-            try
-            {
-                // Search Document Text.
-                FileResponse result = apiInstance.PdfWebapiSearchPost(files, documentPassword, query);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ApiApi.PdfWebapiSearchPost: " + e.Message );
-            }
-        }
-    }
-}
-</code></pre>
-</details>
-<details><summary>java</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.ApiApi;
-
-
-ApiApi apiInstance = new ApiApi();
-List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-String documentPassword = "documentPassword\_example"; // String | 
-String query = "query\_example"; // String | The text to search for within the files.
-try {
-    FileResponse result = apiInstance.pdfWebapiSearchPost(files, documentPassword, query);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ApiApi#pdfWebapiSearchPost");
-    e.printStackTrace();
-}
-</code></pre>
-</details>
-<details><summary>kotlin</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.infrastructure.\*
-//import io.swagger.client.models.\*;
-
-val apiInstance = ApiApi()
-val files : kotlin.Array<kotlin.Array<kotlin.Byte>> =  // kotlin.Array<kotlin.Array<kotlin.Byte>> | 
-val documentPassword : kotlin.String = documentPassword\_example // kotlin.String | 
-val query : kotlin.String = query\_example // kotlin.String | The text to search for within the files.
-try {
-    val result : FileResponse = apiInstance.pdfWebapiSearchPost(files, documentPassword, query)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ApiApi#pdfWebapiSearchPost")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ApiApi#pdfWebapiSearchPost")
-    e.printStackTrace()
-}
-</code></pre>
-</details>
-
-### **Make Scanned PDF Searchable.**
-- Converts scanned PDFs into a searchable PDF format by recognizing and indexing text. This service ensures that you can easily search through your documents by making the text searchable in the specified language.
-
-**Supported formats:**
-
-| pdf |
-| --- |
-
-<details><summary>curl</summary>
-<pre><code>
-curl -X POST 'http://localhost:5252/pdf/webapi/searchable?lang=value' -F 'files=@file.pdf'
-</code></pre>
-</details>
-<details><summary>php</summary>
-<pre><code>
-<?php
-require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
-
-$apiInstance = new Swagger\\Client\\Api\\ApiApi(
-    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
-    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
-    new GuzzleHttp\\Client()
-);
-$files = array("files\_example"); // string[] | 
-$lang = "lang\_example"; // string | The language of the files to be converted.
-
-try {
-    $result = $apiInstance->pdfWebapiSearchablePost($files, $lang);
-    print\_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ApiApi->pdfWebapiSearchablePost: ', $e->getMessage(), PHP\_EOL;
-}
-?>
-</code></pre>
-</details>
-<details><summary>dotnet</summary>
-<pre><code>
-using System;
-using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
-
-namespace Example
-{
-    public class PdfWebapiSearchablePostExample
-    {
-        public void main()
-        {
-
-            var apiInstance = new ApiApi();
-            var files = new List<FileParameter>(); // List<FileParameter> |  (optional) 
-            var lang = lang\_example;  // string | The language of the files to be converted. (optional) 
-
-            try
-            {
-                // Make Scanned PDF Searchable.
-                FileResponse result = apiInstance.PdfWebapiSearchablePost(files, lang);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ApiApi.PdfWebapiSearchablePost: " + e.Message );
-            }
-        }
-    }
-}
-</code></pre>
-</details>
-<details><summary>java</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.ApiApi;
-
-
-ApiApi apiInstance = new ApiApi();
-List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-String lang = "lang\_example"; // String | The language of the files to be converted.
-try {
-    FileResponse result = apiInstance.pdfWebapiSearchablePost(files, lang);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ApiApi#pdfWebapiSearchablePost");
-    e.printStackTrace();
-}
-</code></pre>
-</details>
-<details><summary>kotlin</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.infrastructure.\*
-//import io.swagger.client.models.\*;
-
-val apiInstance = ApiApi()
-val files : kotlin.Array<kotlin.Array<kotlin.Byte>> =  // kotlin.Array<kotlin.Array<kotlin.Byte>> | 
-val lang : kotlin.String = lang\_example // kotlin.String | The language of the files to be converted.
-try {
-    val result : FileResponse = apiInstance.pdfWebapiSearchablePost(files, lang)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ApiApi#pdfWebapiSearchablePost")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ApiApi#pdfWebapiSearchablePost")
-    e.printStackTrace()
-}
-</code></pre>
-</details>
-
-### **Add Signature to Document.**
-- Adds a signature to the provided documents, allowing for the insertion of both text and image signatures. This service ensures that your documents are properly signed and authenticated according to your specifications.
-
-**Supported formats:**
-
-| pdf |
-| --- |
-
-<details><summary>curl</summary>
-<pre><code>
-curl -X POST 'http://localhost:5252/pdf/webapi/signature?inputType=value&outputType=value&signatureType=value' -F 'files=@file.pdf'
-</code></pre>
-</details>
-<details><summary>php</summary>
-<pre><code>
-<?php
-require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
-
-$apiInstance = new Swagger\\Client\\Api\\ApiApi(
-    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
-    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
-    new GuzzleHttp\\Client()
-);
-$image = "image\_example"; // string | 
-$text = "text\_example"; // string | 
-$text\_color = "text\_color\_example"; // string | 
-$files = array("files\_example"); // string[] | 
-$document\_password = "document\_password\_example"; // string | 
-$input\_type = "input\_type\_example"; // string | The format of the input files.
-$output\_type = "output\_type\_example"; // string | The desired format for the output files.
-$signature\_type = new \\Swagger\\Client\\Model\\SignatureType(); // \\Swagger\\Client\\Model\\SignatureType | The type of signature to add.
-
-try {
-    $result = $apiInstance->pdfWebapiSignaturePost($image, $text, $text\_color, $files, $document\_password, $input\_type, $output\_type, $signature\_type);
-    print\_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ApiApi->pdfWebapiSignaturePost: ', $e->getMessage(), PHP\_EOL;
-}
-?>
-</code></pre>
-</details>
-<details><summary>dotnet</summary>
-<pre><code>
-using System;
-using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
-
-namespace Example
-{
-    public class PdfWebapiSignaturePostExample
-    {
-        public void main()
-        {
-
-            var apiInstance = new ApiApi();
-            var image = image\_example;  // string |  (optional) 
-            var text = text\_example;  // string |  (optional) 
-            var textColor = textColor\_example;  // string |  (optional) 
-            var files = new List<FileParameter>(); // List<FileParameter> |  (optional) 
-            var documentPassword = documentPassword\_example;  // string |  (optional) 
-            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
-            var outputType = outputType\_example;  // string | The desired format for the output files. (optional) 
-            var signatureType = SignatureType.Image; // SignatureType | The type of signature to add. (optional) 
-
-            try
-            {
-                // Add Signature to Document.
-                FileResponse result = apiInstance.PdfWebapiSignaturePost(image, text, textColor, files, documentPassword, inputType, outputType, signatureType);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ApiApi.PdfWebapiSignaturePost: " + e.Message );
-            }
-        }
-    }
-}
-</code></pre>
-</details>
-<details><summary>java</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.ApiApi;
-
-
-ApiApi apiInstance = new ApiApi();
-String image = "image\_example"; // String | 
-String text = "text\_example"; // String | 
-String textColor = "textColor\_example"; // String | 
-List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-String documentPassword = "documentPassword\_example"; // String | 
-String inputType = "inputType\_example"; // String | The format of the input files.
-String outputType = "outputType\_example"; // String | The desired format for the output files.
-SignatureType signatureType = SignatureType.TEXT; // SignatureType | The type of signature to add.
-try {
-    FileResponse result = apiInstance.pdfWebapiSignaturePost(image, text, textColor, files, documentPassword, inputType, outputType, signatureType);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ApiApi#pdfWebapiSignaturePost");
-    e.printStackTrace();
-}
-</code></pre>
-</details>
-<details><summary>kotlin</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.infrastructure.\*
-//import io.swagger.client.models.\*;
-
-val apiInstance = ApiApi()
-val image : kotlin.String = image\_example // kotlin.String | 
-val text : kotlin.String = text\_example // kotlin.String | 
-val textColor : kotlin.String = textColor\_example // kotlin.String | 
-val files : kotlin.Array<kotlin.Array<kotlin.Byte>> =  // kotlin.Array<kotlin.Array<kotlin.Byte>> | 
-val documentPassword : kotlin.String = documentPassword\_example // kotlin.String | 
-val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
-val outputType : kotlin.String = outputType\_example // kotlin.String | The desired format for the output files.
-val signatureType : SignatureType =  // SignatureType | The type of signature to add.
-try {
-    val result : FileResponse = apiInstance.pdfWebapiSignaturePost(image, text, textColor, files, documentPassword, inputType, outputType, signatureType)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ApiApi#pdfWebapiSignaturePost")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ApiApi#pdfWebapiSignaturePost")
-    e.printStackTrace()
-}
-</code></pre>
-</details>
-
-### **Split Document.**
-- Splits a document into smaller parts based on specified criteria, such as type or page range. This service ensures that each segment meets your exact requirements, simplifying document management and organization.
-
-**Supported formats:**
-
-| bmp | gif | image | jpg | pdf | png | tiff |
-| --- | --- | --- | --- | --- | --- | --- |
-
-<details><summary>curl</summary>
-<pre><code>
-curl -X POST 'http://localhost:5252/pdf/webapi/splitdoc?inputType=value&splitType=value&pairs=value' -F 'files=@file.pdf'
-</code></pre>
-</details>
-<details><summary>php</summary>
-<pre><code>
-<?php
-require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
-
-$apiInstance = new Swagger\\Client\\Api\\ApiApi(
-    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
-    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
-    new GuzzleHttp\\Client()
-);
-$files = array("files\_example"); // string[] | 
-$document\_password = "document\_password\_example"; // string | 
-$input\_type = "input\_type\_example"; // string | The format of the input files.
-$split\_type = new \\Swagger\\Client\\Model\\SplitDocType(); // \\Swagger\\Client\\Model\\SplitDocType | The type of splitting to be performed.
-$pairs = "pairs\_example"; // string | Optional page rage for the splitting operation.
-
-try {
-    $result = $apiInstance->pdfWebapiSplitdocPost($files, $document\_password, $input\_type, $split\_type, $pairs);
-    print\_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ApiApi->pdfWebapiSplitdocPost: ', $e->getMessage(), PHP\_EOL;
-}
-?>
-</code></pre>
-</details>
-<details><summary>dotnet</summary>
-<pre><code>
-using System;
-using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
-
-namespace Example
-{
-    public class PdfWebapiSplitdocPostExample
-    {
-        public void main()
-        {
-
-            var apiInstance = new ApiApi();
-            var files = new List<FileParameter>(); // List<FileParameter> |  (optional) 
-            var splitType = SplitDocType.AllPages; // SplitDocType | The type of splitting to be performed. (optional) 
-            var documentPassword = documentPassword\_example;  // string |  (optional) 
-            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
-            var pairs = pairs\_example;  // string | Optional page rage for the splitting operation. (optional) 
-
-            try
-            {
-                // Split Document.
-                FileResponse result = apiInstance.PdfWebapiSplitdocPost(files, documentPassword, inputType, splitType, pairs);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ApiApi.PdfWebapiSplitdocPost: " + e.Message );
-            }
-        }
-    }
-}
-</code></pre>
-</details>
-<details><summary>java</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.ApiApi;
-
-
-ApiApi apiInstance = new ApiApi();
-List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-SplitDocType splitType = SplitDocType.ODDEVEN; // SplitDocType | The type of splitting to be performed.
-String documentPassword = "documentPassword\_example"; // String | 
-String inputType = "inputType\_example"; // String | The format of the input files.
-String pairs = "pairs\_example"; // String | Optional page rage for the splitting operation.
-try {
-    FileResponse result = apiInstance.pdfWebapiSplitdocPost(files, documentPassword, inputType, splitType, pairs);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ApiApi#pdfWebapiSplitdocPost");
-    e.printStackTrace();
-}
-</code></pre>
-</details>
-<details><summary>kotlin</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.infrastructure.\*
-//import io.swagger.client.models.\*;
-
-val apiInstance = ApiApi()
-val files : kotlin.Array<kotlin.Array<kotlin.Byte>> =  // kotlin.Array<kotlin.Array<kotlin.Byte>> | 
-val documentPassword : kotlin.String = documentPassword\_example // kotlin.String | 
-val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
-val splitType : SplitDocType =  // SplitDocType | The type of splitting to be performed.
-val pairs : kotlin.String = pairs\_example // kotlin.String | Optional page rage for the splitting operation.
-try {
-    val result : FileResponse = apiInstance.pdfWebapiSplitdocPost(files, documentPassword, inputType, splitType, pairs)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ApiApi#pdfWebapiSplitdocPost")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ApiApi#pdfWebapiSplitdocPost")
-    e.printStackTrace()
-}
-</code></pre>
-</details>
-
-### **Split Image.**
-- Splits large images into smaller sections according to the specified parameters, making it easier to handle and process image data.
-
-**Supported formats:**
-
-| bmp | gif | image | jpg | pdf | png | tiff |
-| --- | --- | --- | --- | --- | --- | --- |
-
-<details><summary>curl</summary>
-<pre><code>
-curl -X POST 'http://localhost:5252/pdf/webapi/splitdoc?inputType=value&splitType=value&pairs=value' -F 'files=@file.pdf'
-</code></pre>
-</details>
-<details><summary>php</summary>
-<pre><code>
-<?php
-require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
-
-$apiInstance = new Swagger\\Client\\Api\\ApiApi(
-    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
-    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
-    new GuzzleHttp\\Client()
-);
-$files = array("files\_example"); // string[] | 
-$document\_password = "document\_password\_example"; // string | 
-$input\_type = "input\_type\_example"; // string | The format of the input files.
-$split\_type = new \\Swagger\\Client\\Model\\SplitDocType(); // \\Swagger\\Client\\Model\\SplitDocType | The type of splitting to be performed.
-$pairs = "pairs\_example"; // string | Optional page rage for the splitting operation.
-
-try {
-    $result = $apiInstance->pdfWebapiSplitdocPost($files, $document\_password, $input\_type, $split\_type, $pairs);
-    print\_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ApiApi->pdfWebapiSplitdocPost: ', $e->getMessage(), PHP\_EOL;
-}
-?>
-</code></pre>
-</details>
-<details><summary>dotnet</summary>
-<pre><code>
-using System;
-using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
-
-namespace Example
-{
-    public class PdfWebapiSplitdocPostExample
-    {
-        public void main()
-        {
-
-            var apiInstance = new ApiApi();
-            var files = new List<FileParameter>(); // List<FileParameter> |  (optional) 
-            var splitType = SplitDocType.AllPages; // SplitDocType | The type of splitting to be performed. (optional) 
-            var documentPassword = documentPassword\_example;  // string |  (optional) 
-            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
-            var pairs = pairs\_example;  // string | Optional page rage for the splitting operation. (optional) 
-
-            try
-            {
-                // Split Document.
-                FileResponse result = apiInstance.PdfWebapiSplitdocPost(files, documentPassword, inputType, splitType, pairs);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ApiApi.PdfWebapiSplitdocPost: " + e.Message );
-            }
-        }
-    }
-}
-</code></pre>
-</details>
-<details><summary>java</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.ApiApi;
-
-
-ApiApi apiInstance = new ApiApi();
-List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-SplitDocType splitType = SplitDocType.ODDEVEN; // SplitDocType | The type of splitting to be performed.
-String documentPassword = "documentPassword\_example"; // String | 
-String inputType = "inputType\_example"; // String | The format of the input files.
-String pairs = "pairs\_example"; // String | Optional page rage for the splitting operation.
-try {
-    FileResponse result = apiInstance.pdfWebapiSplitdocPost(files, documentPassword, inputType, splitType, pairs);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ApiApi#pdfWebapiSplitdocPost");
-    e.printStackTrace();
-}
-</code></pre>
-</details>
-<details><summary>kotlin</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.infrastructure.\*
-//import io.swagger.client.models.\*;
-
-val apiInstance = ApiApi()
-val files : kotlin.Array<kotlin.Array<kotlin.Byte>> =  // kotlin.Array<kotlin.Array<kotlin.Byte>> | 
-val documentPassword : kotlin.String = documentPassword\_example // kotlin.String | 
-val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
-val splitType : SplitDocType =  // SplitDocType | The type of splitting to be performed.
-val pairs : kotlin.String = pairs\_example // kotlin.String | Optional page rage for the splitting operation.
-try {
-    val result : FileResponse = apiInstance.pdfWebapiSplitdocPost(files, documentPassword, inputType, splitType, pairs)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ApiApi#pdfWebapiSplitdocPost")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ApiApi#pdfWebapiSplitdocPost")
-    e.printStackTrace()
-}
-</code></pre>
-</details>
-
-### **Unlock Document.**
-- Attempts to unlock a password-protected document, using any associated files if necessary, to grant access to the content.
-
-**Supported formats:**
-
-| pptx | pptx | pdf |
-| --- | --- | --- |
-
-<details><summary>curl</summary>
-<pre><code>
-curl -X POST 'http://localhost:5252/pdf/webapi/unlock' \\
-     -F 'files=@file.pdf' \\
-     -F 'documentPassword=value'
-</code></pre>
-</details>
-<details><summary>php</summary>
-<pre><code>
-<?php
-require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
-
-$apiInstance = new Swagger\\Client\\Api\\ApiApi(
-    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
-    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
-    new GuzzleHttp\\Client()
-);
-$password = "password\_example"; // string | 
-$files = array("files\_example"); // string[] | 
-
-try {
-    $result = $apiInstance->pdfWebapiUnlockPost($password, $files);
-    print\_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ApiApi->pdfWebapiUnlockPost: ', $e->getMessage(), PHP\_EOL;
-}
-?>
-</code></pre>
-</details>
-<details><summary>dotnet</summary>
-<pre><code>
-using System;
-using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
-
-namespace Example
-{
-    public class PdfWebapiUnlockPostExample
-    {
-        public void main()
-        {
-
-            var apiInstance = new ApiApi();
-            var files = new List<FileParameter>(); // List<FileParameter> |  (optional) 
-            var password = passw\_example;  // string | The password used in locked document. (optional) 
-
-            try
-            {
-                // Unlock Document.
-                FileResponse result = apiInstance.PdfWebapiUnlockPost(password, files);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ApiApi.PdfWebapiUnlockPost: " + e.Message );
-            }
-        }
-    }
-}
-</code></pre>
-</details>
-<details><summary>java</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.ApiApi;
-
-
-ApiApi apiInstance = new ApiApi();
-String password = "password\_example"; // String | 
-List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-try {
-    FileResponse result = apiInstance.pdfWebapiUnlockPost(password, files);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ApiApi#pdfWebapiUnlockPost");
-    e.printStackTrace();
-}
-</code></pre>
-</details>
-<details><summary>kotlin</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.infrastructure.\*
-//import io.swagger.client.models.\*;
-
-val apiInstance = ApiApi()
-val password : kotlin.String = password\_example // kotlin.String | 
-val files : kotlin.Array<kotlin.Array<kotlin.Byte>> =  // kotlin.Array<kotlin.Array<kotlin.Byte>> | 
-try {
-    val result : FileResponse = apiInstance.pdfWebapiUnlockPost(password, files)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ApiApi#pdfWebapiUnlockPost")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ApiApi#pdfWebapiUnlockPost")
-    e.printStackTrace()
-}
-</code></pre>
-</details>
-
-### **Verify Document Certificate.**
-- Verifies the electronic signature of the provided document to ensure its authenticity and integrity. This service checks the digital certificates in the document to confirm their validity and trustworthiness.
-
-**Supported formats:**
-
-| pdf |
-| --- |
-
-<details><summary>curl</summary>
-<pre><code>
-curl -X POST 'http://localhost:5252/pdf/webapi/esign?inputType=value' -F 'files=@file.pdf'
-</code></pre>
-</details>
-<details><summary>php</summary>
-<pre><code>
-<?php
-require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
-
-$apiInstance = new Swagger\\Client\\Api\\ApiApi(
-    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
-    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
-    new GuzzleHttp\\Client()
-);
-$passw = "passw\_example"; // string | 
-$initials = "initials\_example"; // string | 
-$invite = "invite\_example"; // string | 
-$files = array("files\_example"); // string[] | 
-$document\_password = "document\_password\_example"; // string | 
-$input\_type = "input\_type\_example"; // string | The format of the input files.
-
-try {
-    $result = $apiInstance->pdfWebapiEsignPost($passw, $initials, $invite, $files, $document\_password, $input\_type);
-    print\_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ApiApi->pdfWebapiEsignPost: ', $e->getMessage(), PHP\_EOL;
-}
-?>
-</code></pre>
-</details>
-<details><summary>dotnet</summary>
-<pre><code>
-using System;
-using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
-
-namespace Example
-{
-    public class PdfWebapiEsignPostExample
-    {
-        public void main()
-        {
-
-            var apiInstance = new ApiApi();
-            var passw = passw\_example;  // string |  (optional) 
-            var files = new List<FileParameter>(); // List<FileParameter> |  (optional) 
-            var invite = invite\_example;  // string |  (optional) 
-            var documentPassword = documentPassword\_example;  // string |  (optional) 
-            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
-
-            try
-            {
-                // Sign Document with Certificate.
-                FileResponse result = apiInstance.PdfWebapiEsignPost(passw, initials, invite, files, documentPassword, inputType);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ApiApi.PdfWebapiEsignPost: " + e.Message );
-            }
-        }
-    }
-}
-</code></pre>
-</details>
-<details><summary>java</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.ApiApi;
-
-
-ApiApi apiInstance = new ApiApi();
-String passw = "passw\_example"; // String | 
-String initials = "initials\_example"; // String | 
-String invite = "invite\_example"; // String | 
-List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-String documentPassword = "documentPassword\_example"; // String | 
-String inputType = "inputType\_example"; // String | The format of the input files.
-try {
-    FileResponse result = apiInstance.pdfWebapiEsignPost(passw, initials, invite, files, documentPassword, inputType);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ApiApi#pdfWebapiEsignPost");
-    e.printStackTrace();
-}
-</code></pre>
-</details>
-<details><summary>kotlin</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.infrastructure.\*
-//import io.swagger.client.models.\*;
-
-val apiInstance = ApiApi()
-val passw : kotlin.String = passw\_example // kotlin.String | 
-val initials : kotlin.String = initials\_example // kotlin.String | 
-val invite : kotlin.String = invite\_example // kotlin.String | 
-val files : kotlin.Array<kotlin.Array<kotlin.Byte>> =  // kotlin.Array<kotlin.Array<kotlin.Byte>> | 
-val documentPassword : kotlin.String = documentPassword\_example // kotlin.String | 
-val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
-try {
-    val result : FileResponse = apiInstance.pdfWebapiEsignPost(passw, initials, invite, files, documentPassword, inputType)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ApiApi#pdfWebapiEsignPost")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ApiApi#pdfWebapiEsignPost")
-    e.printStackTrace()
-}
-</code></pre>
-</details>
-
-### **Add Watermark to Document.**
-- Adds a watermark to the provided documents, helping to protect and identify them. This service ensures that the watermark is applied according to your specifications, enhancing the security and ownership of your content.
-
-**Supported formats:**
-
-| pdf |
-| --- |
-
-<details><summary>curl</summary>
-<pre><code>
-curl -X POST 'http://localhost:5252/pdf/webapi/watermark?inputType=value&outputType=value&isColored=value&isText=value&text=value&name=value&size=value&bold=value&italic=value&underlined=value&color=value&isBackground=value&rotation=value&transparency=value&layer=value&pageFrom=value&pageTo=value' -F 'files=@file.pdf'
-</code></pre>
-</details>
-<details><summary>php</summary>
-<pre><code>
-<?php
-require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
-
-$apiInstance = new Swagger\\Client\\Api\\ApiApi(
-    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
-    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
-    new GuzzleHttp\\Client()
-);
-$files = array("files\_example"); // string[] | 
-$document\_password = "document\_password\_example"; // string | 
-$input\_type = "input\_type\_example"; // string | The format of the input files.
-$output\_type = "output\_type\_example"; // string | The desired format for the output files.
-$is\_colored = true; // bool | Indicate is watermark will be in color or grayscale.
-$is\_text = true; // bool | Indicates whether the watermark is text.
-$text = "text\_example"; // string | The text of the watermark.
-$name = "name\_example"; // string | The name of the font for the text watermark.
-$size = 56; // int | The size of the font for the text watermark.
-$bold = true; // bool | Indicates whether the text watermark is bold.
-$italic = true; // bool | Indicates whether the text watermark is italic.
-$underlined = true; // bool | Indicates whether the text watermark is underlined.
-$color = "color\_example"; // string | The color of the text or image watermark.
-$is\_background = true; // bool | Indicates whether the watermark is a background watermark.
-$rotation = 56; // int | The rotation angle of the watermark.
-$transparency = 3.4; // float | The transparency of the watermark.
-$layer = true; // bool | Indicates whether the watermark is a layer.
-$page\_from = 56; // int | The starting page number for the watermark.
-$page\_to = 56; // int | The ending page number for the watermark.
-
-try {
-    $result = $apiInstance->pdfWebapiWatermarkPost($files, $document\_password, $input\_type, $output\_type, $is\_colored, $is\_text, $text, $name, $size, $bold, $italic, $underlined, $color, $is\_background, $rotation, $transparency, $layer, $page\_from, $page\_to);
-    print\_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ApiApi->pdfWebapiWatermarkPost: ', $e->getMessage(), PHP\_EOL;
-}
-?>
-</code></pre>
-</details>
-<details><summary>dotnet</summary>
-<pre><code>
-using System;
-using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
-
-namespace Example
-{
-    public class PdfWebapiWatermarkPostExample
-    {
-        public void main()
-        {
-
-            var apiInstance = new ApiApi();
-            var files = new List<FileParameter>(); // List<FileParameter> |  (optional) 
-            var documentPassword = documentPassword\_example;  // string |  (optional) 
-            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
-            var outputType = outputType\_example;  // string | The desired format for the output files. (optional) 
-            var isColored = true;  // bool? | Indicate is watermark will be in color or grayscale. (optional) 
-            var isText = true;  // bool? | Indicates whether the watermark is text. (optional) 
-            var text = text\_example;  // string | The text of the watermark. (optional) 
-            var name = name\_example;  // string | The name of the font for the text watermark. (optional) 
-            var size = 56;  // int? | The size of the font for the text watermark. (optional) 
-            var bold = true;  // bool? | Indicates whether the text watermark is bold. (optional) 
-            var italic = true;  // bool? | Indicates whether the text watermark is italic. (optional) 
-            var underlined = true;  // bool? | Indicates whether the text watermark is underlined. (optional) 
-            var color = color\_example;  // string | The color of the text or image watermark. (optional) 
-            var isBackground = true;  // bool? | Indicates whether the watermark is a background watermark. (optional) 
-            var rotation = 56;  // int? | The rotation angle of the watermark. (optional) 
-            var transparency = 0.4;  // float? | The transparency of the watermark. (optional) 
-            var layer = true;  // bool? | Indicates whether the watermark is a layer. (optional) 
-            var pageFrom = 56;  // int? | The starting page number for the watermark. (optional) 
-            var pageTo = 56;  // int? | The ending page number for the watermark. (optional) 
-
-            try
-            {
-                // Add Watermark to Document.
-                FileResponse result = apiInstance.PdfWebapiWatermarkPost(files, documentPassword, inputType, outputType, isColored, isText, text, name, size, bold, italic, underlined, color, isBackground, rotation, transparency, layer, pageFrom, pageTo);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ApiApi.PdfWebapiWatermarkPost: " + e.Message );
-            }
-        }
-    }
-}
-</code></pre>
-</details>
-<details><summary>java</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.ApiApi;
-
-
-ApiApi apiInstance = new ApiApi();
-List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-String documentPassword = "documentPassword\_example"; // String | 
-String inputType = "inputType\_example"; // String | The format of the input files.
-String outputType = "outputType\_example"; // String | The desired format for the output files.
-Boolean isColored = true; // Boolean | Indicate is watermark will be in color or grayscale.
-Boolean isText = true; // Boolean | Indicates whether the watermark is text.
-String text = "text\_example"; // String | The text of the watermark.
-String name = "name\_example"; // String | The name of the font for the text watermark.
-Integer size = 56; // Integer | The size of the font for the text watermark.
-Boolean bold = true; // Boolean | Indicates whether the text watermark is bold.
-Boolean italic = true; // Boolean | Indicates whether the text watermark is italic.
-Boolean underlined = true; // Boolean | Indicates whether the text watermark is underlined.
-String color = "color\_example"; // String | The color of the text or image watermark.
-Boolean isBackground = true; // Boolean | Indicates whether the watermark is a background watermark.
-Integer rotation = 56; // Integer | The rotation angle of the watermark.
-Float transparency = 3.4F; // Float | The transparency of the watermark.
-Boolean layer = true; // Boolean | Indicates whether the watermark is a layer.
-Integer pageFrom = 56; // Integer | The starting page number for the watermark.
-Integer pageTo = 56; // Integer | The ending page number for the watermark.
-try {
-    FileResponse result = apiInstance.pdfWebapiWatermarkPost(files, documentPassword, inputType, outputType, isColored, isText, text, name, size, bold, italic, underlined, color, isBackground, rotation, transparency, layer, pageFrom, pageTo);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ApiApi#pdfWebapiWatermarkPost");
-    e.printStackTrace();
-}
-</code></pre>
-</details>
-<details><summary>kotlin</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.infrastructure.\*
-//import io.swagger.client.models.\*;
-
-val apiInstance = ApiApi()
-val files : kotlin.Array<kotlin.Array<kotlin.Byte>> =  // kotlin.Array<kotlin.Array<kotlin.Byte>> | 
-val documentPassword : kotlin.String = documentPassword\_example // kotlin.String | 
-val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
-val outputType : kotlin.String = outputType\_example // kotlin.String | The desired format for the output files.
-val isColored : kotlin.Boolean = true // kotlin.Boolean | Indicate is watermark will be in color or grayscale.
-val isText : kotlin.Boolean = true // kotlin.Boolean | Indicates whether the watermark is text.
-val text : kotlin.String = text\_example // kotlin.String | The text of the watermark.
-val name : kotlin.String = name\_example // kotlin.String | The name of the font for the text watermark.
-val size : kotlin.Int = 56 // kotlin.Int | The size of the font for the text watermark.
-val bold : kotlin.Boolean = true // kotlin.Boolean | Indicates whether the text watermark is bold.
-val italic : kotlin.Boolean = true // kotlin.Boolean | Indicates whether the text watermark is italic.
-val underlined : kotlin.Boolean = true // kotlin.Boolean | Indicates whether the text watermark is underlined.
-val color : kotlin.String = color\_example // kotlin.String | The color of the text or image watermark.
-val isBackground : kotlin.Boolean = true // kotlin.Boolean | Indicates whether the watermark is a background watermark.
-val rotation : kotlin.Int = 56 // kotlin.Int | The rotation angle of the watermark.
-val transparency : kotlin.Float = 3.4 // kotlin.Float | The transparency of the watermark.
-val layer : kotlin.Boolean = true // kotlin.Boolean | Indicates whether the watermark is a layer.
-val pageFrom : kotlin.Int = 56 // kotlin.Int | The starting page number for the watermark.
-val pageTo : kotlin.Int = 56 // kotlin.Int | The ending page number for the watermark.
-try {
-    val result : FileResponse = apiInstance.pdfWebapiWatermarkPost(files, documentPassword, inputType, outputType, isColored, isText, text, name, size, bold, italic, underlined, color, isBackground, rotation, transparency, layer, pageFrom, pageTo)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ApiApi#pdfWebapiWatermarkPost")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ApiApi#pdfWebapiWatermarkPost")
-    e.printStackTrace()
-}
-</code></pre>
-</details>
-
-### **Count Words and Characters in Document.**
-- Counts the words and characters in the provided documents within the specified page range. This service helps you accurately determine the length and content density of your documents, ensuring compliance with any required specifications or limits.
-
-**Supported formats:**
-
-| doc | document | docx | pptx | xlsx | pdf |
-| --- | --- | --- | --- | --- | --- |
-
-<details><summary>curl</summary>
-<pre><code>
-curl -X POST 'http://localhost:5252/pdf/webapi/wordcounter?pageRange=value' -F 'files=@file.pdf'
-</code></pre>
-</details>
-<details><summary>php</summary>
-<pre><code>
-<?php
-require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
-
-$apiInstance = new Swagger\\Client\\Api\\ApiApi(
-    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
-    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
-    new GuzzleHttp\\Client()
-);
-$files = array("files\_example"); // string[] | 
-$document\_password = "document\_password\_example"; // string | 
-$page\_range = "page\_range\_example"; // string | The range of pages to count words in.
-
-try {
-    $result = $apiInstance->pdfWebapiWordcounterPost($files, $document\_password, $page\_range);
-    print\_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ApiApi->pdfWebapiWordcounterPost: ', $e->getMessage(), PHP\_EOL;
-}
-?>
-</code></pre>
-</details>
-<details><summary>dotnet</summary>
-<pre><code>
-using System;
-using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
-
-namespace Example
-{
-    public class PdfWebapiWordcounterPostExample
-    {
-        public void main()
-        {
-
-            var apiInstance = new ApiApi();
-            var files = new List<FileParameter>(); // List<FileParameter> |  (optional) 
-            var documentPassword = documentPassword\_example;  // string |  (optional) 
-            var pageRange = pageRange\_example;  // string | The range of pages to count words in. (optional) 
-
-            try
-            {
-                // Count Words and Characters in Document.
-                FileResponse result = apiInstance.PdfWebapiWordcounterPost(files, documentPassword, pageRange);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ApiApi.PdfWebapiWordcounterPost: " + e.Message );
-            }
-        }
-    }
-}
-</code></pre>
-</details>
-<details><summary>java</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.ApiException;
-//import io.swagger.client.api.ApiApi;
-
-
-ApiApi apiInstance = new ApiApi();
-List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-String documentPassword = "documentPassword\_example"; // String | 
-String pageRange = "pageRange\_example"; // String | The range of pages to count words in.
-try {
-    FileResponse result = apiInstance.pdfWebapiWordcounterPost(files, documentPassword, pageRange);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling ApiApi#pdfWebapiWordcounterPost");
-    e.printStackTrace();
-}
-</code></pre>
-</details>
-<details><summary>kotlin</summary>
-<pre><code>
-// Import classes:
-//import io.swagger.client.infrastructure.\*
-//import io.swagger.client.models.\*;
-
-val apiInstance = ApiApi()
-val files : kotlin.Array<kotlin.Array<kotlin.Byte>> =  // kotlin.Array<kotlin.Array<kotlin.Byte>> | 
-val documentPassword : kotlin.String = documentPassword\_example // kotlin.String | 
-val pageRange : kotlin.String = pageRange\_example // kotlin.String | The range of pages to count words in.
-try {
-    val result : FileResponse = apiInstance.pdfWebapiWordcounterPost(files, documentPassword, pageRange)
-    println(result)
-} catch (e: ClientException) {
-    println("4xx response calling ApiApi#pdfWebapiWordcounterPost")
-    e.printStackTrace()
-} catch (e: ServerException) {
-    println("5xx response calling ApiApi#pdfWebapiWordcounterPost")
-    e.printStackTrace()
-}
-</code></pre>
-</details>
-
-### **Convert XFA Format to Another Format.**
-- Converts XFA documents to the specified format, ensuring seamless compatibility and usability. This service supports a wide range of target formats, allowing users to choose the most suitable format for their specific needs. The conversion process maintains the integrity of the original document while adapting it to the desired format, making it ideal for editing, sharing, or archiving..
-
-<details><summary>curl</summary>
-<pre><code>
-curl -X POST 'http://localhost:5252/pdf/webapi/xfaconvert?inputType=value' -F 'files=@file.pdf'
-</code></pre>
-</details>
-<details><summary>php</summary>
-<pre><code>
-<?php
-require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
-
-$apiInstance = new Swagger\\Client\\Api\\ApiApi(
-    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
-    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
-    new GuzzleHttp\\Client()
-);
-$files = array("files\_example"); // string[] | 
-$document\_password = "document\_password\_example"; // string | 
-$input\_type = "input\_type\_example"; // string | The format of the input files.
-
-try {
-    $result = $apiInstance->pdfWebapiXfaconvertPost($files, $document\_password, $input\_type);
-    print\_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ApiApi->pdfWebapiXfaconvertPost: ', $e->getMessage(), PHP\_EOL;
-}
-?>
+?&gt;
 </code></pre>
 </details>
 <details><summary>dotnet</summary>
@@ -6544,14 +2553,13 @@ namespace Example
         {
 
             var apiInstance = new ApiApi();
-            var files = new List<FileParameter>(); // List<FileParameter> |  (optional) 
-            var documentPassword = documentPassword\_example;  // string |  (optional) 
+            var files = new List&lt;byte[]&gt;(); // List&lt;byte[]&gt; |  (optional) 
             var inputType = inputType\_example;  // string | The format of the input files. (optional) 
 
             try
             {
-                // Convert XFA Format to Another Format.
-                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, documentPassword, inputType);
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -6571,11 +2579,10 @@ namespace Example
 
 
 ApiApi apiInstance = new ApiApi();
-List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-String documentPassword = "documentPassword\_example"; // String | 
+List&lt;File&gt; files = Arrays.asList(new File("/path/to/file")); // List&lt;File&gt; | 
 String inputType = "inputType\_example"; // String | The format of the input files.
 try {
-    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, documentPassword, inputType);
+    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
@@ -6590,11 +2597,10 @@ try {
 //import io.swagger.client.models.\*;
 
 val apiInstance = ApiApi()
-val files : kotlin.Array<kotlin.Array<kotlin.Byte>> =  // kotlin.Array<kotlin.Array<kotlin.Byte>> | 
-val documentPassword : kotlin.String = documentPassword\_example // kotlin.String | 
+val files : kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; =  // kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; | 
 val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
 try {
-    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, documentPassword, inputType)
+    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, inputType)
     println(result)
 } catch (e: ClientException) {
     println("4xx response calling ApiApi#pdfWebapiXfaconvertPost")
@@ -6606,5 +2612,5133 @@ try {
 </code></pre>
 </details>
 
+### **Changes the fonts of the provided files using the specified font replacements.**
+- This method is designed to be used as an HTTP POST action, accepting form data for the font replacements and file uploads.
+The font replacements should be provided as a JSON string, and the files should be uploaded as multipart/form-data.
+The method uses Kafka for asynchronous processing and can optionally store the status of the task.
+
+<details><summary>curl</summary>
+<pre><code>
+curl -X POST 'http://localhost:5252/pdf/webapi/change-fonts' -F 'files=@file.pdf'
+</code></pre>
+</details>
+<details><summary>php</summary>
+<pre><code>
+&lt;?php
+require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\\Client\\Api\\ApiApi(
+    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
+    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
+    new GuzzleHttp\\Client()
+);
+$files = array("files\_example"); // string[] | 
+$input\_type = "input\_type\_example"; // string | The format of the input files.
+
+try {
+    $result = $apiInstance-&gt;pdfWebapiXfaconvertPost($files, $input\_type);
+    print\_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi-&gt;pdfWebapiXfaconvertPost: ', $e-&gt;getMessage(), PHP\_EOL;
+}
+?&gt;
+</code></pre>
+</details>
+<details><summary>dotnet</summary>
+<pre><code>
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiXfaconvertPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List&lt;byte[]&gt;(); // List&lt;byte[]&gt; |  (optional) 
+            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
+
+            try
+            {
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiXfaconvertPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+</details>
+<details><summary>java</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.ApiApi;
+
+
+ApiApi apiInstance = new ApiApi();
+List&lt;File&gt; files = Arrays.asList(new File("/path/to/file")); // List&lt;File&gt; | 
+String inputType = "inputType\_example"; // String | The format of the input files.
+try {
+    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
+    e.printStackTrace();
+}
+</code></pre>
+</details>
+<details><summary>kotlin</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.infrastructure.\*
+//import io.swagger.client.models.\*;
+
+val apiInstance = ApiApi()
+val files : kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; =  // kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; | 
+val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
+try {
+    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, inputType)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+}
+</code></pre>
+</details>
+
+### **Compare documents text.**
+- Compare provided files and create document with marked changes.
+
+**Supported formats:**
+
+| pdf |
+| --- |
+
+<details><summary>curl</summary>
+<pre><code>
+curl -X POST 'http://localhost:5252/pdf/webapi/comparison?compareType=value' -F 'files=@file.pdf'
+</code></pre>
+</details>
+<details><summary>php</summary>
+<pre><code>
+&lt;?php
+require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\\Client\\Api\\ApiApi(
+    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
+    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
+    new GuzzleHttp\\Client()
+);
+$files = array("files\_example"); // string[] | 
+$input\_type = "input\_type\_example"; // string | The format of the input files.
+
+try {
+    $result = $apiInstance-&gt;pdfWebapiXfaconvertPost($files, $input\_type);
+    print\_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi-&gt;pdfWebapiXfaconvertPost: ', $e-&gt;getMessage(), PHP\_EOL;
+}
+?&gt;
+</code></pre>
+</details>
+<details><summary>dotnet</summary>
+<pre><code>
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiXfaconvertPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List&lt;byte[]&gt;(); // List&lt;byte[]&gt; |  (optional) 
+            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
+
+            try
+            {
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiXfaconvertPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+</details>
+<details><summary>java</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.ApiApi;
+
+
+ApiApi apiInstance = new ApiApi();
+List&lt;File&gt; files = Arrays.asList(new File("/path/to/file")); // List&lt;File&gt; | 
+String inputType = "inputType\_example"; // String | The format of the input files.
+try {
+    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
+    e.printStackTrace();
+}
+</code></pre>
+</details>
+<details><summary>kotlin</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.infrastructure.\*
+//import io.swagger.client.models.\*;
+
+val apiInstance = ApiApi()
+val files : kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; =  // kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; | 
+val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
+try {
+    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, inputType)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+}
+</code></pre>
+</details>
+
+### **Compress document.**
+- Compresses the provided files using the specified compression level.
+
+**Supported formats:**
+
+| epub | docx | pdf |
+| --- | --- | --- |
+
+<details><summary>curl</summary>
+<pre><code>
+curl -X POST 'http://localhost:5252/pdf/webapi/compress?compressType=value' -F 'files=@file.pdf'
+</code></pre>
+</details>
+<details><summary>php</summary>
+<pre><code>
+&lt;?php
+require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\\Client\\Api\\ApiApi(
+    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
+    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
+    new GuzzleHttp\\Client()
+);
+$files = array("files\_example"); // string[] | 
+$input\_type = "input\_type\_example"; // string | The format of the input files.
+
+try {
+    $result = $apiInstance-&gt;pdfWebapiXfaconvertPost($files, $input\_type);
+    print\_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi-&gt;pdfWebapiXfaconvertPost: ', $e-&gt;getMessage(), PHP\_EOL;
+}
+?&gt;
+</code></pre>
+</details>
+<details><summary>dotnet</summary>
+<pre><code>
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiXfaconvertPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List&lt;byte[]&gt;(); // List&lt;byte[]&gt; |  (optional) 
+            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
+
+            try
+            {
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiXfaconvertPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+</details>
+<details><summary>java</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.ApiApi;
+
+
+ApiApi apiInstance = new ApiApi();
+List&lt;File&gt; files = Arrays.asList(new File("/path/to/file")); // List&lt;File&gt; | 
+String inputType = "inputType\_example"; // String | The format of the input files.
+try {
+    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
+    e.printStackTrace();
+}
+</code></pre>
+</details>
+<details><summary>kotlin</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.infrastructure.\*
+//import io.swagger.client.models.\*;
+
+val apiInstance = ApiApi()
+val files : kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; =  // kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; | 
+val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
+try {
+    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, inputType)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+}
+</code></pre>
+</details>
+
+### **Convert document to another format.**
+- Converts the provided files from one format to another.
+
+**Supported formats:**
+
+| From/To | m4a | mkv | mov | mp3 | mp4 | pdf | webp | 7z | csv | epub | xlsx | gz | html | jpg | latex | png | pptx | svg | tar | tiff | txt | docx | zip | avi | mpeg | file | psd | mobi | base64 | xps | doc | xml | tex | mhtml | ps | wav | flv | mpg | webm | wmv | bmp | kindle | mht | pdfa | djvu | flac | gif | ofd | mp2 | ogg | flatopc | pdfa1a | pdfa1b | pdfa2a | pdfa3a |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 7z | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| base64 |  |  |  |  |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| bmp |  |  |  |  | &#9745; | &#9745; |  |  |  |  | &#9745; | &#9745; | &#9745; |  |  |  | &#9745; |  |  |  |  | &#9745; | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| bz2 |  |  |  | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| cdr |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| dicom |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| djvu |  |  |  |  |  | &#9745; |  |  |  | &#9745; |  |  |  | &#9745; |  | &#9745; |  |  |  |  |  | &#9745; | &#9745; |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| doc |  | &#9745; | &#9745; |  | &#9745; | &#9745; |  |  | &#9745; | &#9745; |  |  | &#9745; | &#9745; | &#9745; | &#9745; |  |  |  |  |  | &#9745; | &#9745; |  | &#9745; |  |  |  | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| dwg |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| emf |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  | &#9745; | &#9745; | &#9745; |  | &#9745; |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| eps |  |  |  |  |  | &#9745; |  |  | &#9745; |  | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  |  | &#9745; | &#9745; | &#9745; |  |  |  |  |  | &#9745; |  | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| epub |  |  |  |  |  | &#9745; |  |  |  |  | &#9745; |  | &#9745; | &#9745; |  | &#9745; | &#9745; |  |  |  | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  |  | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| xlsx |  |  |  |  |  |  |  | &#9745; |  |  |  | &#9745; |  |  |  |  |  |  | &#9745; |  |  |  | &#9745; |  |  |  |  |  | &#9745; |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| gif |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| gz |  |  |  | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| html |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  | &#9745; |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| jpg |  |  | &#9745; |  | &#9745; | &#9745; |  | &#9745; |  |  | &#9745; | &#9745; | &#9745; |  |  | &#9745; | &#9745; |  | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; |  |  |  |  |  | &#9745; |  |  |  |  |  | &#9745; | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| json |  |  |  |  |  | &#9745; |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| kindle |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| latex |  |  |  |  |  | &#9745; |  |  |  | &#9745; |  |  |  |  |  |  | &#9745; | &#9745; |  |  | &#9745; | &#9745; |  |  |  |  |  |  |  |  | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| md |  |  |  |  |  | &#9745; |  |  | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  |  | &#9745; | &#9745; | &#9745; |  |  |  |  | &#9745; | &#9745; |  | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| mht |  |  |  |  |  | &#9745; |  |  |  | &#9745; | &#9745; |  | &#9745; | &#9745; |  | &#9745; | &#9745; |  |  |  | &#9745; | &#9745; |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| mhtml |  |  |  |  |  | &#9745; |  |  | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; |  |  | &#9745; | &#9745; | &#9745; |  |  |  |  |  | &#9745; | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| mov |  |  |  | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| mp3 |  |  | &#9745; |  | &#9745; |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| mp4 |  |  | &#9745; | &#9745; |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| odt |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| oxps |  |  |  |  |  | &#9745; |  |  |  |  | &#9745; |  |  | &#9745; |  |  |  |  |  |  |  | &#9745; | &#9745; |  |  |  |  |  |  | &#9745; |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| pages |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| pcl |  |  |  |  |  | &#9745; |  |  | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; |  | &#9745; |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| pdf |  | &#9745; | &#9745; |  | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  |
+| png |  | &#9745; | &#9745; |  | &#9745; | &#9745; |  | &#9745; |  |  | &#9745; | &#9745; | &#9745; |  |  |  | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; |  |  |  | &#9745; |  |  |  |  |  |  |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| pptx |  | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  |  |  | &#9745; |  | &#9745; |  |  |  |  |  |  | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| ps |  |  |  |  |  | &#9745; |  |  | &#9745; |  | &#9745; |  | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  |  |  | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| psd |  |  |  |  |  | &#9745; |  |  |  |  | &#9745; |  |  | &#9745; |  | &#9745; | &#9745; |  |  | &#9745; |  | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| rar | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; |  |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  |  | &#9745; | &#9745; |  |  |  | &#9745; | &#9745; |  |  |  | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |
+| rtf |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| srt |  |  |  |  |  | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; |  | &#9745; |  |  |  |  | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| svg |  |  | &#9745; |  | &#9745; | &#9745; | &#9745; |  | &#9745; |  | &#9745; |  | &#9745; | &#9745; |  | &#9745; | &#9745; |  |  |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  |  |  | &#9745; |  | &#9745; | &#9745; | &#9745; |  |  |  |  |  | &#9745; |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| tar |  | &#9745; |  | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| tex |  |  |  |  |  |  |  |  | &#9745; |  | &#9745; |  | &#9745; | &#9745; |  | &#9745; |  |  |  | &#9745; |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| tiff |  |  | &#9745; |  | &#9745; | &#9745; | &#9745; |  |  |  | &#9745; |  |  | &#9745; |  |  | &#9745; |  |  |  |  | &#9745; | &#9745; | &#9745; |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| txt |  |  |  |  |  | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; |  |  |  |  |  | &#9745; |  | &#9745; | &#9745; |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| wav |  |  | &#9745; |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| webp |  | &#9745; | &#9745; |  | &#9745; | &#9745; |  |  |  |  | &#9745; |  |  | &#9745; |  |  | &#9745; | &#9745; |  |  |  | &#9745; | &#9745; | &#9745; | &#9745; |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |
+| docx |  |  | &#9745; |  | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; |  |  |  | &#9745; | &#9745; |  |  |  |  | &#9745; |  |  | &#9745; |  |  | &#9745; |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |
+| xml |  |  |  |  |  | &#9745; |  | &#9745; | &#9745; |  | &#9745; | &#9745; |  |  |  |  | &#9745; |  | &#9745; |  |  | &#9745; | &#9745; |  |  |  |  |  | &#9745; |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| xps |  |  |  |  |  | &#9745; |  |  | &#9745; |  | &#9745; |  |  | &#9745; |  | &#9745; | &#9745; |  |  |  | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| zip | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  |  |  | &#9745; | &#9745; |  | &#9745; | &#9745; |  |  |  |  |  |  | &#9745; |  |  |  | &#9745; | &#9745; |  |  |  |  |  |  |
+
+<details><summary>curl</summary>
+<pre><code>
+curl -X POST 'http://localhost:5252/pdf/webapi/convert?inputType=value&outputType=value&xmlType=value&xmlTag=value&fontSise=value&isToSingle=value&separator=value&interval=value' -F 'files=@file.pdf'
+</code></pre>
+</details>
+<details><summary>php</summary>
+<pre><code>
+&lt;?php
+require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\\Client\\Api\\ApiApi(
+    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
+    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
+    new GuzzleHttp\\Client()
+);
+$files = array("files\_example"); // string[] | 
+$input\_type = "input\_type\_example"; // string | The format of the input files.
+
+try {
+    $result = $apiInstance-&gt;pdfWebapiXfaconvertPost($files, $input\_type);
+    print\_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi-&gt;pdfWebapiXfaconvertPost: ', $e-&gt;getMessage(), PHP\_EOL;
+}
+?&gt;
+</code></pre>
+</details>
+<details><summary>dotnet</summary>
+<pre><code>
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiXfaconvertPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List&lt;byte[]&gt;(); // List&lt;byte[]&gt; |  (optional) 
+            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
+
+            try
+            {
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiXfaconvertPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+</details>
+<details><summary>java</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.ApiApi;
+
+
+ApiApi apiInstance = new ApiApi();
+List&lt;File&gt; files = Arrays.asList(new File("/path/to/file")); // List&lt;File&gt; | 
+String inputType = "inputType\_example"; // String | The format of the input files.
+try {
+    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
+    e.printStackTrace();
+}
+</code></pre>
+</details>
+<details><summary>kotlin</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.infrastructure.\*
+//import io.swagger.client.models.\*;
+
+val apiInstance = ApiApi()
+val files : kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; =  // kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; | 
+val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
+try {
+    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, inputType)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+}
+</code></pre>
+</details>
+
+### **Convert web page to document.**
+- Converts a web page to the specified output format.
+
+**Supported formats:**
+
+| bmp | doc | html | jpg | pdf | png | pptx | ppt | svg | tiff | webp | docx |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+
+<details><summary>curl</summary>
+<pre><code>
+curl -X POST 'http://localhost:5252/pdf/webapi/convert-webpage?outputType=value' -F 'files=@file.pdf'
+</code></pre>
+</details>
+<details><summary>php</summary>
+<pre><code>
+&lt;?php
+require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\\Client\\Api\\ApiApi(
+    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
+    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
+    new GuzzleHttp\\Client()
+);
+$files = array("files\_example"); // string[] | 
+$input\_type = "input\_type\_example"; // string | The format of the input files.
+
+try {
+    $result = $apiInstance-&gt;pdfWebapiXfaconvertPost($files, $input\_type);
+    print\_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi-&gt;pdfWebapiXfaconvertPost: ', $e-&gt;getMessage(), PHP\_EOL;
+}
+?&gt;
+</code></pre>
+</details>
+<details><summary>dotnet</summary>
+<pre><code>
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiXfaconvertPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List&lt;byte[]&gt;(); // List&lt;byte[]&gt; |  (optional) 
+            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
+
+            try
+            {
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiXfaconvertPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+</details>
+<details><summary>java</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.ApiApi;
+
+
+ApiApi apiInstance = new ApiApi();
+List&lt;File&gt; files = Arrays.asList(new File("/path/to/file")); // List&lt;File&gt; | 
+String inputType = "inputType\_example"; // String | The format of the input files.
+try {
+    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
+    e.printStackTrace();
+}
+</code></pre>
+</details>
+<details><summary>kotlin</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.infrastructure.\*
+//import io.swagger.client.models.\*;
+
+val apiInstance = ApiApi()
+val files : kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; =  // kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; | 
+val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
+try {
+    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, inputType)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+}
+</code></pre>
+</details>
+
+### ****
+- 
+
+<details><summary>curl</summary>
+<pre><code>
+curl -X POST 'http://localhost:5252/pdf/webapi/creator' -F 'files=@file.pdf'
+</code></pre>
+</details>
+<details><summary>php</summary>
+<pre><code>
+&lt;?php
+require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\\Client\\Api\\ApiApi(
+    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
+    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
+    new GuzzleHttp\\Client()
+);
+$files = array("files\_example"); // string[] | 
+$input\_type = "input\_type\_example"; // string | The format of the input files.
+
+try {
+    $result = $apiInstance-&gt;pdfWebapiXfaconvertPost($files, $input\_type);
+    print\_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi-&gt;pdfWebapiXfaconvertPost: ', $e-&gt;getMessage(), PHP\_EOL;
+}
+?&gt;
+</code></pre>
+</details>
+<details><summary>dotnet</summary>
+<pre><code>
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiXfaconvertPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List&lt;byte[]&gt;(); // List&lt;byte[]&gt; |  (optional) 
+            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
+
+            try
+            {
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiXfaconvertPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+</details>
+<details><summary>java</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.ApiApi;
+
+
+ApiApi apiInstance = new ApiApi();
+List&lt;File&gt; files = Arrays.asList(new File("/path/to/file")); // List&lt;File&gt; | 
+String inputType = "inputType\_example"; // String | The format of the input files.
+try {
+    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
+    e.printStackTrace();
+}
+</code></pre>
+</details>
+<details><summary>kotlin</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.infrastructure.\*
+//import io.swagger.client.models.\*;
+
+val apiInstance = ApiApi()
+val files : kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; =  // kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; | 
+val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
+try {
+    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, inputType)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+}
+</code></pre>
+</details>
+
+### **Crop document.**
+- Crops the provided files to the specified dimensions.
+
+**Supported formats:**
+
+| gif | svg | webp | pdf |
+| --- | --- | --- | --- |
+
+<details><summary>curl</summary>
+<pre><code>
+curl -X POST 'http://localhost:5252/pdf/webapi/crop?inputType=value&top=value&right=value&bottom=value&left=value&outputType=value' -F 'files=@file.pdf'
+</code></pre>
+</details>
+<details><summary>php</summary>
+<pre><code>
+&lt;?php
+require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\\Client\\Api\\ApiApi(
+    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
+    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
+    new GuzzleHttp\\Client()
+);
+$files = array("files\_example"); // string[] | 
+$input\_type = "input\_type\_example"; // string | The format of the input files.
+
+try {
+    $result = $apiInstance-&gt;pdfWebapiXfaconvertPost($files, $input\_type);
+    print\_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi-&gt;pdfWebapiXfaconvertPost: ', $e-&gt;getMessage(), PHP\_EOL;
+}
+?&gt;
+</code></pre>
+</details>
+<details><summary>dotnet</summary>
+<pre><code>
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiXfaconvertPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List&lt;byte[]&gt;(); // List&lt;byte[]&gt; |  (optional) 
+            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
+
+            try
+            {
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiXfaconvertPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+</details>
+<details><summary>java</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.ApiApi;
+
+
+ApiApi apiInstance = new ApiApi();
+List&lt;File&gt; files = Arrays.asList(new File("/path/to/file")); // List&lt;File&gt; | 
+String inputType = "inputType\_example"; // String | The format of the input files.
+try {
+    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
+    e.printStackTrace();
+}
+</code></pre>
+</details>
+<details><summary>kotlin</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.infrastructure.\*
+//import io.swagger.client.models.\*;
+
+val apiInstance = ApiApi()
+val files : kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; =  // kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; | 
+val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
+try {
+    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, inputType)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+}
+</code></pre>
+</details>
+
+### ****
+- 
+
+<details><summary>curl</summary>
+<pre><code>
+curl -X POST 'http://localhost:5252/pdf/webapi/editor?message=value' -F 'files=@file.pdf'
+</code></pre>
+</details>
+<details><summary>php</summary>
+<pre><code>
+&lt;?php
+require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\\Client\\Api\\ApiApi(
+    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
+    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
+    new GuzzleHttp\\Client()
+);
+$files = array("files\_example"); // string[] | 
+$input\_type = "input\_type\_example"; // string | The format of the input files.
+
+try {
+    $result = $apiInstance-&gt;pdfWebapiXfaconvertPost($files, $input\_type);
+    print\_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi-&gt;pdfWebapiXfaconvertPost: ', $e-&gt;getMessage(), PHP\_EOL;
+}
+?&gt;
+</code></pre>
+</details>
+<details><summary>dotnet</summary>
+<pre><code>
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiXfaconvertPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List&lt;byte[]&gt;(); // List&lt;byte[]&gt; |  (optional) 
+            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
+
+            try
+            {
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiXfaconvertPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+</details>
+<details><summary>java</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.ApiApi;
+
+
+ApiApi apiInstance = new ApiApi();
+List&lt;File&gt; files = Arrays.asList(new File("/path/to/file")); // List&lt;File&gt; | 
+String inputType = "inputType\_example"; // String | The format of the input files.
+try {
+    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
+    e.printStackTrace();
+}
+</code></pre>
+</details>
+<details><summary>kotlin</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.infrastructure.\*
+//import io.swagger.client.models.\*;
+
+val apiInstance = ApiApi()
+val files : kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; =  // kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; | 
+val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
+try {
+    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, inputType)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+}
+</code></pre>
+</details>
+
+### **Extract tables from document.**
+- Extracts tables from the provided documents and converts them to the specified output format.
+
+**Supported formats:**
+
+| doc | html | md | mht | mhtml | pptx | tex | docx | pdf |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+
+<details><summary>curl</summary>
+<pre><code>
+curl -X POST 'http://localhost:5252/pdf/webapi/extract?inputType=value&outputType=value' -F 'files=@file.pdf'
+</code></pre>
+</details>
+<details><summary>php</summary>
+<pre><code>
+&lt;?php
+require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\\Client\\Api\\ApiApi(
+    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
+    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
+    new GuzzleHttp\\Client()
+);
+$files = array("files\_example"); // string[] | 
+$input\_type = "input\_type\_example"; // string | The format of the input files.
+
+try {
+    $result = $apiInstance-&gt;pdfWebapiXfaconvertPost($files, $input\_type);
+    print\_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi-&gt;pdfWebapiXfaconvertPost: ', $e-&gt;getMessage(), PHP\_EOL;
+}
+?&gt;
+</code></pre>
+</details>
+<details><summary>dotnet</summary>
+<pre><code>
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiXfaconvertPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List&lt;byte[]&gt;(); // List&lt;byte[]&gt; |  (optional) 
+            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
+
+            try
+            {
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiXfaconvertPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+</details>
+<details><summary>java</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.ApiApi;
+
+
+ApiApi apiInstance = new ApiApi();
+List&lt;File&gt; files = Arrays.asList(new File("/path/to/file")); // List&lt;File&gt; | 
+String inputType = "inputType\_example"; // String | The format of the input files.
+try {
+    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
+    e.printStackTrace();
+}
+</code></pre>
+</details>
+<details><summary>kotlin</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.infrastructure.\*
+//import io.swagger.client.models.\*;
+
+val apiInstance = ApiApi()
+val files : kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; =  // kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; | 
+val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
+try {
+    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, inputType)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+}
+</code></pre>
+</details>
+
+### ****
+- 
+
+<details><summary>curl</summary>
+<pre><code>
+curl -X POST 'http://localhost:5252/pdf/webapi/format-detector' -F 'files=@file.pdf'
+</code></pre>
+</details>
+<details><summary>php</summary>
+<pre><code>
+&lt;?php
+require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\\Client\\Api\\ApiApi(
+    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
+    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
+    new GuzzleHttp\\Client()
+);
+$files = array("files\_example"); // string[] | 
+$input\_type = "input\_type\_example"; // string | The format of the input files.
+
+try {
+    $result = $apiInstance-&gt;pdfWebapiXfaconvertPost($files, $input\_type);
+    print\_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi-&gt;pdfWebapiXfaconvertPost: ', $e-&gt;getMessage(), PHP\_EOL;
+}
+?&gt;
+</code></pre>
+</details>
+<details><summary>dotnet</summary>
+<pre><code>
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiXfaconvertPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List&lt;byte[]&gt;(); // List&lt;byte[]&gt; |  (optional) 
+            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
+
+            try
+            {
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiXfaconvertPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+</details>
+<details><summary>java</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.ApiApi;
+
+
+ApiApi apiInstance = new ApiApi();
+List&lt;File&gt; files = Arrays.asList(new File("/path/to/file")); // List&lt;File&gt; | 
+String inputType = "inputType\_example"; // String | The format of the input files.
+try {
+    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
+    e.printStackTrace();
+}
+</code></pre>
+</details>
+<details><summary>kotlin</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.infrastructure.\*
+//import io.swagger.client.models.\*;
+
+val apiInstance = ApiApi()
+val files : kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; =  // kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; | 
+val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
+try {
+    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, inputType)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+}
+</code></pre>
+</details>
+
+### **Make GIF.**
+- Creates a GIF from the provided images.
+
+<details><summary>curl</summary>
+<pre><code>
+curl -X POST 'http://localhost:5252/pdf/webapi/gif?keepImagesAsIs=value&resizeToImage=value&streched=value&width=value&height=value&frameTimes=value' -F 'files=@file.pdf'
+</code></pre>
+</details>
+<details><summary>php</summary>
+<pre><code>
+&lt;?php
+require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\\Client\\Api\\ApiApi(
+    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
+    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
+    new GuzzleHttp\\Client()
+);
+$files = array("files\_example"); // string[] | 
+$input\_type = "input\_type\_example"; // string | The format of the input files.
+
+try {
+    $result = $apiInstance-&gt;pdfWebapiXfaconvertPost($files, $input\_type);
+    print\_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi-&gt;pdfWebapiXfaconvertPost: ', $e-&gt;getMessage(), PHP\_EOL;
+}
+?&gt;
+</code></pre>
+</details>
+<details><summary>dotnet</summary>
+<pre><code>
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiXfaconvertPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List&lt;byte[]&gt;(); // List&lt;byte[]&gt; |  (optional) 
+            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
+
+            try
+            {
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiXfaconvertPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+</details>
+<details><summary>java</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.ApiApi;
+
+
+ApiApi apiInstance = new ApiApi();
+List&lt;File&gt; files = Arrays.asList(new File("/path/to/file")); // List&lt;File&gt; | 
+String inputType = "inputType\_example"; // String | The format of the input files.
+try {
+    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
+    e.printStackTrace();
+}
+</code></pre>
+</details>
+<details><summary>kotlin</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.infrastructure.\*
+//import io.swagger.client.models.\*;
+
+val apiInstance = ApiApi()
+val files : kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; =  // kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; | 
+val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
+try {
+    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, inputType)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+}
+</code></pre>
+</details>
+
+### **Checks the grammar of text, pdf files and plain text.**
+- 
+
+<details><summary>curl</summary>
+<pre><code>
+curl -X POST 'http://localhost:5252/pdf/webapi/grammar-checker?language=value' -F 'files=@file.pdf'
+</code></pre>
+</details>
+<details><summary>php</summary>
+<pre><code>
+&lt;?php
+require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\\Client\\Api\\ApiApi(
+    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
+    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
+    new GuzzleHttp\\Client()
+);
+$files = array("files\_example"); // string[] | 
+$input\_type = "input\_type\_example"; // string | The format of the input files.
+
+try {
+    $result = $apiInstance-&gt;pdfWebapiXfaconvertPost($files, $input\_type);
+    print\_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi-&gt;pdfWebapiXfaconvertPost: ', $e-&gt;getMessage(), PHP\_EOL;
+}
+?&gt;
+</code></pre>
+</details>
+<details><summary>dotnet</summary>
+<pre><code>
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiXfaconvertPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List&lt;byte[]&gt;(); // List&lt;byte[]&gt; |  (optional) 
+            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
+
+            try
+            {
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiXfaconvertPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+</details>
+<details><summary>java</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.ApiApi;
+
+
+ApiApi apiInstance = new ApiApi();
+List&lt;File&gt; files = Arrays.asList(new File("/path/to/file")); // List&lt;File&gt; | 
+String inputType = "inputType\_example"; // String | The format of the input files.
+try {
+    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
+    e.printStackTrace();
+}
+</code></pre>
+</details>
+<details><summary>kotlin</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.infrastructure.\*
+//import io.swagger.client.models.\*;
+
+val apiInstance = ApiApi()
+val files : kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; =  // kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; | 
+val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
+try {
+    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, inputType)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+}
+</code></pre>
+</details>
+
+### **Calculate document hash.**
+- Calculate hashes of provided files using the specified algorithm.
+
+<details><summary>curl</summary>
+<pre><code>
+curl -X POST 'http://localhost:5252/pdf/webapi/hash?inputType=value&outputType=value&alg=value' -F 'files=@file.pdf'
+</code></pre>
+</details>
+<details><summary>php</summary>
+<pre><code>
+&lt;?php
+require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\\Client\\Api\\ApiApi(
+    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
+    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
+    new GuzzleHttp\\Client()
+);
+$files = array("files\_example"); // string[] | 
+$input\_type = "input\_type\_example"; // string | The format of the input files.
+
+try {
+    $result = $apiInstance-&gt;pdfWebapiXfaconvertPost($files, $input\_type);
+    print\_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi-&gt;pdfWebapiXfaconvertPost: ', $e-&gt;getMessage(), PHP\_EOL;
+}
+?&gt;
+</code></pre>
+</details>
+<details><summary>dotnet</summary>
+<pre><code>
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiXfaconvertPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List&lt;byte[]&gt;(); // List&lt;byte[]&gt; |  (optional) 
+            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
+
+            try
+            {
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiXfaconvertPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+</details>
+<details><summary>java</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.ApiApi;
+
+
+ApiApi apiInstance = new ApiApi();
+List&lt;File&gt; files = Arrays.asList(new File("/path/to/file")); // List&lt;File&gt; | 
+String inputType = "inputType\_example"; // String | The format of the input files.
+try {
+    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
+    e.printStackTrace();
+}
+</code></pre>
+</details>
+<details><summary>kotlin</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.infrastructure.\*
+//import io.swagger.client.models.\*;
+
+val apiInstance = ApiApi()
+val files : kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; =  // kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; | 
+val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
+try {
+    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, inputType)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+}
+</code></pre>
+</details>
+
+### **Make speech synthesizer.**
+- Make audio file with reading the text in the specified language.
+
+<details><summary>curl</summary>
+<pre><code>
+curl -X POST 'http://localhost:5252/pdf/webapi/image-description?language=value' -F 'files=@file.pdf'
+</code></pre>
+</details>
+<details><summary>php</summary>
+<pre><code>
+&lt;?php
+require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\\Client\\Api\\ApiApi(
+    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
+    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
+    new GuzzleHttp\\Client()
+);
+$files = array("files\_example"); // string[] | 
+$input\_type = "input\_type\_example"; // string | The format of the input files.
+
+try {
+    $result = $apiInstance-&gt;pdfWebapiXfaconvertPost($files, $input\_type);
+    print\_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi-&gt;pdfWebapiXfaconvertPost: ', $e-&gt;getMessage(), PHP\_EOL;
+}
+?&gt;
+</code></pre>
+</details>
+<details><summary>dotnet</summary>
+<pre><code>
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiXfaconvertPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List&lt;byte[]&gt;(); // List&lt;byte[]&gt; |  (optional) 
+            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
+
+            try
+            {
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiXfaconvertPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+</details>
+<details><summary>java</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.ApiApi;
+
+
+ApiApi apiInstance = new ApiApi();
+List&lt;File&gt; files = Arrays.asList(new File("/path/to/file")); // List&lt;File&gt; | 
+String inputType = "inputType\_example"; // String | The format of the input files.
+try {
+    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
+    e.printStackTrace();
+}
+</code></pre>
+</details>
+<details><summary>kotlin</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.infrastructure.\*
+//import io.swagger.client.models.\*;
+
+val apiInstance = ApiApi()
+val files : kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; =  // kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; | 
+val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
+try {
+    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, inputType)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+}
+</code></pre>
+</details>
+
+### ****
+- 
+
+<details><summary>curl</summary>
+<pre><code>
+curl -X POST 'http://localhost:5252/pdf/webapi/image-generator?question=value&count=value&size=value' -F 'files=@file.pdf'
+</code></pre>
+</details>
+<details><summary>php</summary>
+<pre><code>
+&lt;?php
+require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\\Client\\Api\\ApiApi(
+    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
+    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
+    new GuzzleHttp\\Client()
+);
+$files = array("files\_example"); // string[] | 
+$input\_type = "input\_type\_example"; // string | The format of the input files.
+
+try {
+    $result = $apiInstance-&gt;pdfWebapiXfaconvertPost($files, $input\_type);
+    print\_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi-&gt;pdfWebapiXfaconvertPost: ', $e-&gt;getMessage(), PHP\_EOL;
+}
+?&gt;
+</code></pre>
+</details>
+<details><summary>dotnet</summary>
+<pre><code>
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiXfaconvertPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List&lt;byte[]&gt;(); // List&lt;byte[]&gt; |  (optional) 
+            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
+
+            try
+            {
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiXfaconvertPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+</details>
+<details><summary>java</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.ApiApi;
+
+
+ApiApi apiInstance = new ApiApi();
+List&lt;File&gt; files = Arrays.asList(new File("/path/to/file")); // List&lt;File&gt; | 
+String inputType = "inputType\_example"; // String | The format of the input files.
+try {
+    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
+    e.printStackTrace();
+}
+</code></pre>
+</details>
+<details><summary>kotlin</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.infrastructure.\*
+//import io.swagger.client.models.\*;
+
+val apiInstance = ApiApi()
+val files : kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; =  // kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; | 
+val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
+try {
+    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, inputType)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+}
+</code></pre>
+</details>
+
+### **Lock document.**
+- Locks a document with the provided password and optional files.
+
+**Supported formats:**
+
+| pdf |
+| --- |
+
+<details><summary>curl</summary>
+<pre><code>
+curl -X POST 'http://localhost:5252/pdf/webapi/lock?passw=value' -F 'files=@file.pdf'
+</code></pre>
+</details>
+<details><summary>php</summary>
+<pre><code>
+&lt;?php
+require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\\Client\\Api\\ApiApi(
+    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
+    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
+    new GuzzleHttp\\Client()
+);
+$files = array("files\_example"); // string[] | 
+$input\_type = "input\_type\_example"; // string | The format of the input files.
+
+try {
+    $result = $apiInstance-&gt;pdfWebapiXfaconvertPost($files, $input\_type);
+    print\_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi-&gt;pdfWebapiXfaconvertPost: ', $e-&gt;getMessage(), PHP\_EOL;
+}
+?&gt;
+</code></pre>
+</details>
+<details><summary>dotnet</summary>
+<pre><code>
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiXfaconvertPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List&lt;byte[]&gt;(); // List&lt;byte[]&gt; |  (optional) 
+            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
+
+            try
+            {
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiXfaconvertPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+</details>
+<details><summary>java</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.ApiApi;
+
+
+ApiApi apiInstance = new ApiApi();
+List&lt;File&gt; files = Arrays.asList(new File("/path/to/file")); // List&lt;File&gt; | 
+String inputType = "inputType\_example"; // String | The format of the input files.
+try {
+    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
+    e.printStackTrace();
+}
+</code></pre>
+</details>
+<details><summary>kotlin</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.infrastructure.\*
+//import io.swagger.client.models.\*;
+
+val apiInstance = ApiApi()
+val files : kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; =  // kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; | 
+val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
+try {
+    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, inputType)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+}
+</code></pre>
+</details>
+
+### **Merge documents.**
+- Merges the provided files into a single document or image, with options for orientation and page size.
+
+**Supported formats:**
+
+| From/To | gif | jpg | pdf | docx | html | pptx | png | doc | xlsx | tex | tiff | webp |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| bmp | &#9745; | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |  |
+| doc |  |  | &#9745; |  |  |  |  |  |  |  |  |  |  |  |
+| xlsx |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| gif |  |  | &#9745; | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  |  |  |
+| html |  | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; |  |  |  |  |  |  |  |
+| jpg | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; | &#9745; |  |  |
+| pdf |  | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  | &#9745; | &#9745; |  |  |  |
+| png | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; | &#9745; |  |  | &#9745; | &#9745; |  |  |  |
+| pptx |  | &#9745; | &#9745; |  |  |  | &#9745; |  |  |  | &#9745; |  | &#9745; |  |
+| tiff | &#9745; | &#9745; | &#9745; |  |  |  | &#9745; |  |  |  |  |  |  |  |
+| webp |  | &#9745; | &#9745; | &#9745; | &#9745; |  |  |  |  |  |  |  |  |  |
+| docx |  |  | &#9745; |  |  | &#9745; |  |  |  | &#9745; |  |  |  |  |
+
+<details><summary>curl</summary>
+<pre><code>
+curl -X POST 'http://localhost:5252/pdf/webapi/merge?inputType=value&outputType=value&mergeType=value&horizontal=value&vertical=value&pageSize=value&dc\_isLandscape=value' -F 'files=@file.pdf'
+</code></pre>
+</details>
+<details><summary>php</summary>
+<pre><code>
+&lt;?php
+require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\\Client\\Api\\ApiApi(
+    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
+    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
+    new GuzzleHttp\\Client()
+);
+$files = array("files\_example"); // string[] | 
+$input\_type = "input\_type\_example"; // string | The format of the input files.
+
+try {
+    $result = $apiInstance-&gt;pdfWebapiXfaconvertPost($files, $input\_type);
+    print\_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi-&gt;pdfWebapiXfaconvertPost: ', $e-&gt;getMessage(), PHP\_EOL;
+}
+?&gt;
+</code></pre>
+</details>
+<details><summary>dotnet</summary>
+<pre><code>
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiXfaconvertPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List&lt;byte[]&gt;(); // List&lt;byte[]&gt; |  (optional) 
+            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
+
+            try
+            {
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiXfaconvertPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+</details>
+<details><summary>java</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.ApiApi;
+
+
+ApiApi apiInstance = new ApiApi();
+List&lt;File&gt; files = Arrays.asList(new File("/path/to/file")); // List&lt;File&gt; | 
+String inputType = "inputType\_example"; // String | The format of the input files.
+try {
+    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
+    e.printStackTrace();
+}
+</code></pre>
+</details>
+<details><summary>kotlin</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.infrastructure.\*
+//import io.swagger.client.models.\*;
+
+val apiInstance = ApiApi()
+val files : kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; =  // kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; | 
+val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
+try {
+    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, inputType)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+}
+</code></pre>
+</details>
+
+### **Read and change document metadata.**
+- Performs metadata operations on the provided files.
+
+**Supported formats:**
+
+| xlsx | jpg | pptx | tiff | docx | pdf |
+| --- | --- | --- | --- | --- | --- |
+
+<details><summary>curl</summary>
+<pre><code>
+curl -X POST 'http://localhost:5252/pdf/webapi/metadata?operation=value&folder=value&name=value' -F 'files=@file.pdf'
+</code></pre>
+</details>
+<details><summary>php</summary>
+<pre><code>
+&lt;?php
+require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\\Client\\Api\\ApiApi(
+    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
+    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
+    new GuzzleHttp\\Client()
+);
+$files = array("files\_example"); // string[] | 
+$input\_type = "input\_type\_example"; // string | The format of the input files.
+
+try {
+    $result = $apiInstance-&gt;pdfWebapiXfaconvertPost($files, $input\_type);
+    print\_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi-&gt;pdfWebapiXfaconvertPost: ', $e-&gt;getMessage(), PHP\_EOL;
+}
+?&gt;
+</code></pre>
+</details>
+<details><summary>dotnet</summary>
+<pre><code>
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiXfaconvertPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List&lt;byte[]&gt;(); // List&lt;byte[]&gt; |  (optional) 
+            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
+
+            try
+            {
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiXfaconvertPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+</details>
+<details><summary>java</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.ApiApi;
+
+
+ApiApi apiInstance = new ApiApi();
+List&lt;File&gt; files = Arrays.asList(new File("/path/to/file")); // List&lt;File&gt; | 
+String inputType = "inputType\_example"; // String | The format of the input files.
+try {
+    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
+    e.printStackTrace();
+}
+</code></pre>
+</details>
+<details><summary>kotlin</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.infrastructure.\*
+//import io.swagger.client.models.\*;
+
+val apiInstance = ApiApi()
+val files : kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; =  // kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; | 
+val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
+try {
+    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, inputType)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+}
+</code></pre>
+</details>
+
+### **Organize document pages.**
+- Organizes the provided documents by removing or moving specified pages.
+
+**Supported formats:**
+
+| pdf |
+| --- |
+
+<details><summary>curl</summary>
+<pre><code>
+curl -X POST 'http://localhost:5252/pdf/webapi/organize?inputType=value&remove=value&move=value' -F 'files=@file.pdf'
+</code></pre>
+</details>
+<details><summary>php</summary>
+<pre><code>
+&lt;?php
+require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\\Client\\Api\\ApiApi(
+    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
+    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
+    new GuzzleHttp\\Client()
+);
+$files = array("files\_example"); // string[] | 
+$input\_type = "input\_type\_example"; // string | The format of the input files.
+
+try {
+    $result = $apiInstance-&gt;pdfWebapiXfaconvertPost($files, $input\_type);
+    print\_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi-&gt;pdfWebapiXfaconvertPost: ', $e-&gt;getMessage(), PHP\_EOL;
+}
+?&gt;
+</code></pre>
+</details>
+<details><summary>dotnet</summary>
+<pre><code>
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiXfaconvertPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List&lt;byte[]&gt;(); // List&lt;byte[]&gt; |  (optional) 
+            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
+
+            try
+            {
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiXfaconvertPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+</details>
+<details><summary>java</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.ApiApi;
+
+
+ApiApi apiInstance = new ApiApi();
+List&lt;File&gt; files = Arrays.asList(new File("/path/to/file")); // List&lt;File&gt; | 
+String inputType = "inputType\_example"; // String | The format of the input files.
+try {
+    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
+    e.printStackTrace();
+}
+</code></pre>
+</details>
+<details><summary>kotlin</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.infrastructure.\*
+//import io.swagger.client.models.\*;
+
+val apiInstance = ApiApi()
+val files : kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; =  // kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; | 
+val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
+try {
+    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, inputType)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+}
+</code></pre>
+</details>
+
+### **Paraphrase document.**
+- Paraphrase the provided files.
+
+<details><summary>curl</summary>
+<pre><code>
+curl -X POST 'http://localhost:5252/pdf/webapi/paraphrase?source=value&paraphraseSource=value' -F 'files=@file.pdf'
+</code></pre>
+</details>
+<details><summary>php</summary>
+<pre><code>
+&lt;?php
+require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\\Client\\Api\\ApiApi(
+    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
+    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
+    new GuzzleHttp\\Client()
+);
+$files = array("files\_example"); // string[] | 
+$input\_type = "input\_type\_example"; // string | The format of the input files.
+
+try {
+    $result = $apiInstance-&gt;pdfWebapiXfaconvertPost($files, $input\_type);
+    print\_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi-&gt;pdfWebapiXfaconvertPost: ', $e-&gt;getMessage(), PHP\_EOL;
+}
+?&gt;
+</code></pre>
+</details>
+<details><summary>dotnet</summary>
+<pre><code>
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiXfaconvertPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List&lt;byte[]&gt;(); // List&lt;byte[]&gt; |  (optional) 
+            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
+
+            try
+            {
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiXfaconvertPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+</details>
+<details><summary>java</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.ApiApi;
+
+
+ApiApi apiInstance = new ApiApi();
+List&lt;File&gt; files = Arrays.asList(new File("/path/to/file")); // List&lt;File&gt; | 
+String inputType = "inputType\_example"; // String | The format of the input files.
+try {
+    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
+    e.printStackTrace();
+}
+</code></pre>
+</details>
+<details><summary>kotlin</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.infrastructure.\*
+//import io.swagger.client.models.\*;
+
+val apiInstance = ApiApi()
+val files : kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; =  // kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; | 
+val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
+try {
+    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, inputType)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+}
+</code></pre>
+</details>
+
+### **Parse document.**
+- Parses the provided files using a parser service.
+
+**Supported formats:**
+
+| epub | html | mhtml | pptx | pdf |
+| --- | --- | --- | --- | --- |
+
+<details><summary>curl</summary>
+<pre><code>
+curl -X POST 'http://localhost:5252/pdf/webapi/parse' -F 'files=@file.pdf'
+</code></pre>
+</details>
+<details><summary>php</summary>
+<pre><code>
+&lt;?php
+require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\\Client\\Api\\ApiApi(
+    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
+    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
+    new GuzzleHttp\\Client()
+);
+$files = array("files\_example"); // string[] | 
+$input\_type = "input\_type\_example"; // string | The format of the input files.
+
+try {
+    $result = $apiInstance-&gt;pdfWebapiXfaconvertPost($files, $input\_type);
+    print\_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi-&gt;pdfWebapiXfaconvertPost: ', $e-&gt;getMessage(), PHP\_EOL;
+}
+?&gt;
+</code></pre>
+</details>
+<details><summary>dotnet</summary>
+<pre><code>
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiXfaconvertPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List&lt;byte[]&gt;(); // List&lt;byte[]&gt; |  (optional) 
+            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
+
+            try
+            {
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiXfaconvertPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+</details>
+<details><summary>java</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.ApiApi;
+
+
+ApiApi apiInstance = new ApiApi();
+List&lt;File&gt; files = Arrays.asList(new File("/path/to/file")); // List&lt;File&gt; | 
+String inputType = "inputType\_example"; // String | The format of the input files.
+try {
+    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
+    e.printStackTrace();
+}
+</code></pre>
+</details>
+<details><summary>kotlin</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.infrastructure.\*
+//import io.swagger.client.models.\*;
+
+val apiInstance = ApiApi()
+val files : kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; =  // kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; | 
+val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
+try {
+    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, inputType)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+}
+</code></pre>
+</details>
+
+### **Generates a list of quiz questions using AI based on the provided content or uploaded files,
+and stores the resulting quiz into a document.**
+- 
+
+<details><summary>curl</summary>
+<pre><code>
+curl -X POST 'http://localhost:5252/pdf/webapi/quiz-maker?content=value&questionNumber=value&includeAnswers=value&questionType=value&difficultyLevel=value' -F 'files=@file.pdf'
+</code></pre>
+</details>
+<details><summary>php</summary>
+<pre><code>
+&lt;?php
+require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\\Client\\Api\\ApiApi(
+    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
+    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
+    new GuzzleHttp\\Client()
+);
+$files = array("files\_example"); // string[] | 
+$input\_type = "input\_type\_example"; // string | The format of the input files.
+
+try {
+    $result = $apiInstance-&gt;pdfWebapiXfaconvertPost($files, $input\_type);
+    print\_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi-&gt;pdfWebapiXfaconvertPost: ', $e-&gt;getMessage(), PHP\_EOL;
+}
+?&gt;
+</code></pre>
+</details>
+<details><summary>dotnet</summary>
+<pre><code>
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiXfaconvertPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List&lt;byte[]&gt;(); // List&lt;byte[]&gt; |  (optional) 
+            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
+
+            try
+            {
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiXfaconvertPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+</details>
+<details><summary>java</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.ApiApi;
+
+
+ApiApi apiInstance = new ApiApi();
+List&lt;File&gt; files = Arrays.asList(new File("/path/to/file")); // List&lt;File&gt; | 
+String inputType = "inputType\_example"; // String | The format of the input files.
+try {
+    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
+    e.printStackTrace();
+}
+</code></pre>
+</details>
+<details><summary>kotlin</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.infrastructure.\*
+//import io.swagger.client.models.\*;
+
+val apiInstance = ApiApi()
+val files : kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; =  // kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; | 
+val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
+try {
+    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, inputType)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+}
+</code></pre>
+</details>
+
+### **Redact document text.**
+- Redacts specified text from the provided documents, with options to search case-sensitively, target in text, comments, and metadata.
+
+**Supported formats:**
+
+| md | srt | txt | xml | pdf |
+| --- | --- | --- | --- | --- |
+
+<details><summary>curl</summary>
+<pre><code>
+curl -X POST 'http://localhost:5252/pdf/webapi/redact?searchQuery=value&replaceText=value&caseSensitive=value&text=value&comments=value&metadata=value' -F 'files=@file.pdf'
+</code></pre>
+</details>
+<details><summary>php</summary>
+<pre><code>
+&lt;?php
+require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\\Client\\Api\\ApiApi(
+    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
+    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
+    new GuzzleHttp\\Client()
+);
+$files = array("files\_example"); // string[] | 
+$input\_type = "input\_type\_example"; // string | The format of the input files.
+
+try {
+    $result = $apiInstance-&gt;pdfWebapiXfaconvertPost($files, $input\_type);
+    print\_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi-&gt;pdfWebapiXfaconvertPost: ', $e-&gt;getMessage(), PHP\_EOL;
+}
+?&gt;
+</code></pre>
+</details>
+<details><summary>dotnet</summary>
+<pre><code>
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiXfaconvertPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List&lt;byte[]&gt;(); // List&lt;byte[]&gt; |  (optional) 
+            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
+
+            try
+            {
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiXfaconvertPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+</details>
+<details><summary>java</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.ApiApi;
+
+
+ApiApi apiInstance = new ApiApi();
+List&lt;File&gt; files = Arrays.asList(new File("/path/to/file")); // List&lt;File&gt; | 
+String inputType = "inputType\_example"; // String | The format of the input files.
+try {
+    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
+    e.printStackTrace();
+}
+</code></pre>
+</details>
+<details><summary>kotlin</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.infrastructure.\*
+//import io.swagger.client.models.\*;
+
+val apiInstance = ApiApi()
+val files : kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; =  // kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; | 
+val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
+try {
+    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, inputType)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+}
+</code></pre>
+</details>
+
+### **Remove document annotations.**
+- Removes annotations from the provided documents.
+
+**Supported formats:**
+
+| pdf |
+| --- |
+
+<details><summary>curl</summary>
+<pre><code>
+curl -X POST 'http://localhost:5252/pdf/webapi/remove' -F 'files=@file.pdf'
+</code></pre>
+</details>
+<details><summary>php</summary>
+<pre><code>
+&lt;?php
+require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\\Client\\Api\\ApiApi(
+    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
+    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
+    new GuzzleHttp\\Client()
+);
+$files = array("files\_example"); // string[] | 
+$input\_type = "input\_type\_example"; // string | The format of the input files.
+
+try {
+    $result = $apiInstance-&gt;pdfWebapiXfaconvertPost($files, $input\_type);
+    print\_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi-&gt;pdfWebapiXfaconvertPost: ', $e-&gt;getMessage(), PHP\_EOL;
+}
+?&gt;
+</code></pre>
+</details>
+<details><summary>dotnet</summary>
+<pre><code>
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiXfaconvertPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List&lt;byte[]&gt;(); // List&lt;byte[]&gt; |  (optional) 
+            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
+
+            try
+            {
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiXfaconvertPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+</details>
+<details><summary>java</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.ApiApi;
+
+
+ApiApi apiInstance = new ApiApi();
+List&lt;File&gt; files = Arrays.asList(new File("/path/to/file")); // List&lt;File&gt; | 
+String inputType = "inputType\_example"; // String | The format of the input files.
+try {
+    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
+    e.printStackTrace();
+}
+</code></pre>
+</details>
+<details><summary>kotlin</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.infrastructure.\*
+//import io.swagger.client.models.\*;
+
+val apiInstance = ApiApi()
+val files : kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; =  // kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; | 
+val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
+try {
+    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, inputType)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+}
+</code></pre>
+</details>
+
+### **Removes document watermark.**
+- Removes a watermark from the document pages.
+
+**Supported formats:**
+
+| pdf |
+| --- |
+
+<details><summary>curl</summary>
+<pre><code>
+curl -X POST 'http://localhost:5252/pdf/webapi/remove-watermark?isAllPages=value&watermarkType=value&removeRange=value' -F 'files=@file.pdf'
+</code></pre>
+</details>
+<details><summary>php</summary>
+<pre><code>
+&lt;?php
+require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\\Client\\Api\\ApiApi(
+    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
+    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
+    new GuzzleHttp\\Client()
+);
+$files = array("files\_example"); // string[] | 
+$input\_type = "input\_type\_example"; // string | The format of the input files.
+
+try {
+    $result = $apiInstance-&gt;pdfWebapiXfaconvertPost($files, $input\_type);
+    print\_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi-&gt;pdfWebapiXfaconvertPost: ', $e-&gt;getMessage(), PHP\_EOL;
+}
+?&gt;
+</code></pre>
+</details>
+<details><summary>dotnet</summary>
+<pre><code>
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiXfaconvertPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List&lt;byte[]&gt;(); // List&lt;byte[]&gt; |  (optional) 
+            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
+
+            try
+            {
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiXfaconvertPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+</details>
+<details><summary>java</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.ApiApi;
+
+
+ApiApi apiInstance = new ApiApi();
+List&lt;File&gt; files = Arrays.asList(new File("/path/to/file")); // List&lt;File&gt; | 
+String inputType = "inputType\_example"; // String | The format of the input files.
+try {
+    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
+    e.printStackTrace();
+}
+</code></pre>
+</details>
+<details><summary>kotlin</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.infrastructure.\*
+//import io.swagger.client.models.\*;
+
+val apiInstance = ApiApi()
+val files : kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; =  // kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; | 
+val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
+try {
+    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, inputType)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+}
+</code></pre>
+</details>
+
+### **Removes document watermark.**
+- Removes a watermark from the document pages.
+
+<details><summary>curl</summary>
+<pre><code>
+curl -X POST 'http://localhost:5252/pdf/webapi/remove-watermark-blazor?watermarkAction=value' -F 'files=@file.pdf'
+</code></pre>
+</details>
+<details><summary>php</summary>
+<pre><code>
+&lt;?php
+require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\\Client\\Api\\ApiApi(
+    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
+    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
+    new GuzzleHttp\\Client()
+);
+$files = array("files\_example"); // string[] | 
+$input\_type = "input\_type\_example"; // string | The format of the input files.
+
+try {
+    $result = $apiInstance-&gt;pdfWebapiXfaconvertPost($files, $input\_type);
+    print\_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi-&gt;pdfWebapiXfaconvertPost: ', $e-&gt;getMessage(), PHP\_EOL;
+}
+?&gt;
+</code></pre>
+</details>
+<details><summary>dotnet</summary>
+<pre><code>
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiXfaconvertPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List&lt;byte[]&gt;(); // List&lt;byte[]&gt; |  (optional) 
+            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
+
+            try
+            {
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiXfaconvertPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+</details>
+<details><summary>java</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.ApiApi;
+
+
+ApiApi apiInstance = new ApiApi();
+List&lt;File&gt; files = Arrays.asList(new File("/path/to/file")); // List&lt;File&gt; | 
+String inputType = "inputType\_example"; // String | The format of the input files.
+try {
+    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
+    e.printStackTrace();
+}
+</code></pre>
+</details>
+<details><summary>kotlin</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.infrastructure.\*
+//import io.swagger.client.models.\*;
+
+val apiInstance = ApiApi()
+val files : kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; =  // kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; | 
+val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
+try {
+    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, inputType)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+}
+</code></pre>
+</details>
+
+### **Remove pages from document.**
+- Removes specified pages from the provided files.
+
+**Supported formats:**
+
+| xlsx | pdf | pptx | tiff | docx |
+| --- | --- | --- | --- | --- |
+
+<details><summary>curl</summary>
+<pre><code>
+curl -X POST 'http://localhost:5252/pdf/webapi/removepages?removeRange=value' -F 'files=@file.pdf'
+</code></pre>
+</details>
+<details><summary>php</summary>
+<pre><code>
+&lt;?php
+require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\\Client\\Api\\ApiApi(
+    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
+    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
+    new GuzzleHttp\\Client()
+);
+$files = array("files\_example"); // string[] | 
+$input\_type = "input\_type\_example"; // string | The format of the input files.
+
+try {
+    $result = $apiInstance-&gt;pdfWebapiXfaconvertPost($files, $input\_type);
+    print\_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi-&gt;pdfWebapiXfaconvertPost: ', $e-&gt;getMessage(), PHP\_EOL;
+}
+?&gt;
+</code></pre>
+</details>
+<details><summary>dotnet</summary>
+<pre><code>
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiXfaconvertPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List&lt;byte[]&gt;(); // List&lt;byte[]&gt; |  (optional) 
+            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
+
+            try
+            {
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiXfaconvertPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+</details>
+<details><summary>java</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.ApiApi;
+
+
+ApiApi apiInstance = new ApiApi();
+List&lt;File&gt; files = Arrays.asList(new File("/path/to/file")); // List&lt;File&gt; | 
+String inputType = "inputType\_example"; // String | The format of the input files.
+try {
+    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
+    e.printStackTrace();
+}
+</code></pre>
+</details>
+<details><summary>kotlin</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.infrastructure.\*
+//import io.swagger.client.models.\*;
+
+val apiInstance = ApiApi()
+val files : kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; =  // kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; | 
+val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
+try {
+    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, inputType)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+}
+</code></pre>
+</details>
+
+### **Repair document.**
+- Repairs the provided files.
+
+**Supported formats:**
+
+| pdf |
+| --- |
+
+<details><summary>curl</summary>
+<pre><code>
+curl -X POST 'http://localhost:5252/pdf/webapi/repair' -F 'files=@file.pdf'
+</code></pre>
+</details>
+<details><summary>php</summary>
+<pre><code>
+&lt;?php
+require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\\Client\\Api\\ApiApi(
+    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
+    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
+    new GuzzleHttp\\Client()
+);
+$files = array("files\_example"); // string[] | 
+$input\_type = "input\_type\_example"; // string | The format of the input files.
+
+try {
+    $result = $apiInstance-&gt;pdfWebapiXfaconvertPost($files, $input\_type);
+    print\_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi-&gt;pdfWebapiXfaconvertPost: ', $e-&gt;getMessage(), PHP\_EOL;
+}
+?&gt;
+</code></pre>
+</details>
+<details><summary>dotnet</summary>
+<pre><code>
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiXfaconvertPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List&lt;byte[]&gt;(); // List&lt;byte[]&gt; |  (optional) 
+            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
+
+            try
+            {
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiXfaconvertPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+</details>
+<details><summary>java</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.ApiApi;
+
+
+ApiApi apiInstance = new ApiApi();
+List&lt;File&gt; files = Arrays.asList(new File("/path/to/file")); // List&lt;File&gt; | 
+String inputType = "inputType\_example"; // String | The format of the input files.
+try {
+    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
+    e.printStackTrace();
+}
+</code></pre>
+</details>
+<details><summary>kotlin</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.infrastructure.\*
+//import io.swagger.client.models.\*;
+
+val apiInstance = ApiApi()
+val files : kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; =  // kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; | 
+val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
+try {
+    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, inputType)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+}
+</code></pre>
+</details>
+
+### **Resize document.**
+- Resizes the provided files to the specified dimensions or using a preset size.
+
+**Supported formats:**
+
+| eps | pdf |
+| --- | --- |
+
+<details><summary>curl</summary>
+<pre><code>
+curl -X POST 'http://localhost:5252/pdf/webapi/resize?inputType=value&outputType=value&resizeType=value&presetType=value&presetSize=value&width=value&height=value&percentage=value&useProportions=value&pageSize=value' -F 'files=@file.pdf'
+</code></pre>
+</details>
+<details><summary>php</summary>
+<pre><code>
+&lt;?php
+require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\\Client\\Api\\ApiApi(
+    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
+    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
+    new GuzzleHttp\\Client()
+);
+$files = array("files\_example"); // string[] | 
+$input\_type = "input\_type\_example"; // string | The format of the input files.
+
+try {
+    $result = $apiInstance-&gt;pdfWebapiXfaconvertPost($files, $input\_type);
+    print\_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi-&gt;pdfWebapiXfaconvertPost: ', $e-&gt;getMessage(), PHP\_EOL;
+}
+?&gt;
+</code></pre>
+</details>
+<details><summary>dotnet</summary>
+<pre><code>
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiXfaconvertPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List&lt;byte[]&gt;(); // List&lt;byte[]&gt; |  (optional) 
+            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
+
+            try
+            {
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiXfaconvertPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+</details>
+<details><summary>java</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.ApiApi;
+
+
+ApiApi apiInstance = new ApiApi();
+List&lt;File&gt; files = Arrays.asList(new File("/path/to/file")); // List&lt;File&gt; | 
+String inputType = "inputType\_example"; // String | The format of the input files.
+try {
+    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
+    e.printStackTrace();
+}
+</code></pre>
+</details>
+<details><summary>kotlin</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.infrastructure.\*
+//import io.swagger.client.models.\*;
+
+val apiInstance = ApiApi()
+val files : kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; =  // kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; | 
+val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
+try {
+    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, inputType)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+}
+</code></pre>
+</details>
+
+### **Rotate document.**
+- Rotates the provided files by a specified angle, with options for rotation type and page number.
+
+**Supported formats:**
+
+| docx | gif | jpg | png | pptx | tiff | pdf |
+| --- | --- | --- | --- | --- | --- | --- |
+
+<details><summary>curl</summary>
+<pre><code>
+curl -X POST 'http://localhost:5252/pdf/webapi/rotate?angle=value&customAngle=value&rotateType=value&pageNum=value' -F 'files=@file.pdf'
+</code></pre>
+</details>
+<details><summary>php</summary>
+<pre><code>
+&lt;?php
+require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\\Client\\Api\\ApiApi(
+    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
+    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
+    new GuzzleHttp\\Client()
+);
+$files = array("files\_example"); // string[] | 
+$input\_type = "input\_type\_example"; // string | The format of the input files.
+
+try {
+    $result = $apiInstance-&gt;pdfWebapiXfaconvertPost($files, $input\_type);
+    print\_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi-&gt;pdfWebapiXfaconvertPost: ', $e-&gt;getMessage(), PHP\_EOL;
+}
+?&gt;
+</code></pre>
+</details>
+<details><summary>dotnet</summary>
+<pre><code>
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiXfaconvertPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List&lt;byte[]&gt;(); // List&lt;byte[]&gt; |  (optional) 
+            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
+
+            try
+            {
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiXfaconvertPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+</details>
+<details><summary>java</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.ApiApi;
+
+
+ApiApi apiInstance = new ApiApi();
+List&lt;File&gt; files = Arrays.asList(new File("/path/to/file")); // List&lt;File&gt; | 
+String inputType = "inputType\_example"; // String | The format of the input files.
+try {
+    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
+    e.printStackTrace();
+}
+</code></pre>
+</details>
+<details><summary>kotlin</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.infrastructure.\*
+//import io.swagger.client.models.\*;
+
+val apiInstance = ApiApi()
+val files : kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; =  // kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; | 
+val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
+try {
+    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, inputType)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+}
+</code></pre>
+</details>
+
+### **Search document text.**
+- Searches the provided files for the specified query and mark found text with yellow background.
+
+**Supported formats:**
+
+| doc | xlsx | pptx | docx | pdf |
+| --- | --- | --- | --- | --- |
+
+<details><summary>curl</summary>
+<pre><code>
+curl -X POST 'http://localhost:5252/pdf/webapi/search?query=value' -F 'files=@file.pdf'
+</code></pre>
+</details>
+<details><summary>php</summary>
+<pre><code>
+&lt;?php
+require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\\Client\\Api\\ApiApi(
+    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
+    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
+    new GuzzleHttp\\Client()
+);
+$files = array("files\_example"); // string[] | 
+$input\_type = "input\_type\_example"; // string | The format of the input files.
+
+try {
+    $result = $apiInstance-&gt;pdfWebapiXfaconvertPost($files, $input\_type);
+    print\_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi-&gt;pdfWebapiXfaconvertPost: ', $e-&gt;getMessage(), PHP\_EOL;
+}
+?&gt;
+</code></pre>
+</details>
+<details><summary>dotnet</summary>
+<pre><code>
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiXfaconvertPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List&lt;byte[]&gt;(); // List&lt;byte[]&gt; |  (optional) 
+            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
+
+            try
+            {
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiXfaconvertPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+</details>
+<details><summary>java</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.ApiApi;
+
+
+ApiApi apiInstance = new ApiApi();
+List&lt;File&gt; files = Arrays.asList(new File("/path/to/file")); // List&lt;File&gt; | 
+String inputType = "inputType\_example"; // String | The format of the input files.
+try {
+    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
+    e.printStackTrace();
+}
+</code></pre>
+</details>
+<details><summary>kotlin</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.infrastructure.\*
+//import io.swagger.client.models.\*;
+
+val apiInstance = ApiApi()
+val files : kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; =  // kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; | 
+val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
+try {
+    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, inputType)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+}
+</code></pre>
+</details>
+
+### **Make scanned pdf searchable.**
+- Converts the provided files into a searchable PDF format for the specified language.
+
+**Supported formats:**
+
+| pdf |
+| --- |
+
+<details><summary>curl</summary>
+<pre><code>
+curl -X POST 'http://localhost:5252/pdf/webapi/searchable?lang=value' -F 'files=@file.pdf'
+</code></pre>
+</details>
+<details><summary>php</summary>
+<pre><code>
+&lt;?php
+require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\\Client\\Api\\ApiApi(
+    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
+    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
+    new GuzzleHttp\\Client()
+);
+$files = array("files\_example"); // string[] | 
+$input\_type = "input\_type\_example"; // string | The format of the input files.
+
+try {
+    $result = $apiInstance-&gt;pdfWebapiXfaconvertPost($files, $input\_type);
+    print\_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi-&gt;pdfWebapiXfaconvertPost: ', $e-&gt;getMessage(), PHP\_EOL;
+}
+?&gt;
+</code></pre>
+</details>
+<details><summary>dotnet</summary>
+<pre><code>
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiXfaconvertPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List&lt;byte[]&gt;(); // List&lt;byte[]&gt; |  (optional) 
+            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
+
+            try
+            {
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiXfaconvertPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+</details>
+<details><summary>java</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.ApiApi;
+
+
+ApiApi apiInstance = new ApiApi();
+List&lt;File&gt; files = Arrays.asList(new File("/path/to/file")); // List&lt;File&gt; | 
+String inputType = "inputType\_example"; // String | The format of the input files.
+try {
+    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
+    e.printStackTrace();
+}
+</code></pre>
+</details>
+<details><summary>kotlin</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.infrastructure.\*
+//import io.swagger.client.models.\*;
+
+val apiInstance = ApiApi()
+val files : kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; =  // kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; | 
+val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
+try {
+    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, inputType)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+}
+</code></pre>
+</details>
+
+### **Add signature to document.**
+- Adds a signature, text and image to the provided documents.
+
+**Supported formats:**
+
+| pdf |
+| --- |
+
+<details><summary>curl</summary>
+<pre><code>
+curl -X POST 'http://localhost:5252/pdf/webapi/signature?inputType=value&outputType=value&signatureType=value' -F 'files=@file.pdf'
+</code></pre>
+</details>
+<details><summary>php</summary>
+<pre><code>
+&lt;?php
+require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\\Client\\Api\\ApiApi(
+    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
+    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
+    new GuzzleHttp\\Client()
+);
+$files = array("files\_example"); // string[] | 
+$input\_type = "input\_type\_example"; // string | The format of the input files.
+
+try {
+    $result = $apiInstance-&gt;pdfWebapiXfaconvertPost($files, $input\_type);
+    print\_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi-&gt;pdfWebapiXfaconvertPost: ', $e-&gt;getMessage(), PHP\_EOL;
+}
+?&gt;
+</code></pre>
+</details>
+<details><summary>dotnet</summary>
+<pre><code>
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiXfaconvertPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List&lt;byte[]&gt;(); // List&lt;byte[]&gt; |  (optional) 
+            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
+
+            try
+            {
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiXfaconvertPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+</details>
+<details><summary>java</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.ApiApi;
+
+
+ApiApi apiInstance = new ApiApi();
+List&lt;File&gt; files = Arrays.asList(new File("/path/to/file")); // List&lt;File&gt; | 
+String inputType = "inputType\_example"; // String | The format of the input files.
+try {
+    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
+    e.printStackTrace();
+}
+</code></pre>
+</details>
+<details><summary>kotlin</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.infrastructure.\*
+//import io.swagger.client.models.\*;
+
+val apiInstance = ApiApi()
+val files : kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; =  // kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; | 
+val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
+try {
+    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, inputType)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+}
+</code></pre>
+</details>
+
+### **Split document.**
+- Splits the provided documents based on the specified split type and page rage to spit.
+
+**Supported formats:**
+
+| bmp | gif | image | jpg | png | tiff |
+| --- | --- | --- | --- | --- | --- |
+
+<details><summary>curl</summary>
+<pre><code>
+curl -X POST 'http://localhost:5252/pdf/webapi/splitdoc?inputType=value&splitType=value&pars=value' -F 'files=@file.pdf'
+</code></pre>
+</details>
+<details><summary>php</summary>
+<pre><code>
+&lt;?php
+require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\\Client\\Api\\ApiApi(
+    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
+    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
+    new GuzzleHttp\\Client()
+);
+$files = array("files\_example"); // string[] | 
+$input\_type = "input\_type\_example"; // string | The format of the input files.
+
+try {
+    $result = $apiInstance-&gt;pdfWebapiXfaconvertPost($files, $input\_type);
+    print\_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi-&gt;pdfWebapiXfaconvertPost: ', $e-&gt;getMessage(), PHP\_EOL;
+}
+?&gt;
+</code></pre>
+</details>
+<details><summary>dotnet</summary>
+<pre><code>
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiXfaconvertPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List&lt;byte[]&gt;(); // List&lt;byte[]&gt; |  (optional) 
+            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
+
+            try
+            {
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiXfaconvertPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+</details>
+<details><summary>java</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.ApiApi;
+
+
+ApiApi apiInstance = new ApiApi();
+List&lt;File&gt; files = Arrays.asList(new File("/path/to/file")); // List&lt;File&gt; | 
+String inputType = "inputType\_example"; // String | The format of the input files.
+try {
+    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
+    e.printStackTrace();
+}
+</code></pre>
+</details>
+<details><summary>kotlin</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.infrastructure.\*
+//import io.swagger.client.models.\*;
+
+val apiInstance = ApiApi()
+val files : kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; =  // kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; | 
+val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
+try {
+    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, inputType)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+}
+</code></pre>
+</details>
+
+### **Split image.**
+- Splits the provided images into smaller parts based on the specified parameters.
+
+**Supported formats:**
+
+| bmp | gif | image | jpg | png | tiff |
+| --- | --- | --- | --- | --- | --- |
+
+<details><summary>curl</summary>
+<pre><code>
+curl -X POST 'http://localhost:5252/pdf/webapi/splitdoc?inputType=value&splitType=value&pars=value' -F 'files=@file.pdf'
+</code></pre>
+</details>
+<details><summary>php</summary>
+<pre><code>
+&lt;?php
+require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\\Client\\Api\\ApiApi(
+    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
+    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
+    new GuzzleHttp\\Client()
+);
+$files = array("files\_example"); // string[] | 
+$input\_type = "input\_type\_example"; // string | The format of the input files.
+
+try {
+    $result = $apiInstance-&gt;pdfWebapiXfaconvertPost($files, $input\_type);
+    print\_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi-&gt;pdfWebapiXfaconvertPost: ', $e-&gt;getMessage(), PHP\_EOL;
+}
+?&gt;
+</code></pre>
+</details>
+<details><summary>dotnet</summary>
+<pre><code>
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiXfaconvertPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List&lt;byte[]&gt;(); // List&lt;byte[]&gt; |  (optional) 
+            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
+
+            try
+            {
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiXfaconvertPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+</details>
+<details><summary>java</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.ApiApi;
+
+
+ApiApi apiInstance = new ApiApi();
+List&lt;File&gt; files = Arrays.asList(new File("/path/to/file")); // List&lt;File&gt; | 
+String inputType = "inputType\_example"; // String | The format of the input files.
+try {
+    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
+    e.printStackTrace();
+}
+</code></pre>
+</details>
+<details><summary>kotlin</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.infrastructure.\*
+//import io.swagger.client.models.\*;
+
+val apiInstance = ApiApi()
+val files : kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; =  // kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; | 
+val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
+try {
+    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, inputType)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+}
+</code></pre>
+</details>
+
+### ****
+- 
+
+<details><summary>curl</summary>
+<pre><code>
+curl -X POST 'http://localhost:5252/pdf/webapi/summary?question=value' -F 'files=@file.pdf'
+</code></pre>
+</details>
+<details><summary>php</summary>
+<pre><code>
+&lt;?php
+require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\\Client\\Api\\ApiApi(
+    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
+    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
+    new GuzzleHttp\\Client()
+);
+$files = array("files\_example"); // string[] | 
+$input\_type = "input\_type\_example"; // string | The format of the input files.
+
+try {
+    $result = $apiInstance-&gt;pdfWebapiXfaconvertPost($files, $input\_type);
+    print\_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi-&gt;pdfWebapiXfaconvertPost: ', $e-&gt;getMessage(), PHP\_EOL;
+}
+?&gt;
+</code></pre>
+</details>
+<details><summary>dotnet</summary>
+<pre><code>
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiXfaconvertPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List&lt;byte[]&gt;(); // List&lt;byte[]&gt; |  (optional) 
+            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
+
+            try
+            {
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiXfaconvertPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+</details>
+<details><summary>java</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.ApiApi;
+
+
+ApiApi apiInstance = new ApiApi();
+List&lt;File&gt; files = Arrays.asList(new File("/path/to/file")); // List&lt;File&gt; | 
+String inputType = "inputType\_example"; // String | The format of the input files.
+try {
+    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
+    e.printStackTrace();
+}
+</code></pre>
+</details>
+<details><summary>kotlin</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.infrastructure.\*
+//import io.swagger.client.models.\*;
+
+val apiInstance = ApiApi()
+val files : kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; =  // kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; | 
+val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
+try {
+    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, inputType)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+}
+</code></pre>
+</details>
+
+### ****
+- 
+
+<details><summary>curl</summary>
+<pre><code>
+curl -X POST 'http://localhost:5252/pdf/webapi/table-of-contents' -F 'files=@file.pdf'
+</code></pre>
+</details>
+<details><summary>php</summary>
+<pre><code>
+&lt;?php
+require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\\Client\\Api\\ApiApi(
+    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
+    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
+    new GuzzleHttp\\Client()
+);
+$files = array("files\_example"); // string[] | 
+$input\_type = "input\_type\_example"; // string | The format of the input files.
+
+try {
+    $result = $apiInstance-&gt;pdfWebapiXfaconvertPost($files, $input\_type);
+    print\_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi-&gt;pdfWebapiXfaconvertPost: ', $e-&gt;getMessage(), PHP\_EOL;
+}
+?&gt;
+</code></pre>
+</details>
+<details><summary>dotnet</summary>
+<pre><code>
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiXfaconvertPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List&lt;byte[]&gt;(); // List&lt;byte[]&gt; |  (optional) 
+            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
+
+            try
+            {
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiXfaconvertPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+</details>
+<details><summary>java</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.ApiApi;
+
+
+ApiApi apiInstance = new ApiApi();
+List&lt;File&gt; files = Arrays.asList(new File("/path/to/file")); // List&lt;File&gt; | 
+String inputType = "inputType\_example"; // String | The format of the input files.
+try {
+    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
+    e.printStackTrace();
+}
+</code></pre>
+</details>
+<details><summary>kotlin</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.infrastructure.\*
+//import io.swagger.client.models.\*;
+
+val apiInstance = ApiApi()
+val files : kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; =  // kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; | 
+val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
+try {
+    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, inputType)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+}
+</code></pre>
+</details>
+
+### **Creates the list of test questions using ai and stores it to the document**
+- 
+
+<details><summary>curl</summary>
+<pre><code>
+curl -X POST 'http://localhost:5252/pdf/webapi/test-generator?subject=value&number=value&complexity=value&language=value&outputType=value' -F 'files=@file.pdf'
+</code></pre>
+</details>
+<details><summary>php</summary>
+<pre><code>
+&lt;?php
+require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\\Client\\Api\\ApiApi(
+    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
+    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
+    new GuzzleHttp\\Client()
+);
+$files = array("files\_example"); // string[] | 
+$input\_type = "input\_type\_example"; // string | The format of the input files.
+
+try {
+    $result = $apiInstance-&gt;pdfWebapiXfaconvertPost($files, $input\_type);
+    print\_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi-&gt;pdfWebapiXfaconvertPost: ', $e-&gt;getMessage(), PHP\_EOL;
+}
+?&gt;
+</code></pre>
+</details>
+<details><summary>dotnet</summary>
+<pre><code>
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiXfaconvertPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List&lt;byte[]&gt;(); // List&lt;byte[]&gt; |  (optional) 
+            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
+
+            try
+            {
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiXfaconvertPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+</details>
+<details><summary>java</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.ApiApi;
+
+
+ApiApi apiInstance = new ApiApi();
+List&lt;File&gt; files = Arrays.asList(new File("/path/to/file")); // List&lt;File&gt; | 
+String inputType = "inputType\_example"; // String | The format of the input files.
+try {
+    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
+    e.printStackTrace();
+}
+</code></pre>
+</details>
+<details><summary>kotlin</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.infrastructure.\*
+//import io.swagger.client.models.\*;
+
+val apiInstance = ApiApi()
+val files : kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; =  // kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; | 
+val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
+try {
+    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, inputType)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+}
+</code></pre>
+</details>
+
+### ****
+- 
+
+<details><summary>curl</summary>
+<pre><code>
+curl -X POST 'http://localhost:5252/pdf/webapi/transcribe-audio' -F 'files=@file.pdf'
+</code></pre>
+</details>
+<details><summary>php</summary>
+<pre><code>
+&lt;?php
+require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\\Client\\Api\\ApiApi(
+    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
+    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
+    new GuzzleHttp\\Client()
+);
+$files = array("files\_example"); // string[] | 
+$input\_type = "input\_type\_example"; // string | The format of the input files.
+
+try {
+    $result = $apiInstance-&gt;pdfWebapiXfaconvertPost($files, $input\_type);
+    print\_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi-&gt;pdfWebapiXfaconvertPost: ', $e-&gt;getMessage(), PHP\_EOL;
+}
+?&gt;
+</code></pre>
+</details>
+<details><summary>dotnet</summary>
+<pre><code>
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiXfaconvertPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List&lt;byte[]&gt;(); // List&lt;byte[]&gt; |  (optional) 
+            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
+
+            try
+            {
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiXfaconvertPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+</details>
+<details><summary>java</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.ApiApi;
+
+
+ApiApi apiInstance = new ApiApi();
+List&lt;File&gt; files = Arrays.asList(new File("/path/to/file")); // List&lt;File&gt; | 
+String inputType = "inputType\_example"; // String | The format of the input files.
+try {
+    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
+    e.printStackTrace();
+}
+</code></pre>
+</details>
+<details><summary>kotlin</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.infrastructure.\*
+//import io.swagger.client.models.\*;
+
+val apiInstance = ApiApi()
+val files : kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; =  // kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; | 
+val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
+try {
+    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, inputType)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+}
+</code></pre>
+</details>
+
+### **Translate document.**
+- Translate the provided files.
+
+<details><summary>curl</summary>
+<pre><code>
+curl -X POST 'http://localhost:5252/pdf/webapi/translate?languages=value&source=value&target=value&aiService=value&translationSource=value' -F 'files=@file.pdf'
+</code></pre>
+</details>
+<details><summary>php</summary>
+<pre><code>
+&lt;?php
+require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\\Client\\Api\\ApiApi(
+    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
+    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
+    new GuzzleHttp\\Client()
+);
+$files = array("files\_example"); // string[] | 
+$input\_type = "input\_type\_example"; // string | The format of the input files.
+
+try {
+    $result = $apiInstance-&gt;pdfWebapiXfaconvertPost($files, $input\_type);
+    print\_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi-&gt;pdfWebapiXfaconvertPost: ', $e-&gt;getMessage(), PHP\_EOL;
+}
+?&gt;
+</code></pre>
+</details>
+<details><summary>dotnet</summary>
+<pre><code>
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiXfaconvertPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List&lt;byte[]&gt;(); // List&lt;byte[]&gt; |  (optional) 
+            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
+
+            try
+            {
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiXfaconvertPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+</details>
+<details><summary>java</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.ApiApi;
+
+
+ApiApi apiInstance = new ApiApi();
+List&lt;File&gt; files = Arrays.asList(new File("/path/to/file")); // List&lt;File&gt; | 
+String inputType = "inputType\_example"; // String | The format of the input files.
+try {
+    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
+    e.printStackTrace();
+}
+</code></pre>
+</details>
+<details><summary>kotlin</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.infrastructure.\*
+//import io.swagger.client.models.\*;
+
+val apiInstance = ApiApi()
+val files : kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; =  // kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; | 
+val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
+try {
+    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, inputType)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+}
+</code></pre>
+</details>
+
+### **Unlock document.**
+- Attempts to unlock a document with an password and associated files.
+
+**Supported formats:**
+
+| pptx | pdf |
+| --- | --- |
+
+<details><summary>curl</summary>
+<pre><code>
+curl -X POST 'http://localhost:5252/pdf/webapi/unlock?passw=value' -F 'files=@file.pdf'
+</code></pre>
+</details>
+<details><summary>php</summary>
+<pre><code>
+&lt;?php
+require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\\Client\\Api\\ApiApi(
+    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
+    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
+    new GuzzleHttp\\Client()
+);
+$files = array("files\_example"); // string[] | 
+$input\_type = "input\_type\_example"; // string | The format of the input files.
+
+try {
+    $result = $apiInstance-&gt;pdfWebapiXfaconvertPost($files, $input\_type);
+    print\_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi-&gt;pdfWebapiXfaconvertPost: ', $e-&gt;getMessage(), PHP\_EOL;
+}
+?&gt;
+</code></pre>
+</details>
+<details><summary>dotnet</summary>
+<pre><code>
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiXfaconvertPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List&lt;byte[]&gt;(); // List&lt;byte[]&gt; |  (optional) 
+            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
+
+            try
+            {
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiXfaconvertPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+</details>
+<details><summary>java</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.ApiApi;
+
+
+ApiApi apiInstance = new ApiApi();
+List&lt;File&gt; files = Arrays.asList(new File("/path/to/file")); // List&lt;File&gt; | 
+String inputType = "inputType\_example"; // String | The format of the input files.
+try {
+    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
+    e.printStackTrace();
+}
+</code></pre>
+</details>
+<details><summary>kotlin</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.infrastructure.\*
+//import io.swagger.client.models.\*;
+
+val apiInstance = ApiApi()
+val files : kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; =  // kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; | 
+val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
+try {
+    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, inputType)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+}
+</code></pre>
+</details>
+
+### **Verify document certificate.**
+- Verifies the electronic signature of the provided files.
+
+<details><summary>curl</summary>
+<pre><code>
+curl -X POST 'http://localhost:5252/pdf/webapi/verify-esign?inputType=value' -F 'files=@file.pdf'
+</code></pre>
+</details>
+<details><summary>php</summary>
+<pre><code>
+&lt;?php
+require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\\Client\\Api\\ApiApi(
+    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
+    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
+    new GuzzleHttp\\Client()
+);
+$files = array("files\_example"); // string[] | 
+$input\_type = "input\_type\_example"; // string | The format of the input files.
+
+try {
+    $result = $apiInstance-&gt;pdfWebapiXfaconvertPost($files, $input\_type);
+    print\_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi-&gt;pdfWebapiXfaconvertPost: ', $e-&gt;getMessage(), PHP\_EOL;
+}
+?&gt;
+</code></pre>
+</details>
+<details><summary>dotnet</summary>
+<pre><code>
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiXfaconvertPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List&lt;byte[]&gt;(); // List&lt;byte[]&gt; |  (optional) 
+            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
+
+            try
+            {
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiXfaconvertPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+</details>
+<details><summary>java</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.ApiApi;
+
+
+ApiApi apiInstance = new ApiApi();
+List&lt;File&gt; files = Arrays.asList(new File("/path/to/file")); // List&lt;File&gt; | 
+String inputType = "inputType\_example"; // String | The format of the input files.
+try {
+    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
+    e.printStackTrace();
+}
+</code></pre>
+</details>
+<details><summary>kotlin</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.infrastructure.\*
+//import io.swagger.client.models.\*;
+
+val apiInstance = ApiApi()
+val files : kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; =  // kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; | 
+val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
+try {
+    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, inputType)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+}
+</code></pre>
+</details>
+
+### **Make speech synthesizer.**
+- Make audio file with reading the text in the specified language.
+
+<details><summary>curl</summary>
+<pre><code>
+curl -X POST 'http://localhost:5252/pdf/webapi/voice-generator?voiceModel=value&genderVoice=value' -F 'files=@file.pdf'
+</code></pre>
+</details>
+<details><summary>php</summary>
+<pre><code>
+&lt;?php
+require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\\Client\\Api\\ApiApi(
+    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
+    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
+    new GuzzleHttp\\Client()
+);
+$files = array("files\_example"); // string[] | 
+$input\_type = "input\_type\_example"; // string | The format of the input files.
+
+try {
+    $result = $apiInstance-&gt;pdfWebapiXfaconvertPost($files, $input\_type);
+    print\_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi-&gt;pdfWebapiXfaconvertPost: ', $e-&gt;getMessage(), PHP\_EOL;
+}
+?&gt;
+</code></pre>
+</details>
+<details><summary>dotnet</summary>
+<pre><code>
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiXfaconvertPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List&lt;byte[]&gt;(); // List&lt;byte[]&gt; |  (optional) 
+            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
+
+            try
+            {
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiXfaconvertPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+</details>
+<details><summary>java</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.ApiApi;
+
+
+ApiApi apiInstance = new ApiApi();
+List&lt;File&gt; files = Arrays.asList(new File("/path/to/file")); // List&lt;File&gt; | 
+String inputType = "inputType\_example"; // String | The format of the input files.
+try {
+    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
+    e.printStackTrace();
+}
+</code></pre>
+</details>
+<details><summary>kotlin</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.infrastructure.\*
+//import io.swagger.client.models.\*;
+
+val apiInstance = ApiApi()
+val files : kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; =  // kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; | 
+val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
+try {
+    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, inputType)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+}
+</code></pre>
+</details>
+
+### **Add watermark to document.**
+- Adds a watermark to the provided files.
+
+**Supported formats:**
+
+| pdf |
+| --- |
+
+<details><summary>curl</summary>
+<pre><code>
+curl -X POST 'http://localhost:5252/pdf/webapi/watermark?inputType=value&outputType=value&isColored=value&isText=value&text=value&name=value&size=value&bold=value&italic=value&underlined=value&color=value&isBackground=value&rotation=value&transparency=value&layer=value&pageFrom=value&pageTo=value' -F 'files=@file.pdf'
+</code></pre>
+</details>
+<details><summary>php</summary>
+<pre><code>
+&lt;?php
+require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\\Client\\Api\\ApiApi(
+    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
+    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
+    new GuzzleHttp\\Client()
+);
+$files = array("files\_example"); // string[] | 
+$input\_type = "input\_type\_example"; // string | The format of the input files.
+
+try {
+    $result = $apiInstance-&gt;pdfWebapiXfaconvertPost($files, $input\_type);
+    print\_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi-&gt;pdfWebapiXfaconvertPost: ', $e-&gt;getMessage(), PHP\_EOL;
+}
+?&gt;
+</code></pre>
+</details>
+<details><summary>dotnet</summary>
+<pre><code>
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiXfaconvertPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List&lt;byte[]&gt;(); // List&lt;byte[]&gt; |  (optional) 
+            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
+
+            try
+            {
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiXfaconvertPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+</details>
+<details><summary>java</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.ApiApi;
+
+
+ApiApi apiInstance = new ApiApi();
+List&lt;File&gt; files = Arrays.asList(new File("/path/to/file")); // List&lt;File&gt; | 
+String inputType = "inputType\_example"; // String | The format of the input files.
+try {
+    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
+    e.printStackTrace();
+}
+</code></pre>
+</details>
+<details><summary>kotlin</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.infrastructure.\*
+//import io.swagger.client.models.\*;
+
+val apiInstance = ApiApi()
+val files : kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; =  // kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; | 
+val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
+try {
+    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, inputType)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+}
+</code></pre>
+</details>
+
+### **Count words and chars in document.**
+- Counts the words in the provided files within the specified page range.
+
+**Supported formats:**
+
+| docx | pptx | xlsx | pdf |
+| --- | --- | --- | --- |
+
+<details><summary>curl</summary>
+<pre><code>
+curl -X POST 'http://localhost:5252/pdf/webapi/wordcounter?pageRange=value' -F 'files=@file.pdf'
+</code></pre>
+</details>
+<details><summary>php</summary>
+<pre><code>
+&lt;?php
+require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\\Client\\Api\\ApiApi(
+    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
+    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
+    new GuzzleHttp\\Client()
+);
+$files = array("files\_example"); // string[] | 
+$input\_type = "input\_type\_example"; // string | The format of the input files.
+
+try {
+    $result = $apiInstance-&gt;pdfWebapiXfaconvertPost($files, $input\_type);
+    print\_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi-&gt;pdfWebapiXfaconvertPost: ', $e-&gt;getMessage(), PHP\_EOL;
+}
+?&gt;
+</code></pre>
+</details>
+<details><summary>dotnet</summary>
+<pre><code>
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiXfaconvertPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List&lt;byte[]&gt;(); // List&lt;byte[]&gt; |  (optional) 
+            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
+
+            try
+            {
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiXfaconvertPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+</details>
+<details><summary>java</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.ApiApi;
+
+
+ApiApi apiInstance = new ApiApi();
+List&lt;File&gt; files = Arrays.asList(new File("/path/to/file")); // List&lt;File&gt; | 
+String inputType = "inputType\_example"; // String | The format of the input files.
+try {
+    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
+    e.printStackTrace();
+}
+</code></pre>
+</details>
+<details><summary>kotlin</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.infrastructure.\*
+//import io.swagger.client.models.\*;
+
+val apiInstance = ApiApi()
+val files : kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; =  // kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; | 
+val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
+try {
+    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, inputType)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+}
+</code></pre>
+</details>
+
+### **Generates words for crossword using AI Mistral**
+- 
+
+<details><summary>curl</summary>
+<pre><code>
+curl -X POST 'http://localhost:5252/pdf/webapi/words-generator' -F 'files=@file.pdf'
+</code></pre>
+</details>
+<details><summary>php</summary>
+<pre><code>
+&lt;?php
+require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\\Client\\Api\\ApiApi(
+    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
+    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
+    new GuzzleHttp\\Client()
+);
+$files = array("files\_example"); // string[] | 
+$input\_type = "input\_type\_example"; // string | The format of the input files.
+
+try {
+    $result = $apiInstance-&gt;pdfWebapiXfaconvertPost($files, $input\_type);
+    print\_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi-&gt;pdfWebapiXfaconvertPost: ', $e-&gt;getMessage(), PHP\_EOL;
+}
+?&gt;
+</code></pre>
+</details>
+<details><summary>dotnet</summary>
+<pre><code>
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiXfaconvertPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List&lt;byte[]&gt;(); // List&lt;byte[]&gt; |  (optional) 
+            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
+
+            try
+            {
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiXfaconvertPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+</details>
+<details><summary>java</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.ApiApi;
+
+
+ApiApi apiInstance = new ApiApi();
+List&lt;File&gt; files = Arrays.asList(new File("/path/to/file")); // List&lt;File&gt; | 
+String inputType = "inputType\_example"; // String | The format of the input files.
+try {
+    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
+    e.printStackTrace();
+}
+</code></pre>
+</details>
+<details><summary>kotlin</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.infrastructure.\*
+//import io.swagger.client.models.\*;
+
+val apiInstance = ApiApi()
+val files : kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; =  // kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; | 
+val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
+try {
+    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, inputType)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+}
+</code></pre>
+</details>
+
+### **Convert XFA format to a another format.**
+- Converts the provided documents from XFA format to a different format.
+
+<details><summary>curl</summary>
+<pre><code>
+curl -X POST 'http://localhost:5252/pdf/webapi/xfaconvert?inputType=value' -F 'files=@file.pdf'
+</code></pre>
+</details>
+<details><summary>php</summary>
+<pre><code>
+&lt;?php
+require\_once(\_\_DIR\_\_ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\\Client\\Api\\ApiApi(
+    // If you want use custom http client, pass your client which implements ``GuzzleHttp\\ClientInterface``.
+    // This is optional, ``GuzzleHttp\\Client`` will be used as default.
+    new GuzzleHttp\\Client()
+);
+$files = array("files\_example"); // string[] | 
+$input\_type = "input\_type\_example"; // string | The format of the input files.
+
+try {
+    $result = $apiInstance-&gt;pdfWebapiXfaconvertPost($files, $input\_type);
+    print\_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi-&gt;pdfWebapiXfaconvertPost: ', $e-&gt;getMessage(), PHP\_EOL;
+}
+?&gt;
+</code></pre>
+</details>
+<details><summary>dotnet</summary>
+<pre><code>
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiXfaconvertPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List&lt;byte[]&gt;(); // List&lt;byte[]&gt; |  (optional) 
+            var inputType = inputType\_example;  // string | The format of the input files. (optional) 
+
+            try
+            {
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiXfaconvertPost: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+</details>
+<details><summary>java</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.ApiException;
+//import io.swagger.client.api.ApiApi;
+
+
+ApiApi apiInstance = new ApiApi();
+List&lt;File&gt; files = Arrays.asList(new File("/path/to/file")); // List&lt;File&gt; | 
+String inputType = "inputType\_example"; // String | The format of the input files.
+try {
+    FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
+    e.printStackTrace();
+}
+</code></pre>
+</details>
+<details><summary>kotlin</summary>
+<pre><code>
+// Import classes:
+//import io.swagger.client.infrastructure.\*
+//import io.swagger.client.models.\*;
+
+val apiInstance = ApiApi()
+val files : kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; =  // kotlin.Array&lt;kotlin.Array&lt;kotlin.Byte&gt;&gt; | 
+val inputType : kotlin.String = inputType\_example // kotlin.String | The format of the input files.
+try {
+    val result : FileResponse = apiInstance.pdfWebapiXfaconvertPost(files, inputType)
+    println(result)
+} catch (e: ClientException) {
+    println("4xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+} catch (e: ServerException) {
+    println("5xx response calling ApiApi#pdfWebapiXfaconvertPost")
+    e.printStackTrace()
+}
+</code></pre>
+</details>
 
 

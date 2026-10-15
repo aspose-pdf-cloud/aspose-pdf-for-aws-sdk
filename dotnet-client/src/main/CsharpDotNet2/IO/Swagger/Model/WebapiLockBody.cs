@@ -13,15 +13,9 @@ namespace IO.Swagger.Model {
   [DataContract]
   public class WebapiLockBody {
     /// <summary>
-    /// Gets or Sets Password
+    /// Files to be locked with a password.
     /// </summary>
-    [DataMember(Name="password", EmitDefaultValue=false)]
-    [JsonProperty(PropertyName = "password")]
-    public string Password { get; set; }
-
-    /// <summary>
-    /// Gets or Sets Files
-    /// </summary>
+    /// <value>Files to be locked with a password.</value>
     [DataMember(Name="files", EmitDefaultValue=false)]
     [JsonProperty(PropertyName = "files")]
     public List<byte[]> Files { get; set; }
@@ -34,7 +28,6 @@ namespace IO.Swagger.Model {
     public override string ToString()  {
       var sb = new StringBuilder();
       sb.Append("class WebapiLockBody {\n");
-      sb.Append("  Password: ").Append(Password).Append("\n");
       sb.Append("  Files: ").Append(Files).Append("\n");
       sb.Append("}\n");
       return sb.ToString();

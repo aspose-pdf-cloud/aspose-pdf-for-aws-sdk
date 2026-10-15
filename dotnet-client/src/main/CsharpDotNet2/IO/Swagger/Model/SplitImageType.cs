@@ -8,23 +8,29 @@ using Newtonsoft.Json;
 namespace IO.Swagger.Model {
 
   /// <summary>
-/// Specifies the type of image splitting.
-/// </summary>
-public enum SplitImageType
-{
-	/// <summary>
-	/// The image is split vertically.
-	/// </summary>
-	Vertical = 1,
+  /// Specifies the type of image splitting.
+  /// </summary>
+  [DataContract]
+  public class SplitImageType {
 
-	/// <summary>
-	/// The image is split horizontally.
-	/// </summary>
-	Horizontal = 2,
+    /// <summary>
+    /// Get the string presentation of the object
+    /// </summary>
+    /// <returns>String presentation of the object</returns>
+    public override string ToString()  {
+      var sb = new StringBuilder();
+      sb.Append("class SplitImageType {\n");
+      sb.Append("}\n");
+      return sb.ToString();
+    }
 
-	/// <summary>
-	/// The image is split both vertically and horizontally.
-	/// </summary>
-	Both = 3
+    /// <summary>
+    /// Get the JSON string presentation of the object
+    /// </summary>
+    /// <returns>JSON string presentation of the object</returns>
+    public string ToJson() {
+      return JsonConvert.SerializeObject(this, Formatting.Indented);
+    }
+
 }
 }

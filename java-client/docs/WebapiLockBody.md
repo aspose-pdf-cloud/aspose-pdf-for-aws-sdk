@@ -3,5 +3,4 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**password** | **String** |  |  [optional]
-**files** | [**List&lt;File&gt;**](File.md) |  |  [optional]
+**files** | [**List&lt;File&gt;**](File.md) | Files to be locked with a password. |  [optional]

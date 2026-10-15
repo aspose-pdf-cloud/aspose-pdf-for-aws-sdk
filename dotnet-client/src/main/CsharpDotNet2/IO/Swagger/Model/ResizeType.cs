@@ -8,23 +8,29 @@ using Newtonsoft.Json;
 namespace IO.Swagger.Model {
 
   /// <summary>
-/// Specifies the type of resizing.
-/// </summary>
-public enum ResizeType
-{
-	/// <summary>
-	/// Resize by a percentage.
-	/// </summary>
-	Percentage = 1,
+  /// Specifies the type of resizing.
+  /// </summary>
+  [DataContract]
+  public class ResizeType {
 
-	/// <summary>
-	/// Resize by a specific number of pixels.
-	/// </summary>
-	Pixels = 2,
+    /// <summary>
+    /// Get the string presentation of the object
+    /// </summary>
+    /// <returns>String presentation of the object</returns>
+    public override string ToString()  {
+      var sb = new StringBuilder();
+      sb.Append("class ResizeType {\n");
+      sb.Append("}\n");
+      return sb.ToString();
+    }
 
-	/// <summary>
-	/// Resize using preset sizes.
-	/// </summary>
-	Presets = 3
+    /// <summary>
+    /// Get the JSON string presentation of the object
+    /// </summary>
+    /// <returns>JSON string presentation of the object</returns>
+    public string ToJson() {
+      return JsonConvert.SerializeObject(this, Formatting.Indented);
+    }
+
 }
 }

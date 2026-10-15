@@ -3,6 +3,5 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**fontReplacementsJson** | **String** |  |  [optional]
-**files** | [**List&lt;File&gt;**](File.md) |  |  [optional]
-**documentPassword** | **String** |  |  [optional]
+**fontReplacementsJson** | **String** | A JSON string representing the font replacements to be applied. |  [optional]
+**files** | [**List&lt;File&gt;**](File.md) | An array of files to be processed. |  [optional]

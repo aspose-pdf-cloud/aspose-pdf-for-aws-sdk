@@ -8,23 +8,29 @@ using Newtonsoft.Json;
 namespace IO.Swagger.Model {
 
   /// <summary>
-/// Specifies the compression level.
-/// </summary>
-public enum CompressType
-{
-	/// <summary>
-	/// Low compression level.
-	/// </summary>
-	Low = 1,
+  /// Specifies the compression level.
+  /// </summary>
+  [DataContract]
+  public class CompressType {
 
-	/// <summary>
-	/// Medium compression level.
-	/// </summary>
-	Medium = 2,
+    /// <summary>
+    /// Get the string presentation of the object
+    /// </summary>
+    /// <returns>String presentation of the object</returns>
+    public override string ToString()  {
+      var sb = new StringBuilder();
+      sb.Append("class CompressType {\n");
+      sb.Append("}\n");
+      return sb.ToString();
+    }
 
-	/// <summary>
-	/// High compression level.
-	/// </summary>
-	High = 3
+    /// <summary>
+    /// Get the JSON string presentation of the object
+    /// </summary>
+    /// <returns>JSON string presentation of the object</returns>
+    public string ToJson() {
+      return JsonConvert.SerializeObject(this, Formatting.Indented);
+    }
+
 }
 }

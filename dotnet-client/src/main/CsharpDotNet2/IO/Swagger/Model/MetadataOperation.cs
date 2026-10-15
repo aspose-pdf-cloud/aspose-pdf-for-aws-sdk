@@ -8,18 +8,29 @@ using Newtonsoft.Json;
 namespace IO.Swagger.Model {
 
   /// <summary>
-/// Specifies the type of metadata operation.
-/// </summary>
-public enum MetadataOperation
-{
-	/// <summary>
-	/// Retrieve metadata.
-	/// </summary>
-	Get,
+  /// Specifies the type of metadata operation.
+  /// </summary>
+  [DataContract]
+  public class MetadataOperation {
 
-	/// <summary>
-	/// Set metadata.
-	/// </summary>
-	Set
+    /// <summary>
+    /// Get the string presentation of the object
+    /// </summary>
+    /// <returns>String presentation of the object</returns>
+    public override string ToString()  {
+      var sb = new StringBuilder();
+      sb.Append("class MetadataOperation {\n");
+      sb.Append("}\n");
+      return sb.ToString();
+    }
+
+    /// <summary>
+    /// Get the JSON string presentation of the object
+    /// </summary>
+    /// <returns>JSON string presentation of the object</returns>
+    public string ToJson() {
+      return JsonConvert.SerializeObject(this, Formatting.Indented);
+    }
+
 }
 }

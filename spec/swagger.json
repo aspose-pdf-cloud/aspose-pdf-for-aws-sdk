@@ -1,0 +1,4536 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "Aspose.PDF for AWS",
+    "description": "Aspose.Pdf for AWS provides a comprehensive set of endpoints for various PDF-related tasks, enabling efficient document processing and manipulation. Users can retrieve processing status, download files, manage file locks, parse documents, redact sensitive information, convert between formats, merge files, add watermarks, perform text searches, and much more. With endpoints for tasks like electronic signing, document comparison, and form filling, the API offers extensive functionality to cater to diverse PDF requirements.",
+    "termsOfService": "https://about.aspose.app/legal/tos/",
+    "contact": {
+      "name": "Evgeny Pirogov",
+      "email": "Evgeny.Pirogov@aspose.com"
+    },
+    "license": {
+      "name": "Aspose.PDF license"
+    },
+    "version": "v1"
+  },
+  "servers": [
+    {
+      "url": "/"
+    }
+  ],
+  "paths": {
+    "/pdf/webapi/status/{id}": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "Processing status.",
+        "description": "Retrieves the status of a processing.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID of the processing to check the status of.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns a FileResponse object with the status information.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "If the file does not exist or if there was an error processing the request."
+          },
+          "500": {
+            "description": "If there was a server error."
+          }
+        }
+      }
+    },
+    "/pdf/webapi/download/{id}": {
+      "get": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "File download.",
+        "description": "Downloads processed file.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The id of the processing to download.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "file",
+            "in": "query",
+            "description": "The name of the file to download.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns the file to download."
+          },
+          "400": {
+            "description": "If the file does not exist."
+          },
+          "500": {
+            "description": "If there was a server error."
+          }
+        }
+      }
+    },
+    "/pdf/webapi/remove/{id}": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "Remove stored files.",
+        "description": "Removes processed files from storage.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID of the processing to remove.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Returns a FileResponse object indicating that all files was successfully removed.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "If the file does not exist or if there was an error processing the request."
+          },
+          "500": {
+            "description": "If there was a server error."
+          }
+        }
+      }
+    },
+    "/pdf/webapi/translate": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "Translate document.",
+        "description": "Translate the provided files.",
+        "parameters": [
+          {
+            "name": "languages",
+            "in": "query",
+            "description": "The language code in which will make the resource files to be translated.",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "source",
+            "in": "query",
+            "description": "The Source language.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "target",
+            "in": "query",
+            "description": "The target language.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "aiService",
+            "in": "query",
+            "description": "Choosing an AI service for developers",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "translationSource",
+            "in": "query",
+            "description": "Upload file or text.",
+            "schema": {
+              "$ref": "#/components/schemas/TranslationSource"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    },
+                    "description": "The files to translate."
+                  }
+                }
+              },
+              "encoding": {
+                "files": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The resource was successfully added to processing.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "The request was invalid or the resource could not be locked."
+          }
+        }
+      }
+    },
+    "/pdf/webapi/searchable": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "Make scanned pdf searchable.",
+        "description": "Converts the provided files into a searchable PDF format for the specified language.",
+        "parameters": [
+          {
+            "name": "lang",
+            "in": "query",
+            "description": "The language of the files to be converted.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    },
+                    "description": "The files to convert to a searchable PDF."
+                  }
+                }
+              },
+              "encoding": {
+                "files": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The resource was successfully added to processing.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "The request was invalid or the resource could not be locked."
+          }
+        }
+      }
+    },
+    "/pdf/webapi/summary": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "parameters": [
+          {
+            "name": "question",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  }
+                }
+              },
+              "encoding": {
+                "files": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/pdf/webapi/transcribe-audio": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  }
+                }
+              },
+              "encoding": {
+                "files": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/pdf/webapi/image-generator": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "parameters": [
+          {
+            "name": "question",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/pdf/webapi/test-generator": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "Creates the list of test questions using ai and stores it to the document",
+        "parameters": [
+          {
+            "name": "subject",
+            "in": "query",
+            "description": "Text description of the subject of the tests",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "number",
+            "in": "query",
+            "description": "Questions number",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "complexity",
+            "in": "query",
+            "description": "The complexity level of generated questions",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "language",
+            "in": "query",
+            "description": "Language in which questions are written",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "outputType",
+            "in": "query",
+            "description": "The format of result file",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The resource was successfully added to processing.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "The request was invalid or the resource could not be locked."
+          }
+        }
+      }
+    },
+    "/pdf/webapi/words-generator": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "Generates words for crossword using AI Mistral",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/pdf/webapi/voice-generator": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "Make speech synthesizer.",
+        "description": "Make audio file with reading the text in the specified language.",
+        "parameters": [
+          {
+            "name": "voiceModel",
+            "in": "query",
+            "description": "The TTS model (Quick/Quality) in which AI must read the text.",
+            "schema": {
+              "$ref": "#/components/schemas/VoiceModel"
+            }
+          },
+          {
+            "name": "genderVoice",
+            "in": "query",
+            "description": "The TTS voice gender (Man/Woman) in which AI must read the text.",
+            "schema": {
+              "$ref": "#/components/schemas/VoiceGender"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    },
+                    "description": "Files for TTS"
+                  }
+                }
+              },
+              "encoding": {
+                "files": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The resource was successfully added to processing.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "The request was invalid or the resource could not be locked."
+          }
+        }
+      }
+    },
+    "/pdf/webapi/grammar-checker": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "Checks the grammar of text, pdf files and plain text.",
+        "parameters": [
+          {
+            "name": "language",
+            "in": "query",
+            "description": "The language of the source file or text",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    },
+                    "description": "Attached file"
+                  }
+                }
+              },
+              "encoding": {
+                "files": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The resource was successfully added to processing.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "The request was invalid or the resource could not be locked."
+          }
+        }
+      }
+    },
+    "/pdf/webapi/image-description": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "Make speech synthesizer.",
+        "description": "Make audio file with reading the text in the specified language.",
+        "parameters": [
+          {
+            "name": "language",
+            "in": "query",
+            "description": "The language code in which ai must read the text.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    },
+                    "description": "Attached file"
+                  }
+                }
+              },
+              "encoding": {
+                "files": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The resource was successfully added to processing.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "The request was invalid or the resource could not be locked."
+          }
+        }
+      }
+    },
+    "/pdf/webapi/paraphrase": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "Paraphrase document.",
+        "description": "Paraphrase the provided files.",
+        "parameters": [
+          {
+            "name": "source",
+            "in": "query",
+            "description": "The Source language.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "paraphraseSource",
+            "in": "query",
+            "description": "Upload file or text.",
+            "schema": {
+              "$ref": "#/components/schemas/ParaphraseSource"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    },
+                    "description": "The files to paraphrase."
+                  }
+                }
+              },
+              "encoding": {
+                "files": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The resource was successfully added to processing.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "The request was invalid or the resource could not be locked."
+          }
+        }
+      }
+    },
+    "/pdf/webapi/table-of-contents": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  }
+                }
+              },
+              "encoding": {
+                "files": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/pdf/webapi/format-detector": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  }
+                }
+              },
+              "encoding": {
+                "files": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/pdf/webapi/creator": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  }
+                }
+              },
+              "encoding": {
+                "files": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/pdf/webapi/quiz-maker": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "Generates a list of quiz questions using AI based on the provided content or uploaded files,\r\nand stores the resulting quiz into a document.",
+        "parameters": [
+          {
+            "name": "content",
+            "in": "query",
+            "description": "Textual content used to generate quiz questions (optional if files are provided).",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "questionNumber",
+            "in": "query",
+            "description": "The total number of questions to generate.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "includeAnswers",
+            "in": "query",
+            "description": "Generating questions with answers",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "questionType",
+            "in": "query",
+            "description": "The type of questions to generate: ShortAnswer, TrueFalse, or McQs (multiple choice).",
+            "schema": {
+              "$ref": "#/components/schemas/QuestionType"
+            }
+          },
+          {
+            "name": "difficultyLevel",
+            "in": "query",
+            "description": "The desired difficulty level of the quiz.",
+            "schema": {
+              "$ref": "#/components/schemas/DifficultyLevel"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    },
+                    "description": "Optional files whose content will be used to generate the quiz."
+                  }
+                }
+              },
+              "encoding": {
+                "files": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The quiz was successfully generated and stored.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An internal error occurred while processing the request."
+          }
+        }
+      }
+    },
+    "/pdf/webapi/editor": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "parameters": [
+          {
+            "name": "message",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  }
+                }
+              },
+              "encoding": {
+                "files": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/pdf/webapi/lock": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "Lock document.",
+        "description": "Locks a document with the provided password and optional files.",
+        "parameters": [
+          {
+            "name": "passw",
+            "in": "query",
+            "description": "The password required to lock the resource.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    },
+                    "description": "Files to be locked with a password."
+                  }
+                }
+              },
+              "encoding": {
+                "files": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The resource was successfully added to processing.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "The request was invalid or the resource could not be locked."
+          }
+        }
+      }
+    },
+    "/pdf/webapi/unlock": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "Unlock document.",
+        "description": "Attempts to unlock a document with an password and associated files.",
+        "parameters": [
+          {
+            "name": "passw",
+            "in": "query",
+            "description": "The password used in locked document.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    },
+                    "description": "Files to be unlocked from a password."
+                  }
+                }
+              },
+              "encoding": {
+                "files": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The resource was successfully added to processing.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "The request was invalid or the resource could not be locked."
+          }
+        }
+      }
+    },
+    "/pdf/webapi/parse": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "Parse document.",
+        "description": "Parses the provided files using a parser service.",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    },
+                    "description": "The files to be parsed."
+                  }
+                }
+              },
+              "encoding": {
+                "files": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The resource was successfully added to processing.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "The request was invalid or the resource could not be locked."
+          }
+        }
+      }
+    },
+    "/pdf/webapi/splitdoc": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "Split document.",
+        "description": "Splits the provided documents based on the specified split type and page rage to spit.",
+        "parameters": [
+          {
+            "name": "inputType",
+            "in": "query",
+            "description": "The format of the input files.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "splitType",
+            "in": "query",
+            "description": "The type of splitting to be performed.",
+            "schema": {
+              "$ref": "#/components/schemas/SplitDocType"
+            }
+          },
+          {
+            "name": "pars",
+            "in": "query",
+            "description": "Optional page rage for the splitting operation.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    },
+                    "description": "The documents to be split."
+                  }
+                }
+              },
+              "encoding": {
+                "files": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The resource was successfully added to processing.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "The request was invalid or the resource could not be locked."
+          }
+        }
+      }
+    },
+    "/pdf/webapi/splitimage": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "Split image.",
+        "description": "Splits the provided images into smaller parts based on the specified parameters.",
+        "parameters": [
+          {
+            "name": "splitType",
+            "in": "query",
+            "description": "The type of splitting to be performed.",
+            "schema": {
+              "$ref": "#/components/schemas/SplitImageType"
+            }
+          },
+          {
+            "name": "vertical",
+            "in": "query",
+            "description": "The number of vertical splits to create.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "horizontal",
+            "in": "query",
+            "description": "The number of horizontal splits to create.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "outputType",
+            "in": "query",
+            "description": "The desired output format for the split images.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    },
+                    "description": "The images to be split."
+                  }
+                }
+              },
+              "encoding": {
+                "files": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The resource was successfully added to processing.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "The request was invalid or the resource could not be locked."
+          }
+        }
+      }
+    },
+    "/pdf/webapi/redact": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "Redact document text.",
+        "description": "Redacts specified text from the provided documents, with options to search case-sensitively, target in text, comments, and metadata.",
+        "parameters": [
+          {
+            "name": "searchQuery",
+            "in": "query",
+            "description": "The text to search for and redact.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "replaceText",
+            "in": "query",
+            "description": "The text to replace the found text with.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "caseSensitive",
+            "in": "query",
+            "description": "Indicates whether the search should be case-sensitive.",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "text",
+            "in": "query",
+            "description": "Indicates whether text should be redacted.",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "comments",
+            "in": "query",
+            "description": "Indicates whether comments should be redacted.",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "metadata",
+            "in": "query",
+            "description": "Indicates whether metadata should be redacted.",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    },
+                    "description": "The files to redact text from."
+                  }
+                }
+              },
+              "encoding": {
+                "files": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The resource was successfully added to processing.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "The request was invalid or the resource could not be locked."
+          }
+        }
+      }
+    },
+    "/pdf/webapi/search": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "Search document text.",
+        "description": "Searches the provided files for the specified query and mark found text with yellow background.",
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "description": "The text to search for within the files.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    },
+                    "description": "The files to search within."
+                  }
+                }
+              },
+              "encoding": {
+                "files": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The resource was successfully added to processing.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "The request was invalid or the resource could not be locked."
+          }
+        }
+      }
+    },
+    "/pdf/webapi/remove": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "Remove document annotations.",
+        "description": "Removes annotations from the provided documents.",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    },
+                    "description": "The files from which to remove annotations."
+                  }
+                }
+              },
+              "encoding": {
+                "files": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The resource was successfully added to processing.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "The request was invalid or the resource could not be locked."
+          }
+        }
+      }
+    },
+    "/pdf/webapi/convert": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "Convert document to another format.",
+        "description": "Converts the provided files from one format to another.",
+        "parameters": [
+          {
+            "name": "inputType",
+            "in": "query",
+            "description": "The format of the input files.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "outputType",
+            "in": "query",
+            "description": "The desired format for the output files.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "xmlType",
+            "in": "query",
+            "description": "The type of XML conversion to perform, if applicable.",
+            "schema": {
+              "$ref": "#/components/schemas/XmlType"
+            }
+          },
+          {
+            "name": "xmlTag",
+            "in": "query",
+            "description": "The XML tag to use for conversion, if applicable.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fontSise",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "isToSingle",
+            "in": "query",
+            "description": "Indicates whether the conversion should result in a single file, if applicable.",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "separator",
+            "in": "query",
+            "description": "The separator to use when converting, if applicable.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "interval",
+            "in": "query",
+            "description": "The interval between frames for convert to video.",
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    },
+                    "description": "The files to convert."
+                  }
+                }
+              },
+              "encoding": {
+                "files": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The resource was successfully added to processing.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "The request was invalid or the resource could not be locked."
+          }
+        }
+      }
+    },
+    "/pdf/webapi/merge": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "Merge documents.",
+        "description": "Merges the provided files into a single document or image, with options for orientation and page size.",
+        "parameters": [
+          {
+            "name": "inputType",
+            "in": "query",
+            "description": "The format of the input files.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "outputType",
+            "in": "query",
+            "description": "The desired format for the output file.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "mergeType",
+            "in": "query",
+            "description": "Type of merger operation.",
+            "schema": {
+              "$ref": "#/components/schemas/MergeImageType"
+            }
+          },
+          {
+            "name": "horizontal",
+            "in": "query",
+            "description": "The number of images to merge horizontally, if applicable.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "vertical",
+            "in": "query",
+            "description": "The number of images to merge vertically, if applicable.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "The page size for the output file, if applicable.",
+            "schema": {
+              "$ref": "#/components/schemas/PageSize"
+            }
+          },
+          {
+            "name": "dc_isLandscape",
+            "in": "query",
+            "description": "Indicates whether the output file should be in landscape orientation.",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    },
+                    "description": "The files to merge."
+                  }
+                }
+              },
+              "encoding": {
+                "files": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The resource was successfully added to processing.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "The request was invalid or the resource could not be locked."
+          }
+        }
+      }
+    },
+    "/pdf/webapi/rotate": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "Rotate document.",
+        "description": "Rotates the provided files by a specified angle, with options for rotation type and page number.",
+        "parameters": [
+          {
+            "name": "angle",
+            "in": "query",
+            "description": "The angle by which to rotate the files.",
+            "schema": {
+              "$ref": "#/components/schemas/RotateAngle"
+            }
+          },
+          {
+            "name": "customAngle",
+            "in": "query",
+            "description": "The angle by which to rotate the files in case angle set to custom state.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "rotateType",
+            "in": "query",
+            "description": "The type of rotation to perform.",
+            "schema": {
+              "$ref": "#/components/schemas/RotateType"
+            }
+          },
+          {
+            "name": "pageNum",
+            "in": "query",
+            "description": "The page number to rotate, if applicable.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    },
+                    "description": "The files to rotate."
+                  }
+                }
+              },
+              "encoding": {
+                "files": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The resource was successfully added to processing.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "The request was invalid or the resource could not be locked."
+          }
+        }
+      }
+    },
+    "/pdf/webapi/organize": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "Organize document pages.",
+        "description": "Organizes the provided documents by removing or moving specified pages.",
+        "parameters": [
+          {
+            "name": "inputType",
+            "in": "query",
+            "description": "The format of the input files.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "remove",
+            "in": "query",
+            "description": "The pages to remove from the document.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "move",
+            "in": "query",
+            "description": "The pages to move within the document.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    },
+                    "description": "The files to organize."
+                  }
+                }
+              },
+              "encoding": {
+                "files": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The resource was successfully added to processing.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "The request was invalid or the resource could not be locked."
+          }
+        }
+      }
+    },
+    "/pdf/webapi/verify-esign": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "Verify document certificate.",
+        "description": "Verifies the electronic signature of the provided files.",
+        "parameters": [
+          {
+            "name": "inputType",
+            "in": "query",
+            "description": "The format of the input files.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    },
+                    "description": "The files to verify the electronic signature exits and valid."
+                  }
+                }
+              },
+              "encoding": {
+                "files": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The resource was successfully added to processing.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "The request was invalid or the resource could not be locked."
+          }
+        }
+      }
+    },
+    "/pdf/webapi/removepages": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "Remove pages from document.",
+        "description": "Removes specified pages from the provided files.",
+        "parameters": [
+          {
+            "name": "removeRange",
+            "in": "query",
+            "description": "The range of pages to remove from the files.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    },
+                    "description": "The files from which to remove pages."
+                  }
+                }
+              },
+              "encoding": {
+                "files": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The resource was successfully added to processing.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "The request was invalid or the resource could not be locked."
+          }
+        }
+      }
+    },
+    "/pdf/webapi/extract": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "Extract tables from document.",
+        "description": "Extracts tables from the provided documents and converts them to the specified output format.",
+        "parameters": [
+          {
+            "name": "inputType",
+            "in": "query",
+            "description": "The format of the input files.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "outputType",
+            "in": "query",
+            "description": "The desired format for the output files.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    },
+                    "description": "The files from which to extract tables."
+                  }
+                }
+              },
+              "encoding": {
+                "files": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The resource was successfully added to processing.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "The request was invalid or the resource could not be locked."
+          }
+        }
+      }
+    },
+    "/pdf/webapi/compress": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "Compress document.",
+        "description": "Compresses the provided files using the specified compression level.",
+        "parameters": [
+          {
+            "name": "compressType",
+            "in": "query",
+            "description": "The level of compression to use.",
+            "schema": {
+              "$ref": "#/components/schemas/CompressType"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    },
+                    "description": "The files to compress."
+                  }
+                }
+              },
+              "encoding": {
+                "files": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The resource was successfully added to processing.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "The request was invalid or the resource could not be locked."
+          }
+        }
+      }
+    },
+    "/pdf/webapi/addnumber": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "Add page numbers to document.",
+        "description": "Adds page numbers to the provided documents with the specified alignment, starting number, and format.",
+        "parameters": [
+          {
+            "name": "vAlignment",
+            "in": "query",
+            "description": "The vertical alignment of the page numbers.",
+            "schema": {
+              "$ref": "#/components/schemas/PageNumberVerticalAlign"
+            }
+          },
+          {
+            "name": "hAlignment",
+            "in": "query",
+            "description": "The horizontal alignment of the page numbers.",
+            "schema": {
+              "$ref": "#/components/schemas/PageNumberHorizontalAlign"
+            }
+          },
+          {
+            "name": "startingNumber",
+            "in": "query",
+            "description": "The starting number for the page numbers.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "sNumber",
+            "in": "query",
+            "description": "The number of the first page to start numbering from.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "fNumber",
+            "in": "query",
+            "description": "The number of the last page to end numbering at.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "margin",
+            "in": "query",
+            "description": "The margin around the page numbers.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "fontSize",
+            "in": "query",
+            "description": "The font size of the page numbers.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "format",
+            "in": "query",
+            "description": "The format of the page numbers.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    },
+                    "description": "The files to add page numbers to."
+                  }
+                }
+              },
+              "encoding": {
+                "files": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The resource was successfully added to processing.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "The request was invalid or the resource could not be locked."
+          }
+        }
+      }
+    },
+    "/pdf/webapi/convert-webpage": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "Convert web page to document.",
+        "description": "Converts a web page to the specified output format.",
+        "parameters": [
+          {
+            "name": "outputType",
+            "in": "query",
+            "description": "The desired format for the output file.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "webPage": {
+                    "type": "string",
+                    "description": "The URL of the web page to convert."
+                  }
+                }
+              },
+              "encoding": {
+                "webPage": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The resource was successfully added to processing.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "The request was invalid or the resource could not be locked."
+          }
+        }
+      }
+    },
+    "/pdf/webapi/xfaconvert": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "Convert XFA format to a another format.",
+        "description": "Converts the provided documents from XFA format to a different format.",
+        "parameters": [
+          {
+            "name": "inputType",
+            "in": "query",
+            "description": "The format of the input files.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    },
+                    "description": "The files to convert from XFA format."
+                  }
+                }
+              },
+              "encoding": {
+                "files": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The resource was successfully added to processing.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "The request was invalid or the resource could not be locked."
+          }
+        }
+      }
+    },
+    "/pdf/webapi/watermark": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "Add watermark to document.",
+        "description": "Adds a watermark to the provided files.",
+        "parameters": [
+          {
+            "name": "inputType",
+            "in": "query",
+            "description": "The format of the input files.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "outputType",
+            "in": "query",
+            "description": "The desired format for the output files.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "isColored",
+            "in": "query",
+            "description": "Indicate is watermark will be in color or grayscale.",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "isText",
+            "in": "query",
+            "description": "Indicates whether the watermark is text.",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "text",
+            "in": "query",
+            "description": "The text of the watermark.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "description": "The name of the font for the text watermark.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "description": "The size of the font for the text watermark.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "bold",
+            "in": "query",
+            "description": "Indicates whether the text watermark is bold.",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "italic",
+            "in": "query",
+            "description": "Indicates whether the text watermark is italic.",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "underlined",
+            "in": "query",
+            "description": "Indicates whether the text watermark is underlined.",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "color",
+            "in": "query",
+            "description": "The color of the text or image watermark.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "isBackground",
+            "in": "query",
+            "description": "Indicates whether the watermark is a background watermark.",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "rotation",
+            "in": "query",
+            "description": "The rotation angle of the watermark.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "transparency",
+            "in": "query",
+            "description": "The transparency of the watermark.",
+            "schema": {
+              "type": "number",
+              "format": "float"
+            }
+          },
+          {
+            "name": "layer",
+            "in": "query",
+            "description": "Indicates whether the watermark is a layer.",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "pageFrom",
+            "in": "query",
+            "description": "The starting page number for the watermark.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageTo",
+            "in": "query",
+            "description": "The ending page number for the watermark.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    },
+                    "description": "The files to add watermarks to."
+                  }
+                }
+              },
+              "encoding": {
+                "files": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The resource was successfully added to processing.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "The request was invalid or the resource could not be locked."
+          }
+        }
+      }
+    },
+    "/pdf/webapi/crop": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "Crop document.",
+        "description": "Crops the provided files to the specified dimensions.",
+        "parameters": [
+          {
+            "name": "inputType",
+            "in": "query",
+            "description": "The format of the input files.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "top",
+            "in": "query",
+            "description": "The number of pixels to crop from the top.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "right",
+            "in": "query",
+            "description": "The number of pixels to crop from the right.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "bottom",
+            "in": "query",
+            "description": "The number of pixels to crop from the bottom.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "left",
+            "in": "query",
+            "description": "The number of pixels to crop from the left.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "outputType",
+            "in": "query",
+            "description": "The desired format for the output files.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    },
+                    "description": "The files to crop."
+                  }
+                }
+              },
+              "encoding": {
+                "files": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The resource was successfully added to processing.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "The request was invalid or the resource could not be locked."
+          }
+        }
+      }
+    },
+    "/pdf/webapi/resize": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "Resize document.",
+        "description": "Resizes the provided files to the specified dimensions or using a preset size.",
+        "parameters": [
+          {
+            "name": "inputType",
+            "in": "query",
+            "description": "The format of the input files.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "outputType",
+            "in": "query",
+            "description": "The desired format for the output files.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "resizeType",
+            "in": "query",
+            "description": "The type of resizing to apply.",
+            "schema": {
+              "$ref": "#/components/schemas/ResizeType"
+            }
+          },
+          {
+            "name": "presetType",
+            "in": "query",
+            "description": "The type of preset size to use for resizing.",
+            "schema": {
+              "$ref": "#/components/schemas/ResizePresetType"
+            }
+          },
+          {
+            "name": "presetSize",
+            "in": "query",
+            "description": "The preset size to use for resizing.",
+            "schema": {
+              "$ref": "#/components/schemas/ResizePresetSize"
+            }
+          },
+          {
+            "name": "width",
+            "in": "query",
+            "description": "The desired width of the resized files.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "height",
+            "in": "query",
+            "description": "The desired height of the resized files.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "percentage",
+            "in": "query",
+            "description": "The percentage to resize the files by.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "useProportions",
+            "in": "query",
+            "description": "Indicates whether to maintain the aspect ratio when resizing.",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "The page size to use for the resized files.",
+            "schema": {
+              "$ref": "#/components/schemas/ResizePageSize"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    },
+                    "description": "The files to resize."
+                  }
+                }
+              },
+              "encoding": {
+                "files": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The resource was successfully added to processing.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "The request was invalid or the resource could not be locked."
+          }
+        }
+      }
+    },
+    "/pdf/webapi/hash": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "Calculate document hash.",
+        "description": "Calculate hashes of provided files using the specified algorithm.",
+        "parameters": [
+          {
+            "name": "inputType",
+            "in": "query",
+            "description": "The format of the input files.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "outputType",
+            "in": "query",
+            "description": "The desired format for the output files.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "alg",
+            "in": "query",
+            "description": "The hashing algorithm to use.",
+            "schema": {
+              "$ref": "#/components/schemas/HashAlgorithm"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    },
+                    "description": "The files to hash."
+                  }
+                }
+              },
+              "encoding": {
+                "files": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The resource was successfully added to processing.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "The request was invalid or the resource could not be locked."
+          }
+        }
+      }
+    },
+    "/pdf/webapi/signature": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "Add signature to document.",
+        "description": "Adds a signature, text and image to the provided documents.",
+        "parameters": [
+          {
+            "name": "inputType",
+            "in": "query",
+            "description": "The format of the input files.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "outputType",
+            "in": "query",
+            "description": "The desired format for the output files.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "signatureType",
+            "in": "query",
+            "description": "The type of signature to add.",
+            "schema": {
+              "$ref": "#/components/schemas/SignatureType"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "image": {
+                    "type": "string",
+                    "description": "The base64 representation of image signature."
+                  },
+                  "text": {
+                    "type": "string",
+                    "description": "The text of signature."
+                  },
+                  "textColor": {
+                    "type": "string",
+                    "description": "The text color of signature."
+                  },
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    },
+                    "description": "The files to add a signature to."
+                  }
+                }
+              },
+              "encoding": {
+                "image": {
+                  "style": "form"
+                },
+                "text": {
+                  "style": "form"
+                },
+                "textColor": {
+                  "style": "form"
+                },
+                "files": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The resource was successfully added to processing.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "The request was invalid or the resource could not be locked."
+          }
+        }
+      }
+    },
+    "/pdf/webapi/comparison": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "Compare documents text.",
+        "description": "Compare provided files and create document with marked changes.",
+        "parameters": [
+          {
+            "name": "compareType",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/CompareType"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    },
+                    "description": "The files to compare."
+                  }
+                }
+              },
+              "encoding": {
+                "files": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The resource was successfully added to processing.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "The request was invalid or the resource could not be locked."
+          }
+        }
+      }
+    },
+    "/pdf/webapi/gif": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "Make GIF.",
+        "description": "Creates a GIF from the provided images.",
+        "parameters": [
+          {
+            "name": "keepImagesAsIs",
+            "in": "query",
+            "description": "Indicates whether the images should be kept as is.",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "resizeToImage",
+            "in": "query",
+            "description": "The index of the image to resize the other images to.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "streched",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "width",
+            "in": "query",
+            "description": "The width of the GIF.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "height",
+            "in": "query",
+            "description": "The height of the GIF.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "frameTimes",
+            "in": "query",
+            "description": "The times for each frame in the GIF.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    },
+                    "description": "The files to create a music video from."
+                  }
+                }
+              },
+              "encoding": {
+                "files": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The resource was successfully added to processing.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "The request was invalid or the resource could not be locked."
+          }
+        }
+      }
+    },
+    "/pdf/webapi/wordcounter": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "Count words and chars in document.",
+        "description": "Counts the words in the provided files within the specified page range.",
+        "parameters": [
+          {
+            "name": "pageRange",
+            "in": "query",
+            "description": "The range of pages to count words in.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    },
+                    "description": "The files to count words in."
+                  }
+                }
+              },
+              "encoding": {
+                "files": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The resource was successfully added to processing.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "The request was invalid or the resource could not be locked."
+          }
+        }
+      }
+    },
+    "/pdf/webapi/repair": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "Repair document.",
+        "description": "Repairs the provided files.",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    },
+                    "description": "The files to repair."
+                  }
+                }
+              },
+              "encoding": {
+                "files": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The resource was successfully added to processing.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "The request was invalid or the resource could not be locked."
+          }
+        }
+      }
+    },
+    "/pdf/webapi/remove-watermark-blazor": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "Removes document watermark.",
+        "description": "Removes a watermark from the document pages.",
+        "parameters": [
+          {
+            "name": "watermarkAction",
+            "in": "query",
+            "description": "",
+            "schema": {
+              "$ref": "#/components/schemas/WatermarkAction"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": ""
+                  },
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    },
+                    "description": "The files to remove the watermark from."
+                  }
+                }
+              },
+              "encoding": {
+                "ids": {
+                  "style": "form"
+                },
+                "files": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The resource was successfully added to processing.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "The request was invalid or the resource could not be locked."
+          }
+        }
+      }
+    },
+    "/pdf/webapi/remove-watermark": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "Removes document watermark.",
+        "description": "Removes a watermark from the document pages.",
+        "parameters": [
+          {
+            "name": "isAllPages",
+            "in": "query",
+            "description": "Indicates whether the watermark should be removed from all pages.",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "watermarkType",
+            "in": "query",
+            "description": "The type of watermark to remove.",
+            "schema": {
+              "$ref": "#/components/schemas/WatermarkType"
+            }
+          },
+          {
+            "name": "removeRange",
+            "in": "query",
+            "description": "The range of pages to remove the watermark from.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "watermarkText": {
+                    "type": "string",
+                    "description": "The text of the watermark to remove."
+                  },
+                  "top": {
+                    "type": "integer",
+                    "description": "The top position of the watermark.",
+                    "format": "int32"
+                  },
+                  "left": {
+                    "type": "integer",
+                    "description": "The left position of the watermark.",
+                    "format": "int32"
+                  },
+                  "bottom": {
+                    "type": "integer",
+                    "description": "The bottom position of the watermark.",
+                    "format": "int32"
+                  },
+                  "right": {
+                    "type": "integer",
+                    "description": "The right position of the watermark.",
+                    "format": "int32"
+                  },
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    },
+                    "description": "The files to remove the watermark from."
+                  }
+                }
+              },
+              "encoding": {
+                "watermarkText": {
+                  "style": "form"
+                },
+                "top": {
+                  "style": "form"
+                },
+                "left": {
+                  "style": "form"
+                },
+                "bottom": {
+                  "style": "form"
+                },
+                "right": {
+                  "style": "form"
+                },
+                "files": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The resource was successfully added to processing.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "The request was invalid or the resource could not be locked."
+          }
+        }
+      }
+    },
+    "/pdf/webapi/change-fonts": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "Changes the fonts of the provided files using the specified font replacements.",
+        "description": "This method is designed to be used as an HTTP POST action, accepting form data for the font replacements and file uploads.\r\nThe font replacements should be provided as a JSON string, and the files should be uploaded as multipart/form-data.\r\nThe method uses Kafka for asynchronous processing and can optionally store the status of the task.",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "fontReplacementsJson": {
+                    "type": "string",
+                    "description": "A JSON string representing the font replacements to be applied."
+                  },
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    },
+                    "description": "An array of files to be processed."
+                  }
+                }
+              },
+              "encoding": {
+                "fontReplacementsJson": {
+                  "style": "form"
+                },
+                "files": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/pdf/webapi/metadata": {
+      "post": {
+        "tags": [
+          "Api"
+        ],
+        "summary": "Read and change document metadata.",
+        "description": "Performs metadata operations on the provided files.",
+        "parameters": [
+          {
+            "name": "operation",
+            "in": "query",
+            "description": "The operation to perform on the metadata.",
+            "schema": {
+              "$ref": "#/components/schemas/MetadataOperation"
+            }
+          },
+          {
+            "name": "folder",
+            "in": "query",
+            "description": "The folder where the files are located.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "description": "The name of the file to perform the operation on.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "files": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    },
+                    "description": "The files to perform the metadata operation on."
+                  }
+                }
+              },
+              "encoding": {
+                "files": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The resource was successfully added to processing.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "The request was invalid or the resource could not be locked."
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CompareType": {
+        "enum": [
+          "Text",
+          "SideBySide",
+          "Graphical"
+        ],
+        "type": "string"
+      },
+      "CompressType": {
+        "enum": [
+          "Low",
+          "Medium",
+          "High"
+        ],
+        "type": "string",
+        "description": "Specifies the compression level."
+      },
+      "DifficultyLevel": {
+        "enum": [
+          "Easy",
+          "Hard",
+          "VeryHard"
+        ],
+        "type": "string"
+      },
+      "DocProperty": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string",
+            "description": "Gets or sets the key of the property.",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "description": "Gets or sets the name of the property.",
+            "nullable": true
+          },
+          "value": {
+            "description": "Gets or sets the value of the property.",
+            "nullable": true
+          },
+          "type": {
+            "$ref": "#/components/schemas/PropertyType"
+          },
+          "readOnly": {
+            "type": "boolean",
+            "description": "Gets or sets a value indicating whether the property is read-only."
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a document property."
+      },
+      "FileProcessingErrorCode": {
+        "enum": [
+          "OK",
+          "NoImagesFound",
+          "NoSearchResults",
+          "WrongRegExp"
+        ],
+        "type": "string",
+        "description": "FileProcessingErrorCode enum"
+      },
+      "FileResponse": {
+        "type": "object",
+        "properties": {
+          "statusCode": {
+            "type": "integer",
+            "description": "Get or set StatusCode",
+            "format": "int32"
+          },
+          "status": {
+            "type": "string",
+            "description": "Get or set Status",
+            "nullable": true
+          },
+          "text": {
+            "type": "string",
+            "description": "Get or set Text",
+            "nullable": true
+          },
+          "failedInputFiles": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "progressTotal": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "progressCurrent": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "locked": {
+            "type": "boolean",
+            "description": "Get or set Document locked with password"
+          },
+          "updated": {
+            "type": "string",
+            "description": "Last updated",
+            "format": "date-time",
+            "nullable": true
+          },
+          "sharedFiles": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FileSafeResult"
+            },
+            "description": "Get or set Files",
+            "nullable": true
+          },
+          "fileProcessingErrorCode": {
+            "$ref": "#/components/schemas/FileProcessingErrorCode"
+          },
+          "fileCount": {
+            "type": "integer",
+            "description": "Get count of files",
+            "format": "int32",
+            "readOnly": true
+          },
+          "fileName": {
+            "type": "string",
+            "description": "Get or set FileName",
+            "nullable": true
+          },
+          "folderName": {
+            "type": "string",
+            "description": "Get or set FolderName",
+            "nullable": true
+          },
+          "resultData": {
+            "description": "Data displaying on file processing result page",
+            "nullable": true
+          },
+          "appInstanceId": {
+            "type": "string",
+            "description": "Instance id where is processing located",
+            "nullable": true
+          },
+          "resourceMessage": {
+            "$ref": "#/components/schemas/ResourceMessage"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Response class to get or set any api call status"
+      },
+      "FileSafeResult": {
+        "type": "object",
+        "properties": {
+          "isSuccess": {
+            "type": "boolean",
+            "description": "Processing status"
+          },
+          "id": {
+            "type": "string",
+            "description": "Upload id.",
+            "nullable": true
+          },
+          "fileName": {
+            "type": "string",
+            "description": "File name.",
+            "nullable": true
+          },
+          "uploadFileName": {
+            "type": "string",
+            "description": "Gets or sets the name of the upload file.",
+            "nullable": true
+          },
+          "idUpload": {
+            "type": "string",
+            "description": "idUpload from request.",
+            "nullable": true
+          },
+          "fileLength": {
+            "type": "integer",
+            "description": "File length.",
+            "format": "int64",
+            "nullable": true,
+            "readOnly": true
+          },
+          "builtProp": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DocProperty"
+            },
+            "nullable": true
+          },
+          "customProp": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DocProperty"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "File processing result."
+      },
+      "HashAlgorithm": {
+        "enum": [
+          "SHA1",
+          "SHA256",
+          "SHA384",
+          "SHA512",
+          "MD5"
+        ],
+        "type": "string",
+        "description": "Specifies the hash algorithm to use."
+      },
+      "MergeImageType": {
+        "enum": [
+          "Vertical",
+          "Horizontal",
+          "Both"
+        ],
+        "type": "string",
+        "description": "Specifies the type of image merging."
+      },
+      "MetadataOperation": {
+        "enum": [
+          "Get",
+          "Set"
+        ],
+        "type": "string",
+        "description": "Specifies the type of metadata operation."
+      },
+      "PageNumberHorizontalAlign": {
+        "enum": [
+          "C",
+          "L",
+          "R"
+        ],
+        "type": "string",
+        "description": "Specifies the horizontal alignment of the page number."
+      },
+      "PageNumberVerticalAlign": {
+        "enum": [
+          "B",
+          "T"
+        ],
+        "type": "string",
+        "description": "Specifies the vertical alignment of the page number."
+      },
+      "PageSize": {
+        "enum": [
+          "A4",
+          "Letter",
+          "Fit"
+        ],
+        "type": "string",
+        "description": "Specifies the page size for the merged images."
+      },
+      "ParaphraseSource": {
+        "enum": [
+          "None",
+          "File",
+          "Text"
+        ],
+        "type": "string"
+      },
+      "PropertyType": {
+        "enum": [
+          "Boolean",
+          "DateTime",
+          "Double",
+          "Number",
+          "String",
+          "StringArray",
+          "ObjectArray",
+          "ByteArray",
+          "Other"
+        ],
+        "type": "string",
+        "description": "Metadata property type"
+      },
+      "QuestionType": {
+        "enum": [
+          "ShortAnswer",
+          "TrueFalse",
+          "McQs"
+        ],
+        "type": "string"
+      },
+      "ResizePageSize": {
+        "enum": [
+          "Custom",
+          "A4",
+          "A3",
+          "Letter",
+          "A5",
+          "B5",
+          "Legal",
+          "Ledger",
+          "A6",
+          "A2",
+          "A1",
+          "A0"
+        ],
+        "type": "string",
+        "description": "Specifies the page size for resizing."
+      },
+      "ResizePresetSize": {
+        "enum": [
+          "Instagram_Story",
+          "Instagram_Square",
+          "Instagram_Portrait",
+          "Instagram_Landscape",
+          "Facebook_Post",
+          "Twitter_Post",
+          "Youtube_Thumbnail",
+          "Pinterest_Pin",
+          "LinkedIn_Shared_Image",
+          "Snapchat_Story",
+          "Standard_Widescreen",
+          "Standard_iPhone",
+          "Standard_Presentation",
+          "Standard_Square",
+          "Standard_Landscape",
+          "Standard_Portrait"
+        ],
+        "type": "string",
+        "description": "Specifies the preset size for resizing."
+      },
+      "ResizePresetType": {
+        "enum": [
+          "Instagram",
+          "Facebook",
+          "Twitter",
+          "Youtube",
+          "Pinterest",
+          "LinkedIn",
+          "Snapchat",
+          "Standard"
+        ],
+        "type": "string",
+        "description": "Specifies the preset type for resizing."
+      },
+      "ResizeType": {
+        "enum": [
+          "Percentage",
+          "Pixels",
+          "Presets"
+        ],
+        "type": "string",
+        "description": "Specifies the type of resizing."
+      },
+      "ResourceMessage": {
+        "type": "object",
+        "properties": {
+          "resourceKey": {
+            "type": "string",
+            "nullable": true
+          },
+          "args": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RotateAngle": {
+        "enum": [
+          "On90",
+          "On180",
+          "On270",
+          "Custom"
+        ],
+        "type": "string",
+        "description": "Specifies the angle of rotation."
+      },
+      "RotateType": {
+        "enum": [
+          "A",
+          "S"
+        ],
+        "type": "string",
+        "description": "Specifies the type of rotation."
+      },
+      "SignatureType": {
+        "enum": [
+          "Image",
+          "Drawing",
+          "Text"
+        ],
+        "type": "string",
+        "description": "Specifies the type of signature."
+      },
+      "SplitDocType": {
+        "enum": [
+          "AllPages",
+          "OddEven",
+          "SpecifiedPage",
+          "PageRange",
+          "PageRangeIntoSingleFile",
+          "NPage"
+        ],
+        "type": "string",
+        "description": "Specifies the type of document splitting."
+      },
+      "SplitImageType": {
+        "enum": [
+          "Vertical",
+          "Horizontal",
+          "Both"
+        ],
+        "type": "string",
+        "description": "Specifies the type of image splitting."
+      },
+      "TranslationSource": {
+        "enum": [
+          "None",
+          "Pdf",
+          "Text",
+          "ResourceFile"
+        ],
+        "type": "string"
+      },
+      "VoiceGender": {
+        "enum": [
+          "Man",
+          "Woman"
+        ],
+        "type": "string"
+      },
+      "VoiceModel": {
+        "enum": [
+          "Quick",
+          "Quality"
+        ],
+        "type": "string"
+      },
+      "WatermarkAction": {
+        "enum": [
+          "None",
+          "Detect",
+          "Remove"
+        ],
+        "type": "string"
+      },
+      "WatermarkType": {
+        "enum": [
+          "None",
+          "Artifact",
+          "Text",
+          "Image"
+        ],
+        "type": "string",
+        "description": "Specifies the type of watermark."
+      },
+      "XmlType": {
+        "enum": [
+          "APS",
+          "MobiXml",
+          "PdfXml",
+          "Xlsx"
+        ],
+        "type": "string",
+        "description": "Specifies the type of XML file."
+      }
+    }
+  }
+}

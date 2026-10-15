@@ -1,6 +1,6 @@
 /**
- * Aspose.Pdf RestApi
- * Aspose.Pdf RestApi provides a comprehensive set of endpoints for various PDF-related tasks, enabling efficient document processing and manipulation. Users can retrieve processing status, download files, manage file locks, parse documents, redact sensitive information, convert between formats, merge files, add watermarks, perform text searches, and much more. With endpoints for tasks like electronic signing, document comparison, and form filling, the API offers extensive functionality to cater to diverse PDF requirements.
+ * Aspose.PDF for AWS
+ * Aspose.Pdf for AWS provides a comprehensive set of endpoints for various PDF-related tasks, enabling efficient document processing and manipulation. Users can retrieve processing status, download files, manage file locks, parse documents, redact sensitive information, convert between formats, merge files, add watermarks, perform text searches, and much more. With endpoints for tasks like electronic signing, document comparison, and form filling, the API offers extensive functionality to cater to diverse PDF requirements.
  *
  * OpenAPI spec version: v1
  * Contact: Evgeny.Pirogov@aspose.com
@@ -10,7 +10,10 @@
  * Do not edit the class manually.
  */
 
-export type ResizePresetSize = 'Instagram_Story' | 'Instagram_Square' | 'Instagram_Portrait' | 'Instagram_Landscape' | 'Facebook_Post' | 'Twitter_Post' | 'Youtube_Thumbnail' | 'Pinterest_Pin' | 'LinedIn_Shared_Image' | 'Snapchat_Story' | 'Standard_Widescreen' | 'Standard_iPhone' | 'Standard_Presentation' | 'Standard_Square' | 'Standard_Landscape' | 'Standard_Portrait';
+/**
+ * Specifies the preset size for resizing.
+ */
+export type ResizePresetSize = 'Instagram_Story' | 'Instagram_Square' | 'Instagram_Portrait' | 'Instagram_Landscape' | 'Facebook_Post' | 'Twitter_Post' | 'Youtube_Thumbnail' | 'Pinterest_Pin' | 'LinkedIn_Shared_Image' | 'Snapchat_Story' | 'Standard_Widescreen' | 'Standard_iPhone' | 'Standard_Presentation' | 'Standard_Square' | 'Standard_Landscape' | 'Standard_Portrait';
 
 export const ResizePresetSize = {
     InstagramStory: 'Instagram_Story' as ResizePresetSize,
@@ -21,7 +24,7 @@ export const ResizePresetSize = {
     TwitterPost: 'Twitter_Post' as ResizePresetSize,
     YoutubeThumbnail: 'Youtube_Thumbnail' as ResizePresetSize,
     PinterestPin: 'Pinterest_Pin' as ResizePresetSize,
-    LinedInSharedImage: 'LinedIn_Shared_Image' as ResizePresetSize,
+    LinkedInSharedImage: 'LinkedIn_Shared_Image' as ResizePresetSize,
     SnapchatStory: 'Snapchat_Story' as ResizePresetSize,
     StandardWidescreen: 'Standard_Widescreen' as ResizePresetSize,
     StandardIPhone: 'Standard_iPhone' as ResizePresetSize,

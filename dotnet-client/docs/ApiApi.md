@@ -4,50 +4,65 @@ All URIs are relative to */*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**PdfWebapiAddnumberPost**](ApiApi.md#pdfwebapiaddnumberpost) | **POST** /pdf/webapi/addnumber | Add Page Numbers to Document.
-[**PdfWebapiChangeFontsPost**](ApiApi.md#pdfwebapichangefontspost) | **POST** /pdf/webapi/change-fonts | Change Fonts in Provided Files.
+[**PdfWebapiAddnumberPost**](ApiApi.md#pdfwebapiaddnumberpost) | **POST** /pdf/webapi/addnumber | Add page numbers to document.
+[**PdfWebapiChangeFontsPost**](ApiApi.md#pdfwebapichangefontspost) | **POST** /pdf/webapi/change-fonts | Changes the fonts of the provided files using the specified font replacements.
 [**PdfWebapiComparisonPost**](ApiApi.md#pdfwebapicomparisonpost) | **POST** /pdf/webapi/comparison | Compare documents text.
-[**PdfWebapiCompressPost**](ApiApi.md#pdfwebapicompresspost) | **POST** /pdf/webapi/compress | Compress Document.
-[**PdfWebapiConvertPost**](ApiApi.md#pdfwebapiconvertpost) | **POST** /pdf/webapi/convert | Convert Document to Another Format.
-[**PdfWebapiConvertWebpagePost**](ApiApi.md#pdfwebapiconvertwebpagepost) | **POST** /pdf/webapi/convert-webpage | Convert Web Page to Document.
-[**PdfWebapiCropPost**](ApiApi.md#pdfwebapicroppost) | **POST** /pdf/webapi/crop | Crop Document.
+[**PdfWebapiCompressPost**](ApiApi.md#pdfwebapicompresspost) | **POST** /pdf/webapi/compress | Compress document.
+[**PdfWebapiConvertPost**](ApiApi.md#pdfwebapiconvertpost) | **POST** /pdf/webapi/convert | Convert document to another format.
+[**PdfWebapiConvertWebpagePost**](ApiApi.md#pdfwebapiconvertwebpagepost) | **POST** /pdf/webapi/convert-webpage | Convert web page to document.
+[**PdfWebapiCreatorPost**](ApiApi.md#pdfwebapicreatorpost) | **POST** /pdf/webapi/creator | 
+[**PdfWebapiCropPost**](ApiApi.md#pdfwebapicroppost) | **POST** /pdf/webapi/crop | Crop document.
 [**PdfWebapiDownloadIdGet**](ApiApi.md#pdfwebapidownloadidget) | **GET** /pdf/webapi/download/{id} | File download.
-[**PdfWebapiEsignPost**](ApiApi.md#pdfwebapiesignpost) | **POST** /pdf/webapi/esign | Sign Document with Certificate.
-[**PdfWebapiExtractPost**](ApiApi.md#pdfwebapiextractpost) | **POST** /pdf/webapi/extract | Extract Tables from Document.
+[**PdfWebapiEditorPost**](ApiApi.md#pdfwebapieditorpost) | **POST** /pdf/webapi/editor | 
+[**PdfWebapiExtractPost**](ApiApi.md#pdfwebapiextractpost) | **POST** /pdf/webapi/extract | Extract tables from document.
+[**PdfWebapiFormatDetectorPost**](ApiApi.md#pdfwebapiformatdetectorpost) | **POST** /pdf/webapi/format-detector | 
 [**PdfWebapiGifPost**](ApiApi.md#pdfwebapigifpost) | **POST** /pdf/webapi/gif | Make GIF.
-[**PdfWebapiHashPost**](ApiApi.md#pdfwebapihashpost) | **POST** /pdf/webapi/hash | Calculate Document Hash.
+[**PdfWebapiGrammarCheckerPost**](ApiApi.md#pdfwebapigrammarcheckerpost) | **POST** /pdf/webapi/grammar-checker | Checks the grammar of text, pdf files and plain text.
+[**PdfWebapiHashPost**](ApiApi.md#pdfwebapihashpost) | **POST** /pdf/webapi/hash | Calculate document hash.
+[**PdfWebapiImageDescriptionPost**](ApiApi.md#pdfwebapiimagedescriptionpost) | **POST** /pdf/webapi/image-description | Make speech synthesizer.
+[**PdfWebapiImageGeneratorPost**](ApiApi.md#pdfwebapiimagegeneratorpost) | **POST** /pdf/webapi/image-generator | 
 [**PdfWebapiLockPost**](ApiApi.md#pdfwebapilockpost) | **POST** /pdf/webapi/lock | Lock document.
-[**PdfWebapiMergePost**](ApiApi.md#pdfwebapimergepost) | **POST** /pdf/webapi/merge | Merge Documents.
-[**PdfWebapiMetadataPost**](ApiApi.md#pdfwebapimetadatapost) | **POST** /pdf/webapi/metadata | Read and Change Document Metadata.
-[**PdfWebapiOrganizePost**](ApiApi.md#pdfwebapiorganizepost) | **POST** /pdf/webapi/organize | Organize Document Pages.
-[**PdfWebapiParsePost**](ApiApi.md#pdfwebapiparsepost) | **POST** /pdf/webapi/parse | Parse Document.
-[**PdfWebapiRedactPost**](ApiApi.md#pdfwebapiredactpost) | **POST** /pdf/webapi/redact | Redact Document Text.
+[**PdfWebapiMergePost**](ApiApi.md#pdfwebapimergepost) | **POST** /pdf/webapi/merge | Merge documents.
+[**PdfWebapiMetadataPost**](ApiApi.md#pdfwebapimetadatapost) | **POST** /pdf/webapi/metadata | Read and change document metadata.
+[**PdfWebapiOrganizePost**](ApiApi.md#pdfwebapiorganizepost) | **POST** /pdf/webapi/organize | Organize document pages.
+[**PdfWebapiParaphrasePost**](ApiApi.md#pdfwebapiparaphrasepost) | **POST** /pdf/webapi/paraphrase | Paraphrase document.
+[**PdfWebapiParsePost**](ApiApi.md#pdfwebapiparsepost) | **POST** /pdf/webapi/parse | Parse document.
+[**PdfWebapiQuizMakerPost**](ApiApi.md#pdfwebapiquizmakerpost) | **POST** /pdf/webapi/quiz-maker | Generates a list of quiz questions using AI based on the provided content or uploaded files,  and stores the resulting quiz into a document.
+[**PdfWebapiRedactPost**](ApiApi.md#pdfwebapiredactpost) | **POST** /pdf/webapi/redact | Redact document text.
 [**PdfWebapiRemoveIdPost**](ApiApi.md#pdfwebapiremoveidpost) | **POST** /pdf/webapi/remove/{id} | Remove stored files.
-[**PdfWebapiRemovePost**](ApiApi.md#pdfwebapiremovepost) | **POST** /pdf/webapi/remove | Remove Document Annotations.
-[**PdfWebapiRemoveWatermarkPost**](ApiApi.md#pdfwebapiremovewatermarkpost) | **POST** /pdf/webapi/remove-watermark | Remove Document Watermark.
-[**PdfWebapiRemovepagesPost**](ApiApi.md#pdfwebapiremovepagespost) | **POST** /pdf/webapi/removepages | Remove Pages from Document.
-[**PdfWebapiRepairPost**](ApiApi.md#pdfwebapirepairpost) | **POST** /pdf/webapi/repair | Repair Document.
-[**PdfWebapiResizePost**](ApiApi.md#pdfwebapiresizepost) | **POST** /pdf/webapi/resize | Resize Document.
-[**PdfWebapiRotatePost**](ApiApi.md#pdfwebapirotatepost) | **POST** /pdf/webapi/rotate | Rotate Document.
-[**PdfWebapiSearchPost**](ApiApi.md#pdfwebapisearchpost) | **POST** /pdf/webapi/search | Search Document Text.
-[**PdfWebapiSearchablePost**](ApiApi.md#pdfwebapisearchablepost) | **POST** /pdf/webapi/searchable | Make Scanned PDF Searchable.
-[**PdfWebapiSignaturePost**](ApiApi.md#pdfwebapisignaturepost) | **POST** /pdf/webapi/signature | Add Signature to Document.
-[**PdfWebapiSplitdocPost**](ApiApi.md#pdfwebapisplitdocpost) | **POST** /pdf/webapi/splitdoc | Split Document.
-[**PdfWebapiSplitimagePost**](ApiApi.md#pdfwebapisplitimagepost) | **POST** /pdf/webapi/splitimage | Split Image.
+[**PdfWebapiRemovePost**](ApiApi.md#pdfwebapiremovepost) | **POST** /pdf/webapi/remove | Remove document annotations.
+[**PdfWebapiRemoveWatermarkBlazorPost**](ApiApi.md#pdfwebapiremovewatermarkblazorpost) | **POST** /pdf/webapi/remove-watermark-blazor | Removes document watermark.
+[**PdfWebapiRemoveWatermarkPost**](ApiApi.md#pdfwebapiremovewatermarkpost) | **POST** /pdf/webapi/remove-watermark | Removes document watermark.
+[**PdfWebapiRemovepagesPost**](ApiApi.md#pdfwebapiremovepagespost) | **POST** /pdf/webapi/removepages | Remove pages from document.
+[**PdfWebapiRepairPost**](ApiApi.md#pdfwebapirepairpost) | **POST** /pdf/webapi/repair | Repair document.
+[**PdfWebapiResizePost**](ApiApi.md#pdfwebapiresizepost) | **POST** /pdf/webapi/resize | Resize document.
+[**PdfWebapiRotatePost**](ApiApi.md#pdfwebapirotatepost) | **POST** /pdf/webapi/rotate | Rotate document.
+[**PdfWebapiSearchPost**](ApiApi.md#pdfwebapisearchpost) | **POST** /pdf/webapi/search | Search document text.
+[**PdfWebapiSearchablePost**](ApiApi.md#pdfwebapisearchablepost) | **POST** /pdf/webapi/searchable | Make scanned pdf searchable.
+[**PdfWebapiSignaturePost**](ApiApi.md#pdfwebapisignaturepost) | **POST** /pdf/webapi/signature | Add signature to document.
+[**PdfWebapiSplitdocPost**](ApiApi.md#pdfwebapisplitdocpost) | **POST** /pdf/webapi/splitdoc | Split document.
+[**PdfWebapiSplitimagePost**](ApiApi.md#pdfwebapisplitimagepost) | **POST** /pdf/webapi/splitimage | Split image.
 [**PdfWebapiStatusIdPost**](ApiApi.md#pdfwebapistatusidpost) | **POST** /pdf/webapi/status/{id} | Processing status.
-[**PdfWebapiUnlockPost**](ApiApi.md#pdfwebapiunlockpost) | **POST** /pdf/webapi/unlock | Unlock Document.
-[**PdfWebapiVerifyEsignPost**](ApiApi.md#pdfwebapiverifyesignpost) | **POST** /pdf/webapi/verify_esign | Verify Document Certificate.
-[**PdfWebapiWatermarkPost**](ApiApi.md#pdfwebapiwatermarkpost) | **POST** /pdf/webapi/watermark | Add Watermark to Document.
-[**PdfWebapiWordcounterPost**](ApiApi.md#pdfwebapiwordcounterpost) | **POST** /pdf/webapi/wordcounter | Count Words and Characters in Document.
-[**PdfWebapiXfaconvertPost**](ApiApi.md#pdfwebapixfaconvertpost) | **POST** /pdf/webapi/xfaconvert | Convert XFA Format to Another Format.
+[**PdfWebapiSummaryPost**](ApiApi.md#pdfwebapisummarypost) | **POST** /pdf/webapi/summary | 
+[**PdfWebapiTableOfContentsPost**](ApiApi.md#pdfwebapitableofcontentspost) | **POST** /pdf/webapi/table-of-contents | 
+[**PdfWebapiTestGeneratorPost**](ApiApi.md#pdfwebapitestgeneratorpost) | **POST** /pdf/webapi/test-generator | Creates the list of test questions using ai and stores it to the document
+[**PdfWebapiTranscribeAudioPost**](ApiApi.md#pdfwebapitranscribeaudiopost) | **POST** /pdf/webapi/transcribe-audio | 
+[**PdfWebapiTranslatePost**](ApiApi.md#pdfwebapitranslatepost) | **POST** /pdf/webapi/translate | Translate document.
+[**PdfWebapiUnlockPost**](ApiApi.md#pdfwebapiunlockpost) | **POST** /pdf/webapi/unlock | Unlock document.
+[**PdfWebapiVerifyEsignPost**](ApiApi.md#pdfwebapiverifyesignpost) | **POST** /pdf/webapi/verify-esign | Verify document certificate.
+[**PdfWebapiVoiceGeneratorPost**](ApiApi.md#pdfwebapivoicegeneratorpost) | **POST** /pdf/webapi/voice-generator | Make speech synthesizer.
+[**PdfWebapiWatermarkPost**](ApiApi.md#pdfwebapiwatermarkpost) | **POST** /pdf/webapi/watermark | Add watermark to document.
+[**PdfWebapiWordcounterPost**](ApiApi.md#pdfwebapiwordcounterpost) | **POST** /pdf/webapi/wordcounter | Count words and chars in document.
+[**PdfWebapiWordsGeneratorPost**](ApiApi.md#pdfwebapiwordsgeneratorpost) | **POST** /pdf/webapi/words-generator | Generates words for crossword using AI Mistral
+[**PdfWebapiXfaconvertPost**](ApiApi.md#pdfwebapixfaconvertpost) | **POST** /pdf/webapi/xfaconvert | Convert XFA format to a another format.
 
 <a name="pdfwebapiaddnumberpost"></a>
 # **PdfWebapiAddnumberPost**
-> FileResponse PdfWebapiAddnumberPost (List<byte[]> files, string documentPassword, PageNumberVerticalAlign vAlignment, PageNumberHorizontalAlign hAlignment, int? startingNumber, int? sNumber, int? fNumber, int? margin, int? fontSize, string format)
+> FileResponse PdfWebapiAddnumberPost (List<byte[]> files, PageNumberVerticalAlign vAlignment, PageNumberHorizontalAlign hAlignment, int? startingNumber, int? sNumber, int? fNumber, int? margin, int? fontSize, string format)
 
-Add Page Numbers to Document.
+Add page numbers to document.
 
-Adds page numbers to your documents based on specified alignment, starting number, and format. The service ensures that page numbers are accurately applied, improving the readability and professionalism of your documents. It supports various formats, including DOC, PPTX, TIFF, DOCX, and PDF, to cater to your specific requirements.
+Adds page numbers to the provided documents with the specified alignment, starting number, and format.
 
 ### Example
 ```csharp
@@ -66,7 +81,6 @@ namespace Example
 
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
             var vAlignment = new PageNumberVerticalAlign(); // PageNumberVerticalAlign | The vertical alignment of the page numbers. (optional) 
             var hAlignment = new PageNumberHorizontalAlign(); // PageNumberHorizontalAlign | The horizontal alignment of the page numbers. (optional) 
             var startingNumber = 56;  // int? | The starting number for the page numbers. (optional) 
@@ -78,8 +92,8 @@ namespace Example
 
             try
             {
-                // Add Page Numbers to Document.
-                FileResponse result = apiInstance.PdfWebapiAddnumberPost(files, documentPassword, vAlignment, hAlignment, startingNumber, sNumber, fNumber, margin, fontSize, format);
+                // Add page numbers to document.
+                FileResponse result = apiInstance.PdfWebapiAddnumberPost(files, vAlignment, hAlignment, startingNumber, sNumber, fNumber, margin, fontSize, format);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -96,7 +110,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **files** | [**List<byte[]>**](byte[].md)|  | [optional] 
- **documentPassword** | **string**|  | [optional] 
  **vAlignment** | [**PageNumberVerticalAlign**](.md)| The vertical alignment of the page numbers. | [optional] 
  **hAlignment** | [**PageNumberHorizontalAlign**](.md)| The horizontal alignment of the page numbers. | [optional] 
  **startingNumber** | **int?**| The starting number for the page numbers. | [optional] 
@@ -123,11 +136,11 @@ No authorization required
 
 <a name="pdfwebapichangefontspost"></a>
 # **PdfWebapiChangeFontsPost**
-> FileResponse PdfWebapiChangeFontsPost (string fontReplacementsJson, List<byte[]> files, string documentPassword)
+> FileResponse PdfWebapiChangeFontsPost (string fontReplacementsJson, List<byte[]> files)
 
-Change Fonts in Provided Files.
+Changes the fonts of the provided files using the specified font replacements.
 
-Updates the fonts in your documents according to specified replacements.  Provide the font replacement details as a JSON string and upload your files using multipart/form-data.The service processes these requests asynchronously using Kafka, ensuring efficient handling of your files.
+This method is designed to be used as an HTTP POST action, accepting form data for the font replacements and file uploads.  The font replacements should be provided as a JSON string, and the files should be uploaded as multipart/form-data.  The method uses Kafka for asynchronous processing and can optionally store the status of the task.
 
 ### Example
 ```csharp
@@ -147,12 +160,11 @@ namespace Example
             var apiInstance = new ApiApi();
             var fontReplacementsJson = fontReplacementsJson_example;  // string |  (optional) 
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
 
             try
             {
-                // Change Fonts in Provided Files.
-                FileResponse result = apiInstance.PdfWebapiChangeFontsPost(fontReplacementsJson, files, documentPassword);
+                // Changes the fonts of the provided files using the specified font replacements.
+                FileResponse result = apiInstance.PdfWebapiChangeFontsPost(fontReplacementsJson, files);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -170,7 +182,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fontReplacementsJson** | **string**|  | [optional] 
  **files** | [**List<byte[]>**](byte[].md)|  | [optional] 
- **documentPassword** | **string**|  | [optional] 
 
 ### Return type
 
@@ -189,11 +200,11 @@ No authorization required
 
 <a name="pdfwebapicomparisonpost"></a>
 # **PdfWebapiComparisonPost**
-> FileResponse PdfWebapiComparisonPost (List<byte[]> files, string documentPassword)
+> FileResponse PdfWebapiComparisonPost (List<byte[]> files, CompareType compareType)
 
 Compare documents text.
 
-Compares the text of the provided documents and highlights the differences. Upload the files you want to compare, and the service will analyze them to detect any changes in the text. The result is a new document that clearly marks all text variations, making it easy to review and understand the modifications between the original and updated versions.
+Compare provided files and create document with marked changes.
 
 ### Example
 ```csharp
@@ -212,12 +223,12 @@ namespace Example
 
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
+            var compareType = new CompareType(); // CompareType |  (optional) 
 
             try
             {
                 // Compare documents text.
-                FileResponse result = apiInstance.PdfWebapiComparisonPost(files, documentPassword);
+                FileResponse result = apiInstance.PdfWebapiComparisonPost(files, compareType);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -234,7 +245,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **files** | [**List<byte[]>**](byte[].md)|  | [optional] 
- **documentPassword** | **string**|  | [optional] 
+ **compareType** | [**CompareType**](.md)|  | [optional] 
 
 ### Return type
 
@@ -253,11 +264,11 @@ No authorization required
 
 <a name="pdfwebapicompresspost"></a>
 # **PdfWebapiCompressPost**
-> FileResponse PdfWebapiCompressPost (List<byte[]> files, string documentPassword, CompressType compressType)
+> FileResponse PdfWebapiCompressPost (List<byte[]> files, CompressType compressType)
 
-Compress Document.
+Compress document.
 
-Compresses the provided documents to reduce their file size based on the specified compression level. Upload the documents and choose the desired compression level. The service will reduce the file sizes while maintaining quality, resulting in compressed files that are easier to handle and share, saving storage space and reducing upload and download times.
+Compresses the provided files using the specified compression level.
 
 ### Example
 ```csharp
@@ -276,13 +287,12 @@ namespace Example
 
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
             var compressType = new CompressType(); // CompressType | The level of compression to use. (optional) 
 
             try
             {
-                // Compress Document.
-                FileResponse result = apiInstance.PdfWebapiCompressPost(files, documentPassword, compressType);
+                // Compress document.
+                FileResponse result = apiInstance.PdfWebapiCompressPost(files, compressType);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -299,7 +309,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **files** | [**List<byte[]>**](byte[].md)|  | [optional] 
- **documentPassword** | **string**|  | [optional] 
  **compressType** | [**CompressType**](.md)| The level of compression to use. | [optional] 
 
 ### Return type
@@ -319,11 +328,11 @@ No authorization required
 
 <a name="pdfwebapiconvertpost"></a>
 # **PdfWebapiConvertPost**
-> FileResponse PdfWebapiConvertPost (List<byte[]> files, string documentPassword, string inputType, string outputType, XmlType xmlType, string xmlTag, int? fontSise, bool? isToSingle, string separator)
+> FileResponse PdfWebapiConvertPost (List<byte[]> files, string inputType, string outputType, XmlType xmlType, string xmlTag, int? fontSise, bool? isToSingle, string separator, double? interval)
 
-Convert Document to Another Format.
+Convert document to another format.
 
-Converts documents from one format to another seamlessly. Upload the files you need to convert and specify the target format. The service will handle the conversion process efficiently, ensuring that the resulting document is ready for use in the desired format and compatible with various applications and systems.
+Converts the provided files from one format to another.
 
 ### Example
 ```csharp
@@ -342,7 +351,6 @@ namespace Example
 
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
             var inputType = inputType_example;  // string | The format of the input files. (optional) 
             var outputType = outputType_example;  // string | The desired format for the output files. (optional) 
             var xmlType = new XmlType(); // XmlType | The type of XML conversion to perform, if applicable. (optional) 
@@ -350,11 +358,12 @@ namespace Example
             var fontSise = 56;  // int? |  (optional) 
             var isToSingle = true;  // bool? | Indicates whether the conversion should result in a single file, if applicable. (optional) 
             var separator = separator_example;  // string | The separator to use when converting, if applicable. (optional) 
+            var interval = 1.2;  // double? | The interval between frames for convert to video. (optional) 
 
             try
             {
-                // Convert Document to Another Format.
-                FileResponse result = apiInstance.PdfWebapiConvertPost(files, documentPassword, inputType, outputType, xmlType, xmlTag, fontSise, isToSingle, separator);
+                // Convert document to another format.
+                FileResponse result = apiInstance.PdfWebapiConvertPost(files, inputType, outputType, xmlType, xmlTag, fontSise, isToSingle, separator, interval);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -371,7 +380,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **files** | [**List<byte[]>**](byte[].md)|  | [optional] 
- **documentPassword** | **string**|  | [optional] 
  **inputType** | **string**| The format of the input files. | [optional] 
  **outputType** | **string**| The desired format for the output files. | [optional] 
  **xmlType** | [**XmlType**](.md)| The type of XML conversion to perform, if applicable. | [optional] 
@@ -379,6 +387,7 @@ Name | Type | Description  | Notes
  **fontSise** | **int?**|  | [optional] 
  **isToSingle** | **bool?**| Indicates whether the conversion should result in a single file, if applicable. | [optional] 
  **separator** | **string**| The separator to use when converting, if applicable. | [optional] 
+ **interval** | **double?**| The interval between frames for convert to video. | [optional] 
 
 ### Return type
 
@@ -397,11 +406,11 @@ No authorization required
 
 <a name="pdfwebapiconvertwebpagepost"></a>
 # **PdfWebapiConvertWebpagePost**
-> FileResponse PdfWebapiConvertWebpagePost (string webPage, string documentPassword, string outputType)
+> FileResponse PdfWebapiConvertWebpagePost (string webPage, string outputType)
 
-Convert Web Page to Document.
+Convert web page to document.
 
-Converts a web page to a document in the specified output format. Provide the URL of the web page and choose the desired format for conversion. The service will create a document that mirrors the content and layout of the original web page, ensuring it is well-formatted and suitable for your needs.
+Converts a web page to the specified output format.
 
 ### Example
 ```csharp
@@ -420,13 +429,12 @@ namespace Example
 
             var apiInstance = new ApiApi();
             var webPage = webPage_example;  // string |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
             var outputType = outputType_example;  // string | The desired format for the output file. (optional) 
 
             try
             {
-                // Convert Web Page to Document.
-                FileResponse result = apiInstance.PdfWebapiConvertWebpagePost(webPage, documentPassword, outputType);
+                // Convert web page to document.
+                FileResponse result = apiInstance.PdfWebapiConvertWebpagePost(webPage, outputType);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -443,8 +451,66 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webPage** | **string**|  | [optional] 
- **documentPassword** | **string**|  | [optional] 
  **outputType** | **string**| The desired format for the output file. | [optional] 
+
+### Return type
+
+[**FileResponse**](FileResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="pdfwebapicreatorpost"></a>
+# **PdfWebapiCreatorPost**
+> FileResponse PdfWebapiCreatorPost (List<byte[]> files)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiCreatorPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List<byte[]>(); // List<byte[]> |  (optional) 
+
+            try
+            {
+                FileResponse result = apiInstance.PdfWebapiCreatorPost(files);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiCreatorPost: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **files** | [**List<byte[]>**](byte[].md)|  | [optional] 
 
 ### Return type
 
@@ -463,11 +529,11 @@ No authorization required
 
 <a name="pdfwebapicroppost"></a>
 # **PdfWebapiCropPost**
-> FileResponse PdfWebapiCropPost (List<byte[]> files, string documentPassword, string inputType, int? top, int? right, int? bottom, int? left, string outputType)
+> FileResponse PdfWebapiCropPost (List<byte[]> files, string inputType, int? top, int? right, int? bottom, int? left, string outputType)
 
-Crop Document.
+Crop document.
 
-Crops the provided document to the specified dimensions by removing unwanted areas. Upload the document and specify the dimensions for cropping. The service will adjust the file accordingly, resulting in a precisely cropped document that meets your requirements.
+Crops the provided files to the specified dimensions.
 
 ### Example
 ```csharp
@@ -486,7 +552,6 @@ namespace Example
 
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
             var inputType = inputType_example;  // string | The format of the input files. (optional) 
             var top = 56;  // int? | The number of pixels to crop from the top. (optional) 
             var right = 56;  // int? | The number of pixels to crop from the right. (optional) 
@@ -496,8 +561,8 @@ namespace Example
 
             try
             {
-                // Crop Document.
-                FileResponse result = apiInstance.PdfWebapiCropPost(files, documentPassword, inputType, top, right, bottom, left, outputType);
+                // Crop document.
+                FileResponse result = apiInstance.PdfWebapiCropPost(files, inputType, top, right, bottom, left, outputType);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -514,7 +579,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **files** | [**List<byte[]>**](byte[].md)|  | [optional] 
- **documentPassword** | **string**|  | [optional] 
  **inputType** | **string**| The format of the input files. | [optional] 
  **top** | **int?**| The number of pixels to crop from the top. | [optional] 
  **right** | **int?**| The number of pixels to crop from the right. | [optional] 
@@ -600,13 +664,11 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="pdfwebapiesignpost"></a>
-# **PdfWebapiEsignPost**
-> FileResponse PdfWebapiEsignPost (string passw, string initials, string invite, List<byte[]> files, string documentPassword, string inputType)
+<a name="pdfwebapieditorpost"></a>
+# **PdfWebapiEditorPost**
+> FileResponse PdfWebapiEditorPost (List<byte[]> files, string message)
 
-Sign Document with Certificate.
 
-Applies a digital signature to the provided document using the specified certificate. Upload the document and provide the certificate details, and the service will securely apply the signature, ensuring that the document is authenticated and legally binding.
 
 ### Example
 ```csharp
@@ -618,28 +680,23 @@ using IO.Swagger.Model;
 
 namespace Example
 {
-    public class PdfWebapiEsignPostExample
+    public class PdfWebapiEditorPostExample
     {
         public void main()
         {
 
             var apiInstance = new ApiApi();
-            var passw = passw_example;  // string |  (optional) 
-            var initials = initials_example;  // string |  (optional) 
-            var invite = invite_example;  // string |  (optional) 
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
-            var inputType = inputType_example;  // string | The format of the input files. (optional) 
+            var message = message_example;  // string |  (optional) 
 
             try
             {
-                // Sign Document with Certificate.
-                FileResponse result = apiInstance.PdfWebapiEsignPost(passw, initials, invite, files, documentPassword, inputType);
+                FileResponse result = apiInstance.PdfWebapiEditorPost(files, message);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ApiApi.PdfWebapiEsignPost: " + e.Message );
+                Debug.Print("Exception when calling ApiApi.PdfWebapiEditorPost: " + e.Message );
             }
         }
     }
@@ -650,12 +707,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **passw** | **string**|  | [optional] 
- **initials** | **string**|  | [optional] 
- **invite** | **string**|  | [optional] 
  **files** | [**List<byte[]>**](byte[].md)|  | [optional] 
- **documentPassword** | **string**|  | [optional] 
- **inputType** | **string**| The format of the input files. | [optional] 
+ **message** | **string**|  | [optional] 
 
 ### Return type
 
@@ -674,11 +727,11 @@ No authorization required
 
 <a name="pdfwebapiextractpost"></a>
 # **PdfWebapiExtractPost**
-> FileResponse PdfWebapiExtractPost (List<byte[]> files, string documentPassword, string inputType, string outputType)
+> FileResponse PdfWebapiExtractPost (List<byte[]> files, string inputType, string outputType)
 
-Extract Tables from Document.
+Extract tables from document.
 
-Extracts tables from the provided document and converts them into the specified output format. Upload the document containing the tables and choose the format you prefer. The service will extract the tables and deliver them in the selected format, facilitating easier data usage and analysis.
+Extracts tables from the provided documents and converts them to the specified output format.
 
 ### Example
 ```csharp
@@ -697,14 +750,13 @@ namespace Example
 
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
             var inputType = inputType_example;  // string | The format of the input files. (optional) 
             var outputType = outputType_example;  // string | The desired format for the output files. (optional) 
 
             try
             {
-                // Extract Tables from Document.
-                FileResponse result = apiInstance.PdfWebapiExtractPost(files, documentPassword, inputType, outputType);
+                // Extract tables from document.
+                FileResponse result = apiInstance.PdfWebapiExtractPost(files, inputType, outputType);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -721,7 +773,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **files** | [**List<byte[]>**](byte[].md)|  | [optional] 
- **documentPassword** | **string**|  | [optional] 
  **inputType** | **string**| The format of the input files. | [optional] 
  **outputType** | **string**| The desired format for the output files. | [optional] 
 
@@ -740,13 +791,72 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="pdfwebapiformatdetectorpost"></a>
+# **PdfWebapiFormatDetectorPost**
+> FileResponse PdfWebapiFormatDetectorPost (List<byte[]> files)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiFormatDetectorPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List<byte[]>(); // List<byte[]> |  (optional) 
+
+            try
+            {
+                FileResponse result = apiInstance.PdfWebapiFormatDetectorPost(files);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiFormatDetectorPost: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **files** | [**List<byte[]>**](byte[].md)|  | [optional] 
+
+### Return type
+
+[**FileResponse**](FileResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="pdfwebapigifpost"></a>
 # **PdfWebapiGifPost**
-> FileResponse PdfWebapiGifPost (List<byte[]> files, string documentPassword, bool? keepImagesAsIs, int? resizeToImage, bool? streched, int? width, int? height, string frameTimes)
+> FileResponse PdfWebapiGifPost (List<byte[]> files, bool? keepImagesAsIs, int? resizeToImage, bool? streched, int? width, int? height, string frameTimes)
 
 Make GIF.
 
-Creates a GIF from a collection of images, ensuring smooth transitions and cohesive animation. Upload the images you want to include, and the service will generate a GIF based on your specifications. This service is ideal for animating a series of product shots, creating engaging social media content, or other animation needs.
+Creates a GIF from the provided images.
 
 ### Example
 ```csharp
@@ -765,7 +875,6 @@ namespace Example
 
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
             var keepImagesAsIs = true;  // bool? | Indicates whether the images should be kept as is. (optional) 
             var resizeToImage = 56;  // int? | The index of the image to resize the other images to. (optional) 
             var streched = true;  // bool? |  (optional) 
@@ -776,7 +885,7 @@ namespace Example
             try
             {
                 // Make GIF.
-                FileResponse result = apiInstance.PdfWebapiGifPost(files, documentPassword, keepImagesAsIs, resizeToImage, streched, width, height, frameTimes);
+                FileResponse result = apiInstance.PdfWebapiGifPost(files, keepImagesAsIs, resizeToImage, streched, width, height, frameTimes);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -793,7 +902,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **files** | [**List<byte[]>**](byte[].md)|  | [optional] 
- **documentPassword** | **string**|  | [optional] 
  **keepImagesAsIs** | **bool?**| Indicates whether the images should be kept as is. | [optional] 
  **resizeToImage** | **int?**| The index of the image to resize the other images to. | [optional] 
  **streched** | **bool?**|  | [optional] 
@@ -816,13 +924,75 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="pdfwebapigrammarcheckerpost"></a>
+# **PdfWebapiGrammarCheckerPost**
+> FileResponse PdfWebapiGrammarCheckerPost (List<byte[]> files, string language)
+
+Checks the grammar of text, pdf files and plain text.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiGrammarCheckerPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List<byte[]>(); // List<byte[]> |  (optional) 
+            var language = language_example;  // string | The language of the source file or text (optional) 
+
+            try
+            {
+                // Checks the grammar of text, pdf files and plain text.
+                FileResponse result = apiInstance.PdfWebapiGrammarCheckerPost(files, language);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiGrammarCheckerPost: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **files** | [**List<byte[]>**](byte[].md)|  | [optional] 
+ **language** | **string**| The language of the source file or text | [optional] 
+
+### Return type
+
+[**FileResponse**](FileResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="pdfwebapihashpost"></a>
 # **PdfWebapiHashPost**
-> FileResponse PdfWebapiHashPost (List<byte[]> files, string documentPassword, string inputType, string outputType, HashAlgorithm alg)
+> FileResponse PdfWebapiHashPost (List<byte[]> files, string inputType, string outputType, HashAlgorithm alg)
 
-Calculate Document Hash.
+Calculate document hash.
 
-Calculates the hash values for the provided documents using the specified hashing algorithm. Upload the documents and choose the desired algorithm, and the service will generate hash values for each file. This process helps verify that the documents have not been altered or corrupted, ensuring data integrity.
+Calculate hashes of provided files using the specified algorithm.
 
 ### Example
 ```csharp
@@ -841,15 +1011,14 @@ namespace Example
 
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
             var inputType = inputType_example;  // string | The format of the input files. (optional) 
             var outputType = outputType_example;  // string | The desired format for the output files. (optional) 
             var alg = new HashAlgorithm(); // HashAlgorithm | The hashing algorithm to use. (optional) 
 
             try
             {
-                // Calculate Document Hash.
-                FileResponse result = apiInstance.PdfWebapiHashPost(files, documentPassword, inputType, outputType, alg);
+                // Calculate document hash.
+                FileResponse result = apiInstance.PdfWebapiHashPost(files, inputType, outputType, alg);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -866,7 +1035,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **files** | [**List<byte[]>**](byte[].md)|  | [optional] 
- **documentPassword** | **string**|  | [optional] 
  **inputType** | **string**| The format of the input files. | [optional] 
  **outputType** | **string**| The desired format for the output files. | [optional] 
  **alg** | [**HashAlgorithm**](.md)| The hashing algorithm to use. | [optional] 
@@ -886,13 +1054,140 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="pdfwebapiimagedescriptionpost"></a>
+# **PdfWebapiImageDescriptionPost**
+> FileResponse PdfWebapiImageDescriptionPost (List<byte[]> files, string language)
+
+Make speech synthesizer.
+
+Make audio file with reading the text in the specified language.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiImageDescriptionPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List<byte[]>(); // List<byte[]> |  (optional) 
+            var language = language_example;  // string | The language code in which ai must read the text. (optional) 
+
+            try
+            {
+                // Make speech synthesizer.
+                FileResponse result = apiInstance.PdfWebapiImageDescriptionPost(files, language);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiImageDescriptionPost: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **files** | [**List<byte[]>**](byte[].md)|  | [optional] 
+ **language** | **string**| The language code in which ai must read the text. | [optional] 
+
+### Return type
+
+[**FileResponse**](FileResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="pdfwebapiimagegeneratorpost"></a>
+# **PdfWebapiImageGeneratorPost**
+> FileResponse PdfWebapiImageGeneratorPost (string question, int? count, string size)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiImageGeneratorPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var question = question_example;  // string |  (optional) 
+            var count = 56;  // int? |  (optional) 
+            var size = size_example;  // string |  (optional) 
+
+            try
+            {
+                FileResponse result = apiInstance.PdfWebapiImageGeneratorPost(question, count, size);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiImageGeneratorPost: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **question** | **string**|  | [optional] 
+ **count** | **int?**|  | [optional] 
+ **size** | **string**|  | [optional] 
+
+### Return type
+
+[**FileResponse**](FileResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="pdfwebapilockpost"></a>
 # **PdfWebapiLockPost**
-> FileResponse PdfWebapiLockPost (string password, List<byte[]> files)
+> FileResponse PdfWebapiLockPost (List<byte[]> files, string passw)
 
 Lock document.
 
-Locks the provided document with a specified password to restrict access to authorized users only. Upload the file and provide a password, and the service will apply the password protection to secure the document. Optionally, you can include additional files to further enhance the security of the document.
+Locks a document with the provided password and optional files.
 
 ### Example
 ```csharp
@@ -910,13 +1205,13 @@ namespace Example
         {
 
             var apiInstance = new ApiApi();
-            var password = password_example;  // string |  (optional) 
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
+            var passw = passw_example;  // string | The password required to lock the resource. (optional) 
 
             try
             {
                 // Lock document.
-                FileResponse result = apiInstance.PdfWebapiLockPost(password, files);
+                FileResponse result = apiInstance.PdfWebapiLockPost(files, passw);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -932,8 +1227,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **password** | **string**|  | [optional] 
  **files** | [**List<byte[]>**](byte[].md)|  | [optional] 
+ **passw** | **string**| The password required to lock the resource. | [optional] 
 
 ### Return type
 
@@ -952,11 +1247,11 @@ No authorization required
 
 <a name="pdfwebapimergepost"></a>
 # **PdfWebapiMergePost**
-> FileResponse PdfWebapiMergePost (List<byte[]> files, string documentPassword, string inputType, string outputType, MergeImageType mergeType, int? horizontal, int? vertical, PageSize pageSize, bool? dcIsLandscape)
+> FileResponse PdfWebapiMergePost (List<byte[]> files, string inputType, string outputType, MergeImageType mergeType, int? horizontal, int? vertical, PageSize pageSize, bool? dcIsLandscape)
 
-Merge Documents.
+Merge documents.
 
-Merges multiple documents or images into a single file based on specified preferences for orientation and page size. Upload the files you want to consolidate and define your formatting preferences. This service will combine the files into one, ensuring that the final document or image meets your requirements.
+Merges the provided files into a single document or image, with options for orientation and page size.
 
 ### Example
 ```csharp
@@ -975,7 +1270,6 @@ namespace Example
 
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
             var inputType = inputType_example;  // string | The format of the input files. (optional) 
             var outputType = outputType_example;  // string | The desired format for the output file. (optional) 
             var mergeType = new MergeImageType(); // MergeImageType | Type of merger operation. (optional) 
@@ -986,8 +1280,8 @@ namespace Example
 
             try
             {
-                // Merge Documents.
-                FileResponse result = apiInstance.PdfWebapiMergePost(files, documentPassword, inputType, outputType, mergeType, horizontal, vertical, pageSize, dcIsLandscape);
+                // Merge documents.
+                FileResponse result = apiInstance.PdfWebapiMergePost(files, inputType, outputType, mergeType, horizontal, vertical, pageSize, dcIsLandscape);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1004,7 +1298,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **files** | [**List<byte[]>**](byte[].md)|  | [optional] 
- **documentPassword** | **string**|  | [optional] 
  **inputType** | **string**| The format of the input files. | [optional] 
  **outputType** | **string**| The desired format for the output file. | [optional] 
  **mergeType** | [**MergeImageType**](.md)| Type of merger operation. | [optional] 
@@ -1030,11 +1323,11 @@ No authorization required
 
 <a name="pdfwebapimetadatapost"></a>
 # **PdfWebapiMetadataPost**
-> FileResponse PdfWebapiMetadataPost (List<byte[]> files, string documentPassword, MetadataOperation operation, string folder, string name)
+> FileResponse PdfWebapiMetadataPost (List<byte[]> files, MetadataOperation operation, string folder, string name)
 
-Read and Change Document Metadata.
+Read and change document metadata.
 
-Reads and updates the metadata of the provided documents based on specified operations. Upload the documents and define the metadata changes you need. This service will read the existing metadata, apply the changes, and ensure that your files contain accurate and updated information.
+Performs metadata operations on the provided files.
 
 ### Example
 ```csharp
@@ -1053,15 +1346,14 @@ namespace Example
 
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
             var operation = new MetadataOperation(); // MetadataOperation | The operation to perform on the metadata. (optional) 
             var folder = folder_example;  // string | The folder where the files are located. (optional) 
             var name = name_example;  // string | The name of the file to perform the operation on. (optional) 
 
             try
             {
-                // Read and Change Document Metadata.
-                FileResponse result = apiInstance.PdfWebapiMetadataPost(files, documentPassword, operation, folder, name);
+                // Read and change document metadata.
+                FileResponse result = apiInstance.PdfWebapiMetadataPost(files, operation, folder, name);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1078,7 +1370,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **files** | [**List<byte[]>**](byte[].md)|  | [optional] 
- **documentPassword** | **string**|  | [optional] 
  **operation** | [**MetadataOperation**](.md)| The operation to perform on the metadata. | [optional] 
  **folder** | **string**| The folder where the files are located. | [optional] 
  **name** | **string**| The name of the file to perform the operation on. | [optional] 
@@ -1100,11 +1391,11 @@ No authorization required
 
 <a name="pdfwebapiorganizepost"></a>
 # **PdfWebapiOrganizePost**
-> FileResponse PdfWebapiOrganizePost (List<byte[]> files, string documentPassword, string inputType, string remove, string move)
+> FileResponse PdfWebapiOrganizePost (List<byte[]> files, string inputType, string remove, string move)
 
-Organize Document Pages.
+Organize document pages.
 
-Reorganizes the pages of the provided document based on your instructions. Upload the document and specify which pages to remove or move, and the service will rearrange the pages accordingly, ensuring that the document is organized as you require.
+Organizes the provided documents by removing or moving specified pages.
 
 ### Example
 ```csharp
@@ -1123,15 +1414,14 @@ namespace Example
 
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
             var inputType = inputType_example;  // string | The format of the input files. (optional) 
             var remove = remove_example;  // string | The pages to remove from the document. (optional) 
             var move = move_example;  // string | The pages to move within the document. (optional) 
 
             try
             {
-                // Organize Document Pages.
-                FileResponse result = apiInstance.PdfWebapiOrganizePost(files, documentPassword, inputType, remove, move);
+                // Organize document pages.
+                FileResponse result = apiInstance.PdfWebapiOrganizePost(files, inputType, remove, move);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1148,7 +1438,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **files** | [**List<byte[]>**](byte[].md)|  | [optional] 
- **documentPassword** | **string**|  | [optional] 
  **inputType** | **string**| The format of the input files. | [optional] 
  **remove** | **string**| The pages to remove from the document. | [optional] 
  **move** | **string**| The pages to move within the document. | [optional] 
@@ -1168,13 +1457,79 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="pdfwebapiparaphrasepost"></a>
+# **PdfWebapiParaphrasePost**
+> FileResponse PdfWebapiParaphrasePost (List<byte[]> files, string source, ParaphraseSource paraphraseSource)
+
+Paraphrase document.
+
+Paraphrase the provided files.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiParaphrasePostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List<byte[]>(); // List<byte[]> |  (optional) 
+            var source = source_example;  // string | The Source language. (optional) 
+            var paraphraseSource = new ParaphraseSource(); // ParaphraseSource | Upload file or text. (optional) 
+
+            try
+            {
+                // Paraphrase document.
+                FileResponse result = apiInstance.PdfWebapiParaphrasePost(files, source, paraphraseSource);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiParaphrasePost: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **files** | [**List<byte[]>**](byte[].md)|  | [optional] 
+ **source** | **string**| The Source language. | [optional] 
+ **paraphraseSource** | [**ParaphraseSource**](.md)| Upload file or text. | [optional] 
+
+### Return type
+
+[**FileResponse**](FileResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="pdfwebapiparsepost"></a>
 # **PdfWebapiParsePost**
-> FileResponse PdfWebapiParsePost (List<byte[]> files, string documentPassword)
+> FileResponse PdfWebapiParsePost (List<byte[]> files)
 
-Parse Document.
+Parse document.
 
-Analyses and extracts relevant content from the provided document files. The parsing service organizes the data within your documents to make it accessible and tailored to your specific requirements.
+Parses the provided files using a parser service.
 
 ### Example
 ```csharp
@@ -1193,12 +1548,11 @@ namespace Example
 
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
 
             try
             {
-                // Parse Document.
-                FileResponse result = apiInstance.PdfWebapiParsePost(files, documentPassword);
+                // Parse document.
+                FileResponse result = apiInstance.PdfWebapiParsePost(files);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1215,7 +1569,76 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **files** | [**List<byte[]>**](byte[].md)|  | [optional] 
- **documentPassword** | **string**|  | [optional] 
+
+### Return type
+
+[**FileResponse**](FileResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="pdfwebapiquizmakerpost"></a>
+# **PdfWebapiQuizMakerPost**
+> FileResponse PdfWebapiQuizMakerPost (List<byte[]> files, string content, int? questionNumber, bool? includeAnswers, QuestionType questionType, DifficultyLevel difficultyLevel)
+
+Generates a list of quiz questions using AI based on the provided content or uploaded files,  and stores the resulting quiz into a document.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiQuizMakerPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List<byte[]>(); // List<byte[]> |  (optional) 
+            var content = content_example;  // string | Textual content used to generate quiz questions (optional if files are provided). (optional) 
+            var questionNumber = 56;  // int? | The total number of questions to generate. (optional) 
+            var includeAnswers = true;  // bool? | Generating questions with answers (optional) 
+            var questionType = new QuestionType(); // QuestionType | The type of questions to generate: ShortAnswer, TrueFalse, or McQs (multiple choice). (optional) 
+            var difficultyLevel = new DifficultyLevel(); // DifficultyLevel | The desired difficulty level of the quiz. (optional) 
+
+            try
+            {
+                // Generates a list of quiz questions using AI based on the provided content or uploaded files,  and stores the resulting quiz into a document.
+                FileResponse result = apiInstance.PdfWebapiQuizMakerPost(files, content, questionNumber, includeAnswers, questionType, difficultyLevel);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiQuizMakerPost: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **files** | [**List<byte[]>**](byte[].md)|  | [optional] 
+ **content** | **string**| Textual content used to generate quiz questions (optional if files are provided). | [optional] 
+ **questionNumber** | **int?**| The total number of questions to generate. | [optional] 
+ **includeAnswers** | **bool?**| Generating questions with answers | [optional] 
+ **questionType** | [**QuestionType**](.md)| The type of questions to generate: ShortAnswer, TrueFalse, or McQs (multiple choice). | [optional] 
+ **difficultyLevel** | [**DifficultyLevel**](.md)| The desired difficulty level of the quiz. | [optional] 
 
 ### Return type
 
@@ -1234,11 +1657,11 @@ No authorization required
 
 <a name="pdfwebapiredactpost"></a>
 # **PdfWebapiRedactPost**
-> FileResponse PdfWebapiRedactPost (List<byte[]> files, string documentPassword, string searchQuery, string replaceText, bool? caseSensitive, bool? text, bool? comments, bool? metadata)
+> FileResponse PdfWebapiRedactPost (List<byte[]> files, string searchQuery, string replaceText, bool? caseSensitive, bool? text, bool? comments, bool? metadata)
 
-Redact Document Text.
+Redact document text.
 
-Redacts sensitive information from the provided documents by removing specified text, comments, and metadata. You can specify the text to be redacted and use case-sensitive search to ensure thorough removal. This service helps maintain confidentiality and security by ensuring that sensitive information is completely removed.
+Redacts specified text from the provided documents, with options to search case-sensitively, target in text, comments, and metadata.
 
 ### Example
 ```csharp
@@ -1257,7 +1680,6 @@ namespace Example
 
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
             var searchQuery = searchQuery_example;  // string | The text to search for and redact. (optional) 
             var replaceText = replaceText_example;  // string | The text to replace the found text with. (optional) 
             var caseSensitive = true;  // bool? | Indicates whether the search should be case-sensitive. (optional) 
@@ -1267,8 +1689,8 @@ namespace Example
 
             try
             {
-                // Redact Document Text.
-                FileResponse result = apiInstance.PdfWebapiRedactPost(files, documentPassword, searchQuery, replaceText, caseSensitive, text, comments, metadata);
+                // Redact document text.
+                FileResponse result = apiInstance.PdfWebapiRedactPost(files, searchQuery, replaceText, caseSensitive, text, comments, metadata);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1285,7 +1707,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **files** | [**List<byte[]>**](byte[].md)|  | [optional] 
- **documentPassword** | **string**|  | [optional] 
  **searchQuery** | **string**| The text to search for and redact. | [optional] 
  **replaceText** | **string**| The text to replace the found text with. | [optional] 
  **caseSensitive** | **bool?**| Indicates whether the search should be case-sensitive. | [optional] 
@@ -1372,11 +1793,11 @@ No authorization required
 
 <a name="pdfwebapiremovepost"></a>
 # **PdfWebapiRemovePost**
-> FileResponse PdfWebapiRemovePost (List<byte[]> files, string documentPassword)
+> FileResponse PdfWebapiRemovePost (List<byte[]> files)
 
-Remove Document Annotations.
+Remove document annotations.
 
-Removes all annotations, including comments, highlights, and markup, from the provided documents. By specifying the documents, this service ensures that they are cleaned of any annotations, resulting in a clean and annotation-free file.
+Removes annotations from the provided documents.
 
 ### Example
 ```csharp
@@ -1395,12 +1816,11 @@ namespace Example
 
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
 
             try
             {
-                // Remove Document Annotations.
-                FileResponse result = apiInstance.PdfWebapiRemovePost(files, documentPassword);
+                // Remove document annotations.
+                FileResponse result = apiInstance.PdfWebapiRemovePost(files);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1417,7 +1837,72 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **files** | [**List<byte[]>**](byte[].md)|  | [optional] 
- **documentPassword** | **string**|  | [optional] 
+
+### Return type
+
+[**FileResponse**](FileResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="pdfwebapiremovewatermarkblazorpost"></a>
+# **PdfWebapiRemoveWatermarkBlazorPost**
+> FileResponse PdfWebapiRemoveWatermarkBlazorPost (List<string> ids, List<byte[]> files, WatermarkAction watermarkAction)
+
+Removes document watermark.
+
+Removes a watermark from the document pages.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiRemoveWatermarkBlazorPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var ids = new List<string>(); // List<string> |  (optional) 
+            var files = new List<byte[]>(); // List<byte[]> |  (optional) 
+            var watermarkAction = new WatermarkAction(); // WatermarkAction |  (optional) 
+
+            try
+            {
+                // Removes document watermark.
+                FileResponse result = apiInstance.PdfWebapiRemoveWatermarkBlazorPost(ids, files, watermarkAction);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiRemoveWatermarkBlazorPost: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ids** | [**List<string>**](string.md)|  | [optional] 
+ **files** | [**List<byte[]>**](byte[].md)|  | [optional] 
+ **watermarkAction** | [**WatermarkAction**](.md)|  | [optional] 
 
 ### Return type
 
@@ -1436,11 +1921,11 @@ No authorization required
 
 <a name="pdfwebapiremovewatermarkpost"></a>
 # **PdfWebapiRemoveWatermarkPost**
-> FileResponse PdfWebapiRemoveWatermarkPost (string watermarkText, int? top, int? left, int? bottom, int? right, List<byte[]> files, string documentPassword, bool? isAllPages, WatermarkType watermarkType, string removeRange)
+> FileResponse PdfWebapiRemoveWatermarkPost (string watermarkText, int? top, int? left, int? bottom, int? right, List<byte[]> files, bool? isAllPages, WatermarkType watermarkType, string removeRange)
 
-Remove Document Watermark.
+Removes document watermark.
 
-Removes an unwanted watermark from all pages of the provided document. Submit the document, and this service will efficiently eliminate the watermark, resulting in a clean version of the file without the watermark.
+Removes a watermark from the document pages.
 
 ### Example
 ```csharp
@@ -1464,15 +1949,14 @@ namespace Example
             var bottom = 56;  // int? |  (optional) 
             var right = 56;  // int? |  (optional) 
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
             var isAllPages = true;  // bool? | Indicates whether the watermark should be removed from all pages. (optional) 
             var watermarkType = new WatermarkType(); // WatermarkType | The type of watermark to remove. (optional) 
             var removeRange = removeRange_example;  // string | The range of pages to remove the watermark from. (optional) 
 
             try
             {
-                // Remove Document Watermark.
-                FileResponse result = apiInstance.PdfWebapiRemoveWatermarkPost(watermarkText, top, left, bottom, right, files, documentPassword, isAllPages, watermarkType, removeRange);
+                // Removes document watermark.
+                FileResponse result = apiInstance.PdfWebapiRemoveWatermarkPost(watermarkText, top, left, bottom, right, files, isAllPages, watermarkType, removeRange);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1494,7 +1978,6 @@ Name | Type | Description  | Notes
  **bottom** | **int?**|  | [optional] 
  **right** | **int?**|  | [optional] 
  **files** | [**List<byte[]>**](byte[].md)|  | [optional] 
- **documentPassword** | **string**|  | [optional] 
  **isAllPages** | **bool?**| Indicates whether the watermark should be removed from all pages. | [optional] 
  **watermarkType** | [**WatermarkType**](.md)| The type of watermark to remove. | [optional] 
  **removeRange** | **string**| The range of pages to remove the watermark from. | [optional] 
@@ -1516,11 +1999,11 @@ No authorization required
 
 <a name="pdfwebapiremovepagespost"></a>
 # **PdfWebapiRemovepagesPost**
-> FileResponse PdfWebapiRemovepagesPost (List<byte[]> files, string documentPassword, string removeRange)
+> FileResponse PdfWebapiRemovepagesPost (List<byte[]> files, string removeRange)
 
-Remove Pages from Document.
+Remove pages from document.
 
-Removes specified pages from the provided document, leaving only the pages you want to keep. Simply provide the document and specify which pages to remove, and the service will process the file accordingly.
+Removes specified pages from the provided files.
 
 ### Example
 ```csharp
@@ -1539,13 +2022,12 @@ namespace Example
 
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
             var removeRange = removeRange_example;  // string | The range of pages to remove from the files. (optional) 
 
             try
             {
-                // Remove Pages from Document.
-                FileResponse result = apiInstance.PdfWebapiRemovepagesPost(files, documentPassword, removeRange);
+                // Remove pages from document.
+                FileResponse result = apiInstance.PdfWebapiRemovepagesPost(files, removeRange);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1562,7 +2044,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **files** | [**List<byte[]>**](byte[].md)|  | [optional] 
- **documentPassword** | **string**|  | [optional] 
  **removeRange** | **string**| The range of pages to remove from the files. | [optional] 
 
 ### Return type
@@ -1582,11 +2063,11 @@ No authorization required
 
 <a name="pdfwebapirepairpost"></a>
 # **PdfWebapiRepairPost**
-> FileResponse PdfWebapiRepairPost (List<byte[]> files, string documentPassword)
+> FileResponse PdfWebapiRepairPost (List<byte[]> files)
 
-Repair Document.
+Repair document.
 
-Repairs a corrupted or error-ridden document by identifying and fixing issues. Upload the problematic file, and this service will restore it to a usable state.
+Repairs the provided files.
 
 ### Example
 ```csharp
@@ -1605,12 +2086,11 @@ namespace Example
 
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
 
             try
             {
-                // Repair Document.
-                FileResponse result = apiInstance.PdfWebapiRepairPost(files, documentPassword);
+                // Repair document.
+                FileResponse result = apiInstance.PdfWebapiRepairPost(files);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1627,7 +2107,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **files** | [**List<byte[]>**](byte[].md)|  | [optional] 
- **documentPassword** | **string**|  | [optional] 
 
 ### Return type
 
@@ -1646,11 +2125,11 @@ No authorization required
 
 <a name="pdfwebapiresizepost"></a>
 # **PdfWebapiResizePost**
-> FileResponse PdfWebapiResizePost (List<byte[]> files, string documentPassword, string inputType, string outputType, ResizeType resizeType, ResizePresetType presetType, ResizePresetSize presetSize, int? width, int? height, int? percentage, bool? useProportions, ResizePageSize pageSize)
+> FileResponse PdfWebapiResizePost (List<byte[]> files, string inputType, string outputType, ResizeType resizeType, ResizePresetType presetType, ResizePresetSize presetSize, int? width, int? height, int? percentage, bool? useProportions, ResizePageSize pageSize)
 
-Resize Document.
+Resize document.
 
-Resizes the document to fit the specified dimensions or preset sizes. Provide the file and specify the desired dimensions, or select from available preset sizes to adjust the document accordingly.
+Resizes the provided files to the specified dimensions or using a preset size.
 
 ### Example
 ```csharp
@@ -1669,7 +2148,6 @@ namespace Example
 
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
             var inputType = inputType_example;  // string | The format of the input files. (optional) 
             var outputType = outputType_example;  // string | The desired format for the output files. (optional) 
             var resizeType = new ResizeType(); // ResizeType | The type of resizing to apply. (optional) 
@@ -1683,8 +2161,8 @@ namespace Example
 
             try
             {
-                // Resize Document.
-                FileResponse result = apiInstance.PdfWebapiResizePost(files, documentPassword, inputType, outputType, resizeType, presetType, presetSize, width, height, percentage, useProportions, pageSize);
+                // Resize document.
+                FileResponse result = apiInstance.PdfWebapiResizePost(files, inputType, outputType, resizeType, presetType, presetSize, width, height, percentage, useProportions, pageSize);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1701,7 +2179,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **files** | [**List<byte[]>**](byte[].md)|  | [optional] 
- **documentPassword** | **string**|  | [optional] 
  **inputType** | **string**| The format of the input files. | [optional] 
  **outputType** | **string**| The desired format for the output files. | [optional] 
  **resizeType** | [**ResizeType**](.md)| The type of resizing to apply. | [optional] 
@@ -1730,11 +2207,11 @@ No authorization required
 
 <a name="pdfwebapirotatepost"></a>
 # **PdfWebapiRotatePost**
-> FileResponse PdfWebapiRotatePost (List<byte[]> files, string documentPassword, RotateAngle angle, RotateType rotateType, string pageNum)
+> FileResponse PdfWebapiRotatePost (List<byte[]> files, RotateAngle angle, int? customAngle, RotateType rotateType, string pageNum)
 
-Rotate Document.
+Rotate document.
 
-Rotates the document by a specified angle, allowing for adjustment of the document's orientation. You can choose the type of rotation and target specific pages to ensure the document is aligned according to your needs.
+Rotates the provided files by a specified angle, with options for rotation type and page number.
 
 ### Example
 ```csharp
@@ -1753,15 +2230,15 @@ namespace Example
 
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
             var angle = new RotateAngle(); // RotateAngle | The angle by which to rotate the files. (optional) 
+            var customAngle = 56;  // int? | The angle by which to rotate the files in case angle set to custom state. (optional) 
             var rotateType = new RotateType(); // RotateType | The type of rotation to perform. (optional) 
             var pageNum = pageNum_example;  // string | The page number to rotate, if applicable. (optional) 
 
             try
             {
-                // Rotate Document.
-                FileResponse result = apiInstance.PdfWebapiRotatePost(files, documentPassword, angle, rotateType, pageNum);
+                // Rotate document.
+                FileResponse result = apiInstance.PdfWebapiRotatePost(files, angle, customAngle, rotateType, pageNum);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1778,8 +2255,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **files** | [**List<byte[]>**](byte[].md)|  | [optional] 
- **documentPassword** | **string**|  | [optional] 
  **angle** | [**RotateAngle**](.md)| The angle by which to rotate the files. | [optional] 
+ **customAngle** | **int?**| The angle by which to rotate the files in case angle set to custom state. | [optional] 
  **rotateType** | [**RotateType**](.md)| The type of rotation to perform. | [optional] 
  **pageNum** | **string**| The page number to rotate, if applicable. | [optional] 
 
@@ -1800,11 +2277,11 @@ No authorization required
 
 <a name="pdfwebapisearchpost"></a>
 # **PdfWebapiSearchPost**
-> FileResponse PdfWebapiSearchPost (List<byte[]> files, string documentPassword, string query)
+> FileResponse PdfWebapiSearchPost (List<byte[]> files, string query)
 
-Search Document Text.
+Search document text.
 
-Searches the provided documents for the specified query and highlights the found text with a yellow background. This service helps you quickly locate and review relevant sections of your documents.
+Searches the provided files for the specified query and mark found text with yellow background.
 
 ### Example
 ```csharp
@@ -1823,13 +2300,12 @@ namespace Example
 
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
             var query = query_example;  // string | The text to search for within the files. (optional) 
 
             try
             {
-                // Search Document Text.
-                FileResponse result = apiInstance.PdfWebapiSearchPost(files, documentPassword, query);
+                // Search document text.
+                FileResponse result = apiInstance.PdfWebapiSearchPost(files, query);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1846,7 +2322,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **files** | [**List<byte[]>**](byte[].md)|  | [optional] 
- **documentPassword** | **string**|  | [optional] 
  **query** | **string**| The text to search for within the files. | [optional] 
 
 ### Return type
@@ -1868,9 +2343,9 @@ No authorization required
 # **PdfWebapiSearchablePost**
 > FileResponse PdfWebapiSearchablePost (List<byte[]> files, string lang)
 
-Make Scanned PDF Searchable.
+Make scanned pdf searchable.
 
-Converts scanned PDFs into a searchable PDF format by recognizing and indexing text. This service ensures that you can easily search through your documents by making the text searchable in the specified language.
+Converts the provided files into a searchable PDF format for the specified language.
 
 ### Example
 ```csharp
@@ -1893,7 +2368,7 @@ namespace Example
 
             try
             {
-                // Make Scanned PDF Searchable.
+                // Make scanned pdf searchable.
                 FileResponse result = apiInstance.PdfWebapiSearchablePost(files, lang);
                 Debug.WriteLine(result);
             }
@@ -1930,11 +2405,11 @@ No authorization required
 
 <a name="pdfwebapisignaturepost"></a>
 # **PdfWebapiSignaturePost**
-> FileResponse PdfWebapiSignaturePost (string image, string text, string textColor, List<byte[]> files, string documentPassword, string inputType, string outputType, SignatureType signatureType)
+> FileResponse PdfWebapiSignaturePost (string image, string text, string textColor, List<byte[]> files, string inputType, string outputType, SignatureType signatureType)
 
-Add Signature to Document.
+Add signature to document.
 
-Adds a signature to the provided documents, allowing for the insertion of both text and image signatures. This service ensures that your documents are properly signed and authenticated according to your specifications.
+Adds a signature, text and image to the provided documents.
 
 ### Example
 ```csharp
@@ -1956,15 +2431,14 @@ namespace Example
             var text = text_example;  // string |  (optional) 
             var textColor = textColor_example;  // string |  (optional) 
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
             var inputType = inputType_example;  // string | The format of the input files. (optional) 
             var outputType = outputType_example;  // string | The desired format for the output files. (optional) 
             var signatureType = new SignatureType(); // SignatureType | The type of signature to add. (optional) 
 
             try
             {
-                // Add Signature to Document.
-                FileResponse result = apiInstance.PdfWebapiSignaturePost(image, text, textColor, files, documentPassword, inputType, outputType, signatureType);
+                // Add signature to document.
+                FileResponse result = apiInstance.PdfWebapiSignaturePost(image, text, textColor, files, inputType, outputType, signatureType);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1984,7 +2458,6 @@ Name | Type | Description  | Notes
  **text** | **string**|  | [optional] 
  **textColor** | **string**|  | [optional] 
  **files** | [**List<byte[]>**](byte[].md)|  | [optional] 
- **documentPassword** | **string**|  | [optional] 
  **inputType** | **string**| The format of the input files. | [optional] 
  **outputType** | **string**| The desired format for the output files. | [optional] 
  **signatureType** | [**SignatureType**](.md)| The type of signature to add. | [optional] 
@@ -2006,11 +2479,11 @@ No authorization required
 
 <a name="pdfwebapisplitdocpost"></a>
 # **PdfWebapiSplitdocPost**
-> FileResponse PdfWebapiSplitdocPost (List<byte[]> files, string documentPassword, string inputType, SplitDocType splitType, string pairs)
+> FileResponse PdfWebapiSplitdocPost (List<byte[]> files, string inputType, SplitDocType splitType, string pars)
 
-Split Document.
+Split document.
 
-Splits a document into smaller parts based on specified criteria, such as type or page range. This service ensures that each segment meets your exact requirements, simplifying document management and organization.
+Splits the provided documents based on the specified split type and page rage to spit.
 
 ### Example
 ```csharp
@@ -2029,15 +2502,14 @@ namespace Example
 
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
             var inputType = inputType_example;  // string | The format of the input files. (optional) 
             var splitType = new SplitDocType(); // SplitDocType | The type of splitting to be performed. (optional) 
-            var pairs = pairs_example;  // string | Optional page rage for the splitting operation. (optional) 
+            var pars = pars_example;  // string | Optional page rage for the splitting operation. (optional) 
 
             try
             {
-                // Split Document.
-                FileResponse result = apiInstance.PdfWebapiSplitdocPost(files, documentPassword, inputType, splitType, pairs);
+                // Split document.
+                FileResponse result = apiInstance.PdfWebapiSplitdocPost(files, inputType, splitType, pars);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2054,10 +2526,9 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **files** | [**List<byte[]>**](byte[].md)|  | [optional] 
- **documentPassword** | **string**|  | [optional] 
  **inputType** | **string**| The format of the input files. | [optional] 
  **splitType** | [**SplitDocType**](.md)| The type of splitting to be performed. | [optional] 
- **pairs** | **string**| Optional page rage for the splitting operation. | [optional] 
+ **pars** | **string**| Optional page rage for the splitting operation. | [optional] 
 
 ### Return type
 
@@ -2076,11 +2547,11 @@ No authorization required
 
 <a name="pdfwebapisplitimagepost"></a>
 # **PdfWebapiSplitimagePost**
-> FileResponse PdfWebapiSplitimagePost (List<byte[]> files, string documentPassword, SplitImageType splitType, int? vertical, int? horizontal, string outputType)
+> FileResponse PdfWebapiSplitimagePost (List<byte[]> files, SplitImageType splitType, int? vertical, int? horizontal, string outputType)
 
-Split Image.
+Split image.
 
-Splits large images into smaller sections according to the specified parameters, making it easier to handle and process image data.
+Splits the provided images into smaller parts based on the specified parameters.
 
 ### Example
 ```csharp
@@ -2099,7 +2570,6 @@ namespace Example
 
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
             var splitType = new SplitImageType(); // SplitImageType | The type of splitting to be performed. (optional) 
             var vertical = 56;  // int? | The number of vertical splits to create. (optional) 
             var horizontal = 56;  // int? | The number of horizontal splits to create. (optional) 
@@ -2107,8 +2577,8 @@ namespace Example
 
             try
             {
-                // Split Image.
-                FileResponse result = apiInstance.PdfWebapiSplitimagePost(files, documentPassword, splitType, vertical, horizontal, outputType);
+                // Split image.
+                FileResponse result = apiInstance.PdfWebapiSplitimagePost(files, splitType, vertical, horizontal, outputType);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2125,7 +2595,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **files** | [**List<byte[]>**](byte[].md)|  | [optional] 
- **documentPassword** | **string**|  | [optional] 
  **splitType** | [**SplitImageType**](.md)| The type of splitting to be performed. | [optional] 
  **vertical** | **int?**| The number of vertical splits to create. | [optional] 
  **horizontal** | **int?**| The number of horizontal splits to create. | [optional] 
@@ -2208,13 +2677,332 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="pdfwebapisummarypost"></a>
+# **PdfWebapiSummaryPost**
+> FileResponse PdfWebapiSummaryPost (List<byte[]> files, string question)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiSummaryPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List<byte[]>(); // List<byte[]> |  (optional) 
+            var question = question_example;  // string |  (optional) 
+
+            try
+            {
+                FileResponse result = apiInstance.PdfWebapiSummaryPost(files, question);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiSummaryPost: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **files** | [**List<byte[]>**](byte[].md)|  | [optional] 
+ **question** | **string**|  | [optional] 
+
+### Return type
+
+[**FileResponse**](FileResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="pdfwebapitableofcontentspost"></a>
+# **PdfWebapiTableOfContentsPost**
+> FileResponse PdfWebapiTableOfContentsPost (List<byte[]> files)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiTableOfContentsPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List<byte[]>(); // List<byte[]> |  (optional) 
+
+            try
+            {
+                FileResponse result = apiInstance.PdfWebapiTableOfContentsPost(files);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiTableOfContentsPost: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **files** | [**List<byte[]>**](byte[].md)|  | [optional] 
+
+### Return type
+
+[**FileResponse**](FileResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="pdfwebapitestgeneratorpost"></a>
+# **PdfWebapiTestGeneratorPost**
+> FileResponse PdfWebapiTestGeneratorPost (string subject, int? number, string complexity, string language, string outputType)
+
+Creates the list of test questions using ai and stores it to the document
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiTestGeneratorPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var subject = subject_example;  // string | Text description of the subject of the tests (optional) 
+            var number = 56;  // int? | Questions number (optional) 
+            var complexity = complexity_example;  // string | The complexity level of generated questions (optional) 
+            var language = language_example;  // string | Language in which questions are written (optional) 
+            var outputType = outputType_example;  // string | The format of result file (optional) 
+
+            try
+            {
+                // Creates the list of test questions using ai and stores it to the document
+                FileResponse result = apiInstance.PdfWebapiTestGeneratorPost(subject, number, complexity, language, outputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiTestGeneratorPost: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **subject** | **string**| Text description of the subject of the tests | [optional] 
+ **number** | **int?**| Questions number | [optional] 
+ **complexity** | **string**| The complexity level of generated questions | [optional] 
+ **language** | **string**| Language in which questions are written | [optional] 
+ **outputType** | **string**| The format of result file | [optional] 
+
+### Return type
+
+[**FileResponse**](FileResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="pdfwebapitranscribeaudiopost"></a>
+# **PdfWebapiTranscribeAudioPost**
+> FileResponse PdfWebapiTranscribeAudioPost (List<byte[]> files)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiTranscribeAudioPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List<byte[]>(); // List<byte[]> |  (optional) 
+
+            try
+            {
+                FileResponse result = apiInstance.PdfWebapiTranscribeAudioPost(files);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiTranscribeAudioPost: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **files** | [**List<byte[]>**](byte[].md)|  | [optional] 
+
+### Return type
+
+[**FileResponse**](FileResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="pdfwebapitranslatepost"></a>
+# **PdfWebapiTranslatePost**
+> FileResponse PdfWebapiTranslatePost (List<byte[]> files, List<string> languages, string source, string target, string aiService, TranslationSource translationSource)
+
+Translate document.
+
+Translate the provided files.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiTranslatePostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List<byte[]>(); // List<byte[]> |  (optional) 
+            var languages = new List<string>(); // List<string> | The language code in which will make the resource files to be translated. (optional) 
+            var source = source_example;  // string | The Source language. (optional) 
+            var target = target_example;  // string | The target language. (optional) 
+            var aiService = aiService_example;  // string | Choosing an AI service for developers (optional) 
+            var translationSource = new TranslationSource(); // TranslationSource | Upload file or text. (optional) 
+
+            try
+            {
+                // Translate document.
+                FileResponse result = apiInstance.PdfWebapiTranslatePost(files, languages, source, target, aiService, translationSource);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiTranslatePost: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **files** | [**List<byte[]>**](byte[].md)|  | [optional] 
+ **languages** | [**List<string>**](string.md)| The language code in which will make the resource files to be translated. | [optional] 
+ **source** | **string**| The Source language. | [optional] 
+ **target** | **string**| The target language. | [optional] 
+ **aiService** | **string**| Choosing an AI service for developers | [optional] 
+ **translationSource** | [**TranslationSource**](.md)| Upload file or text. | [optional] 
+
+### Return type
+
+[**FileResponse**](FileResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="pdfwebapiunlockpost"></a>
 # **PdfWebapiUnlockPost**
-> FileResponse PdfWebapiUnlockPost (string password, List<byte[]> files)
+> FileResponse PdfWebapiUnlockPost (List<byte[]> files, string passw)
 
-Unlock Document.
+Unlock document.
 
-Attempts to unlock a password-protected document, using any associated files if necessary, to grant access to the content.
+Attempts to unlock a document with an password and associated files.
 
 ### Example
 ```csharp
@@ -2232,13 +3020,13 @@ namespace Example
         {
 
             var apiInstance = new ApiApi();
-            var password = password_example;  // string |  (optional) 
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
+            var passw = passw_example;  // string | The password used in locked document. (optional) 
 
             try
             {
-                // Unlock Document.
-                FileResponse result = apiInstance.PdfWebapiUnlockPost(password, files);
+                // Unlock document.
+                FileResponse result = apiInstance.PdfWebapiUnlockPost(files, passw);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2254,8 +3042,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **password** | **string**|  | [optional] 
  **files** | [**List<byte[]>**](byte[].md)|  | [optional] 
+ **passw** | **string**| The password used in locked document. | [optional] 
 
 ### Return type
 
@@ -2274,11 +3062,11 @@ No authorization required
 
 <a name="pdfwebapiverifyesignpost"></a>
 # **PdfWebapiVerifyEsignPost**
-> FileResponse PdfWebapiVerifyEsignPost (List<byte[]> files, string documentPassword, string inputType)
+> FileResponse PdfWebapiVerifyEsignPost (List<byte[]> files, string inputType)
 
-Verify Document Certificate.
+Verify document certificate.
 
-Verifies the electronic signature of the provided document to ensure its authenticity and integrity. This service checks the digital certificates in the document to confirm their validity and trustworthiness.
+Verifies the electronic signature of the provided files.
 
 ### Example
 ```csharp
@@ -2297,13 +3085,12 @@ namespace Example
 
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
             var inputType = inputType_example;  // string | The format of the input files. (optional) 
 
             try
             {
-                // Verify Document Certificate.
-                FileResponse result = apiInstance.PdfWebapiVerifyEsignPost(files, documentPassword, inputType);
+                // Verify document certificate.
+                FileResponse result = apiInstance.PdfWebapiVerifyEsignPost(files, inputType);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2320,8 +3107,73 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **files** | [**List<byte[]>**](byte[].md)|  | [optional] 
- **documentPassword** | **string**|  | [optional] 
  **inputType** | **string**| The format of the input files. | [optional] 
+
+### Return type
+
+[**FileResponse**](FileResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="pdfwebapivoicegeneratorpost"></a>
+# **PdfWebapiVoiceGeneratorPost**
+> FileResponse PdfWebapiVoiceGeneratorPost (List<byte[]> files, VoiceModel voiceModel, VoiceGender genderVoice)
+
+Make speech synthesizer.
+
+Make audio file with reading the text in the specified language.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiVoiceGeneratorPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+            var files = new List<byte[]>(); // List<byte[]> |  (optional) 
+            var voiceModel = new VoiceModel(); // VoiceModel | The TTS model (Quick/Quality) in which AI must read the text. (optional) 
+            var genderVoice = new VoiceGender(); // VoiceGender | The TTS voice gender (Man/Woman) in which AI must read the text. (optional) 
+
+            try
+            {
+                // Make speech synthesizer.
+                FileResponse result = apiInstance.PdfWebapiVoiceGeneratorPost(files, voiceModel, genderVoice);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiVoiceGeneratorPost: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **files** | [**List<byte[]>**](byte[].md)|  | [optional] 
+ **voiceModel** | [**VoiceModel**](.md)| The TTS model (Quick/Quality) in which AI must read the text. | [optional] 
+ **genderVoice** | [**VoiceGender**](.md)| The TTS voice gender (Man/Woman) in which AI must read the text. | [optional] 
 
 ### Return type
 
@@ -2340,11 +3192,11 @@ No authorization required
 
 <a name="pdfwebapiwatermarkpost"></a>
 # **PdfWebapiWatermarkPost**
-> FileResponse PdfWebapiWatermarkPost (List<byte[]> files, string documentPassword, string inputType, string outputType, bool? isColored, bool? isText, string text, string name, int? size, bool? bold, bool? italic, bool? underlined, string color, bool? isBackground, int? rotation, float? transparency, bool? layer, int? pageFrom, int? pageTo)
+> FileResponse PdfWebapiWatermarkPost (List<byte[]> files, string inputType, string outputType, bool? isColored, bool? isText, string text, string name, int? size, bool? bold, bool? italic, bool? underlined, string color, bool? isBackground, int? rotation, float? transparency, bool? layer, int? pageFrom, int? pageTo)
 
-Add Watermark to Document.
+Add watermark to document.
 
-Adds a watermark to the provided documents, helping to protect and identify them. This service ensures that the watermark is applied according to your specifications, enhancing the security and ownership of your content.
+Adds a watermark to the provided files.
 
 ### Example
 ```csharp
@@ -2363,7 +3215,6 @@ namespace Example
 
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
             var inputType = inputType_example;  // string | The format of the input files. (optional) 
             var outputType = outputType_example;  // string | The desired format for the output files. (optional) 
             var isColored = true;  // bool? | Indicate is watermark will be in color or grayscale. (optional) 
@@ -2384,8 +3235,8 @@ namespace Example
 
             try
             {
-                // Add Watermark to Document.
-                FileResponse result = apiInstance.PdfWebapiWatermarkPost(files, documentPassword, inputType, outputType, isColored, isText, text, name, size, bold, italic, underlined, color, isBackground, rotation, transparency, layer, pageFrom, pageTo);
+                // Add watermark to document.
+                FileResponse result = apiInstance.PdfWebapiWatermarkPost(files, inputType, outputType, isColored, isText, text, name, size, bold, italic, underlined, color, isBackground, rotation, transparency, layer, pageFrom, pageTo);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2402,7 +3253,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **files** | [**List<byte[]>**](byte[].md)|  | [optional] 
- **documentPassword** | **string**|  | [optional] 
  **inputType** | **string**| The format of the input files. | [optional] 
  **outputType** | **string**| The desired format for the output files. | [optional] 
  **isColored** | **bool?**| Indicate is watermark will be in color or grayscale. | [optional] 
@@ -2438,11 +3288,11 @@ No authorization required
 
 <a name="pdfwebapiwordcounterpost"></a>
 # **PdfWebapiWordcounterPost**
-> FileResponse PdfWebapiWordcounterPost (List<byte[]> files, string documentPassword, string pageRange)
+> FileResponse PdfWebapiWordcounterPost (List<byte[]> files, string pageRange)
 
-Count Words and Characters in Document.
+Count words and chars in document.
 
-Counts the words and characters in the provided documents within the specified page range. This service helps you accurately determine the length and content density of your documents, ensuring compliance with any required specifications or limits.
+Counts the words in the provided files within the specified page range.
 
 ### Example
 ```csharp
@@ -2461,13 +3311,12 @@ namespace Example
 
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
             var pageRange = pageRange_example;  // string | The range of pages to count words in. (optional) 
 
             try
             {
-                // Count Words and Characters in Document.
-                FileResponse result = apiInstance.PdfWebapiWordcounterPost(files, documentPassword, pageRange);
+                // Count words and chars in document.
+                FileResponse result = apiInstance.PdfWebapiWordcounterPost(files, pageRange);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2484,7 +3333,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **files** | [**List<byte[]>**](byte[].md)|  | [optional] 
- **documentPassword** | **string**|  | [optional] 
  **pageRange** | **string**| The range of pages to count words in. | [optional] 
 
 ### Return type
@@ -2502,13 +3350,69 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="pdfwebapiwordsgeneratorpost"></a>
+# **PdfWebapiWordsGeneratorPost**
+> FileResponse PdfWebapiWordsGeneratorPost ()
+
+Generates words for crossword using AI Mistral
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class PdfWebapiWordsGeneratorPostExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new ApiApi();
+
+            try
+            {
+                // Generates words for crossword using AI Mistral
+                FileResponse result = apiInstance.PdfWebapiWordsGeneratorPost();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiWordsGeneratorPost: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**FileResponse**](FileResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="pdfwebapixfaconvertpost"></a>
 # **PdfWebapiXfaconvertPost**
-> FileResponse PdfWebapiXfaconvertPost (List<byte[]> files, string documentPassword, string inputType)
+> FileResponse PdfWebapiXfaconvertPost (List<byte[]> files, string inputType)
 
-Convert XFA Format to Another Format.
+Convert XFA format to a another format.
 
-Converts XFA documents to the specified format, ensuring seamless compatibility and usability. This service supports a wide range of target formats, allowing users to choose the most suitable format for their specific needs. The conversion process maintains the integrity of the original document while adapting it to the desired format, making it ideal for editing, sharing, or archiving..
+Converts the provided documents from XFA format to a different format.
 
 ### Example
 ```csharp
@@ -2527,13 +3431,12 @@ namespace Example
 
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
             var inputType = inputType_example;  // string | The format of the input files. (optional) 
 
             try
             {
-                // Convert XFA Format to Another Format.
-                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, documentPassword, inputType);
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2550,7 +3453,6 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **files** | [**List<byte[]>**](byte[].md)|  | [optional] 
- **documentPassword** | **string**|  | [optional] 
  **inputType** | **string**| The format of the input files. | [optional] 
 
 ### Return type

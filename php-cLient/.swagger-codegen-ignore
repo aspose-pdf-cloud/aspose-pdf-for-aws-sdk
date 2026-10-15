@@ -1,0 +1,6 @@
+# Files listed here are hand-maintained: swagger-codegen will not overwrite them
+# and scripts/update-sdks.ps1 will not delete them. Syntax is like .gitignore.
+
+index.php
+info.php
+test.pdf

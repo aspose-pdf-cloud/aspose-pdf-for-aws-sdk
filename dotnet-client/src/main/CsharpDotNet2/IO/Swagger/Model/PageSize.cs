@@ -8,23 +8,29 @@ using Newtonsoft.Json;
 namespace IO.Swagger.Model {
 
   /// <summary>
-/// Specifies the page size for the merged images.
-/// </summary>
-public enum PageSize
-{
-	/// <summary>
-	/// The page size is A4.
-	/// </summary>
-	A4,
+  /// Specifies the page size for the merged images.
+  /// </summary>
+  [DataContract]
+  public class PageSize {
 
-	/// <summary>
-	/// The page size is Letter.
-	/// </summary>
-	Letter,
+    /// <summary>
+    /// Get the string presentation of the object
+    /// </summary>
+    /// <returns>String presentation of the object</returns>
+    public override string ToString()  {
+      var sb = new StringBuilder();
+      sb.Append("class PageSize {\n");
+      sb.Append("}\n");
+      return sb.ToString();
+    }
 
-	/// <summary>
-	/// The page size is Fit to content.
-	/// </summary>
-	Fit
+    /// <summary>
+    /// Get the JSON string presentation of the object
+    /// </summary>
+    /// <returns>JSON string presentation of the object</returns>
+    public string ToJson() {
+      return JsonConvert.SerializeObject(this, Formatting.Indented);
+    }
+
 }
 }

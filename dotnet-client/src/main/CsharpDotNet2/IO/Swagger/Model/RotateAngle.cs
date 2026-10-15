@@ -8,23 +8,29 @@ using Newtonsoft.Json;
 namespace IO.Swagger.Model {
 
   /// <summary>
-/// Specifies the angle of rotation.
-/// </summary>
-public enum RotateAngle
-{
-	/// <summary>
-	/// Rotate the image by 90 degrees.
-	/// </summary>
-	On90 = 90,
+  /// Specifies the angle of rotation.
+  /// </summary>
+  [DataContract]
+  public class RotateAngle {
 
-	/// <summary>
-	/// Rotate the image by 180 degrees.
-	/// </summary>
-	On180 = 180,
+    /// <summary>
+    /// Get the string presentation of the object
+    /// </summary>
+    /// <returns>String presentation of the object</returns>
+    public override string ToString()  {
+      var sb = new StringBuilder();
+      sb.Append("class RotateAngle {\n");
+      sb.Append("}\n");
+      return sb.ToString();
+    }
 
-	/// <summary>
-	/// Rotate the image by 270 degrees.
-	/// </summary>
-	On270 = 270
+    /// <summary>
+    /// Get the JSON string presentation of the object
+    /// </summary>
+    /// <returns>JSON string presentation of the object</returns>
+    public string ToJson() {
+      return JsonConvert.SerializeObject(this, Formatting.Indented);
+    }
+
 }
 }

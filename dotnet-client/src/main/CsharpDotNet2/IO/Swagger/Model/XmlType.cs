@@ -8,28 +8,29 @@ using Newtonsoft.Json;
 namespace IO.Swagger.Model {
 
   /// <summary>
-/// Specifies the type of XML file.
-/// </summary>
-public enum XmlType
-{
-	/// <summary>
-	/// APS XML file.
-	/// </summary>
-	APS = 1,
+  /// Specifies the type of XML file.
+  /// </summary>
+  [DataContract]
+  public class XmlType {
 
-	/// <summary>
-	/// MobiXML file.
-	/// </summary>
-	MobiXml = 2,
+    /// <summary>
+    /// Get the string presentation of the object
+    /// </summary>
+    /// <returns>String presentation of the object</returns>
+    public override string ToString()  {
+      var sb = new StringBuilder();
+      sb.Append("class XmlType {\n");
+      sb.Append("}\n");
+      return sb.ToString();
+    }
 
-	/// <summary>
-	/// PDFXML file.
-	/// </summary>
-	PdfXml = 3,
+    /// <summary>
+    /// Get the JSON string presentation of the object
+    /// </summary>
+    /// <returns>JSON string presentation of the object</returns>
+    public string ToJson() {
+      return JsonConvert.SerializeObject(this, Formatting.Indented);
+    }
 
-	/// <summary>
-	/// XLSX (Microsoft Excel XML) file.
-	/// </summary>
-	Xlsx = 4
 }
 }

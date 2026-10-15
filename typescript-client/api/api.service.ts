@@ -1,6 +1,6 @@
 /**
- * Aspose.Pdf RestApi
- * Aspose.Pdf RestApi provides a comprehensive set of endpoints for various PDF-related tasks, enabling efficient document processing and manipulation. Users can retrieve processing status, download files, manage file locks, parse documents, redact sensitive information, convert between formats, merge files, add watermarks, perform text searches, and much more. With endpoints for tasks like electronic signing, document comparison, and form filling, the API offers extensive functionality to cater to diverse PDF requirements.
+ * Aspose.PDF for AWS
+ * Aspose.Pdf for AWS provides a comprehensive set of endpoints for various PDF-related tasks, enabling efficient document processing and manipulation. Users can retrieve processing status, download files, manage file locks, parse documents, redact sensitive information, convert between formats, merge files, add watermarks, perform text searches, and much more. With endpoints for tasks like electronic signing, document comparison, and form filling, the API offers extensive functionality to cater to diverse PDF requirements.
  *
  * OpenAPI spec version: v1
  * Contact: Evgeny.Pirogov@aspose.com
@@ -17,7 +17,9 @@ import { CustomHttpUrlEncodingCodec }                        from '../encoder';
 
 import { Observable }                                        from 'rxjs';
 
+import { CompareType } from '../model/compareType';
 import { CompressType } from '../model/compressType';
+import { DifficultyLevel } from '../model/difficultyLevel';
 import { FileResponse } from '../model/fileResponse';
 import { HashAlgorithm } from '../model/hashAlgorithm';
 import { MergeImageType } from '../model/mergeImageType';
@@ -25,6 +27,8 @@ import { MetadataOperation } from '../model/metadataOperation';
 import { PageNumberHorizontalAlign } from '../model/pageNumberHorizontalAlign';
 import { PageNumberVerticalAlign } from '../model/pageNumberVerticalAlign';
 import { PageSize } from '../model/pageSize';
+import { ParaphraseSource } from '../model/paraphraseSource';
+import { QuestionType } from '../model/questionType';
 import { ResizePageSize } from '../model/resizePageSize';
 import { ResizePresetSize } from '../model/resizePresetSize';
 import { ResizePresetType } from '../model/resizePresetType';
@@ -34,6 +38,10 @@ import { RotateType } from '../model/rotateType';
 import { SignatureType } from '../model/signatureType';
 import { SplitDocType } from '../model/splitDocType';
 import { SplitImageType } from '../model/splitImageType';
+import { TranslationSource } from '../model/translationSource';
+import { VoiceGender } from '../model/voiceGender';
+import { VoiceModel } from '../model/voiceModel';
+import { WatermarkAction } from '../model/watermarkAction';
 import { WatermarkType } from '../model/watermarkType';
 import { XmlType } from '../model/xmlType';
 
@@ -179,8 +187,8 @@ export class ApiService {
     }
 
     /**
-     * 
-     * 
+     * Changes the fonts of the provided files using the specified font replacements.
+     * This method is designed to be used as an HTTP POST action, accepting form data for the font replacements and file uploads.  The font replacements should be provided as a JSON string, and the files should be uploaded as multipart/form-data.  The method uses Kafka for asynchronous processing and can optionally store the status of the task.
      * @param fontReplacementsJson 
      * @param files 
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
@@ -249,14 +257,21 @@ export class ApiService {
      * Compare documents text.
      * Compare provided files and create document with marked changes.
      * @param files 
+     * @param compareType 
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public pdfWebapiComparisonPostForm(files?: Array<Blob>, observe?: 'body', reportProgress?: boolean): Observable<FileResponse>;
-    public pdfWebapiComparisonPostForm(files?: Array<Blob>, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<FileResponse>>;
-    public pdfWebapiComparisonPostForm(files?: Array<Blob>, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<FileResponse>>;
-    public pdfWebapiComparisonPostForm(files?: Array<Blob>, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
+    public pdfWebapiComparisonPostForm(files?: Array<Blob>, compareType?: CompareType, observe?: 'body', reportProgress?: boolean): Observable<FileResponse>;
+    public pdfWebapiComparisonPostForm(files?: Array<Blob>, compareType?: CompareType, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<FileResponse>>;
+    public pdfWebapiComparisonPostForm(files?: Array<Blob>, compareType?: CompareType, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<FileResponse>>;
+    public pdfWebapiComparisonPostForm(files?: Array<Blob>, compareType?: CompareType, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
 
+
+
+        let queryParameters = new HttpParams({encoder: new CustomHttpUrlEncodingCodec()});
+        if (compareType !== undefined && compareType !== null) {
+            queryParameters = queryParameters.set('compareType', <any>compareType);
+        }
 
         let headers = this.defaultHeaders;
 
@@ -299,6 +314,7 @@ export class ApiService {
         return this.httpClient.request<FileResponse>('post',`${this.basePath}/pdf/webapi/comparison`,
             {
                 body: convertFormParamsToString ? formParams.toString() : formParams,
+                params: queryParameters,
                 withCredentials: this.configuration.withCredentials,
                 headers: headers,
                 observe: observe,
@@ -388,13 +404,15 @@ export class ApiService {
      * @param fontSise 
      * @param isToSingle Indicates whether the conversion should result in a single file, if applicable.
      * @param separator The separator to use when converting, if applicable.
+     * @param interval The interval between frames for convert to video.
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public pdfWebapiConvertPostForm(files?: Array<Blob>, inputType?: string, outputType?: string, xmlType?: XmlType, xmlTag?: string, fontSise?: number, isToSingle?: boolean, separator?: string, observe?: 'body', reportProgress?: boolean): Observable<FileResponse>;
-    public pdfWebapiConvertPostForm(files?: Array<Blob>, inputType?: string, outputType?: string, xmlType?: XmlType, xmlTag?: string, fontSise?: number, isToSingle?: boolean, separator?: string, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<FileResponse>>;
-    public pdfWebapiConvertPostForm(files?: Array<Blob>, inputType?: string, outputType?: string, xmlType?: XmlType, xmlTag?: string, fontSise?: number, isToSingle?: boolean, separator?: string, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<FileResponse>>;
-    public pdfWebapiConvertPostForm(files?: Array<Blob>, inputType?: string, outputType?: string, xmlType?: XmlType, xmlTag?: string, fontSise?: number, isToSingle?: boolean, separator?: string, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
+    public pdfWebapiConvertPostForm(files?: Array<Blob>, inputType?: string, outputType?: string, xmlType?: XmlType, xmlTag?: string, fontSise?: number, isToSingle?: boolean, separator?: string, interval?: number, observe?: 'body', reportProgress?: boolean): Observable<FileResponse>;
+    public pdfWebapiConvertPostForm(files?: Array<Blob>, inputType?: string, outputType?: string, xmlType?: XmlType, xmlTag?: string, fontSise?: number, isToSingle?: boolean, separator?: string, interval?: number, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<FileResponse>>;
+    public pdfWebapiConvertPostForm(files?: Array<Blob>, inputType?: string, outputType?: string, xmlType?: XmlType, xmlTag?: string, fontSise?: number, isToSingle?: boolean, separator?: string, interval?: number, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<FileResponse>>;
+    public pdfWebapiConvertPostForm(files?: Array<Blob>, inputType?: string, outputType?: string, xmlType?: XmlType, xmlTag?: string, fontSise?: number, isToSingle?: boolean, separator?: string, interval?: number, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
+
 
 
 
@@ -425,6 +443,9 @@ export class ApiService {
         }
         if (separator !== undefined && separator !== null) {
             queryParameters = queryParameters.set('separator', <any>separator);
+        }
+        if (interval !== undefined && interval !== null) {
+            queryParameters = queryParameters.set('interval', <any>interval);
         }
 
         let headers = this.defaultHeaders;
@@ -534,6 +555,68 @@ export class ApiService {
             {
                 body: convertFormParamsToString ? formParams.toString() : formParams,
                 params: queryParameters,
+                withCredentials: this.configuration.withCredentials,
+                headers: headers,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * 
+     * 
+     * @param files 
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public pdfWebapiCreatorPostForm(files?: Array<Blob>, observe?: 'body', reportProgress?: boolean): Observable<FileResponse>;
+    public pdfWebapiCreatorPostForm(files?: Array<Blob>, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<FileResponse>>;
+    public pdfWebapiCreatorPostForm(files?: Array<Blob>, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<FileResponse>>;
+    public pdfWebapiCreatorPostForm(files?: Array<Blob>, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
+
+
+        let headers = this.defaultHeaders;
+
+        // to determine the Accept header
+        let httpHeaderAccepts: string[] = [
+            'text/plain',
+            'application/json',
+            'text/json'
+        ];
+        const httpHeaderAcceptSelected: string | undefined = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        if (httpHeaderAcceptSelected != undefined) {
+            headers = headers.set('Accept', httpHeaderAcceptSelected);
+        }
+
+        // to determine the Content-Type header
+        const consumes: string[] = [
+            'multipart/form-data'
+        ];
+
+        const canConsumeForm = this.canConsumeForm(consumes);
+
+        let formParams: { append(param: string, value: any): void; };
+        let useForm = false;
+        let convertFormParamsToString = false;
+        // use FormData to transmit files using content-type "multipart/form-data"
+        // see https://stackoverflow.com/questions/4007969/application-x-www-form-urlencoded-or-multipart-form-data
+        useForm = canConsumeForm;
+        if (useForm) {
+            formParams = new FormData();
+        } else {
+            formParams = new HttpParams({encoder: new CustomHttpUrlEncodingCodec()});
+        }
+
+        if (files) {
+            files.forEach((element) => {
+                formParams = formParams.append('files', <any>element) as any || formParams;
+            })
+        }
+
+        return this.httpClient.request<FileResponse>('post',`${this.basePath}/pdf/webapi/creator`,
+            {
+                body: convertFormParamsToString ? formParams.toString() : formParams,
                 withCredentials: this.configuration.withCredentials,
                 headers: headers,
                 observe: observe,
@@ -686,25 +769,23 @@ export class ApiService {
     }
 
     /**
-     * Sign document with certificate.
-     * Electronically signs the provided documents with the specified certificate.
-     * @param passw 
+     * 
+     * 
      * @param files 
-     * @param inputType The format of the input files.
+     * @param message 
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public pdfWebapiEsignPostForm(passw?: string, files?: Array<Blob>, inputType?: string, observe?: 'body', reportProgress?: boolean): Observable<FileResponse>;
-    public pdfWebapiEsignPostForm(passw?: string, files?: Array<Blob>, inputType?: string, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<FileResponse>>;
-    public pdfWebapiEsignPostForm(passw?: string, files?: Array<Blob>, inputType?: string, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<FileResponse>>;
-    public pdfWebapiEsignPostForm(passw?: string, files?: Array<Blob>, inputType?: string, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
-
+    public pdfWebapiEditorPostForm(files?: Array<Blob>, message?: string, observe?: 'body', reportProgress?: boolean): Observable<FileResponse>;
+    public pdfWebapiEditorPostForm(files?: Array<Blob>, message?: string, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<FileResponse>>;
+    public pdfWebapiEditorPostForm(files?: Array<Blob>, message?: string, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<FileResponse>>;
+    public pdfWebapiEditorPostForm(files?: Array<Blob>, message?: string, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
 
 
 
         let queryParameters = new HttpParams({encoder: new CustomHttpUrlEncodingCodec()});
-        if (inputType !== undefined && inputType !== null) {
-            queryParameters = queryParameters.set('inputType', <any>inputType);
+        if (message !== undefined && message !== null) {
+            queryParameters = queryParameters.set('message', <any>message);
         }
 
         let headers = this.defaultHeaders;
@@ -739,16 +820,13 @@ export class ApiService {
             formParams = new HttpParams({encoder: new CustomHttpUrlEncodingCodec()});
         }
 
-        if (passw !== undefined) {
-            formParams = formParams.append('passw', <any>passw) as any || formParams;
-        }
         if (files) {
             files.forEach((element) => {
                 formParams = formParams.append('files', <any>element) as any || formParams;
             })
         }
 
-        return this.httpClient.request<FileResponse>('post',`${this.basePath}/pdf/webapi/esign`,
+        return this.httpClient.request<FileResponse>('post',`${this.basePath}/pdf/webapi/editor`,
             {
                 body: convertFormParamsToString ? formParams.toString() : formParams,
                 params: queryParameters,
@@ -836,24 +914,17 @@ export class ApiService {
     }
 
     /**
-     * Fill form.
-     * Fills a form with the provided files.
+     * 
+     * 
      * @param files 
-     * @param fileName The name of the file to fill the form with.
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public pdfWebapiFormFillerPostForm(files?: Array<Blob>, fileName?: string, observe?: 'body', reportProgress?: boolean): Observable<FileResponse>;
-    public pdfWebapiFormFillerPostForm(files?: Array<Blob>, fileName?: string, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<FileResponse>>;
-    public pdfWebapiFormFillerPostForm(files?: Array<Blob>, fileName?: string, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<FileResponse>>;
-    public pdfWebapiFormFillerPostForm(files?: Array<Blob>, fileName?: string, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
+    public pdfWebapiFormatDetectorPostForm(files?: Array<Blob>, observe?: 'body', reportProgress?: boolean): Observable<FileResponse>;
+    public pdfWebapiFormatDetectorPostForm(files?: Array<Blob>, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<FileResponse>>;
+    public pdfWebapiFormatDetectorPostForm(files?: Array<Blob>, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<FileResponse>>;
+    public pdfWebapiFormatDetectorPostForm(files?: Array<Blob>, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
 
-
-
-        let queryParameters = new HttpParams({encoder: new CustomHttpUrlEncodingCodec()});
-        if (fileName !== undefined && fileName !== null) {
-            queryParameters = queryParameters.set('fileName', <any>fileName);
-        }
 
         let headers = this.defaultHeaders;
 
@@ -893,10 +964,9 @@ export class ApiService {
             })
         }
 
-        return this.httpClient.request<FileResponse>('post',`${this.basePath}/pdf/webapi/form-filler`,
+        return this.httpClient.request<FileResponse>('post',`${this.basePath}/pdf/webapi/format-detector`,
             {
                 body: convertFormParamsToString ? formParams.toString() : formParams,
-                params: queryParameters,
                 withCredentials: this.configuration.withCredentials,
                 headers: headers,
                 observe: observe,
@@ -1001,6 +1071,76 @@ export class ApiService {
     }
 
     /**
+     * Checks the grammar of text, pdf files and plain text.
+     * 
+     * @param files 
+     * @param language The language of the source file or text
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public pdfWebapiGrammarCheckerPostForm(files?: Array<Blob>, language?: string, observe?: 'body', reportProgress?: boolean): Observable<FileResponse>;
+    public pdfWebapiGrammarCheckerPostForm(files?: Array<Blob>, language?: string, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<FileResponse>>;
+    public pdfWebapiGrammarCheckerPostForm(files?: Array<Blob>, language?: string, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<FileResponse>>;
+    public pdfWebapiGrammarCheckerPostForm(files?: Array<Blob>, language?: string, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
+
+
+
+        let queryParameters = new HttpParams({encoder: new CustomHttpUrlEncodingCodec()});
+        if (language !== undefined && language !== null) {
+            queryParameters = queryParameters.set('language', <any>language);
+        }
+
+        let headers = this.defaultHeaders;
+
+        // to determine the Accept header
+        let httpHeaderAccepts: string[] = [
+            'text/plain',
+            'application/json',
+            'text/json'
+        ];
+        const httpHeaderAcceptSelected: string | undefined = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        if (httpHeaderAcceptSelected != undefined) {
+            headers = headers.set('Accept', httpHeaderAcceptSelected);
+        }
+
+        // to determine the Content-Type header
+        const consumes: string[] = [
+            'multipart/form-data'
+        ];
+
+        const canConsumeForm = this.canConsumeForm(consumes);
+
+        let formParams: { append(param: string, value: any): void; };
+        let useForm = false;
+        let convertFormParamsToString = false;
+        // use FormData to transmit files using content-type "multipart/form-data"
+        // see https://stackoverflow.com/questions/4007969/application-x-www-form-urlencoded-or-multipart-form-data
+        useForm = canConsumeForm;
+        if (useForm) {
+            formParams = new FormData();
+        } else {
+            formParams = new HttpParams({encoder: new CustomHttpUrlEncodingCodec()});
+        }
+
+        if (files) {
+            files.forEach((element) => {
+                formParams = formParams.append('files', <any>element) as any || formParams;
+            })
+        }
+
+        return this.httpClient.request<FileResponse>('post',`${this.basePath}/pdf/webapi/grammar-checker`,
+            {
+                body: convertFormParamsToString ? formParams.toString() : formParams,
+                params: queryParameters,
+                withCredentials: this.configuration.withCredentials,
+                headers: headers,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
      * Calculate document hash.
      * Calculate hashes of provided files using the specified algorithm.
      * @param files 
@@ -1071,6 +1211,132 @@ export class ApiService {
         return this.httpClient.request<FileResponse>('post',`${this.basePath}/pdf/webapi/hash`,
             {
                 body: convertFormParamsToString ? formParams.toString() : formParams,
+                params: queryParameters,
+                withCredentials: this.configuration.withCredentials,
+                headers: headers,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * Make speech synthesizer.
+     * Make audio file with reading the text in the specified language.
+     * @param files 
+     * @param language The language code in which ai must read the text.
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public pdfWebapiImageDescriptionPostForm(files?: Array<Blob>, language?: string, observe?: 'body', reportProgress?: boolean): Observable<FileResponse>;
+    public pdfWebapiImageDescriptionPostForm(files?: Array<Blob>, language?: string, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<FileResponse>>;
+    public pdfWebapiImageDescriptionPostForm(files?: Array<Blob>, language?: string, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<FileResponse>>;
+    public pdfWebapiImageDescriptionPostForm(files?: Array<Blob>, language?: string, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
+
+
+
+        let queryParameters = new HttpParams({encoder: new CustomHttpUrlEncodingCodec()});
+        if (language !== undefined && language !== null) {
+            queryParameters = queryParameters.set('language', <any>language);
+        }
+
+        let headers = this.defaultHeaders;
+
+        // to determine the Accept header
+        let httpHeaderAccepts: string[] = [
+            'text/plain',
+            'application/json',
+            'text/json'
+        ];
+        const httpHeaderAcceptSelected: string | undefined = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        if (httpHeaderAcceptSelected != undefined) {
+            headers = headers.set('Accept', httpHeaderAcceptSelected);
+        }
+
+        // to determine the Content-Type header
+        const consumes: string[] = [
+            'multipart/form-data'
+        ];
+
+        const canConsumeForm = this.canConsumeForm(consumes);
+
+        let formParams: { append(param: string, value: any): void; };
+        let useForm = false;
+        let convertFormParamsToString = false;
+        // use FormData to transmit files using content-type "multipart/form-data"
+        // see https://stackoverflow.com/questions/4007969/application-x-www-form-urlencoded-or-multipart-form-data
+        useForm = canConsumeForm;
+        if (useForm) {
+            formParams = new FormData();
+        } else {
+            formParams = new HttpParams({encoder: new CustomHttpUrlEncodingCodec()});
+        }
+
+        if (files) {
+            files.forEach((element) => {
+                formParams = formParams.append('files', <any>element) as any || formParams;
+            })
+        }
+
+        return this.httpClient.request<FileResponse>('post',`${this.basePath}/pdf/webapi/image-description`,
+            {
+                body: convertFormParamsToString ? formParams.toString() : formParams,
+                params: queryParameters,
+                withCredentials: this.configuration.withCredentials,
+                headers: headers,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * 
+     * 
+     * @param question 
+     * @param count 
+     * @param size 
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public pdfWebapiImageGeneratorPost(question?: string, count?: number, size?: string, observe?: 'body', reportProgress?: boolean): Observable<FileResponse>;
+    public pdfWebapiImageGeneratorPost(question?: string, count?: number, size?: string, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<FileResponse>>;
+    public pdfWebapiImageGeneratorPost(question?: string, count?: number, size?: string, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<FileResponse>>;
+    public pdfWebapiImageGeneratorPost(question?: string, count?: number, size?: string, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
+
+
+
+
+        let queryParameters = new HttpParams({encoder: new CustomHttpUrlEncodingCodec()});
+        if (question !== undefined && question !== null) {
+            queryParameters = queryParameters.set('question', <any>question);
+        }
+        if (count !== undefined && count !== null) {
+            queryParameters = queryParameters.set('count', <any>count);
+        }
+        if (size !== undefined && size !== null) {
+            queryParameters = queryParameters.set('size', <any>size);
+        }
+
+        let headers = this.defaultHeaders;
+
+        // to determine the Accept header
+        let httpHeaderAccepts: string[] = [
+            'text/plain',
+            'application/json',
+            'text/json'
+        ];
+        const httpHeaderAcceptSelected: string | undefined = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        if (httpHeaderAcceptSelected != undefined) {
+            headers = headers.set('Accept', httpHeaderAcceptSelected);
+        }
+
+        // to determine the Content-Type header
+        const consumes: string[] = [
+        ];
+
+        return this.httpClient.request<FileResponse>('post',`${this.basePath}/pdf/webapi/image-generator`,
+            {
                 params: queryParameters,
                 withCredentials: this.configuration.withCredentials,
                 headers: headers,
@@ -1411,6 +1677,81 @@ export class ApiService {
     }
 
     /**
+     * Paraphrase document.
+     * Paraphrase the provided files.
+     * @param files 
+     * @param source The Source language.
+     * @param paraphraseSource Upload file or text.
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public pdfWebapiParaphrasePostForm(files?: Array<Blob>, source?: string, paraphraseSource?: ParaphraseSource, observe?: 'body', reportProgress?: boolean): Observable<FileResponse>;
+    public pdfWebapiParaphrasePostForm(files?: Array<Blob>, source?: string, paraphraseSource?: ParaphraseSource, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<FileResponse>>;
+    public pdfWebapiParaphrasePostForm(files?: Array<Blob>, source?: string, paraphraseSource?: ParaphraseSource, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<FileResponse>>;
+    public pdfWebapiParaphrasePostForm(files?: Array<Blob>, source?: string, paraphraseSource?: ParaphraseSource, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
+
+
+
+
+        let queryParameters = new HttpParams({encoder: new CustomHttpUrlEncodingCodec()});
+        if (source !== undefined && source !== null) {
+            queryParameters = queryParameters.set('source', <any>source);
+        }
+        if (paraphraseSource !== undefined && paraphraseSource !== null) {
+            queryParameters = queryParameters.set('paraphraseSource', <any>paraphraseSource);
+        }
+
+        let headers = this.defaultHeaders;
+
+        // to determine the Accept header
+        let httpHeaderAccepts: string[] = [
+            'text/plain',
+            'application/json',
+            'text/json'
+        ];
+        const httpHeaderAcceptSelected: string | undefined = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        if (httpHeaderAcceptSelected != undefined) {
+            headers = headers.set('Accept', httpHeaderAcceptSelected);
+        }
+
+        // to determine the Content-Type header
+        const consumes: string[] = [
+            'multipart/form-data'
+        ];
+
+        const canConsumeForm = this.canConsumeForm(consumes);
+
+        let formParams: { append(param: string, value: any): void; };
+        let useForm = false;
+        let convertFormParamsToString = false;
+        // use FormData to transmit files using content-type "multipart/form-data"
+        // see https://stackoverflow.com/questions/4007969/application-x-www-form-urlencoded-or-multipart-form-data
+        useForm = canConsumeForm;
+        if (useForm) {
+            formParams = new FormData();
+        } else {
+            formParams = new HttpParams({encoder: new CustomHttpUrlEncodingCodec()});
+        }
+
+        if (files) {
+            files.forEach((element) => {
+                formParams = formParams.append('files', <any>element) as any || formParams;
+            })
+        }
+
+        return this.httpClient.request<FileResponse>('post',`${this.basePath}/pdf/webapi/paraphrase`,
+            {
+                body: convertFormParamsToString ? formParams.toString() : formParams,
+                params: queryParameters,
+                withCredentials: this.configuration.withCredentials,
+                headers: headers,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
      * Parse document.
      * Parses the provided files using a parser service.
      * @param files 
@@ -1464,6 +1805,96 @@ export class ApiService {
         return this.httpClient.request<FileResponse>('post',`${this.basePath}/pdf/webapi/parse`,
             {
                 body: convertFormParamsToString ? formParams.toString() : formParams,
+                withCredentials: this.configuration.withCredentials,
+                headers: headers,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * Generates a list of quiz questions using AI based on the provided content or uploaded files,  and stores the resulting quiz into a document.
+     * 
+     * @param files 
+     * @param content Textual content used to generate quiz questions (optional if files are provided).
+     * @param questionNumber The total number of questions to generate.
+     * @param includeAnswers Generating questions with answers
+     * @param questionType The type of questions to generate: ShortAnswer, TrueFalse, or McQs (multiple choice).
+     * @param difficultyLevel The desired difficulty level of the quiz.
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public pdfWebapiQuizMakerPostForm(files?: Array<Blob>, content?: string, questionNumber?: number, includeAnswers?: boolean, questionType?: QuestionType, difficultyLevel?: DifficultyLevel, observe?: 'body', reportProgress?: boolean): Observable<FileResponse>;
+    public pdfWebapiQuizMakerPostForm(files?: Array<Blob>, content?: string, questionNumber?: number, includeAnswers?: boolean, questionType?: QuestionType, difficultyLevel?: DifficultyLevel, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<FileResponse>>;
+    public pdfWebapiQuizMakerPostForm(files?: Array<Blob>, content?: string, questionNumber?: number, includeAnswers?: boolean, questionType?: QuestionType, difficultyLevel?: DifficultyLevel, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<FileResponse>>;
+    public pdfWebapiQuizMakerPostForm(files?: Array<Blob>, content?: string, questionNumber?: number, includeAnswers?: boolean, questionType?: QuestionType, difficultyLevel?: DifficultyLevel, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
+
+
+
+
+
+
+
+        let queryParameters = new HttpParams({encoder: new CustomHttpUrlEncodingCodec()});
+        if (content !== undefined && content !== null) {
+            queryParameters = queryParameters.set('content', <any>content);
+        }
+        if (questionNumber !== undefined && questionNumber !== null) {
+            queryParameters = queryParameters.set('questionNumber', <any>questionNumber);
+        }
+        if (includeAnswers !== undefined && includeAnswers !== null) {
+            queryParameters = queryParameters.set('includeAnswers', <any>includeAnswers);
+        }
+        if (questionType !== undefined && questionType !== null) {
+            queryParameters = queryParameters.set('questionType', <any>questionType);
+        }
+        if (difficultyLevel !== undefined && difficultyLevel !== null) {
+            queryParameters = queryParameters.set('difficultyLevel', <any>difficultyLevel);
+        }
+
+        let headers = this.defaultHeaders;
+
+        // to determine the Accept header
+        let httpHeaderAccepts: string[] = [
+            'text/plain',
+            'application/json',
+            'text/json'
+        ];
+        const httpHeaderAcceptSelected: string | undefined = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        if (httpHeaderAcceptSelected != undefined) {
+            headers = headers.set('Accept', httpHeaderAcceptSelected);
+        }
+
+        // to determine the Content-Type header
+        const consumes: string[] = [
+            'multipart/form-data'
+        ];
+
+        const canConsumeForm = this.canConsumeForm(consumes);
+
+        let formParams: { append(param: string, value: any): void; };
+        let useForm = false;
+        let convertFormParamsToString = false;
+        // use FormData to transmit files using content-type "multipart/form-data"
+        // see https://stackoverflow.com/questions/4007969/application-x-www-form-urlencoded-or-multipart-form-data
+        useForm = canConsumeForm;
+        if (useForm) {
+            formParams = new FormData();
+        } else {
+            formParams = new HttpParams({encoder: new CustomHttpUrlEncodingCodec()});
+        }
+
+        if (files) {
+            files.forEach((element) => {
+                formParams = formParams.append('files', <any>element) as any || formParams;
+            })
+        }
+
+        return this.httpClient.request<FileResponse>('post',`${this.basePath}/pdf/webapi/quiz-maker`,
+            {
+                body: convertFormParamsToString ? formParams.toString() : formParams,
+                params: queryParameters,
                 withCredentials: this.configuration.withCredentials,
                 headers: headers,
                 observe: observe,
@@ -1664,6 +2095,83 @@ export class ApiService {
         return this.httpClient.request<FileResponse>('post',`${this.basePath}/pdf/webapi/remove`,
             {
                 body: convertFormParamsToString ? formParams.toString() : formParams,
+                withCredentials: this.configuration.withCredentials,
+                headers: headers,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * Removes document watermark.
+     * Removes a watermark from the document pages.
+     * @param ids 
+     * @param files 
+     * @param watermarkAction 
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public pdfWebapiRemoveWatermarkBlazorPostForm(ids?: Array<string>, files?: Array<Blob>, watermarkAction?: WatermarkAction, observe?: 'body', reportProgress?: boolean): Observable<FileResponse>;
+    public pdfWebapiRemoveWatermarkBlazorPostForm(ids?: Array<string>, files?: Array<Blob>, watermarkAction?: WatermarkAction, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<FileResponse>>;
+    public pdfWebapiRemoveWatermarkBlazorPostForm(ids?: Array<string>, files?: Array<Blob>, watermarkAction?: WatermarkAction, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<FileResponse>>;
+    public pdfWebapiRemoveWatermarkBlazorPostForm(ids?: Array<string>, files?: Array<Blob>, watermarkAction?: WatermarkAction, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
+
+
+
+
+        let queryParameters = new HttpParams({encoder: new CustomHttpUrlEncodingCodec()});
+        if (watermarkAction !== undefined && watermarkAction !== null) {
+            queryParameters = queryParameters.set('watermarkAction', <any>watermarkAction);
+        }
+
+        let headers = this.defaultHeaders;
+
+        // to determine the Accept header
+        let httpHeaderAccepts: string[] = [
+            'text/plain',
+            'application/json',
+            'text/json'
+        ];
+        const httpHeaderAcceptSelected: string | undefined = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        if (httpHeaderAcceptSelected != undefined) {
+            headers = headers.set('Accept', httpHeaderAcceptSelected);
+        }
+
+        // to determine the Content-Type header
+        const consumes: string[] = [
+            'multipart/form-data'
+        ];
+
+        const canConsumeForm = this.canConsumeForm(consumes);
+
+        let formParams: { append(param: string, value: any): void; };
+        let useForm = false;
+        let convertFormParamsToString = false;
+        // use FormData to transmit files using content-type "multipart/form-data"
+        // see https://stackoverflow.com/questions/4007969/application-x-www-form-urlencoded-or-multipart-form-data
+        useForm = canConsumeForm;
+        if (useForm) {
+            formParams = new FormData();
+        } else {
+            formParams = new HttpParams({encoder: new CustomHttpUrlEncodingCodec()});
+        }
+
+        if (ids) {
+            ids.forEach((element) => {
+                formParams = formParams.append('ids', <any>element) as any || formParams;
+            })
+        }
+        if (files) {
+            files.forEach((element) => {
+                formParams = formParams.append('files', <any>element) as any || formParams;
+            })
+        }
+
+        return this.httpClient.request<FileResponse>('post',`${this.basePath}/pdf/webapi/remove-watermark-blazor`,
+            {
+                body: convertFormParamsToString ? formParams.toString() : formParams,
+                params: queryParameters,
                 withCredentials: this.configuration.withCredentials,
                 headers: headers,
                 observe: observe,
@@ -2029,15 +2537,17 @@ export class ApiService {
      * Rotates the provided files by a specified angle, with options for rotation type and page number.
      * @param files 
      * @param angle The angle by which to rotate the files.
+     * @param customAngle The angle by which to rotate the files in case angle set to custom state.
      * @param rotateType The type of rotation to perform.
      * @param pageNum The page number to rotate, if applicable.
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public pdfWebapiRotatePostForm(files?: Array<Blob>, angle?: RotateAngle, rotateType?: RotateType, pageNum?: string, observe?: 'body', reportProgress?: boolean): Observable<FileResponse>;
-    public pdfWebapiRotatePostForm(files?: Array<Blob>, angle?: RotateAngle, rotateType?: RotateType, pageNum?: string, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<FileResponse>>;
-    public pdfWebapiRotatePostForm(files?: Array<Blob>, angle?: RotateAngle, rotateType?: RotateType, pageNum?: string, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<FileResponse>>;
-    public pdfWebapiRotatePostForm(files?: Array<Blob>, angle?: RotateAngle, rotateType?: RotateType, pageNum?: string, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
+    public pdfWebapiRotatePostForm(files?: Array<Blob>, angle?: RotateAngle, customAngle?: number, rotateType?: RotateType, pageNum?: string, observe?: 'body', reportProgress?: boolean): Observable<FileResponse>;
+    public pdfWebapiRotatePostForm(files?: Array<Blob>, angle?: RotateAngle, customAngle?: number, rotateType?: RotateType, pageNum?: string, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<FileResponse>>;
+    public pdfWebapiRotatePostForm(files?: Array<Blob>, angle?: RotateAngle, customAngle?: number, rotateType?: RotateType, pageNum?: string, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<FileResponse>>;
+    public pdfWebapiRotatePostForm(files?: Array<Blob>, angle?: RotateAngle, customAngle?: number, rotateType?: RotateType, pageNum?: string, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
+
 
 
 
@@ -2046,6 +2556,9 @@ export class ApiService {
         let queryParameters = new HttpParams({encoder: new CustomHttpUrlEncodingCodec()});
         if (angle !== undefined && angle !== null) {
             queryParameters = queryParameters.set('angle', <any>angle);
+        }
+        if (customAngle !== undefined && customAngle !== null) {
+            queryParameters = queryParameters.set('customAngle', <any>customAngle);
         }
         if (rotateType !== undefined && rotateType !== null) {
             queryParameters = queryParameters.set('rotateType', <any>rotateType);
@@ -2106,7 +2619,7 @@ export class ApiService {
 
     /**
      * Search document text.
-     * Searches the provided files for the specified query and makr found text with yellow background.
+     * Searches the provided files for the specified query and mark found text with yellow background.
      * @param files 
      * @param query The text to search for within the files.
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
@@ -2343,25 +2856,30 @@ export class ApiService {
      * Split document.
      * Splits the provided documents based on the specified split type and page rage to spit.
      * @param files 
+     * @param inputType The format of the input files.
      * @param splitType The type of splitting to be performed.
-     * @param pairs Optional page rage for the splitting operation.
+     * @param pars Optional page rage for the splitting operation.
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public pdfWebapiSplitdocPostForm(files?: Array<Blob>, splitType?: SplitDocType, pairs?: string, observe?: 'body', reportProgress?: boolean): Observable<FileResponse>;
-    public pdfWebapiSplitdocPostForm(files?: Array<Blob>, splitType?: SplitDocType, pairs?: string, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<FileResponse>>;
-    public pdfWebapiSplitdocPostForm(files?: Array<Blob>, splitType?: SplitDocType, pairs?: string, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<FileResponse>>;
-    public pdfWebapiSplitdocPostForm(files?: Array<Blob>, splitType?: SplitDocType, pairs?: string, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
+    public pdfWebapiSplitdocPostForm(files?: Array<Blob>, inputType?: string, splitType?: SplitDocType, pars?: string, observe?: 'body', reportProgress?: boolean): Observable<FileResponse>;
+    public pdfWebapiSplitdocPostForm(files?: Array<Blob>, inputType?: string, splitType?: SplitDocType, pars?: string, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<FileResponse>>;
+    public pdfWebapiSplitdocPostForm(files?: Array<Blob>, inputType?: string, splitType?: SplitDocType, pars?: string, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<FileResponse>>;
+    public pdfWebapiSplitdocPostForm(files?: Array<Blob>, inputType?: string, splitType?: SplitDocType, pars?: string, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
+
 
 
 
 
         let queryParameters = new HttpParams({encoder: new CustomHttpUrlEncodingCodec()});
+        if (inputType !== undefined && inputType !== null) {
+            queryParameters = queryParameters.set('inputType', <any>inputType);
+        }
         if (splitType !== undefined && splitType !== null) {
             queryParameters = queryParameters.set('splitType', <any>splitType);
         }
-        if (pairs !== undefined && pairs !== null) {
-            queryParameters = queryParameters.set('pairs', <any>pairs);
+        if (pars !== undefined && pars !== null) {
+            queryParameters = queryParameters.set('pars', <any>pars);
         }
 
         let headers = this.defaultHeaders;
@@ -2543,6 +3061,358 @@ export class ApiService {
     }
 
     /**
+     * 
+     * 
+     * @param files 
+     * @param question 
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public pdfWebapiSummaryPostForm(files?: Array<Blob>, question?: string, observe?: 'body', reportProgress?: boolean): Observable<FileResponse>;
+    public pdfWebapiSummaryPostForm(files?: Array<Blob>, question?: string, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<FileResponse>>;
+    public pdfWebapiSummaryPostForm(files?: Array<Blob>, question?: string, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<FileResponse>>;
+    public pdfWebapiSummaryPostForm(files?: Array<Blob>, question?: string, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
+
+
+
+        let queryParameters = new HttpParams({encoder: new CustomHttpUrlEncodingCodec()});
+        if (question !== undefined && question !== null) {
+            queryParameters = queryParameters.set('question', <any>question);
+        }
+
+        let headers = this.defaultHeaders;
+
+        // to determine the Accept header
+        let httpHeaderAccepts: string[] = [
+            'text/plain',
+            'application/json',
+            'text/json'
+        ];
+        const httpHeaderAcceptSelected: string | undefined = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        if (httpHeaderAcceptSelected != undefined) {
+            headers = headers.set('Accept', httpHeaderAcceptSelected);
+        }
+
+        // to determine the Content-Type header
+        const consumes: string[] = [
+            'multipart/form-data'
+        ];
+
+        const canConsumeForm = this.canConsumeForm(consumes);
+
+        let formParams: { append(param: string, value: any): void; };
+        let useForm = false;
+        let convertFormParamsToString = false;
+        // use FormData to transmit files using content-type "multipart/form-data"
+        // see https://stackoverflow.com/questions/4007969/application-x-www-form-urlencoded-or-multipart-form-data
+        useForm = canConsumeForm;
+        if (useForm) {
+            formParams = new FormData();
+        } else {
+            formParams = new HttpParams({encoder: new CustomHttpUrlEncodingCodec()});
+        }
+
+        if (files) {
+            files.forEach((element) => {
+                formParams = formParams.append('files', <any>element) as any || formParams;
+            })
+        }
+
+        return this.httpClient.request<FileResponse>('post',`${this.basePath}/pdf/webapi/summary`,
+            {
+                body: convertFormParamsToString ? formParams.toString() : formParams,
+                params: queryParameters,
+                withCredentials: this.configuration.withCredentials,
+                headers: headers,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * 
+     * 
+     * @param files 
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public pdfWebapiTableOfContentsPostForm(files?: Array<Blob>, observe?: 'body', reportProgress?: boolean): Observable<FileResponse>;
+    public pdfWebapiTableOfContentsPostForm(files?: Array<Blob>, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<FileResponse>>;
+    public pdfWebapiTableOfContentsPostForm(files?: Array<Blob>, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<FileResponse>>;
+    public pdfWebapiTableOfContentsPostForm(files?: Array<Blob>, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
+
+
+        let headers = this.defaultHeaders;
+
+        // to determine the Accept header
+        let httpHeaderAccepts: string[] = [
+            'text/plain',
+            'application/json',
+            'text/json'
+        ];
+        const httpHeaderAcceptSelected: string | undefined = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        if (httpHeaderAcceptSelected != undefined) {
+            headers = headers.set('Accept', httpHeaderAcceptSelected);
+        }
+
+        // to determine the Content-Type header
+        const consumes: string[] = [
+            'multipart/form-data'
+        ];
+
+        const canConsumeForm = this.canConsumeForm(consumes);
+
+        let formParams: { append(param: string, value: any): void; };
+        let useForm = false;
+        let convertFormParamsToString = false;
+        // use FormData to transmit files using content-type "multipart/form-data"
+        // see https://stackoverflow.com/questions/4007969/application-x-www-form-urlencoded-or-multipart-form-data
+        useForm = canConsumeForm;
+        if (useForm) {
+            formParams = new FormData();
+        } else {
+            formParams = new HttpParams({encoder: new CustomHttpUrlEncodingCodec()});
+        }
+
+        if (files) {
+            files.forEach((element) => {
+                formParams = formParams.append('files', <any>element) as any || formParams;
+            })
+        }
+
+        return this.httpClient.request<FileResponse>('post',`${this.basePath}/pdf/webapi/table-of-contents`,
+            {
+                body: convertFormParamsToString ? formParams.toString() : formParams,
+                withCredentials: this.configuration.withCredentials,
+                headers: headers,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * Creates the list of test questions using ai and stores it to the document
+     * 
+     * @param subject Text description of the subject of the tests
+     * @param number Questions number
+     * @param complexity The complexity level of generated questions
+     * @param language Language in which questions are written
+     * @param outputType The format of result file
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public pdfWebapiTestGeneratorPost(subject?: string, number?: number, complexity?: string, language?: string, outputType?: string, observe?: 'body', reportProgress?: boolean): Observable<FileResponse>;
+    public pdfWebapiTestGeneratorPost(subject?: string, number?: number, complexity?: string, language?: string, outputType?: string, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<FileResponse>>;
+    public pdfWebapiTestGeneratorPost(subject?: string, number?: number, complexity?: string, language?: string, outputType?: string, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<FileResponse>>;
+    public pdfWebapiTestGeneratorPost(subject?: string, number?: number, complexity?: string, language?: string, outputType?: string, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
+
+
+
+
+
+
+        let queryParameters = new HttpParams({encoder: new CustomHttpUrlEncodingCodec()});
+        if (subject !== undefined && subject !== null) {
+            queryParameters = queryParameters.set('subject', <any>subject);
+        }
+        if (number !== undefined && number !== null) {
+            queryParameters = queryParameters.set('number', <any>number);
+        }
+        if (complexity !== undefined && complexity !== null) {
+            queryParameters = queryParameters.set('complexity', <any>complexity);
+        }
+        if (language !== undefined && language !== null) {
+            queryParameters = queryParameters.set('language', <any>language);
+        }
+        if (outputType !== undefined && outputType !== null) {
+            queryParameters = queryParameters.set('outputType', <any>outputType);
+        }
+
+        let headers = this.defaultHeaders;
+
+        // to determine the Accept header
+        let httpHeaderAccepts: string[] = [
+            'text/plain',
+            'application/json',
+            'text/json'
+        ];
+        const httpHeaderAcceptSelected: string | undefined = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        if (httpHeaderAcceptSelected != undefined) {
+            headers = headers.set('Accept', httpHeaderAcceptSelected);
+        }
+
+        // to determine the Content-Type header
+        const consumes: string[] = [
+        ];
+
+        return this.httpClient.request<FileResponse>('post',`${this.basePath}/pdf/webapi/test-generator`,
+            {
+                params: queryParameters,
+                withCredentials: this.configuration.withCredentials,
+                headers: headers,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * 
+     * 
+     * @param files 
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public pdfWebapiTranscribeAudioPostForm(files?: Array<Blob>, observe?: 'body', reportProgress?: boolean): Observable<FileResponse>;
+    public pdfWebapiTranscribeAudioPostForm(files?: Array<Blob>, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<FileResponse>>;
+    public pdfWebapiTranscribeAudioPostForm(files?: Array<Blob>, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<FileResponse>>;
+    public pdfWebapiTranscribeAudioPostForm(files?: Array<Blob>, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
+
+
+        let headers = this.defaultHeaders;
+
+        // to determine the Accept header
+        let httpHeaderAccepts: string[] = [
+            'text/plain',
+            'application/json',
+            'text/json'
+        ];
+        const httpHeaderAcceptSelected: string | undefined = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        if (httpHeaderAcceptSelected != undefined) {
+            headers = headers.set('Accept', httpHeaderAcceptSelected);
+        }
+
+        // to determine the Content-Type header
+        const consumes: string[] = [
+            'multipart/form-data'
+        ];
+
+        const canConsumeForm = this.canConsumeForm(consumes);
+
+        let formParams: { append(param: string, value: any): void; };
+        let useForm = false;
+        let convertFormParamsToString = false;
+        // use FormData to transmit files using content-type "multipart/form-data"
+        // see https://stackoverflow.com/questions/4007969/application-x-www-form-urlencoded-or-multipart-form-data
+        useForm = canConsumeForm;
+        if (useForm) {
+            formParams = new FormData();
+        } else {
+            formParams = new HttpParams({encoder: new CustomHttpUrlEncodingCodec()});
+        }
+
+        if (files) {
+            files.forEach((element) => {
+                formParams = formParams.append('files', <any>element) as any || formParams;
+            })
+        }
+
+        return this.httpClient.request<FileResponse>('post',`${this.basePath}/pdf/webapi/transcribe-audio`,
+            {
+                body: convertFormParamsToString ? formParams.toString() : formParams,
+                withCredentials: this.configuration.withCredentials,
+                headers: headers,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * Translate document.
+     * Translate the provided files.
+     * @param files 
+     * @param languages The language code in which will make the resource files to be translated.
+     * @param source The Source language.
+     * @param target The target language.
+     * @param aiService Choosing an AI service for developers
+     * @param translationSource Upload file or text.
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public pdfWebapiTranslatePostForm(files?: Array<Blob>, languages?: Array<string>, source?: string, target?: string, aiService?: string, translationSource?: TranslationSource, observe?: 'body', reportProgress?: boolean): Observable<FileResponse>;
+    public pdfWebapiTranslatePostForm(files?: Array<Blob>, languages?: Array<string>, source?: string, target?: string, aiService?: string, translationSource?: TranslationSource, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<FileResponse>>;
+    public pdfWebapiTranslatePostForm(files?: Array<Blob>, languages?: Array<string>, source?: string, target?: string, aiService?: string, translationSource?: TranslationSource, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<FileResponse>>;
+    public pdfWebapiTranslatePostForm(files?: Array<Blob>, languages?: Array<string>, source?: string, target?: string, aiService?: string, translationSource?: TranslationSource, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
+
+
+
+
+
+
+
+        let queryParameters = new HttpParams({encoder: new CustomHttpUrlEncodingCodec()});
+        if (languages) {
+            languages.forEach((element) => {
+                queryParameters = queryParameters.append('languages', <any>element);
+            })
+        }
+        if (source !== undefined && source !== null) {
+            queryParameters = queryParameters.set('source', <any>source);
+        }
+        if (target !== undefined && target !== null) {
+            queryParameters = queryParameters.set('target', <any>target);
+        }
+        if (aiService !== undefined && aiService !== null) {
+            queryParameters = queryParameters.set('aiService', <any>aiService);
+        }
+        if (translationSource !== undefined && translationSource !== null) {
+            queryParameters = queryParameters.set('translationSource', <any>translationSource);
+        }
+
+        let headers = this.defaultHeaders;
+
+        // to determine the Accept header
+        let httpHeaderAccepts: string[] = [
+            'text/plain',
+            'application/json',
+            'text/json'
+        ];
+        const httpHeaderAcceptSelected: string | undefined = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        if (httpHeaderAcceptSelected != undefined) {
+            headers = headers.set('Accept', httpHeaderAcceptSelected);
+        }
+
+        // to determine the Content-Type header
+        const consumes: string[] = [
+            'multipart/form-data'
+        ];
+
+        const canConsumeForm = this.canConsumeForm(consumes);
+
+        let formParams: { append(param: string, value: any): void; };
+        let useForm = false;
+        let convertFormParamsToString = false;
+        // use FormData to transmit files using content-type "multipart/form-data"
+        // see https://stackoverflow.com/questions/4007969/application-x-www-form-urlencoded-or-multipart-form-data
+        useForm = canConsumeForm;
+        if (useForm) {
+            formParams = new FormData();
+        } else {
+            formParams = new HttpParams({encoder: new CustomHttpUrlEncodingCodec()});
+        }
+
+        if (files) {
+            files.forEach((element) => {
+                formParams = formParams.append('files', <any>element) as any || formParams;
+            })
+        }
+
+        return this.httpClient.request<FileResponse>('post',`${this.basePath}/pdf/webapi/translate`,
+            {
+                body: convertFormParamsToString ? formParams.toString() : formParams,
+                params: queryParameters,
+                withCredentials: this.configuration.withCredentials,
+                headers: headers,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
      * Unlock document.
      * Attempts to unlock a document with an password and associated files.
      * @param files 
@@ -2670,7 +3540,82 @@ export class ApiService {
             })
         }
 
-        return this.httpClient.request<FileResponse>('post',`${this.basePath}/pdf/webapi/verify_esign`,
+        return this.httpClient.request<FileResponse>('post',`${this.basePath}/pdf/webapi/verify-esign`,
+            {
+                body: convertFormParamsToString ? formParams.toString() : formParams,
+                params: queryParameters,
+                withCredentials: this.configuration.withCredentials,
+                headers: headers,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * Make speech synthesizer.
+     * Make audio file with reading the text in the specified language.
+     * @param files 
+     * @param voiceModel The TTS model (Quick/Quality) in which AI must read the text.
+     * @param genderVoice The TTS voice gender (Man/Woman) in which AI must read the text.
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public pdfWebapiVoiceGeneratorPostForm(files?: Array<Blob>, voiceModel?: VoiceModel, genderVoice?: VoiceGender, observe?: 'body', reportProgress?: boolean): Observable<FileResponse>;
+    public pdfWebapiVoiceGeneratorPostForm(files?: Array<Blob>, voiceModel?: VoiceModel, genderVoice?: VoiceGender, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<FileResponse>>;
+    public pdfWebapiVoiceGeneratorPostForm(files?: Array<Blob>, voiceModel?: VoiceModel, genderVoice?: VoiceGender, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<FileResponse>>;
+    public pdfWebapiVoiceGeneratorPostForm(files?: Array<Blob>, voiceModel?: VoiceModel, genderVoice?: VoiceGender, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
+
+
+
+
+        let queryParameters = new HttpParams({encoder: new CustomHttpUrlEncodingCodec()});
+        if (voiceModel !== undefined && voiceModel !== null) {
+            queryParameters = queryParameters.set('voiceModel', <any>voiceModel);
+        }
+        if (genderVoice !== undefined && genderVoice !== null) {
+            queryParameters = queryParameters.set('genderVoice', <any>genderVoice);
+        }
+
+        let headers = this.defaultHeaders;
+
+        // to determine the Accept header
+        let httpHeaderAccepts: string[] = [
+            'text/plain',
+            'application/json',
+            'text/json'
+        ];
+        const httpHeaderAcceptSelected: string | undefined = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        if (httpHeaderAcceptSelected != undefined) {
+            headers = headers.set('Accept', httpHeaderAcceptSelected);
+        }
+
+        // to determine the Content-Type header
+        const consumes: string[] = [
+            'multipart/form-data'
+        ];
+
+        const canConsumeForm = this.canConsumeForm(consumes);
+
+        let formParams: { append(param: string, value: any): void; };
+        let useForm = false;
+        let convertFormParamsToString = false;
+        // use FormData to transmit files using content-type "multipart/form-data"
+        // see https://stackoverflow.com/questions/4007969/application-x-www-form-urlencoded-or-multipart-form-data
+        useForm = canConsumeForm;
+        if (useForm) {
+            formParams = new FormData();
+        } else {
+            formParams = new HttpParams({encoder: new CustomHttpUrlEncodingCodec()});
+        }
+
+        if (files) {
+            files.forEach((element) => {
+                formParams = formParams.append('files', <any>element) as any || formParams;
+            })
+        }
+
+        return this.httpClient.request<FileResponse>('post',`${this.basePath}/pdf/webapi/voice-generator`,
             {
                 body: convertFormParamsToString ? formParams.toString() : formParams,
                 params: queryParameters,
@@ -2894,6 +3839,44 @@ export class ApiService {
             {
                 body: convertFormParamsToString ? formParams.toString() : formParams,
                 params: queryParameters,
+                withCredentials: this.configuration.withCredentials,
+                headers: headers,
+                observe: observe,
+                reportProgress: reportProgress
+            }
+        );
+    }
+
+    /**
+     * Generates words for crossword using AI Mistral
+     * 
+     * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
+     * @param reportProgress flag to report request and response progress.
+     */
+    public pdfWebapiWordsGeneratorPost(observe?: 'body', reportProgress?: boolean): Observable<FileResponse>;
+    public pdfWebapiWordsGeneratorPost(observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<FileResponse>>;
+    public pdfWebapiWordsGeneratorPost(observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<FileResponse>>;
+    public pdfWebapiWordsGeneratorPost(observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
+
+        let headers = this.defaultHeaders;
+
+        // to determine the Accept header
+        let httpHeaderAccepts: string[] = [
+            'text/plain',
+            'application/json',
+            'text/json'
+        ];
+        const httpHeaderAcceptSelected: string | undefined = this.configuration.selectHeaderAccept(httpHeaderAccepts);
+        if (httpHeaderAcceptSelected != undefined) {
+            headers = headers.set('Accept', httpHeaderAcceptSelected);
+        }
+
+        // to determine the Content-Type header
+        const consumes: string[] = [
+        ];
+
+        return this.httpClient.request<FileResponse>('post',`${this.basePath}/pdf/webapi/words-generator`,
+            {
                 withCredentials: this.configuration.withCredentials,
                 headers: headers,
                 observe: observe,

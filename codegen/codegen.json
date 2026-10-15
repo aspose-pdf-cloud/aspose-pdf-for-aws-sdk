@@ -1,0 +1,20 @@
+{
+  "codegen": {
+    "version": "3.0.62",
+    "url": "https://repo1.maven.org/maven2/io/swagger/codegen/v3/swagger-codegen-cli/3.0.62/swagger-codegen-cli-3.0.62.jar",
+    "sha256": "db7a29c75e0145f1bb4a3712297bb9f709abac9b0988679b88c46f89d576804f"
+  },
+  "jdk": {
+    "version": "21.0.12.1+1",
+    "url": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.12.1%2B1/OpenJDK21U-jdk_x64_windows_hotspot_21.0.12.1_1.zip",
+    "sha256": "f9d6e191ab098c0d416e7d588a24420a8621cd2f4720dab2459b8b7b2d2d8b4e"
+  },
+  "spec": "spec/swagger.json",
+  "clients": [
+    { "name": "dotnet",     "generator": "csharp-dotnet2",     "output": "dotnet-client",     "config": "codegen/dotnet.json",     "versionKey": "packageVersion",  "sources": "src",      "postprocess": "scripts/postprocess/dotnet.ps1" },
+    { "name": "java",       "generator": "java",               "output": "java-client",       "config": "codegen/java.json",       "versionKey": "artifactVersion", "sources": "src/main", "postprocess": "scripts/postprocess/java.ps1" },
+    { "name": "kotlin",     "generator": "kotlin-client",      "output": "kotlin-client",     "config": "codegen/kotlin.json",     "versionKey": "artifactVersion", "sources": "src/main" },
+    { "name": "php",        "generator": "php",                "output": "php-cLient",        "config": "codegen/php.json",        "generatedSubdir": "SwaggerClient-php", "versionKey": "artifactVersion", "sources": "lib" },
+    { "name": "typescript", "generator": "typescript-angular", "output": "typescript-client", "config": "codegen/typescript.json", "versionKey": "npmVersion",      "sources": "api" }
+  ]
+}

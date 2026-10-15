@@ -62,7 +62,6 @@ $apiInstance = new Swagger\Client\Api\ApiApi(
     new GuzzleHttp\Client()
 );
 $files = array("files_example"); // string[] | 
-$document_password = "document_password_example"; // string | 
 $v_alignment = new \Swagger\Client\Model\PageNumberVerticalAlign(); // \Swagger\Client\Model\PageNumberVerticalAlign | The vertical alignment of the page numbers.
 $h_alignment = new \Swagger\Client\Model\PageNumberHorizontalAlign(); // \Swagger\Client\Model\PageNumberHorizontalAlign | The horizontal alignment of the page numbers.
 $starting_number = 56; // int | The starting number for the page numbers.
@@ -73,7 +72,7 @@ $font_size = 56; // int | The font size of the page numbers.
 $format = "format_example"; // string | The format of the page numbers.
 
 try {
-    $result = $apiInstance->pdfWebapiAddnumberPost($files, $document_password, $v_alignment, $h_alignment, $starting_number, $s_number, $f_number, $margin, $font_size, $format);
+    $result = $apiInstance->pdfWebapiAddnumberPost($files, $v_alignment, $h_alignment, $starting_number, $s_number, $f_number, $margin, $font_size, $format);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ApiApi->pdfWebapiAddnumberPost: ', $e->getMessage(), PHP_EOL;
@@ -86,10 +85,9 @@ $apiInstance = new Swagger\Client\Api\ApiApi(
 );
 $font_replacements_json = "font_replacements_json_example"; // string | 
 $files = array("files_example"); // string[] | 
-$document_password = "document_password_example"; // string | 
 
 try {
-    $result = $apiInstance->pdfWebapiChangeFontsPost($font_replacements_json, $files, $document_password);
+    $result = $apiInstance->pdfWebapiChangeFontsPost($font_replacements_json, $files);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ApiApi->pdfWebapiChangeFontsPost: ', $e->getMessage(), PHP_EOL;
@@ -101,10 +99,10 @@ $apiInstance = new Swagger\Client\Api\ApiApi(
     new GuzzleHttp\Client()
 );
 $files = array("files_example"); // string[] | 
-$document_password = "document_password_example"; // string | 
+$compare_type = new \Swagger\Client\Model\CompareType(); // \Swagger\Client\Model\CompareType | 
 
 try {
-    $result = $apiInstance->pdfWebapiComparisonPost($files, $document_password);
+    $result = $apiInstance->pdfWebapiComparisonPost($files, $compare_type);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ApiApi->pdfWebapiComparisonPost: ', $e->getMessage(), PHP_EOL;
@@ -116,11 +114,10 @@ $apiInstance = new Swagger\Client\Api\ApiApi(
     new GuzzleHttp\Client()
 );
 $files = array("files_example"); // string[] | 
-$document_password = "document_password_example"; // string | 
 $compress_type = new \Swagger\Client\Model\CompressType(); // \Swagger\Client\Model\CompressType | The level of compression to use.
 
 try {
-    $result = $apiInstance->pdfWebapiCompressPost($files, $document_password, $compress_type);
+    $result = $apiInstance->pdfWebapiCompressPost($files, $compress_type);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ApiApi->pdfWebapiCompressPost: ', $e->getMessage(), PHP_EOL;
@@ -132,7 +129,6 @@ $apiInstance = new Swagger\Client\Api\ApiApi(
     new GuzzleHttp\Client()
 );
 $files = array("files_example"); // string[] | 
-$document_password = "document_password_example"; // string | 
 $input_type = "input_type_example"; // string | The format of the input files.
 $output_type = "output_type_example"; // string | The desired format for the output files.
 $xml_type = new \Swagger\Client\Model\XmlType(); // \Swagger\Client\Model\XmlType | The type of XML conversion to perform, if applicable.
@@ -140,9 +136,10 @@ $xml_tag = "xml_tag_example"; // string | The XML tag to use for conversion, if 
 $font_sise = 56; // int | 
 $is_to_single = true; // bool | Indicates whether the conversion should result in a single file, if applicable.
 $separator = "separator_example"; // string | The separator to use when converting, if applicable.
+$interval = 1.2; // double | The interval between frames for convert to video.
 
 try {
-    $result = $apiInstance->pdfWebapiConvertPost($files, $document_password, $input_type, $output_type, $xml_type, $xml_tag, $font_sise, $is_to_single, $separator);
+    $result = $apiInstance->pdfWebapiConvertPost($files, $input_type, $output_type, $xml_type, $xml_tag, $font_sise, $is_to_single, $separator, $interval);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ApiApi->pdfWebapiConvertPost: ', $e->getMessage(), PHP_EOL;
@@ -154,11 +151,10 @@ $apiInstance = new Swagger\Client\Api\ApiApi(
     new GuzzleHttp\Client()
 );
 $web_page = "web_page_example"; // string | 
-$document_password = "document_password_example"; // string | 
 $output_type = "output_type_example"; // string | The desired format for the output file.
 
 try {
-    $result = $apiInstance->pdfWebapiConvertWebpagePost($web_page, $document_password, $output_type);
+    $result = $apiInstance->pdfWebapiConvertWebpagePost($web_page, $output_type);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ApiApi->pdfWebapiConvertWebpagePost: ', $e->getMessage(), PHP_EOL;
@@ -170,7 +166,20 @@ $apiInstance = new Swagger\Client\Api\ApiApi(
     new GuzzleHttp\Client()
 );
 $files = array("files_example"); // string[] | 
-$document_password = "document_password_example"; // string | 
+
+try {
+    $result = $apiInstance->pdfWebapiCreatorPost($files);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi->pdfWebapiCreatorPost: ', $e->getMessage(), PHP_EOL;
+}
+
+$apiInstance = new Swagger\Client\Api\ApiApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$files = array("files_example"); // string[] | 
 $input_type = "input_type_example"; // string | The format of the input files.
 $top = 56; // int | The number of pixels to crop from the top.
 $right = 56; // int | The number of pixels to crop from the right.
@@ -179,7 +188,7 @@ $left = 56; // int | The number of pixels to crop from the left.
 $output_type = "output_type_example"; // string | The desired format for the output files.
 
 try {
-    $result = $apiInstance->pdfWebapiCropPost($files, $document_password, $input_type, $top, $right, $bottom, $left, $output_type);
+    $result = $apiInstance->pdfWebapiCropPost($files, $input_type, $top, $right, $bottom, $left, $output_type);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ApiApi->pdfWebapiCropPost: ', $e->getMessage(), PHP_EOL;
@@ -204,18 +213,14 @@ $apiInstance = new Swagger\Client\Api\ApiApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$passw = "passw_example"; // string | 
-$initials = "initials_example"; // string | 
-$invite = "invite_example"; // string | 
 $files = array("files_example"); // string[] | 
-$document_password = "document_password_example"; // string | 
-$input_type = "input_type_example"; // string | The format of the input files.
+$message = "message_example"; // string | 
 
 try {
-    $result = $apiInstance->pdfWebapiEsignPost($passw, $initials, $invite, $files, $document_password, $input_type);
+    $result = $apiInstance->pdfWebapiEditorPost($files, $message);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ApiApi->pdfWebapiEsignPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ApiApi->pdfWebapiEditorPost: ', $e->getMessage(), PHP_EOL;
 }
 
 $apiInstance = new Swagger\Client\Api\ApiApi(
@@ -224,12 +229,11 @@ $apiInstance = new Swagger\Client\Api\ApiApi(
     new GuzzleHttp\Client()
 );
 $files = array("files_example"); // string[] | 
-$document_password = "document_password_example"; // string | 
 $input_type = "input_type_example"; // string | The format of the input files.
 $output_type = "output_type_example"; // string | The desired format for the output files.
 
 try {
-    $result = $apiInstance->pdfWebapiExtractPost($files, $document_password, $input_type, $output_type);
+    $result = $apiInstance->pdfWebapiExtractPost($files, $input_type, $output_type);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ApiApi->pdfWebapiExtractPost: ', $e->getMessage(), PHP_EOL;
@@ -241,7 +245,20 @@ $apiInstance = new Swagger\Client\Api\ApiApi(
     new GuzzleHttp\Client()
 );
 $files = array("files_example"); // string[] | 
-$document_password = "document_password_example"; // string | 
+
+try {
+    $result = $apiInstance->pdfWebapiFormatDetectorPost($files);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi->pdfWebapiFormatDetectorPost: ', $e->getMessage(), PHP_EOL;
+}
+
+$apiInstance = new Swagger\Client\Api\ApiApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$files = array("files_example"); // string[] | 
 $keep_images_as_is = true; // bool | Indicates whether the images should be kept as is.
 $resize_to_image = 56; // int | The index of the image to resize the other images to.
 $streched = true; // bool | 
@@ -250,7 +267,7 @@ $height = 56; // int | The height of the GIF.
 $frame_times = "frame_times_example"; // string | The times for each frame in the GIF.
 
 try {
-    $result = $apiInstance->pdfWebapiGifPost($files, $document_password, $keep_images_as_is, $resize_to_image, $streched, $width, $height, $frame_times);
+    $result = $apiInstance->pdfWebapiGifPost($files, $keep_images_as_is, $resize_to_image, $streched, $width, $height, $frame_times);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ApiApi->pdfWebapiGifPost: ', $e->getMessage(), PHP_EOL;
@@ -262,13 +279,27 @@ $apiInstance = new Swagger\Client\Api\ApiApi(
     new GuzzleHttp\Client()
 );
 $files = array("files_example"); // string[] | 
-$document_password = "document_password_example"; // string | 
+$language = "language_example"; // string | The language of the source file or text
+
+try {
+    $result = $apiInstance->pdfWebapiGrammarCheckerPost($files, $language);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi->pdfWebapiGrammarCheckerPost: ', $e->getMessage(), PHP_EOL;
+}
+
+$apiInstance = new Swagger\Client\Api\ApiApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$files = array("files_example"); // string[] | 
 $input_type = "input_type_example"; // string | The format of the input files.
 $output_type = "output_type_example"; // string | The desired format for the output files.
 $alg = new \Swagger\Client\Model\HashAlgorithm(); // \Swagger\Client\Model\HashAlgorithm | The hashing algorithm to use.
 
 try {
-    $result = $apiInstance->pdfWebapiHashPost($files, $document_password, $input_type, $output_type, $alg);
+    $result = $apiInstance->pdfWebapiHashPost($files, $input_type, $output_type, $alg);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ApiApi->pdfWebapiHashPost: ', $e->getMessage(), PHP_EOL;
@@ -279,11 +310,42 @@ $apiInstance = new Swagger\Client\Api\ApiApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$password = "password_example"; // string | 
 $files = array("files_example"); // string[] | 
+$language = "language_example"; // string | The language code in which ai must read the text.
 
 try {
-    $result = $apiInstance->pdfWebapiLockPost($password, $files);
+    $result = $apiInstance->pdfWebapiImageDescriptionPost($files, $language);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi->pdfWebapiImageDescriptionPost: ', $e->getMessage(), PHP_EOL;
+}
+
+$apiInstance = new Swagger\Client\Api\ApiApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$question = "question_example"; // string | 
+$count = 56; // int | 
+$size = "size_example"; // string | 
+
+try {
+    $result = $apiInstance->pdfWebapiImageGeneratorPost($question, $count, $size);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi->pdfWebapiImageGeneratorPost: ', $e->getMessage(), PHP_EOL;
+}
+
+$apiInstance = new Swagger\Client\Api\ApiApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$files = array("files_example"); // string[] | 
+$passw = "passw_example"; // string | The password required to lock the resource.
+
+try {
+    $result = $apiInstance->pdfWebapiLockPost($files, $passw);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ApiApi->pdfWebapiLockPost: ', $e->getMessage(), PHP_EOL;
@@ -295,7 +357,6 @@ $apiInstance = new Swagger\Client\Api\ApiApi(
     new GuzzleHttp\Client()
 );
 $files = array("files_example"); // string[] | 
-$document_password = "document_password_example"; // string | 
 $input_type = "input_type_example"; // string | The format of the input files.
 $output_type = "output_type_example"; // string | The desired format for the output file.
 $merge_type = new \Swagger\Client\Model\MergeImageType(); // \Swagger\Client\Model\MergeImageType | Type of merger operation.
@@ -305,7 +366,7 @@ $page_size = new \Swagger\Client\Model\PageSize(); // \Swagger\Client\Model\Page
 $dc_is_landscape = true; // bool | Indicates whether the output file should be in landscape orientation.
 
 try {
-    $result = $apiInstance->pdfWebapiMergePost($files, $document_password, $input_type, $output_type, $merge_type, $horizontal, $vertical, $page_size, $dc_is_landscape);
+    $result = $apiInstance->pdfWebapiMergePost($files, $input_type, $output_type, $merge_type, $horizontal, $vertical, $page_size, $dc_is_landscape);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ApiApi->pdfWebapiMergePost: ', $e->getMessage(), PHP_EOL;
@@ -317,13 +378,12 @@ $apiInstance = new Swagger\Client\Api\ApiApi(
     new GuzzleHttp\Client()
 );
 $files = array("files_example"); // string[] | 
-$document_password = "document_password_example"; // string | 
 $operation = new \Swagger\Client\Model\MetadataOperation(); // \Swagger\Client\Model\MetadataOperation | The operation to perform on the metadata.
 $folder = "folder_example"; // string | The folder where the files are located.
 $name = "name_example"; // string | The name of the file to perform the operation on.
 
 try {
-    $result = $apiInstance->pdfWebapiMetadataPost($files, $document_password, $operation, $folder, $name);
+    $result = $apiInstance->pdfWebapiMetadataPost($files, $operation, $folder, $name);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ApiApi->pdfWebapiMetadataPost: ', $e->getMessage(), PHP_EOL;
@@ -335,13 +395,12 @@ $apiInstance = new Swagger\Client\Api\ApiApi(
     new GuzzleHttp\Client()
 );
 $files = array("files_example"); // string[] | 
-$document_password = "document_password_example"; // string | 
 $input_type = "input_type_example"; // string | The format of the input files.
 $remove = "remove_example"; // string | The pages to remove from the document.
 $move = "move_example"; // string | The pages to move within the document.
 
 try {
-    $result = $apiInstance->pdfWebapiOrganizePost($files, $document_password, $input_type, $remove, $move);
+    $result = $apiInstance->pdfWebapiOrganizePost($files, $input_type, $remove, $move);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ApiApi->pdfWebapiOrganizePost: ', $e->getMessage(), PHP_EOL;
@@ -353,10 +412,25 @@ $apiInstance = new Swagger\Client\Api\ApiApi(
     new GuzzleHttp\Client()
 );
 $files = array("files_example"); // string[] | 
-$document_password = "document_password_example"; // string | 
+$source = "source_example"; // string | The Source language.
+$paraphrase_source = new \Swagger\Client\Model\ParaphraseSource(); // \Swagger\Client\Model\ParaphraseSource | Upload file or text.
 
 try {
-    $result = $apiInstance->pdfWebapiParsePost($files, $document_password);
+    $result = $apiInstance->pdfWebapiParaphrasePost($files, $source, $paraphrase_source);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi->pdfWebapiParaphrasePost: ', $e->getMessage(), PHP_EOL;
+}
+
+$apiInstance = new Swagger\Client\Api\ApiApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$files = array("files_example"); // string[] | 
+
+try {
+    $result = $apiInstance->pdfWebapiParsePost($files);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ApiApi->pdfWebapiParsePost: ', $e->getMessage(), PHP_EOL;
@@ -368,7 +442,25 @@ $apiInstance = new Swagger\Client\Api\ApiApi(
     new GuzzleHttp\Client()
 );
 $files = array("files_example"); // string[] | 
-$document_password = "document_password_example"; // string | 
+$content = "content_example"; // string | Textual content used to generate quiz questions (optional if files are provided).
+$question_number = 56; // int | The total number of questions to generate.
+$include_answers = true; // bool | Generating questions with answers
+$question_type = new \Swagger\Client\Model\QuestionType(); // \Swagger\Client\Model\QuestionType | The type of questions to generate: ShortAnswer, TrueFalse, or McQs (multiple choice).
+$difficulty_level = new \Swagger\Client\Model\DifficultyLevel(); // \Swagger\Client\Model\DifficultyLevel | The desired difficulty level of the quiz.
+
+try {
+    $result = $apiInstance->pdfWebapiQuizMakerPost($files, $content, $question_number, $include_answers, $question_type, $difficulty_level);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi->pdfWebapiQuizMakerPost: ', $e->getMessage(), PHP_EOL;
+}
+
+$apiInstance = new Swagger\Client\Api\ApiApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$files = array("files_example"); // string[] | 
 $search_query = "search_query_example"; // string | The text to search for and redact.
 $replace_text = "replace_text_example"; // string | The text to replace the found text with.
 $case_sensitive = true; // bool | Indicates whether the search should be case-sensitive.
@@ -377,7 +469,7 @@ $comments = true; // bool | Indicates whether comments should be redacted.
 $metadata = true; // bool | Indicates whether metadata should be redacted.
 
 try {
-    $result = $apiInstance->pdfWebapiRedactPost($files, $document_password, $search_query, $replace_text, $case_sensitive, $text, $comments, $metadata);
+    $result = $apiInstance->pdfWebapiRedactPost($files, $search_query, $replace_text, $case_sensitive, $text, $comments, $metadata);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ApiApi->pdfWebapiRedactPost: ', $e->getMessage(), PHP_EOL;
@@ -403,13 +495,28 @@ $apiInstance = new Swagger\Client\Api\ApiApi(
     new GuzzleHttp\Client()
 );
 $files = array("files_example"); // string[] | 
-$document_password = "document_password_example"; // string | 
 
 try {
-    $result = $apiInstance->pdfWebapiRemovePost($files, $document_password);
+    $result = $apiInstance->pdfWebapiRemovePost($files);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ApiApi->pdfWebapiRemovePost: ', $e->getMessage(), PHP_EOL;
+}
+
+$apiInstance = new Swagger\Client\Api\ApiApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$ids = array("ids_example"); // string[] | 
+$files = array("files_example"); // string[] | 
+$watermark_action = new \Swagger\Client\Model\WatermarkAction(); // \Swagger\Client\Model\WatermarkAction | 
+
+try {
+    $result = $apiInstance->pdfWebapiRemoveWatermarkBlazorPost($ids, $files, $watermark_action);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi->pdfWebapiRemoveWatermarkBlazorPost: ', $e->getMessage(), PHP_EOL;
 }
 
 $apiInstance = new Swagger\Client\Api\ApiApi(
@@ -423,13 +530,12 @@ $left = 56; // int |
 $bottom = 56; // int | 
 $right = 56; // int | 
 $files = array("files_example"); // string[] | 
-$document_password = "document_password_example"; // string | 
 $is_all_pages = true; // bool | Indicates whether the watermark should be removed from all pages.
 $watermark_type = new \Swagger\Client\Model\WatermarkType(); // \Swagger\Client\Model\WatermarkType | The type of watermark to remove.
 $remove_range = "remove_range_example"; // string | The range of pages to remove the watermark from.
 
 try {
-    $result = $apiInstance->pdfWebapiRemoveWatermarkPost($watermark_text, $top, $left, $bottom, $right, $files, $document_password, $is_all_pages, $watermark_type, $remove_range);
+    $result = $apiInstance->pdfWebapiRemoveWatermarkPost($watermark_text, $top, $left, $bottom, $right, $files, $is_all_pages, $watermark_type, $remove_range);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ApiApi->pdfWebapiRemoveWatermarkPost: ', $e->getMessage(), PHP_EOL;
@@ -441,11 +547,10 @@ $apiInstance = new Swagger\Client\Api\ApiApi(
     new GuzzleHttp\Client()
 );
 $files = array("files_example"); // string[] | 
-$document_password = "document_password_example"; // string | 
 $remove_range = "remove_range_example"; // string | The range of pages to remove from the files.
 
 try {
-    $result = $apiInstance->pdfWebapiRemovepagesPost($files, $document_password, $remove_range);
+    $result = $apiInstance->pdfWebapiRemovepagesPost($files, $remove_range);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ApiApi->pdfWebapiRemovepagesPost: ', $e->getMessage(), PHP_EOL;
@@ -457,10 +562,9 @@ $apiInstance = new Swagger\Client\Api\ApiApi(
     new GuzzleHttp\Client()
 );
 $files = array("files_example"); // string[] | 
-$document_password = "document_password_example"; // string | 
 
 try {
-    $result = $apiInstance->pdfWebapiRepairPost($files, $document_password);
+    $result = $apiInstance->pdfWebapiRepairPost($files);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ApiApi->pdfWebapiRepairPost: ', $e->getMessage(), PHP_EOL;
@@ -472,7 +576,6 @@ $apiInstance = new Swagger\Client\Api\ApiApi(
     new GuzzleHttp\Client()
 );
 $files = array("files_example"); // string[] | 
-$document_password = "document_password_example"; // string | 
 $input_type = "input_type_example"; // string | The format of the input files.
 $output_type = "output_type_example"; // string | The desired format for the output files.
 $resize_type = new \Swagger\Client\Model\ResizeType(); // \Swagger\Client\Model\ResizeType | The type of resizing to apply.
@@ -485,7 +588,7 @@ $use_proportions = true; // bool | Indicates whether to maintain the aspect rati
 $page_size = new \Swagger\Client\Model\ResizePageSize(); // \Swagger\Client\Model\ResizePageSize | The page size to use for the resized files.
 
 try {
-    $result = $apiInstance->pdfWebapiResizePost($files, $document_password, $input_type, $output_type, $resize_type, $preset_type, $preset_size, $width, $height, $percentage, $use_proportions, $page_size);
+    $result = $apiInstance->pdfWebapiResizePost($files, $input_type, $output_type, $resize_type, $preset_type, $preset_size, $width, $height, $percentage, $use_proportions, $page_size);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ApiApi->pdfWebapiResizePost: ', $e->getMessage(), PHP_EOL;
@@ -497,13 +600,13 @@ $apiInstance = new Swagger\Client\Api\ApiApi(
     new GuzzleHttp\Client()
 );
 $files = array("files_example"); // string[] | 
-$document_password = "document_password_example"; // string | 
 $angle = new \Swagger\Client\Model\RotateAngle(); // \Swagger\Client\Model\RotateAngle | The angle by which to rotate the files.
+$custom_angle = 56; // int | The angle by which to rotate the files in case angle set to custom state.
 $rotate_type = new \Swagger\Client\Model\RotateType(); // \Swagger\Client\Model\RotateType | The type of rotation to perform.
 $page_num = "page_num_example"; // string | The page number to rotate, if applicable.
 
 try {
-    $result = $apiInstance->pdfWebapiRotatePost($files, $document_password, $angle, $rotate_type, $page_num);
+    $result = $apiInstance->pdfWebapiRotatePost($files, $angle, $custom_angle, $rotate_type, $page_num);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ApiApi->pdfWebapiRotatePost: ', $e->getMessage(), PHP_EOL;
@@ -515,11 +618,10 @@ $apiInstance = new Swagger\Client\Api\ApiApi(
     new GuzzleHttp\Client()
 );
 $files = array("files_example"); // string[] | 
-$document_password = "document_password_example"; // string | 
 $query = "query_example"; // string | The text to search for within the files.
 
 try {
-    $result = $apiInstance->pdfWebapiSearchPost($files, $document_password, $query);
+    $result = $apiInstance->pdfWebapiSearchPost($files, $query);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ApiApi->pdfWebapiSearchPost: ', $e->getMessage(), PHP_EOL;
@@ -549,13 +651,12 @@ $image = "image_example"; // string |
 $text = "text_example"; // string | 
 $text_color = "text_color_example"; // string | 
 $files = array("files_example"); // string[] | 
-$document_password = "document_password_example"; // string | 
 $input_type = "input_type_example"; // string | The format of the input files.
 $output_type = "output_type_example"; // string | The desired format for the output files.
 $signature_type = new \Swagger\Client\Model\SignatureType(); // \Swagger\Client\Model\SignatureType | The type of signature to add.
 
 try {
-    $result = $apiInstance->pdfWebapiSignaturePost($image, $text, $text_color, $files, $document_password, $input_type, $output_type, $signature_type);
+    $result = $apiInstance->pdfWebapiSignaturePost($image, $text, $text_color, $files, $input_type, $output_type, $signature_type);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ApiApi->pdfWebapiSignaturePost: ', $e->getMessage(), PHP_EOL;
@@ -567,13 +668,12 @@ $apiInstance = new Swagger\Client\Api\ApiApi(
     new GuzzleHttp\Client()
 );
 $files = array("files_example"); // string[] | 
-$document_password = "document_password_example"; // string | 
 $input_type = "input_type_example"; // string | The format of the input files.
 $split_type = new \Swagger\Client\Model\SplitDocType(); // \Swagger\Client\Model\SplitDocType | The type of splitting to be performed.
-$pairs = "pairs_example"; // string | Optional page rage for the splitting operation.
+$pars = "pars_example"; // string | Optional page rage for the splitting operation.
 
 try {
-    $result = $apiInstance->pdfWebapiSplitdocPost($files, $document_password, $input_type, $split_type, $pairs);
+    $result = $apiInstance->pdfWebapiSplitdocPost($files, $input_type, $split_type, $pars);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ApiApi->pdfWebapiSplitdocPost: ', $e->getMessage(), PHP_EOL;
@@ -585,14 +685,13 @@ $apiInstance = new Swagger\Client\Api\ApiApi(
     new GuzzleHttp\Client()
 );
 $files = array("files_example"); // string[] | 
-$document_password = "document_password_example"; // string | 
 $split_type = new \Swagger\Client\Model\SplitImageType(); // \Swagger\Client\Model\SplitImageType | The type of splitting to be performed.
 $vertical = 56; // int | The number of vertical splits to create.
 $horizontal = 56; // int | The number of horizontal splits to create.
 $output_type = "output_type_example"; // string | The desired output format for the split images.
 
 try {
-    $result = $apiInstance->pdfWebapiSplitimagePost($files, $document_password, $split_type, $vertical, $horizontal, $output_type);
+    $result = $apiInstance->pdfWebapiSplitimagePost($files, $split_type, $vertical, $horizontal, $output_type);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ApiApi->pdfWebapiSplitimagePost: ', $e->getMessage(), PHP_EOL;
@@ -617,11 +716,91 @@ $apiInstance = new Swagger\Client\Api\ApiApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$password = "password_example"; // string | 
+$files = array("files_example"); // string[] | 
+$question = "question_example"; // string | 
+
+try {
+    $result = $apiInstance->pdfWebapiSummaryPost($files, $question);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi->pdfWebapiSummaryPost: ', $e->getMessage(), PHP_EOL;
+}
+
+$apiInstance = new Swagger\Client\Api\ApiApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $files = array("files_example"); // string[] | 
 
 try {
-    $result = $apiInstance->pdfWebapiUnlockPost($password, $files);
+    $result = $apiInstance->pdfWebapiTableOfContentsPost($files);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi->pdfWebapiTableOfContentsPost: ', $e->getMessage(), PHP_EOL;
+}
+
+$apiInstance = new Swagger\Client\Api\ApiApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$subject = "subject_example"; // string | Text description of the subject of the tests
+$number = 56; // int | Questions number
+$complexity = "complexity_example"; // string | The complexity level of generated questions
+$language = "language_example"; // string | Language in which questions are written
+$output_type = "output_type_example"; // string | The format of result file
+
+try {
+    $result = $apiInstance->pdfWebapiTestGeneratorPost($subject, $number, $complexity, $language, $output_type);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi->pdfWebapiTestGeneratorPost: ', $e->getMessage(), PHP_EOL;
+}
+
+$apiInstance = new Swagger\Client\Api\ApiApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$files = array("files_example"); // string[] | 
+
+try {
+    $result = $apiInstance->pdfWebapiTranscribeAudioPost($files);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi->pdfWebapiTranscribeAudioPost: ', $e->getMessage(), PHP_EOL;
+}
+
+$apiInstance = new Swagger\Client\Api\ApiApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$files = array("files_example"); // string[] | 
+$languages = array("languages_example"); // string[] | The language code in which will make the resource files to be translated.
+$source = "source_example"; // string | The Source language.
+$target = "target_example"; // string | The target language.
+$ai_service = "ai_service_example"; // string | Choosing an AI service for developers
+$translation_source = new \Swagger\Client\Model\TranslationSource(); // \Swagger\Client\Model\TranslationSource | Upload file or text.
+
+try {
+    $result = $apiInstance->pdfWebapiTranslatePost($files, $languages, $source, $target, $ai_service, $translation_source);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi->pdfWebapiTranslatePost: ', $e->getMessage(), PHP_EOL;
+}
+
+$apiInstance = new Swagger\Client\Api\ApiApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$files = array("files_example"); // string[] | 
+$passw = "passw_example"; // string | The password used in locked document.
+
+try {
+    $result = $apiInstance->pdfWebapiUnlockPost($files, $passw);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ApiApi->pdfWebapiUnlockPost: ', $e->getMessage(), PHP_EOL;
@@ -633,11 +812,10 @@ $apiInstance = new Swagger\Client\Api\ApiApi(
     new GuzzleHttp\Client()
 );
 $files = array("files_example"); // string[] | 
-$document_password = "document_password_example"; // string | 
 $input_type = "input_type_example"; // string | The format of the input files.
 
 try {
-    $result = $apiInstance->pdfWebapiVerifyEsignPost($files, $document_password, $input_type);
+    $result = $apiInstance->pdfWebapiVerifyEsignPost($files, $input_type);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ApiApi->pdfWebapiVerifyEsignPost: ', $e->getMessage(), PHP_EOL;
@@ -649,7 +827,22 @@ $apiInstance = new Swagger\Client\Api\ApiApi(
     new GuzzleHttp\Client()
 );
 $files = array("files_example"); // string[] | 
-$document_password = "document_password_example"; // string | 
+$voice_model = new \Swagger\Client\Model\VoiceModel(); // \Swagger\Client\Model\VoiceModel | The TTS model (Quick/Quality) in which AI must read the text.
+$gender_voice = new \Swagger\Client\Model\VoiceGender(); // \Swagger\Client\Model\VoiceGender | The TTS voice gender (Man/Woman) in which AI must read the text.
+
+try {
+    $result = $apiInstance->pdfWebapiVoiceGeneratorPost($files, $voice_model, $gender_voice);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi->pdfWebapiVoiceGeneratorPost: ', $e->getMessage(), PHP_EOL;
+}
+
+$apiInstance = new Swagger\Client\Api\ApiApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$files = array("files_example"); // string[] | 
 $input_type = "input_type_example"; // string | The format of the input files.
 $output_type = "output_type_example"; // string | The desired format for the output files.
 $is_colored = true; // bool | Indicate is watermark will be in color or grayscale.
@@ -669,7 +862,7 @@ $page_from = 56; // int | The starting page number for the watermark.
 $page_to = 56; // int | The ending page number for the watermark.
 
 try {
-    $result = $apiInstance->pdfWebapiWatermarkPost($files, $document_password, $input_type, $output_type, $is_colored, $is_text, $text, $name, $size, $bold, $italic, $underlined, $color, $is_background, $rotation, $transparency, $layer, $page_from, $page_to);
+    $result = $apiInstance->pdfWebapiWatermarkPost($files, $input_type, $output_type, $is_colored, $is_text, $text, $name, $size, $bold, $italic, $underlined, $color, $is_background, $rotation, $transparency, $layer, $page_from, $page_to);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ApiApi->pdfWebapiWatermarkPost: ', $e->getMessage(), PHP_EOL;
@@ -681,11 +874,10 @@ $apiInstance = new Swagger\Client\Api\ApiApi(
     new GuzzleHttp\Client()
 );
 $files = array("files_example"); // string[] | 
-$document_password = "document_password_example"; // string | 
 $page_range = "page_range_example"; // string | The range of pages to count words in.
 
 try {
-    $result = $apiInstance->pdfWebapiWordcounterPost($files, $document_password, $page_range);
+    $result = $apiInstance->pdfWebapiWordcounterPost($files, $page_range);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ApiApi->pdfWebapiWordcounterPost: ', $e->getMessage(), PHP_EOL;
@@ -696,12 +888,24 @@ $apiInstance = new Swagger\Client\Api\ApiApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
+
+try {
+    $result = $apiInstance->pdfWebapiWordsGeneratorPost();
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ApiApi->pdfWebapiWordsGeneratorPost: ', $e->getMessage(), PHP_EOL;
+}
+
+$apiInstance = new Swagger\Client\Api\ApiApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
 $files = array("files_example"); // string[] | 
-$document_password = "document_password_example"; // string | 
 $input_type = "input_type_example"; // string | The format of the input files.
 
 try {
-    $result = $apiInstance->pdfWebapiXfaconvertPost($files, $document_password, $input_type);
+    $result = $apiInstance->pdfWebapiXfaconvertPost($files, $input_type);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ApiApi->pdfWebapiXfaconvertPost: ', $e->getMessage(), PHP_EOL;
@@ -715,46 +919,63 @@ All URIs are relative to */*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*ApiApi* | [**pdfWebapiAddnumberPost**](docs/Api/ApiApi.md#pdfwebapiaddnumberpost) | **POST** /pdf/webapi/addnumber | Add Page Numbers to Document.
-*ApiApi* | [**pdfWebapiChangeFontsPost**](docs/Api/ApiApi.md#pdfwebapichangefontspost) | **POST** /pdf/webapi/change-fonts | Change Fonts in Provided Files.
+*ApiApi* | [**pdfWebapiAddnumberPost**](docs/Api/ApiApi.md#pdfwebapiaddnumberpost) | **POST** /pdf/webapi/addnumber | Add page numbers to document.
+*ApiApi* | [**pdfWebapiChangeFontsPost**](docs/Api/ApiApi.md#pdfwebapichangefontspost) | **POST** /pdf/webapi/change-fonts | Changes the fonts of the provided files using the specified font replacements.
 *ApiApi* | [**pdfWebapiComparisonPost**](docs/Api/ApiApi.md#pdfwebapicomparisonpost) | **POST** /pdf/webapi/comparison | Compare documents text.
-*ApiApi* | [**pdfWebapiCompressPost**](docs/Api/ApiApi.md#pdfwebapicompresspost) | **POST** /pdf/webapi/compress | Compress Document.
-*ApiApi* | [**pdfWebapiConvertPost**](docs/Api/ApiApi.md#pdfwebapiconvertpost) | **POST** /pdf/webapi/convert | Convert Document to Another Format.
-*ApiApi* | [**pdfWebapiConvertWebpagePost**](docs/Api/ApiApi.md#pdfwebapiconvertwebpagepost) | **POST** /pdf/webapi/convert-webpage | Convert Web Page to Document.
-*ApiApi* | [**pdfWebapiCropPost**](docs/Api/ApiApi.md#pdfwebapicroppost) | **POST** /pdf/webapi/crop | Crop Document.
+*ApiApi* | [**pdfWebapiCompressPost**](docs/Api/ApiApi.md#pdfwebapicompresspost) | **POST** /pdf/webapi/compress | Compress document.
+*ApiApi* | [**pdfWebapiConvertPost**](docs/Api/ApiApi.md#pdfwebapiconvertpost) | **POST** /pdf/webapi/convert | Convert document to another format.
+*ApiApi* | [**pdfWebapiConvertWebpagePost**](docs/Api/ApiApi.md#pdfwebapiconvertwebpagepost) | **POST** /pdf/webapi/convert-webpage | Convert web page to document.
+*ApiApi* | [**pdfWebapiCreatorPost**](docs/Api/ApiApi.md#pdfwebapicreatorpost) | **POST** /pdf/webapi/creator | 
+*ApiApi* | [**pdfWebapiCropPost**](docs/Api/ApiApi.md#pdfwebapicroppost) | **POST** /pdf/webapi/crop | Crop document.
 *ApiApi* | [**pdfWebapiDownloadIdGet**](docs/Api/ApiApi.md#pdfwebapidownloadidget) | **GET** /pdf/webapi/download/{id} | File download.
-*ApiApi* | [**pdfWebapiEsignPost**](docs/Api/ApiApi.md#pdfwebapiesignpost) | **POST** /pdf/webapi/esign | Sign Document with Certificate.
-*ApiApi* | [**pdfWebapiExtractPost**](docs/Api/ApiApi.md#pdfwebapiextractpost) | **POST** /pdf/webapi/extract | Extract Tables from Document.
+*ApiApi* | [**pdfWebapiEditorPost**](docs/Api/ApiApi.md#pdfwebapieditorpost) | **POST** /pdf/webapi/editor | 
+*ApiApi* | [**pdfWebapiExtractPost**](docs/Api/ApiApi.md#pdfwebapiextractpost) | **POST** /pdf/webapi/extract | Extract tables from document.
+*ApiApi* | [**pdfWebapiFormatDetectorPost**](docs/Api/ApiApi.md#pdfwebapiformatdetectorpost) | **POST** /pdf/webapi/format-detector | 
 *ApiApi* | [**pdfWebapiGifPost**](docs/Api/ApiApi.md#pdfwebapigifpost) | **POST** /pdf/webapi/gif | Make GIF.
-*ApiApi* | [**pdfWebapiHashPost**](docs/Api/ApiApi.md#pdfwebapihashpost) | **POST** /pdf/webapi/hash | Calculate Document Hash.
+*ApiApi* | [**pdfWebapiGrammarCheckerPost**](docs/Api/ApiApi.md#pdfwebapigrammarcheckerpost) | **POST** /pdf/webapi/grammar-checker | Checks the grammar of text, pdf files and plain text.
+*ApiApi* | [**pdfWebapiHashPost**](docs/Api/ApiApi.md#pdfwebapihashpost) | **POST** /pdf/webapi/hash | Calculate document hash.
+*ApiApi* | [**pdfWebapiImageDescriptionPost**](docs/Api/ApiApi.md#pdfwebapiimagedescriptionpost) | **POST** /pdf/webapi/image-description | Make speech synthesizer.
+*ApiApi* | [**pdfWebapiImageGeneratorPost**](docs/Api/ApiApi.md#pdfwebapiimagegeneratorpost) | **POST** /pdf/webapi/image-generator | 
 *ApiApi* | [**pdfWebapiLockPost**](docs/Api/ApiApi.md#pdfwebapilockpost) | **POST** /pdf/webapi/lock | Lock document.
-*ApiApi* | [**pdfWebapiMergePost**](docs/Api/ApiApi.md#pdfwebapimergepost) | **POST** /pdf/webapi/merge | Merge Documents.
-*ApiApi* | [**pdfWebapiMetadataPost**](docs/Api/ApiApi.md#pdfwebapimetadatapost) | **POST** /pdf/webapi/metadata | Read and Change Document Metadata.
-*ApiApi* | [**pdfWebapiOrganizePost**](docs/Api/ApiApi.md#pdfwebapiorganizepost) | **POST** /pdf/webapi/organize | Organize Document Pages.
-*ApiApi* | [**pdfWebapiParsePost**](docs/Api/ApiApi.md#pdfwebapiparsepost) | **POST** /pdf/webapi/parse | Parse Document.
-*ApiApi* | [**pdfWebapiRedactPost**](docs/Api/ApiApi.md#pdfwebapiredactpost) | **POST** /pdf/webapi/redact | Redact Document Text.
+*ApiApi* | [**pdfWebapiMergePost**](docs/Api/ApiApi.md#pdfwebapimergepost) | **POST** /pdf/webapi/merge | Merge documents.
+*ApiApi* | [**pdfWebapiMetadataPost**](docs/Api/ApiApi.md#pdfwebapimetadatapost) | **POST** /pdf/webapi/metadata | Read and change document metadata.
+*ApiApi* | [**pdfWebapiOrganizePost**](docs/Api/ApiApi.md#pdfwebapiorganizepost) | **POST** /pdf/webapi/organize | Organize document pages.
+*ApiApi* | [**pdfWebapiParaphrasePost**](docs/Api/ApiApi.md#pdfwebapiparaphrasepost) | **POST** /pdf/webapi/paraphrase | Paraphrase document.
+*ApiApi* | [**pdfWebapiParsePost**](docs/Api/ApiApi.md#pdfwebapiparsepost) | **POST** /pdf/webapi/parse | Parse document.
+*ApiApi* | [**pdfWebapiQuizMakerPost**](docs/Api/ApiApi.md#pdfwebapiquizmakerpost) | **POST** /pdf/webapi/quiz-maker | Generates a list of quiz questions using AI based on the provided content or uploaded files,  and stores the resulting quiz into a document.
+*ApiApi* | [**pdfWebapiRedactPost**](docs/Api/ApiApi.md#pdfwebapiredactpost) | **POST** /pdf/webapi/redact | Redact document text.
 *ApiApi* | [**pdfWebapiRemoveIdPost**](docs/Api/ApiApi.md#pdfwebapiremoveidpost) | **POST** /pdf/webapi/remove/{id} | Remove stored files.
-*ApiApi* | [**pdfWebapiRemovePost**](docs/Api/ApiApi.md#pdfwebapiremovepost) | **POST** /pdf/webapi/remove | Remove Document Annotations.
-*ApiApi* | [**pdfWebapiRemoveWatermarkPost**](docs/Api/ApiApi.md#pdfwebapiremovewatermarkpost) | **POST** /pdf/webapi/remove-watermark | Remove Document Watermark.
-*ApiApi* | [**pdfWebapiRemovepagesPost**](docs/Api/ApiApi.md#pdfwebapiremovepagespost) | **POST** /pdf/webapi/removepages | Remove Pages from Document.
-*ApiApi* | [**pdfWebapiRepairPost**](docs/Api/ApiApi.md#pdfwebapirepairpost) | **POST** /pdf/webapi/repair | Repair Document.
-*ApiApi* | [**pdfWebapiResizePost**](docs/Api/ApiApi.md#pdfwebapiresizepost) | **POST** /pdf/webapi/resize | Resize Document.
-*ApiApi* | [**pdfWebapiRotatePost**](docs/Api/ApiApi.md#pdfwebapirotatepost) | **POST** /pdf/webapi/rotate | Rotate Document.
-*ApiApi* | [**pdfWebapiSearchPost**](docs/Api/ApiApi.md#pdfwebapisearchpost) | **POST** /pdf/webapi/search | Search Document Text.
-*ApiApi* | [**pdfWebapiSearchablePost**](docs/Api/ApiApi.md#pdfwebapisearchablepost) | **POST** /pdf/webapi/searchable | Make Scanned PDF Searchable.
-*ApiApi* | [**pdfWebapiSignaturePost**](docs/Api/ApiApi.md#pdfwebapisignaturepost) | **POST** /pdf/webapi/signature | Add Signature to Document.
-*ApiApi* | [**pdfWebapiSplitdocPost**](docs/Api/ApiApi.md#pdfwebapisplitdocpost) | **POST** /pdf/webapi/splitdoc | Split Document.
-*ApiApi* | [**pdfWebapiSplitimagePost**](docs/Api/ApiApi.md#pdfwebapisplitimagepost) | **POST** /pdf/webapi/splitimage | Split Image.
+*ApiApi* | [**pdfWebapiRemovePost**](docs/Api/ApiApi.md#pdfwebapiremovepost) | **POST** /pdf/webapi/remove | Remove document annotations.
+*ApiApi* | [**pdfWebapiRemoveWatermarkBlazorPost**](docs/Api/ApiApi.md#pdfwebapiremovewatermarkblazorpost) | **POST** /pdf/webapi/remove-watermark-blazor | Removes document watermark.
+*ApiApi* | [**pdfWebapiRemoveWatermarkPost**](docs/Api/ApiApi.md#pdfwebapiremovewatermarkpost) | **POST** /pdf/webapi/remove-watermark | Removes document watermark.
+*ApiApi* | [**pdfWebapiRemovepagesPost**](docs/Api/ApiApi.md#pdfwebapiremovepagespost) | **POST** /pdf/webapi/removepages | Remove pages from document.
+*ApiApi* | [**pdfWebapiRepairPost**](docs/Api/ApiApi.md#pdfwebapirepairpost) | **POST** /pdf/webapi/repair | Repair document.
+*ApiApi* | [**pdfWebapiResizePost**](docs/Api/ApiApi.md#pdfwebapiresizepost) | **POST** /pdf/webapi/resize | Resize document.
+*ApiApi* | [**pdfWebapiRotatePost**](docs/Api/ApiApi.md#pdfwebapirotatepost) | **POST** /pdf/webapi/rotate | Rotate document.
+*ApiApi* | [**pdfWebapiSearchPost**](docs/Api/ApiApi.md#pdfwebapisearchpost) | **POST** /pdf/webapi/search | Search document text.
+*ApiApi* | [**pdfWebapiSearchablePost**](docs/Api/ApiApi.md#pdfwebapisearchablepost) | **POST** /pdf/webapi/searchable | Make scanned pdf searchable.
+*ApiApi* | [**pdfWebapiSignaturePost**](docs/Api/ApiApi.md#pdfwebapisignaturepost) | **POST** /pdf/webapi/signature | Add signature to document.
+*ApiApi* | [**pdfWebapiSplitdocPost**](docs/Api/ApiApi.md#pdfwebapisplitdocpost) | **POST** /pdf/webapi/splitdoc | Split document.
+*ApiApi* | [**pdfWebapiSplitimagePost**](docs/Api/ApiApi.md#pdfwebapisplitimagepost) | **POST** /pdf/webapi/splitimage | Split image.
 *ApiApi* | [**pdfWebapiStatusIdPost**](docs/Api/ApiApi.md#pdfwebapistatusidpost) | **POST** /pdf/webapi/status/{id} | Processing status.
-*ApiApi* | [**pdfWebapiUnlockPost**](docs/Api/ApiApi.md#pdfwebapiunlockpost) | **POST** /pdf/webapi/unlock | Unlock Document.
-*ApiApi* | [**pdfWebapiVerifyEsignPost**](docs/Api/ApiApi.md#pdfwebapiverifyesignpost) | **POST** /pdf/webapi/verify_esign | Verify Document Certificate.
-*ApiApi* | [**pdfWebapiWatermarkPost**](docs/Api/ApiApi.md#pdfwebapiwatermarkpost) | **POST** /pdf/webapi/watermark | Add Watermark to Document.
-*ApiApi* | [**pdfWebapiWordcounterPost**](docs/Api/ApiApi.md#pdfwebapiwordcounterpost) | **POST** /pdf/webapi/wordcounter | Count Words and Characters in Document.
-*ApiApi* | [**pdfWebapiXfaconvertPost**](docs/Api/ApiApi.md#pdfwebapixfaconvertpost) | **POST** /pdf/webapi/xfaconvert | Convert XFA Format to Another Format.
+*ApiApi* | [**pdfWebapiSummaryPost**](docs/Api/ApiApi.md#pdfwebapisummarypost) | **POST** /pdf/webapi/summary | 
+*ApiApi* | [**pdfWebapiTableOfContentsPost**](docs/Api/ApiApi.md#pdfwebapitableofcontentspost) | **POST** /pdf/webapi/table-of-contents | 
+*ApiApi* | [**pdfWebapiTestGeneratorPost**](docs/Api/ApiApi.md#pdfwebapitestgeneratorpost) | **POST** /pdf/webapi/test-generator | Creates the list of test questions using ai and stores it to the document
+*ApiApi* | [**pdfWebapiTranscribeAudioPost**](docs/Api/ApiApi.md#pdfwebapitranscribeaudiopost) | **POST** /pdf/webapi/transcribe-audio | 
+*ApiApi* | [**pdfWebapiTranslatePost**](docs/Api/ApiApi.md#pdfwebapitranslatepost) | **POST** /pdf/webapi/translate | Translate document.
+*ApiApi* | [**pdfWebapiUnlockPost**](docs/Api/ApiApi.md#pdfwebapiunlockpost) | **POST** /pdf/webapi/unlock | Unlock document.
+*ApiApi* | [**pdfWebapiVerifyEsignPost**](docs/Api/ApiApi.md#pdfwebapiverifyesignpost) | **POST** /pdf/webapi/verify-esign | Verify document certificate.
+*ApiApi* | [**pdfWebapiVoiceGeneratorPost**](docs/Api/ApiApi.md#pdfwebapivoicegeneratorpost) | **POST** /pdf/webapi/voice-generator | Make speech synthesizer.
+*ApiApi* | [**pdfWebapiWatermarkPost**](docs/Api/ApiApi.md#pdfwebapiwatermarkpost) | **POST** /pdf/webapi/watermark | Add watermark to document.
+*ApiApi* | [**pdfWebapiWordcounterPost**](docs/Api/ApiApi.md#pdfwebapiwordcounterpost) | **POST** /pdf/webapi/wordcounter | Count words and chars in document.
+*ApiApi* | [**pdfWebapiWordsGeneratorPost**](docs/Api/ApiApi.md#pdfwebapiwordsgeneratorpost) | **POST** /pdf/webapi/words-generator | Generates words for crossword using AI Mistral
+*ApiApi* | [**pdfWebapiXfaconvertPost**](docs/Api/ApiApi.md#pdfwebapixfaconvertpost) | **POST** /pdf/webapi/xfaconvert | Convert XFA format to a another format.
 
 ## Documentation For Models
 
+ - [CompareType](docs/Model/CompareType.md)
  - [CompressType](docs/Model/CompressType.md)
+ - [DifficultyLevel](docs/Model/DifficultyLevel.md)
  - [DocProperty](docs/Model/DocProperty.md)
  - [FileProcessingErrorCode](docs/Model/FileProcessingErrorCode.md)
  - [FileResponse](docs/Model/FileResponse.md)
@@ -765,17 +986,23 @@ Class | Method | HTTP request | Description
  - [PageNumberHorizontalAlign](docs/Model/PageNumberHorizontalAlign.md)
  - [PageNumberVerticalAlign](docs/Model/PageNumberVerticalAlign.md)
  - [PageSize](docs/Model/PageSize.md)
+ - [ParaphraseSource](docs/Model/ParaphraseSource.md)
  - [PropertyType](docs/Model/PropertyType.md)
+ - [QuestionType](docs/Model/QuestionType.md)
  - [ResizePageSize](docs/Model/ResizePageSize.md)
  - [ResizePresetSize](docs/Model/ResizePresetSize.md)
  - [ResizePresetType](docs/Model/ResizePresetType.md)
  - [ResizeType](docs/Model/ResizeType.md)
+ - [ResourceMessage](docs/Model/ResourceMessage.md)
  - [RotateAngle](docs/Model/RotateAngle.md)
  - [RotateType](docs/Model/RotateType.md)
  - [SignatureType](docs/Model/SignatureType.md)
  - [SplitDocType](docs/Model/SplitDocType.md)
  - [SplitImageType](docs/Model/SplitImageType.md)
  - [TranslationSource](docs/Model/TranslationSource.md)
+ - [VoiceGender](docs/Model/VoiceGender.md)
+ - [VoiceModel](docs/Model/VoiceModel.md)
+ - [WatermarkAction](docs/Model/WatermarkAction.md)
  - [WatermarkType](docs/Model/WatermarkType.md)
  - [WebapiAddnumberBody](docs/Model/WebapiAddnumberBody.md)
  - [WebapiChangefontsBody](docs/Model/WebapiChangefontsBody.md)
@@ -783,20 +1010,27 @@ Class | Method | HTTP request | Description
  - [WebapiCompressBody](docs/Model/WebapiCompressBody.md)
  - [WebapiConvertBody](docs/Model/WebapiConvertBody.md)
  - [WebapiConvertwebpageBody](docs/Model/WebapiConvertwebpageBody.md)
+ - [WebapiCreatorBody](docs/Model/WebapiCreatorBody.md)
  - [WebapiCropBody](docs/Model/WebapiCropBody.md)
- - [WebapiEsignBody](docs/Model/WebapiEsignBody.md)
+ - [WebapiEditorBody](docs/Model/WebapiEditorBody.md)
  - [WebapiExtractBody](docs/Model/WebapiExtractBody.md)
+ - [WebapiFormatdetectorBody](docs/Model/WebapiFormatdetectorBody.md)
  - [WebapiGifBody](docs/Model/WebapiGifBody.md)
+ - [WebapiGrammarcheckerBody](docs/Model/WebapiGrammarcheckerBody.md)
  - [WebapiHashBody](docs/Model/WebapiHashBody.md)
+ - [WebapiImagedescriptionBody](docs/Model/WebapiImagedescriptionBody.md)
  - [WebapiLockBody](docs/Model/WebapiLockBody.md)
  - [WebapiMergeBody](docs/Model/WebapiMergeBody.md)
  - [WebapiMetadataBody](docs/Model/WebapiMetadataBody.md)
  - [WebapiOrganizeBody](docs/Model/WebapiOrganizeBody.md)
+ - [WebapiParaphraseBody](docs/Model/WebapiParaphraseBody.md)
  - [WebapiParseBody](docs/Model/WebapiParseBody.md)
+ - [WebapiQuizmakerBody](docs/Model/WebapiQuizmakerBody.md)
  - [WebapiRedactBody](docs/Model/WebapiRedactBody.md)
  - [WebapiRemoveBody](docs/Model/WebapiRemoveBody.md)
  - [WebapiRemovepagesBody](docs/Model/WebapiRemovepagesBody.md)
  - [WebapiRemovewatermarkBody](docs/Model/WebapiRemovewatermarkBody.md)
+ - [WebapiRemovewatermarkblazorBody](docs/Model/WebapiRemovewatermarkblazorBody.md)
  - [WebapiRepairBody](docs/Model/WebapiRepairBody.md)
  - [WebapiResizeBody](docs/Model/WebapiResizeBody.md)
  - [WebapiRotateBody](docs/Model/WebapiRotateBody.md)
@@ -805,8 +1039,13 @@ Class | Method | HTTP request | Description
  - [WebapiSignatureBody](docs/Model/WebapiSignatureBody.md)
  - [WebapiSplitdocBody](docs/Model/WebapiSplitdocBody.md)
  - [WebapiSplitimageBody](docs/Model/WebapiSplitimageBody.md)
+ - [WebapiSummaryBody](docs/Model/WebapiSummaryBody.md)
+ - [WebapiTableofcontentsBody](docs/Model/WebapiTableofcontentsBody.md)
+ - [WebapiTranscribeaudioBody](docs/Model/WebapiTranscribeaudioBody.md)
+ - [WebapiTranslateBody](docs/Model/WebapiTranslateBody.md)
  - [WebapiUnlockBody](docs/Model/WebapiUnlockBody.md)
- - [WebapiVerifyEsignBody](docs/Model/WebapiVerifyEsignBody.md)
+ - [WebapiVerifyesignBody](docs/Model/WebapiVerifyesignBody.md)
+ - [WebapiVoicegeneratorBody](docs/Model/WebapiVoicegeneratorBody.md)
  - [WebapiWatermarkBody](docs/Model/WebapiWatermarkBody.md)
  - [WebapiWordcounterBody](docs/Model/WebapiWordcounterBody.md)
  - [WebapiXfaconvertBody](docs/Model/WebapiXfaconvertBody.md)
@@ -819,5 +1058,5 @@ Class | Method | HTTP request | Description
 
 ## Author
 
-sales@aspose.com
+Evgeny.Pirogov@aspose.com
 

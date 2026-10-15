@@ -8,68 +8,29 @@ using Newtonsoft.Json;
 namespace IO.Swagger.Model {
 
   /// <summary>
-/// Specifies the page size for resizing.
-/// </summary>
-public enum ResizePageSize
-{
-	/// <summary>
-	/// Custom page size.
-	/// </summary>
-	Custom,
+  /// Specifies the page size for resizing.
+  /// </summary>
+  [DataContract]
+  public class ResizePageSize {
 
-	/// <summary>
-	/// A4 page size.
-	/// </summary>
-	A4,
+    /// <summary>
+    /// Get the string presentation of the object
+    /// </summary>
+    /// <returns>String presentation of the object</returns>
+    public override string ToString()  {
+      var sb = new StringBuilder();
+      sb.Append("class ResizePageSize {\n");
+      sb.Append("}\n");
+      return sb.ToString();
+    }
 
-	/// <summary>
-	/// A3 page size.
-	/// </summary>
-	A3,
+    /// <summary>
+    /// Get the JSON string presentation of the object
+    /// </summary>
+    /// <returns>JSON string presentation of the object</returns>
+    public string ToJson() {
+      return JsonConvert.SerializeObject(this, Formatting.Indented);
+    }
 
-	/// <summary>
-	/// Letter page size.
-	/// </summary>
-	Letter,
-
-	/// <summary>
-	/// A5 page size.
-	/// </summary>
-	A5,
-
-	/// <summary>
-	/// B5 page size.
-	/// </summary>
-	B5,
-
-	/// <summary>
-	/// Legal page size.
-	/// </summary>
-	Legal,
-
-	/// <summary>
-	/// Ledger page size.
-	/// </summary>
-	Ledger,
-
-	/// <summary>
-	/// A6 page size.
-	/// </summary>
-	A6,
-
-	/// <summary>
-	/// A2 page size.
-	/// </summary>
-	A2,
-
-	/// <summary>
-	/// A1 page size.
-	/// </summary>
-	A1,
-
-	/// <summary>
-	/// A0 page size.
-	/// </summary>
-	A0
 }
 }

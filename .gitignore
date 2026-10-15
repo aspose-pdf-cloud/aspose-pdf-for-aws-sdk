@@ -3,3 +3,5 @@ bin/
 operator_Evgeny Pirogov.json
 aspose-pdf-for-aws-sdk.sln
 target/
+# downloaded codegen jars (see scripts/get-codegen.ps1)
+tools/

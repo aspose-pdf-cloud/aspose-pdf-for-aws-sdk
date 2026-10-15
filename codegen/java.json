@@ -1,0 +1,10 @@
+{
+  "library": "okhttp-gson",
+  "hideGenerationTimestamp": true,
+  "groupId": "io.swagger",
+  "artifactId": "swagger-java-client",
+  "artifactVersion": "1.0.0",
+  "invokerPackage": "io.swagger.client",
+  "apiPackage": "io.swagger.client.api",
+  "modelPackage": "io.swagger.client.model"
+}

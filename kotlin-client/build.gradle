@@ -2,12 +2,12 @@ group 'io.swagger'
 version '1.0.0'
 
 wrapper {
-    gradleVersion = '7.5'
+    gradleVersion = '8.5'
     distributionUrl = "https://services.gradle.org/distributions/gradle-$gradleVersion-all.zip"
 }
 
 buildscript {
-    ext.kotlin_version = '1.8.0'
+    ext.kotlin_version = '1.9.24'
 
     repositories {
         maven { url "https://repo1.maven.org/maven2" }

@@ -3,5 +3,4 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**webPage** | **String** |  |  [optional]
-**documentPassword** | **String** |  |  [optional]
+**webPage** | **String** | The URL of the web page to convert. |  [optional]

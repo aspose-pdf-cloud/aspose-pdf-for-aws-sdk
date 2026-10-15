@@ -2,7 +2,6 @@
 
 Aspose.PDF for AWS
 - API version: v1
-  - Build date: 2024-08-29T10:06:07.701365036Z[GMT]
 
 Aspose.Pdf for AWS provides a comprehensive set of endpoints for various PDF-related tasks, enabling efficient document processing and manipulation. Users can retrieve processing status, download files, manage file locks, parse documents, redact sensitive information, convert between formats, merge files, add watermarks, perform text searches, and much more. With endpoints for tasks like electronic signing, document comparison, and form filling, the API offers extensive functionality to cater to diverse PDF requirements.
 
@@ -13,7 +12,7 @@ Aspose.Pdf for AWS provides a comprehensive set of endpoints for various PDF-rel
 ## Requirements
 
 Building the API client library requires:
-1. Java 1.7+
+1. Java 21+
 2. Maven/Gradle
 
 ## Installation
@@ -85,7 +84,6 @@ public class ApiApiExample {
         
         ApiApi apiInstance = new ApiApi();
         List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-        String documentPassword = "documentPassword_example"; // String | 
         PageNumberVerticalAlign vAlignment = new PageNumberVerticalAlign(); // PageNumberVerticalAlign | The vertical alignment of the page numbers.
         PageNumberHorizontalAlign hAlignment = new PageNumberHorizontalAlign(); // PageNumberHorizontalAlign | The horizontal alignment of the page numbers.
         Integer startingNumber = 56; // Integer | The starting number for the page numbers.
@@ -95,7 +93,7 @@ public class ApiApiExample {
         Integer fontSize = 56; // Integer | The font size of the page numbers.
         String format = "format_example"; // String | The format of the page numbers.
         try {
-            FileResponse result = apiInstance.pdfWebapiAddnumberPost(files, documentPassword, vAlignment, hAlignment, startingNumber, sNumber, fNumber, margin, fontSize, format);
+            FileResponse result = apiInstance.pdfWebapiAddnumberPost(files, vAlignment, hAlignment, startingNumber, sNumber, fNumber, margin, fontSize, format);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ApiApi#pdfWebapiAddnumberPost");
@@ -118,9 +116,8 @@ public class ApiApiExample {
         ApiApi apiInstance = new ApiApi();
         String fontReplacementsJson = "fontReplacementsJson_example"; // String | 
         List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-        String documentPassword = "documentPassword_example"; // String | 
         try {
-            FileResponse result = apiInstance.pdfWebapiChangeFontsPost(fontReplacementsJson, files, documentPassword);
+            FileResponse result = apiInstance.pdfWebapiChangeFontsPost(fontReplacementsJson, files);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ApiApi#pdfWebapiChangeFontsPost");
@@ -142,9 +139,9 @@ public class ApiApiExample {
         
         ApiApi apiInstance = new ApiApi();
         List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-        String documentPassword = "documentPassword_example"; // String | 
+        CompareType compareType = new CompareType(); // CompareType | 
         try {
-            FileResponse result = apiInstance.pdfWebapiComparisonPost(files, documentPassword);
+            FileResponse result = apiInstance.pdfWebapiComparisonPost(files, compareType);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ApiApi#pdfWebapiComparisonPost");
@@ -166,10 +163,9 @@ public class ApiApiExample {
         
         ApiApi apiInstance = new ApiApi();
         List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-        String documentPassword = "documentPassword_example"; // String | 
         CompressType compressType = new CompressType(); // CompressType | The level of compression to use.
         try {
-            FileResponse result = apiInstance.pdfWebapiCompressPost(files, documentPassword, compressType);
+            FileResponse result = apiInstance.pdfWebapiCompressPost(files, compressType);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ApiApi#pdfWebapiCompressPost");
@@ -191,7 +187,6 @@ public class ApiApiExample {
         
         ApiApi apiInstance = new ApiApi();
         List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-        String documentPassword = "documentPassword_example"; // String | 
         String inputType = "inputType_example"; // String | The format of the input files.
         String outputType = "outputType_example"; // String | The desired format for the output files.
         XmlType xmlType = new XmlType(); // XmlType | The type of XML conversion to perform, if applicable.
@@ -199,8 +194,9 @@ public class ApiApiExample {
         Integer fontSise = 56; // Integer | 
         Boolean isToSingle = true; // Boolean | Indicates whether the conversion should result in a single file, if applicable.
         String separator = "separator_example"; // String | The separator to use when converting, if applicable.
+        Double interval = 3.4D; // Double | The interval between frames for convert to video.
         try {
-            FileResponse result = apiInstance.pdfWebapiConvertPost(files, documentPassword, inputType, outputType, xmlType, xmlTag, fontSise, isToSingle, separator);
+            FileResponse result = apiInstance.pdfWebapiConvertPost(files, inputType, outputType, xmlType, xmlTag, fontSise, isToSingle, separator, interval);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ApiApi#pdfWebapiConvertPost");
@@ -222,10 +218,9 @@ public class ApiApiExample {
         
         ApiApi apiInstance = new ApiApi();
         String webPage = "webPage_example"; // String | 
-        String documentPassword = "documentPassword_example"; // String | 
         String outputType = "outputType_example"; // String | The desired format for the output file.
         try {
-            FileResponse result = apiInstance.pdfWebapiConvertWebpagePost(webPage, documentPassword, outputType);
+            FileResponse result = apiInstance.pdfWebapiConvertWebpagePost(webPage, outputType);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ApiApi#pdfWebapiConvertWebpagePost");
@@ -247,7 +242,29 @@ public class ApiApiExample {
         
         ApiApi apiInstance = new ApiApi();
         List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-        String documentPassword = "documentPassword_example"; // String | 
+        try {
+            FileResponse result = apiInstance.pdfWebapiCreatorPost(files);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling ApiApi#pdfWebapiCreatorPost");
+            e.printStackTrace();
+        }
+    }
+}
+import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.ApiApi;
+
+import java.io.File;
+import java.util.*;
+
+public class ApiApiExample {
+
+    public static void main(String[] args) {
+        
+        ApiApi apiInstance = new ApiApi();
+        List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
         String inputType = "inputType_example"; // String | The format of the input files.
         Integer top = 56; // Integer | The number of pixels to crop from the top.
         Integer right = 56; // Integer | The number of pixels to crop from the right.
@@ -255,7 +272,7 @@ public class ApiApiExample {
         Integer left = 56; // Integer | The number of pixels to crop from the left.
         String outputType = "outputType_example"; // String | The desired format for the output files.
         try {
-            FileResponse result = apiInstance.pdfWebapiCropPost(files, documentPassword, inputType, top, right, bottom, left, outputType);
+            FileResponse result = apiInstance.pdfWebapiCropPost(files, inputType, top, right, bottom, left, outputType);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ApiApi#pdfWebapiCropPost");
@@ -299,17 +316,13 @@ public class ApiApiExample {
     public static void main(String[] args) {
         
         ApiApi apiInstance = new ApiApi();
-        String passw = "passw_example"; // String | 
-        String initials = "initials_example"; // String | 
-        String invite = "invite_example"; // String | 
         List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-        String documentPassword = "documentPassword_example"; // String | 
-        String inputType = "inputType_example"; // String | The format of the input files.
+        String message = "message_example"; // String | 
         try {
-            FileResponse result = apiInstance.pdfWebapiEsignPost(passw, initials, invite, files, documentPassword, inputType);
+            FileResponse result = apiInstance.pdfWebapiEditorPost(files, message);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling ApiApi#pdfWebapiEsignPost");
+            System.err.println("Exception when calling ApiApi#pdfWebapiEditorPost");
             e.printStackTrace();
         }
     }
@@ -328,11 +341,10 @@ public class ApiApiExample {
         
         ApiApi apiInstance = new ApiApi();
         List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-        String documentPassword = "documentPassword_example"; // String | 
         String inputType = "inputType_example"; // String | The format of the input files.
         String outputType = "outputType_example"; // String | The desired format for the output files.
         try {
-            FileResponse result = apiInstance.pdfWebapiExtractPost(files, documentPassword, inputType, outputType);
+            FileResponse result = apiInstance.pdfWebapiExtractPost(files, inputType, outputType);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ApiApi#pdfWebapiExtractPost");
@@ -354,7 +366,29 @@ public class ApiApiExample {
         
         ApiApi apiInstance = new ApiApi();
         List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-        String documentPassword = "documentPassword_example"; // String | 
+        try {
+            FileResponse result = apiInstance.pdfWebapiFormatDetectorPost(files);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling ApiApi#pdfWebapiFormatDetectorPost");
+            e.printStackTrace();
+        }
+    }
+}
+import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.ApiApi;
+
+import java.io.File;
+import java.util.*;
+
+public class ApiApiExample {
+
+    public static void main(String[] args) {
+        
+        ApiApi apiInstance = new ApiApi();
+        List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
         Boolean keepImagesAsIs = true; // Boolean | Indicates whether the images should be kept as is.
         Integer resizeToImage = 56; // Integer | The index of the image to resize the other images to.
         Boolean streched = true; // Boolean | 
@@ -362,7 +396,7 @@ public class ApiApiExample {
         Integer height = 56; // Integer | The height of the GIF.
         String frameTimes = "frameTimes_example"; // String | The times for each frame in the GIF.
         try {
-            FileResponse result = apiInstance.pdfWebapiGifPost(files, documentPassword, keepImagesAsIs, resizeToImage, streched, width, height, frameTimes);
+            FileResponse result = apiInstance.pdfWebapiGifPost(files, keepImagesAsIs, resizeToImage, streched, width, height, frameTimes);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ApiApi#pdfWebapiGifPost");
@@ -384,12 +418,35 @@ public class ApiApiExample {
         
         ApiApi apiInstance = new ApiApi();
         List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-        String documentPassword = "documentPassword_example"; // String | 
+        String language = "language_example"; // String | The language of the source file or text
+        try {
+            FileResponse result = apiInstance.pdfWebapiGrammarCheckerPost(files, language);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling ApiApi#pdfWebapiGrammarCheckerPost");
+            e.printStackTrace();
+        }
+    }
+}
+import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.ApiApi;
+
+import java.io.File;
+import java.util.*;
+
+public class ApiApiExample {
+
+    public static void main(String[] args) {
+        
+        ApiApi apiInstance = new ApiApi();
+        List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
         String inputType = "inputType_example"; // String | The format of the input files.
         String outputType = "outputType_example"; // String | The desired format for the output files.
         HashAlgorithm alg = new HashAlgorithm(); // HashAlgorithm | The hashing algorithm to use.
         try {
-            FileResponse result = apiInstance.pdfWebapiHashPost(files, documentPassword, inputType, outputType, alg);
+            FileResponse result = apiInstance.pdfWebapiHashPost(files, inputType, outputType, alg);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ApiApi#pdfWebapiHashPost");
@@ -410,10 +467,59 @@ public class ApiApiExample {
     public static void main(String[] args) {
         
         ApiApi apiInstance = new ApiApi();
-        String password = "password_example"; // String | 
         List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
+        String language = "language_example"; // String | The language code in which ai must read the text.
         try {
-            FileResponse result = apiInstance.pdfWebapiLockPost(password, files);
+            FileResponse result = apiInstance.pdfWebapiImageDescriptionPost(files, language);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling ApiApi#pdfWebapiImageDescriptionPost");
+            e.printStackTrace();
+        }
+    }
+}
+import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.ApiApi;
+
+import java.io.File;
+import java.util.*;
+
+public class ApiApiExample {
+
+    public static void main(String[] args) {
+        
+        ApiApi apiInstance = new ApiApi();
+        String question = "question_example"; // String | 
+        Integer count = 56; // Integer | 
+        String size = "size_example"; // String | 
+        try {
+            FileResponse result = apiInstance.pdfWebapiImageGeneratorPost(question, count, size);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling ApiApi#pdfWebapiImageGeneratorPost");
+            e.printStackTrace();
+        }
+    }
+}
+import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.ApiApi;
+
+import java.io.File;
+import java.util.*;
+
+public class ApiApiExample {
+
+    public static void main(String[] args) {
+        
+        ApiApi apiInstance = new ApiApi();
+        List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
+        String passw = "passw_example"; // String | The password required to lock the resource.
+        try {
+            FileResponse result = apiInstance.pdfWebapiLockPost(files, passw);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ApiApi#pdfWebapiLockPost");
@@ -435,7 +541,6 @@ public class ApiApiExample {
         
         ApiApi apiInstance = new ApiApi();
         List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-        String documentPassword = "documentPassword_example"; // String | 
         String inputType = "inputType_example"; // String | The format of the input files.
         String outputType = "outputType_example"; // String | The desired format for the output file.
         MergeImageType mergeType = new MergeImageType(); // MergeImageType | Type of merger operation.
@@ -444,7 +549,7 @@ public class ApiApiExample {
         PageSize pageSize = new PageSize(); // PageSize | The page size for the output file, if applicable.
         Boolean dcIsLandscape = true; // Boolean | Indicates whether the output file should be in landscape orientation.
         try {
-            FileResponse result = apiInstance.pdfWebapiMergePost(files, documentPassword, inputType, outputType, mergeType, horizontal, vertical, pageSize, dcIsLandscape);
+            FileResponse result = apiInstance.pdfWebapiMergePost(files, inputType, outputType, mergeType, horizontal, vertical, pageSize, dcIsLandscape);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ApiApi#pdfWebapiMergePost");
@@ -466,12 +571,11 @@ public class ApiApiExample {
         
         ApiApi apiInstance = new ApiApi();
         List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-        String documentPassword = "documentPassword_example"; // String | 
         MetadataOperation operation = new MetadataOperation(); // MetadataOperation | The operation to perform on the metadata.
         String folder = "folder_example"; // String | The folder where the files are located.
         String name = "name_example"; // String | The name of the file to perform the operation on.
         try {
-            FileResponse result = apiInstance.pdfWebapiMetadataPost(files, documentPassword, operation, folder, name);
+            FileResponse result = apiInstance.pdfWebapiMetadataPost(files, operation, folder, name);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ApiApi#pdfWebapiMetadataPost");
@@ -493,12 +597,11 @@ public class ApiApiExample {
         
         ApiApi apiInstance = new ApiApi();
         List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-        String documentPassword = "documentPassword_example"; // String | 
         String inputType = "inputType_example"; // String | The format of the input files.
         String remove = "remove_example"; // String | The pages to remove from the document.
         String move = "move_example"; // String | The pages to move within the document.
         try {
-            FileResponse result = apiInstance.pdfWebapiOrganizePost(files, documentPassword, inputType, remove, move);
+            FileResponse result = apiInstance.pdfWebapiOrganizePost(files, inputType, remove, move);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ApiApi#pdfWebapiOrganizePost");
@@ -520,9 +623,33 @@ public class ApiApiExample {
         
         ApiApi apiInstance = new ApiApi();
         List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-        String documentPassword = "documentPassword_example"; // String | 
+        String source = "source_example"; // String | The Source language.
+        ParaphraseSource paraphraseSource = new ParaphraseSource(); // ParaphraseSource | Upload file or text.
         try {
-            FileResponse result = apiInstance.pdfWebapiParsePost(files, documentPassword);
+            FileResponse result = apiInstance.pdfWebapiParaphrasePost(files, source, paraphraseSource);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling ApiApi#pdfWebapiParaphrasePost");
+            e.printStackTrace();
+        }
+    }
+}
+import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.ApiApi;
+
+import java.io.File;
+import java.util.*;
+
+public class ApiApiExample {
+
+    public static void main(String[] args) {
+        
+        ApiApi apiInstance = new ApiApi();
+        List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
+        try {
+            FileResponse result = apiInstance.pdfWebapiParsePost(files);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ApiApi#pdfWebapiParsePost");
@@ -544,7 +671,34 @@ public class ApiApiExample {
         
         ApiApi apiInstance = new ApiApi();
         List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-        String documentPassword = "documentPassword_example"; // String | 
+        String content = "content_example"; // String | Textual content used to generate quiz questions (optional if files are provided).
+        Integer questionNumber = 56; // Integer | The total number of questions to generate.
+        Boolean includeAnswers = true; // Boolean | Generating questions with answers
+        QuestionType questionType = new QuestionType(); // QuestionType | The type of questions to generate: ShortAnswer, TrueFalse, or McQs (multiple choice).
+        DifficultyLevel difficultyLevel = new DifficultyLevel(); // DifficultyLevel | The desired difficulty level of the quiz.
+        try {
+            FileResponse result = apiInstance.pdfWebapiQuizMakerPost(files, content, questionNumber, includeAnswers, questionType, difficultyLevel);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling ApiApi#pdfWebapiQuizMakerPost");
+            e.printStackTrace();
+        }
+    }
+}
+import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.ApiApi;
+
+import java.io.File;
+import java.util.*;
+
+public class ApiApiExample {
+
+    public static void main(String[] args) {
+        
+        ApiApi apiInstance = new ApiApi();
+        List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
         String searchQuery = "searchQuery_example"; // String | The text to search for and redact.
         String replaceText = "replaceText_example"; // String | The text to replace the found text with.
         Boolean caseSensitive = true; // Boolean | Indicates whether the search should be case-sensitive.
@@ -552,7 +706,7 @@ public class ApiApiExample {
         Boolean comments = true; // Boolean | Indicates whether comments should be redacted.
         Boolean metadata = true; // Boolean | Indicates whether metadata should be redacted.
         try {
-            FileResponse result = apiInstance.pdfWebapiRedactPost(files, documentPassword, searchQuery, replaceText, caseSensitive, text, comments, metadata);
+            FileResponse result = apiInstance.pdfWebapiRedactPost(files, searchQuery, replaceText, caseSensitive, text, comments, metadata);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ApiApi#pdfWebapiRedactPost");
@@ -597,12 +751,36 @@ public class ApiApiExample {
         
         ApiApi apiInstance = new ApiApi();
         List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-        String documentPassword = "documentPassword_example"; // String | 
         try {
-            FileResponse result = apiInstance.pdfWebapiRemovePost(files, documentPassword);
+            FileResponse result = apiInstance.pdfWebapiRemovePost(files);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ApiApi#pdfWebapiRemovePost");
+            e.printStackTrace();
+        }
+    }
+}
+import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.ApiApi;
+
+import java.io.File;
+import java.util.*;
+
+public class ApiApiExample {
+
+    public static void main(String[] args) {
+        
+        ApiApi apiInstance = new ApiApi();
+        List<String> ids = Arrays.asList("ids_example"); // List<String> | 
+        List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
+        WatermarkAction watermarkAction = new WatermarkAction(); // WatermarkAction | 
+        try {
+            FileResponse result = apiInstance.pdfWebapiRemoveWatermarkBlazorPost(ids, files, watermarkAction);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling ApiApi#pdfWebapiRemoveWatermarkBlazorPost");
             e.printStackTrace();
         }
     }
@@ -626,12 +804,11 @@ public class ApiApiExample {
         Integer bottom = 56; // Integer | 
         Integer right = 56; // Integer | 
         List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-        String documentPassword = "documentPassword_example"; // String | 
         Boolean isAllPages = true; // Boolean | Indicates whether the watermark should be removed from all pages.
         WatermarkType watermarkType = new WatermarkType(); // WatermarkType | The type of watermark to remove.
         String removeRange = "removeRange_example"; // String | The range of pages to remove the watermark from.
         try {
-            FileResponse result = apiInstance.pdfWebapiRemoveWatermarkPost(watermarkText, top, left, bottom, right, files, documentPassword, isAllPages, watermarkType, removeRange);
+            FileResponse result = apiInstance.pdfWebapiRemoveWatermarkPost(watermarkText, top, left, bottom, right, files, isAllPages, watermarkType, removeRange);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ApiApi#pdfWebapiRemoveWatermarkPost");
@@ -653,10 +830,9 @@ public class ApiApiExample {
         
         ApiApi apiInstance = new ApiApi();
         List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-        String documentPassword = "documentPassword_example"; // String | 
         String removeRange = "removeRange_example"; // String | The range of pages to remove from the files.
         try {
-            FileResponse result = apiInstance.pdfWebapiRemovepagesPost(files, documentPassword, removeRange);
+            FileResponse result = apiInstance.pdfWebapiRemovepagesPost(files, removeRange);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ApiApi#pdfWebapiRemovepagesPost");
@@ -678,9 +854,8 @@ public class ApiApiExample {
         
         ApiApi apiInstance = new ApiApi();
         List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-        String documentPassword = "documentPassword_example"; // String | 
         try {
-            FileResponse result = apiInstance.pdfWebapiRepairPost(files, documentPassword);
+            FileResponse result = apiInstance.pdfWebapiRepairPost(files);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ApiApi#pdfWebapiRepairPost");
@@ -702,7 +877,6 @@ public class ApiApiExample {
         
         ApiApi apiInstance = new ApiApi();
         List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-        String documentPassword = "documentPassword_example"; // String | 
         String inputType = "inputType_example"; // String | The format of the input files.
         String outputType = "outputType_example"; // String | The desired format for the output files.
         ResizeType resizeType = new ResizeType(); // ResizeType | The type of resizing to apply.
@@ -714,7 +888,7 @@ public class ApiApiExample {
         Boolean useProportions = true; // Boolean | Indicates whether to maintain the aspect ratio when resizing.
         ResizePageSize pageSize = new ResizePageSize(); // ResizePageSize | The page size to use for the resized files.
         try {
-            FileResponse result = apiInstance.pdfWebapiResizePost(files, documentPassword, inputType, outputType, resizeType, presetType, presetSize, width, height, percentage, useProportions, pageSize);
+            FileResponse result = apiInstance.pdfWebapiResizePost(files, inputType, outputType, resizeType, presetType, presetSize, width, height, percentage, useProportions, pageSize);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ApiApi#pdfWebapiResizePost");
@@ -736,12 +910,12 @@ public class ApiApiExample {
         
         ApiApi apiInstance = new ApiApi();
         List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-        String documentPassword = "documentPassword_example"; // String | 
         RotateAngle angle = new RotateAngle(); // RotateAngle | The angle by which to rotate the files.
+        Integer customAngle = 56; // Integer | The angle by which to rotate the files in case angle set to custom state.
         RotateType rotateType = new RotateType(); // RotateType | The type of rotation to perform.
         String pageNum = "pageNum_example"; // String | The page number to rotate, if applicable.
         try {
-            FileResponse result = apiInstance.pdfWebapiRotatePost(files, documentPassword, angle, rotateType, pageNum);
+            FileResponse result = apiInstance.pdfWebapiRotatePost(files, angle, customAngle, rotateType, pageNum);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ApiApi#pdfWebapiRotatePost");
@@ -763,10 +937,9 @@ public class ApiApiExample {
         
         ApiApi apiInstance = new ApiApi();
         List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-        String documentPassword = "documentPassword_example"; // String | 
         String query = "query_example"; // String | The text to search for within the files.
         try {
-            FileResponse result = apiInstance.pdfWebapiSearchPost(files, documentPassword, query);
+            FileResponse result = apiInstance.pdfWebapiSearchPost(files, query);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ApiApi#pdfWebapiSearchPost");
@@ -815,12 +988,11 @@ public class ApiApiExample {
         String text = "text_example"; // String | 
         String textColor = "textColor_example"; // String | 
         List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-        String documentPassword = "documentPassword_example"; // String | 
         String inputType = "inputType_example"; // String | The format of the input files.
         String outputType = "outputType_example"; // String | The desired format for the output files.
         SignatureType signatureType = new SignatureType(); // SignatureType | The type of signature to add.
         try {
-            FileResponse result = apiInstance.pdfWebapiSignaturePost(image, text, textColor, files, documentPassword, inputType, outputType, signatureType);
+            FileResponse result = apiInstance.pdfWebapiSignaturePost(image, text, textColor, files, inputType, outputType, signatureType);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ApiApi#pdfWebapiSignaturePost");
@@ -842,12 +1014,11 @@ public class ApiApiExample {
         
         ApiApi apiInstance = new ApiApi();
         List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-        String documentPassword = "documentPassword_example"; // String | 
         String inputType = "inputType_example"; // String | The format of the input files.
         SplitDocType splitType = new SplitDocType(); // SplitDocType | The type of splitting to be performed.
-        String pairs = "pairs_example"; // String | Optional page rage for the splitting operation.
+        String pars = "pars_example"; // String | Optional page rage for the splitting operation.
         try {
-            FileResponse result = apiInstance.pdfWebapiSplitdocPost(files, documentPassword, inputType, splitType, pairs);
+            FileResponse result = apiInstance.pdfWebapiSplitdocPost(files, inputType, splitType, pars);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ApiApi#pdfWebapiSplitdocPost");
@@ -869,13 +1040,12 @@ public class ApiApiExample {
         
         ApiApi apiInstance = new ApiApi();
         List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-        String documentPassword = "documentPassword_example"; // String | 
         SplitImageType splitType = new SplitImageType(); // SplitImageType | The type of splitting to be performed.
         Integer vertical = 56; // Integer | The number of vertical splits to create.
         Integer horizontal = 56; // Integer | The number of horizontal splits to create.
         String outputType = "outputType_example"; // String | The desired output format for the split images.
         try {
-            FileResponse result = apiInstance.pdfWebapiSplitimagePost(files, documentPassword, splitType, vertical, horizontal, outputType);
+            FileResponse result = apiInstance.pdfWebapiSplitimagePost(files, splitType, vertical, horizontal, outputType);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ApiApi#pdfWebapiSplitimagePost");
@@ -919,10 +1089,135 @@ public class ApiApiExample {
     public static void main(String[] args) {
         
         ApiApi apiInstance = new ApiApi();
-        String password = "password_example"; // String | 
+        List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
+        String question = "question_example"; // String | 
+        try {
+            FileResponse result = apiInstance.pdfWebapiSummaryPost(files, question);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling ApiApi#pdfWebapiSummaryPost");
+            e.printStackTrace();
+        }
+    }
+}
+import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.ApiApi;
+
+import java.io.File;
+import java.util.*;
+
+public class ApiApiExample {
+
+    public static void main(String[] args) {
+        
+        ApiApi apiInstance = new ApiApi();
         List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
         try {
-            FileResponse result = apiInstance.pdfWebapiUnlockPost(password, files);
+            FileResponse result = apiInstance.pdfWebapiTableOfContentsPost(files);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling ApiApi#pdfWebapiTableOfContentsPost");
+            e.printStackTrace();
+        }
+    }
+}
+import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.ApiApi;
+
+import java.io.File;
+import java.util.*;
+
+public class ApiApiExample {
+
+    public static void main(String[] args) {
+        
+        ApiApi apiInstance = new ApiApi();
+        String subject = "subject_example"; // String | Text description of the subject of the tests
+        Integer number = 56; // Integer | Questions number
+        String complexity = "complexity_example"; // String | The complexity level of generated questions
+        String language = "language_example"; // String | Language in which questions are written
+        String outputType = "outputType_example"; // String | The format of result file
+        try {
+            FileResponse result = apiInstance.pdfWebapiTestGeneratorPost(subject, number, complexity, language, outputType);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling ApiApi#pdfWebapiTestGeneratorPost");
+            e.printStackTrace();
+        }
+    }
+}
+import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.ApiApi;
+
+import java.io.File;
+import java.util.*;
+
+public class ApiApiExample {
+
+    public static void main(String[] args) {
+        
+        ApiApi apiInstance = new ApiApi();
+        List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
+        try {
+            FileResponse result = apiInstance.pdfWebapiTranscribeAudioPost(files);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling ApiApi#pdfWebapiTranscribeAudioPost");
+            e.printStackTrace();
+        }
+    }
+}
+import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.ApiApi;
+
+import java.io.File;
+import java.util.*;
+
+public class ApiApiExample {
+
+    public static void main(String[] args) {
+        
+        ApiApi apiInstance = new ApiApi();
+        List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
+        List<String> languages = Arrays.asList("languages_example"); // List<String> | The language code in which will make the resource files to be translated.
+        String source = "source_example"; // String | The Source language.
+        String target = "target_example"; // String | The target language.
+        String aiService = "aiService_example"; // String | Choosing an AI service for developers
+        TranslationSource translationSource = new TranslationSource(); // TranslationSource | Upload file or text.
+        try {
+            FileResponse result = apiInstance.pdfWebapiTranslatePost(files, languages, source, target, aiService, translationSource);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling ApiApi#pdfWebapiTranslatePost");
+            e.printStackTrace();
+        }
+    }
+}
+import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.ApiApi;
+
+import java.io.File;
+import java.util.*;
+
+public class ApiApiExample {
+
+    public static void main(String[] args) {
+        
+        ApiApi apiInstance = new ApiApi();
+        List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
+        String passw = "passw_example"; // String | The password used in locked document.
+        try {
+            FileResponse result = apiInstance.pdfWebapiUnlockPost(files, passw);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ApiApi#pdfWebapiUnlockPost");
@@ -944,10 +1239,9 @@ public class ApiApiExample {
         
         ApiApi apiInstance = new ApiApi();
         List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-        String documentPassword = "documentPassword_example"; // String | 
         String inputType = "inputType_example"; // String | The format of the input files.
         try {
-            FileResponse result = apiInstance.pdfWebapiVerifyEsignPost(files, documentPassword, inputType);
+            FileResponse result = apiInstance.pdfWebapiVerifyEsignPost(files, inputType);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ApiApi#pdfWebapiVerifyEsignPost");
@@ -969,7 +1263,31 @@ public class ApiApiExample {
         
         ApiApi apiInstance = new ApiApi();
         List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-        String documentPassword = "documentPassword_example"; // String | 
+        VoiceModel voiceModel = new VoiceModel(); // VoiceModel | The TTS model (Quick/Quality) in which AI must read the text.
+        VoiceGender genderVoice = new VoiceGender(); // VoiceGender | The TTS voice gender (Man/Woman) in which AI must read the text.
+        try {
+            FileResponse result = apiInstance.pdfWebapiVoiceGeneratorPost(files, voiceModel, genderVoice);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling ApiApi#pdfWebapiVoiceGeneratorPost");
+            e.printStackTrace();
+        }
+    }
+}
+import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.ApiApi;
+
+import java.io.File;
+import java.util.*;
+
+public class ApiApiExample {
+
+    public static void main(String[] args) {
+        
+        ApiApi apiInstance = new ApiApi();
+        List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
         String inputType = "inputType_example"; // String | The format of the input files.
         String outputType = "outputType_example"; // String | The desired format for the output files.
         Boolean isColored = true; // Boolean | Indicate is watermark will be in color or grayscale.
@@ -988,7 +1306,7 @@ public class ApiApiExample {
         Integer pageFrom = 56; // Integer | The starting page number for the watermark.
         Integer pageTo = 56; // Integer | The ending page number for the watermark.
         try {
-            FileResponse result = apiInstance.pdfWebapiWatermarkPost(files, documentPassword, inputType, outputType, isColored, isText, text, name, size, bold, italic, underlined, color, isBackground, rotation, transparency, layer, pageFrom, pageTo);
+            FileResponse result = apiInstance.pdfWebapiWatermarkPost(files, inputType, outputType, isColored, isText, text, name, size, bold, italic, underlined, color, isBackground, rotation, transparency, layer, pageFrom, pageTo);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ApiApi#pdfWebapiWatermarkPost");
@@ -1010,10 +1328,9 @@ public class ApiApiExample {
         
         ApiApi apiInstance = new ApiApi();
         List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-        String documentPassword = "documentPassword_example"; // String | 
         String pageRange = "pageRange_example"; // String | The range of pages to count words in.
         try {
-            FileResponse result = apiInstance.pdfWebapiWordcounterPost(files, documentPassword, pageRange);
+            FileResponse result = apiInstance.pdfWebapiWordcounterPost(files, pageRange);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ApiApi#pdfWebapiWordcounterPost");
@@ -1034,11 +1351,32 @@ public class ApiApiExample {
     public static void main(String[] args) {
         
         ApiApi apiInstance = new ApiApi();
+        try {
+            FileResponse result = apiInstance.pdfWebapiWordsGeneratorPost();
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling ApiApi#pdfWebapiWordsGeneratorPost");
+            e.printStackTrace();
+        }
+    }
+}
+import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.ApiApi;
+
+import java.io.File;
+import java.util.*;
+
+public class ApiApiExample {
+
+    public static void main(String[] args) {
+        
+        ApiApi apiInstance = new ApiApi();
         List<File> files = Arrays.asList(new File("/path/to/file")); // List<File> | 
-        String documentPassword = "documentPassword_example"; // String | 
         String inputType = "inputType_example"; // String | The format of the input files.
         try {
-            FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, documentPassword, inputType);
+            FileResponse result = apiInstance.pdfWebapiXfaconvertPost(files, inputType);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling ApiApi#pdfWebapiXfaconvertPost");
@@ -1054,46 +1392,63 @@ All URIs are relative to */*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*ApiApi* | [**pdfWebapiAddnumberPost**](docs/ApiApi.md#pdfWebapiAddnumberPost) | **POST** /pdf/webapi/addnumber | Add Page Numbers to Document.
-*ApiApi* | [**pdfWebapiChangeFontsPost**](docs/ApiApi.md#pdfWebapiChangeFontsPost) | **POST** /pdf/webapi/change-fonts | Change Fonts in Provided Files.
+*ApiApi* | [**pdfWebapiAddnumberPost**](docs/ApiApi.md#pdfWebapiAddnumberPost) | **POST** /pdf/webapi/addnumber | Add page numbers to document.
+*ApiApi* | [**pdfWebapiChangeFontsPost**](docs/ApiApi.md#pdfWebapiChangeFontsPost) | **POST** /pdf/webapi/change-fonts | Changes the fonts of the provided files using the specified font replacements.
 *ApiApi* | [**pdfWebapiComparisonPost**](docs/ApiApi.md#pdfWebapiComparisonPost) | **POST** /pdf/webapi/comparison | Compare documents text.
-*ApiApi* | [**pdfWebapiCompressPost**](docs/ApiApi.md#pdfWebapiCompressPost) | **POST** /pdf/webapi/compress | Compress Document.
-*ApiApi* | [**pdfWebapiConvertPost**](docs/ApiApi.md#pdfWebapiConvertPost) | **POST** /pdf/webapi/convert | Convert Document to Another Format.
-*ApiApi* | [**pdfWebapiConvertWebpagePost**](docs/ApiApi.md#pdfWebapiConvertWebpagePost) | **POST** /pdf/webapi/convert-webpage | Convert Web Page to Document.
-*ApiApi* | [**pdfWebapiCropPost**](docs/ApiApi.md#pdfWebapiCropPost) | **POST** /pdf/webapi/crop | Crop Document.
+*ApiApi* | [**pdfWebapiCompressPost**](docs/ApiApi.md#pdfWebapiCompressPost) | **POST** /pdf/webapi/compress | Compress document.
+*ApiApi* | [**pdfWebapiConvertPost**](docs/ApiApi.md#pdfWebapiConvertPost) | **POST** /pdf/webapi/convert | Convert document to another format.
+*ApiApi* | [**pdfWebapiConvertWebpagePost**](docs/ApiApi.md#pdfWebapiConvertWebpagePost) | **POST** /pdf/webapi/convert-webpage | Convert web page to document.
+*ApiApi* | [**pdfWebapiCreatorPost**](docs/ApiApi.md#pdfWebapiCreatorPost) | **POST** /pdf/webapi/creator | 
+*ApiApi* | [**pdfWebapiCropPost**](docs/ApiApi.md#pdfWebapiCropPost) | **POST** /pdf/webapi/crop | Crop document.
 *ApiApi* | [**pdfWebapiDownloadIdGet**](docs/ApiApi.md#pdfWebapiDownloadIdGet) | **GET** /pdf/webapi/download/{id} | File download.
-*ApiApi* | [**pdfWebapiEsignPost**](docs/ApiApi.md#pdfWebapiEsignPost) | **POST** /pdf/webapi/esign | Sign Document with Certificate.
-*ApiApi* | [**pdfWebapiExtractPost**](docs/ApiApi.md#pdfWebapiExtractPost) | **POST** /pdf/webapi/extract | Extract Tables from Document.
+*ApiApi* | [**pdfWebapiEditorPost**](docs/ApiApi.md#pdfWebapiEditorPost) | **POST** /pdf/webapi/editor | 
+*ApiApi* | [**pdfWebapiExtractPost**](docs/ApiApi.md#pdfWebapiExtractPost) | **POST** /pdf/webapi/extract | Extract tables from document.
+*ApiApi* | [**pdfWebapiFormatDetectorPost**](docs/ApiApi.md#pdfWebapiFormatDetectorPost) | **POST** /pdf/webapi/format-detector | 
 *ApiApi* | [**pdfWebapiGifPost**](docs/ApiApi.md#pdfWebapiGifPost) | **POST** /pdf/webapi/gif | Make GIF.
-*ApiApi* | [**pdfWebapiHashPost**](docs/ApiApi.md#pdfWebapiHashPost) | **POST** /pdf/webapi/hash | Calculate Document Hash.
+*ApiApi* | [**pdfWebapiGrammarCheckerPost**](docs/ApiApi.md#pdfWebapiGrammarCheckerPost) | **POST** /pdf/webapi/grammar-checker | Checks the grammar of text, pdf files and plain text.
+*ApiApi* | [**pdfWebapiHashPost**](docs/ApiApi.md#pdfWebapiHashPost) | **POST** /pdf/webapi/hash | Calculate document hash.
+*ApiApi* | [**pdfWebapiImageDescriptionPost**](docs/ApiApi.md#pdfWebapiImageDescriptionPost) | **POST** /pdf/webapi/image-description | Make speech synthesizer.
+*ApiApi* | [**pdfWebapiImageGeneratorPost**](docs/ApiApi.md#pdfWebapiImageGeneratorPost) | **POST** /pdf/webapi/image-generator | 
 *ApiApi* | [**pdfWebapiLockPost**](docs/ApiApi.md#pdfWebapiLockPost) | **POST** /pdf/webapi/lock | Lock document.
-*ApiApi* | [**pdfWebapiMergePost**](docs/ApiApi.md#pdfWebapiMergePost) | **POST** /pdf/webapi/merge | Merge Documents.
-*ApiApi* | [**pdfWebapiMetadataPost**](docs/ApiApi.md#pdfWebapiMetadataPost) | **POST** /pdf/webapi/metadata | Read and Change Document Metadata.
-*ApiApi* | [**pdfWebapiOrganizePost**](docs/ApiApi.md#pdfWebapiOrganizePost) | **POST** /pdf/webapi/organize | Organize Document Pages.
-*ApiApi* | [**pdfWebapiParsePost**](docs/ApiApi.md#pdfWebapiParsePost) | **POST** /pdf/webapi/parse | Parse Document.
-*ApiApi* | [**pdfWebapiRedactPost**](docs/ApiApi.md#pdfWebapiRedactPost) | **POST** /pdf/webapi/redact | Redact Document Text.
+*ApiApi* | [**pdfWebapiMergePost**](docs/ApiApi.md#pdfWebapiMergePost) | **POST** /pdf/webapi/merge | Merge documents.
+*ApiApi* | [**pdfWebapiMetadataPost**](docs/ApiApi.md#pdfWebapiMetadataPost) | **POST** /pdf/webapi/metadata | Read and change document metadata.
+*ApiApi* | [**pdfWebapiOrganizePost**](docs/ApiApi.md#pdfWebapiOrganizePost) | **POST** /pdf/webapi/organize | Organize document pages.
+*ApiApi* | [**pdfWebapiParaphrasePost**](docs/ApiApi.md#pdfWebapiParaphrasePost) | **POST** /pdf/webapi/paraphrase | Paraphrase document.
+*ApiApi* | [**pdfWebapiParsePost**](docs/ApiApi.md#pdfWebapiParsePost) | **POST** /pdf/webapi/parse | Parse document.
+*ApiApi* | [**pdfWebapiQuizMakerPost**](docs/ApiApi.md#pdfWebapiQuizMakerPost) | **POST** /pdf/webapi/quiz-maker | Generates a list of quiz questions using AI based on the provided content or uploaded files,  and stores the resulting quiz into a document.
+*ApiApi* | [**pdfWebapiRedactPost**](docs/ApiApi.md#pdfWebapiRedactPost) | **POST** /pdf/webapi/redact | Redact document text.
 *ApiApi* | [**pdfWebapiRemoveIdPost**](docs/ApiApi.md#pdfWebapiRemoveIdPost) | **POST** /pdf/webapi/remove/{id} | Remove stored files.
-*ApiApi* | [**pdfWebapiRemovePost**](docs/ApiApi.md#pdfWebapiRemovePost) | **POST** /pdf/webapi/remove | Remove Document Annotations.
-*ApiApi* | [**pdfWebapiRemoveWatermarkPost**](docs/ApiApi.md#pdfWebapiRemoveWatermarkPost) | **POST** /pdf/webapi/remove-watermark | Remove Document Watermark.
-*ApiApi* | [**pdfWebapiRemovepagesPost**](docs/ApiApi.md#pdfWebapiRemovepagesPost) | **POST** /pdf/webapi/removepages | Remove Pages from Document.
-*ApiApi* | [**pdfWebapiRepairPost**](docs/ApiApi.md#pdfWebapiRepairPost) | **POST** /pdf/webapi/repair | Repair Document.
-*ApiApi* | [**pdfWebapiResizePost**](docs/ApiApi.md#pdfWebapiResizePost) | **POST** /pdf/webapi/resize | Resize Document.
-*ApiApi* | [**pdfWebapiRotatePost**](docs/ApiApi.md#pdfWebapiRotatePost) | **POST** /pdf/webapi/rotate | Rotate Document.
-*ApiApi* | [**pdfWebapiSearchPost**](docs/ApiApi.md#pdfWebapiSearchPost) | **POST** /pdf/webapi/search | Search Document Text.
-*ApiApi* | [**pdfWebapiSearchablePost**](docs/ApiApi.md#pdfWebapiSearchablePost) | **POST** /pdf/webapi/searchable | Make Scanned PDF Searchable.
-*ApiApi* | [**pdfWebapiSignaturePost**](docs/ApiApi.md#pdfWebapiSignaturePost) | **POST** /pdf/webapi/signature | Add Signature to Document.
-*ApiApi* | [**pdfWebapiSplitdocPost**](docs/ApiApi.md#pdfWebapiSplitdocPost) | **POST** /pdf/webapi/splitdoc | Split Document.
-*ApiApi* | [**pdfWebapiSplitimagePost**](docs/ApiApi.md#pdfWebapiSplitimagePost) | **POST** /pdf/webapi/splitimage | Split Image.
+*ApiApi* | [**pdfWebapiRemovePost**](docs/ApiApi.md#pdfWebapiRemovePost) | **POST** /pdf/webapi/remove | Remove document annotations.
+*ApiApi* | [**pdfWebapiRemoveWatermarkBlazorPost**](docs/ApiApi.md#pdfWebapiRemoveWatermarkBlazorPost) | **POST** /pdf/webapi/remove-watermark-blazor | Removes document watermark.
+*ApiApi* | [**pdfWebapiRemoveWatermarkPost**](docs/ApiApi.md#pdfWebapiRemoveWatermarkPost) | **POST** /pdf/webapi/remove-watermark | Removes document watermark.
+*ApiApi* | [**pdfWebapiRemovepagesPost**](docs/ApiApi.md#pdfWebapiRemovepagesPost) | **POST** /pdf/webapi/removepages | Remove pages from document.
+*ApiApi* | [**pdfWebapiRepairPost**](docs/ApiApi.md#pdfWebapiRepairPost) | **POST** /pdf/webapi/repair | Repair document.
+*ApiApi* | [**pdfWebapiResizePost**](docs/ApiApi.md#pdfWebapiResizePost) | **POST** /pdf/webapi/resize | Resize document.
+*ApiApi* | [**pdfWebapiRotatePost**](docs/ApiApi.md#pdfWebapiRotatePost) | **POST** /pdf/webapi/rotate | Rotate document.
+*ApiApi* | [**pdfWebapiSearchPost**](docs/ApiApi.md#pdfWebapiSearchPost) | **POST** /pdf/webapi/search | Search document text.
+*ApiApi* | [**pdfWebapiSearchablePost**](docs/ApiApi.md#pdfWebapiSearchablePost) | **POST** /pdf/webapi/searchable | Make scanned pdf searchable.
+*ApiApi* | [**pdfWebapiSignaturePost**](docs/ApiApi.md#pdfWebapiSignaturePost) | **POST** /pdf/webapi/signature | Add signature to document.
+*ApiApi* | [**pdfWebapiSplitdocPost**](docs/ApiApi.md#pdfWebapiSplitdocPost) | **POST** /pdf/webapi/splitdoc | Split document.
+*ApiApi* | [**pdfWebapiSplitimagePost**](docs/ApiApi.md#pdfWebapiSplitimagePost) | **POST** /pdf/webapi/splitimage | Split image.
 *ApiApi* | [**pdfWebapiStatusIdPost**](docs/ApiApi.md#pdfWebapiStatusIdPost) | **POST** /pdf/webapi/status/{id} | Processing status.
-*ApiApi* | [**pdfWebapiUnlockPost**](docs/ApiApi.md#pdfWebapiUnlockPost) | **POST** /pdf/webapi/unlock | Unlock Document.
-*ApiApi* | [**pdfWebapiVerifyEsignPost**](docs/ApiApi.md#pdfWebapiVerifyEsignPost) | **POST** /pdf/webapi/verify_esign | Verify Document Certificate.
-*ApiApi* | [**pdfWebapiWatermarkPost**](docs/ApiApi.md#pdfWebapiWatermarkPost) | **POST** /pdf/webapi/watermark | Add Watermark to Document.
-*ApiApi* | [**pdfWebapiWordcounterPost**](docs/ApiApi.md#pdfWebapiWordcounterPost) | **POST** /pdf/webapi/wordcounter | Count Words and Characters in Document.
-*ApiApi* | [**pdfWebapiXfaconvertPost**](docs/ApiApi.md#pdfWebapiXfaconvertPost) | **POST** /pdf/webapi/xfaconvert | Convert XFA Format to Another Format.
+*ApiApi* | [**pdfWebapiSummaryPost**](docs/ApiApi.md#pdfWebapiSummaryPost) | **POST** /pdf/webapi/summary | 
+*ApiApi* | [**pdfWebapiTableOfContentsPost**](docs/ApiApi.md#pdfWebapiTableOfContentsPost) | **POST** /pdf/webapi/table-of-contents | 
+*ApiApi* | [**pdfWebapiTestGeneratorPost**](docs/ApiApi.md#pdfWebapiTestGeneratorPost) | **POST** /pdf/webapi/test-generator | Creates the list of test questions using ai and stores it to the document
+*ApiApi* | [**pdfWebapiTranscribeAudioPost**](docs/ApiApi.md#pdfWebapiTranscribeAudioPost) | **POST** /pdf/webapi/transcribe-audio | 
+*ApiApi* | [**pdfWebapiTranslatePost**](docs/ApiApi.md#pdfWebapiTranslatePost) | **POST** /pdf/webapi/translate | Translate document.
+*ApiApi* | [**pdfWebapiUnlockPost**](docs/ApiApi.md#pdfWebapiUnlockPost) | **POST** /pdf/webapi/unlock | Unlock document.
+*ApiApi* | [**pdfWebapiVerifyEsignPost**](docs/ApiApi.md#pdfWebapiVerifyEsignPost) | **POST** /pdf/webapi/verify-esign | Verify document certificate.
+*ApiApi* | [**pdfWebapiVoiceGeneratorPost**](docs/ApiApi.md#pdfWebapiVoiceGeneratorPost) | **POST** /pdf/webapi/voice-generator | Make speech synthesizer.
+*ApiApi* | [**pdfWebapiWatermarkPost**](docs/ApiApi.md#pdfWebapiWatermarkPost) | **POST** /pdf/webapi/watermark | Add watermark to document.
+*ApiApi* | [**pdfWebapiWordcounterPost**](docs/ApiApi.md#pdfWebapiWordcounterPost) | **POST** /pdf/webapi/wordcounter | Count words and chars in document.
+*ApiApi* | [**pdfWebapiWordsGeneratorPost**](docs/ApiApi.md#pdfWebapiWordsGeneratorPost) | **POST** /pdf/webapi/words-generator | Generates words for crossword using AI Mistral
+*ApiApi* | [**pdfWebapiXfaconvertPost**](docs/ApiApi.md#pdfWebapiXfaconvertPost) | **POST** /pdf/webapi/xfaconvert | Convert XFA format to a another format.
 
 ## Documentation for Models
 
+ - [CompareType](docs/CompareType.md)
  - [CompressType](docs/CompressType.md)
+ - [DifficultyLevel](docs/DifficultyLevel.md)
  - [DocProperty](docs/DocProperty.md)
  - [FileProcessingErrorCode](docs/FileProcessingErrorCode.md)
  - [FileResponse](docs/FileResponse.md)
@@ -1104,17 +1459,23 @@ Class | Method | HTTP request | Description
  - [PageNumberHorizontalAlign](docs/PageNumberHorizontalAlign.md)
  - [PageNumberVerticalAlign](docs/PageNumberVerticalAlign.md)
  - [PageSize](docs/PageSize.md)
+ - [ParaphraseSource](docs/ParaphraseSource.md)
  - [PropertyType](docs/PropertyType.md)
+ - [QuestionType](docs/QuestionType.md)
  - [ResizePageSize](docs/ResizePageSize.md)
  - [ResizePresetSize](docs/ResizePresetSize.md)
  - [ResizePresetType](docs/ResizePresetType.md)
  - [ResizeType](docs/ResizeType.md)
+ - [ResourceMessage](docs/ResourceMessage.md)
  - [RotateAngle](docs/RotateAngle.md)
  - [RotateType](docs/RotateType.md)
  - [SignatureType](docs/SignatureType.md)
  - [SplitDocType](docs/SplitDocType.md)
  - [SplitImageType](docs/SplitImageType.md)
  - [TranslationSource](docs/TranslationSource.md)
+ - [VoiceGender](docs/VoiceGender.md)
+ - [VoiceModel](docs/VoiceModel.md)
+ - [WatermarkAction](docs/WatermarkAction.md)
  - [WatermarkType](docs/WatermarkType.md)
  - [WebapiAddnumberBody](docs/WebapiAddnumberBody.md)
  - [WebapiChangefontsBody](docs/WebapiChangefontsBody.md)
@@ -1122,20 +1483,27 @@ Class | Method | HTTP request | Description
  - [WebapiCompressBody](docs/WebapiCompressBody.md)
  - [WebapiConvertBody](docs/WebapiConvertBody.md)
  - [WebapiConvertwebpageBody](docs/WebapiConvertwebpageBody.md)
+ - [WebapiCreatorBody](docs/WebapiCreatorBody.md)
  - [WebapiCropBody](docs/WebapiCropBody.md)
- - [WebapiEsignBody](docs/WebapiEsignBody.md)
+ - [WebapiEditorBody](docs/WebapiEditorBody.md)
  - [WebapiExtractBody](docs/WebapiExtractBody.md)
+ - [WebapiFormatdetectorBody](docs/WebapiFormatdetectorBody.md)
  - [WebapiGifBody](docs/WebapiGifBody.md)
+ - [WebapiGrammarcheckerBody](docs/WebapiGrammarcheckerBody.md)
  - [WebapiHashBody](docs/WebapiHashBody.md)
+ - [WebapiImagedescriptionBody](docs/WebapiImagedescriptionBody.md)
  - [WebapiLockBody](docs/WebapiLockBody.md)
  - [WebapiMergeBody](docs/WebapiMergeBody.md)
  - [WebapiMetadataBody](docs/WebapiMetadataBody.md)
  - [WebapiOrganizeBody](docs/WebapiOrganizeBody.md)
+ - [WebapiParaphraseBody](docs/WebapiParaphraseBody.md)
  - [WebapiParseBody](docs/WebapiParseBody.md)
+ - [WebapiQuizmakerBody](docs/WebapiQuizmakerBody.md)
  - [WebapiRedactBody](docs/WebapiRedactBody.md)
  - [WebapiRemoveBody](docs/WebapiRemoveBody.md)
  - [WebapiRemovepagesBody](docs/WebapiRemovepagesBody.md)
  - [WebapiRemovewatermarkBody](docs/WebapiRemovewatermarkBody.md)
+ - [WebapiRemovewatermarkblazorBody](docs/WebapiRemovewatermarkblazorBody.md)
  - [WebapiRepairBody](docs/WebapiRepairBody.md)
  - [WebapiResizeBody](docs/WebapiResizeBody.md)
  - [WebapiRotateBody](docs/WebapiRotateBody.md)
@@ -1144,8 +1512,13 @@ Class | Method | HTTP request | Description
  - [WebapiSignatureBody](docs/WebapiSignatureBody.md)
  - [WebapiSplitdocBody](docs/WebapiSplitdocBody.md)
  - [WebapiSplitimageBody](docs/WebapiSplitimageBody.md)
+ - [WebapiSummaryBody](docs/WebapiSummaryBody.md)
+ - [WebapiTableofcontentsBody](docs/WebapiTableofcontentsBody.md)
+ - [WebapiTranscribeaudioBody](docs/WebapiTranscribeaudioBody.md)
+ - [WebapiTranslateBody](docs/WebapiTranslateBody.md)
  - [WebapiUnlockBody](docs/WebapiUnlockBody.md)
- - [WebapiVerifyEsignBody](docs/WebapiVerifyEsignBody.md)
+ - [WebapiVerifyesignBody](docs/WebapiVerifyesignBody.md)
+ - [WebapiVoicegeneratorBody](docs/WebapiVoicegeneratorBody.md)
  - [WebapiWatermarkBody](docs/WebapiWatermarkBody.md)
  - [WebapiWordcounterBody](docs/WebapiWordcounterBody.md)
  - [WebapiXfaconvertBody](docs/WebapiXfaconvertBody.md)
@@ -1162,4 +1535,4 @@ It's recommended to create an instance of `ApiClient` per thread in a multithrea
 
 ## Author
 
-sales@aspose.com
+Evgeny.Pirogov@aspose.com

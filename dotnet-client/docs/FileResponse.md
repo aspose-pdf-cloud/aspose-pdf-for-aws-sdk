@@ -6,6 +6,9 @@ Name | Type | Description | Notes
 **StatusCode** | **int?** | Get or set StatusCode | [optional] 
 **Status** | **string** | Get or set Status | [optional] 
 **Text** | **string** | Get or set Text | [optional] 
+**FailedInputFiles** | **List&lt;string&gt;** |  | [optional] 
+**ProgressTotal** | **int?** |  | [optional] 
+**ProgressCurrent** | **int?** |  | [optional] 
 **Locked** | **bool?** | Get or set Document locked with password | [optional] 
 **Updated** | **DateTime?** | Last updated | [optional] 
 **SharedFiles** | [**List&lt;FileSafeResult&gt;**](FileSafeResult.md) | Get or set Files | [optional] 
@@ -15,7 +18,7 @@ Name | Type | Description | Notes
 **FolderName** | **string** | Get or set FolderName | [optional] 
 **ResultData** | **Object** | Data displaying on file processing result page | [optional] 
 **AppInstanceId** | **string** | Instance id where is processing located | [optional] 
-**ErrorCallStack** | **string** |  | [optional] 
+**ResourceMessage** | [**ResourceMessage**](ResourceMessage.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

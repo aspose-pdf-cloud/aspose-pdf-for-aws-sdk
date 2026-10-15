@@ -37,6 +37,27 @@ namespace IO.Swagger.Model {
     public string Text { get; set; }
 
     /// <summary>
+    /// Gets or Sets FailedInputFiles
+    /// </summary>
+    [DataMember(Name="failedInputFiles", EmitDefaultValue=false)]
+    [JsonProperty(PropertyName = "failedInputFiles")]
+    public List<string> FailedInputFiles { get; set; }
+
+    /// <summary>
+    /// Gets or Sets ProgressTotal
+    /// </summary>
+    [DataMember(Name="progressTotal", EmitDefaultValue=false)]
+    [JsonProperty(PropertyName = "progressTotal")]
+    public int? ProgressTotal { get; set; }
+
+    /// <summary>
+    /// Gets or Sets ProgressCurrent
+    /// </summary>
+    [DataMember(Name="progressCurrent", EmitDefaultValue=false)]
+    [JsonProperty(PropertyName = "progressCurrent")]
+    public int? ProgressCurrent { get; set; }
+
+    /// <summary>
     /// Get or set Document locked with password
     /// </summary>
     /// <value>Get or set Document locked with password</value>
@@ -108,11 +129,11 @@ namespace IO.Swagger.Model {
     public string AppInstanceId { get; set; }
 
     /// <summary>
-    /// Gets or Sets ErrorCallStack
+    /// Gets or Sets ResourceMessage
     /// </summary>
-    [DataMember(Name="errorCallStack", EmitDefaultValue=false)]
-    [JsonProperty(PropertyName = "errorCallStack")]
-    public string ErrorCallStack { get; set; }
+    [DataMember(Name="resourceMessage", EmitDefaultValue=false)]
+    [JsonProperty(PropertyName = "resourceMessage")]
+    public ResourceMessage ResourceMessage { get; set; }
 
 
     /// <summary>
@@ -125,6 +146,9 @@ namespace IO.Swagger.Model {
       sb.Append("  StatusCode: ").Append(StatusCode).Append("\n");
       sb.Append("  Status: ").Append(Status).Append("\n");
       sb.Append("  Text: ").Append(Text).Append("\n");
+      sb.Append("  FailedInputFiles: ").Append(FailedInputFiles).Append("\n");
+      sb.Append("  ProgressTotal: ").Append(ProgressTotal).Append("\n");
+      sb.Append("  ProgressCurrent: ").Append(ProgressCurrent).Append("\n");
       sb.Append("  Locked: ").Append(Locked).Append("\n");
       sb.Append("  Updated: ").Append(Updated).Append("\n");
       sb.Append("  SharedFiles: ").Append(SharedFiles).Append("\n");
@@ -134,7 +158,7 @@ namespace IO.Swagger.Model {
       sb.Append("  FolderName: ").Append(FolderName).Append("\n");
       sb.Append("  ResultData: ").Append(ResultData).Append("\n");
       sb.Append("  AppInstanceId: ").Append(AppInstanceId).Append("\n");
-      sb.Append("  ErrorCallStack: ").Append(ErrorCallStack).Append("\n");
+      sb.Append("  ResourceMessage: ").Append(ResourceMessage).Append("\n");
       sb.Append("}\n");
       return sb.ToString();
     }

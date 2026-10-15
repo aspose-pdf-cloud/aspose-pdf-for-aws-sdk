@@ -13,25 +13,20 @@ namespace IO.Swagger.Model {
   [DataContract]
   public class WebapiChangefontsBody {
     /// <summary>
-    /// Gets or Sets FontReplacementsJson
+    /// A JSON string representing the font replacements to be applied.
     /// </summary>
+    /// <value>A JSON string representing the font replacements to be applied.</value>
     [DataMember(Name="fontReplacementsJson", EmitDefaultValue=false)]
     [JsonProperty(PropertyName = "fontReplacementsJson")]
     public string FontReplacementsJson { get; set; }
 
     /// <summary>
-    /// Gets or Sets Files
+    /// An array of files to be processed.
     /// </summary>
+    /// <value>An array of files to be processed.</value>
     [DataMember(Name="files", EmitDefaultValue=false)]
     [JsonProperty(PropertyName = "files")]
     public List<byte[]> Files { get; set; }
-
-    /// <summary>
-    /// Gets or Sets DocumentPassword
-    /// </summary>
-    [DataMember(Name="documentPassword", EmitDefaultValue=false)]
-    [JsonProperty(PropertyName = "documentPassword")]
-    public string DocumentPassword { get; set; }
 
 
     /// <summary>
@@ -43,7 +38,6 @@ namespace IO.Swagger.Model {
       sb.Append("class WebapiChangefontsBody {\n");
       sb.Append("  FontReplacementsJson: ").Append(FontReplacementsJson).Append("\n");
       sb.Append("  Files: ").Append(Files).Append("\n");
-      sb.Append("  DocumentPassword: ").Append(DocumentPassword).Append("\n");
       sb.Append("}\n");
       return sb.ToString();
     }

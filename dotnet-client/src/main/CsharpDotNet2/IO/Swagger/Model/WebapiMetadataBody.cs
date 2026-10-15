@@ -13,18 +13,12 @@ namespace IO.Swagger.Model {
   [DataContract]
   public class WebapiMetadataBody {
     /// <summary>
-    /// Gets or Sets Files
+    /// The files to perform the metadata operation on.
     /// </summary>
+    /// <value>The files to perform the metadata operation on.</value>
     [DataMember(Name="files", EmitDefaultValue=false)]
     [JsonProperty(PropertyName = "files")]
     public List<byte[]> Files { get; set; }
-
-    /// <summary>
-    /// Gets or Sets DocumentPassword
-    /// </summary>
-    [DataMember(Name="documentPassword", EmitDefaultValue=false)]
-    [JsonProperty(PropertyName = "documentPassword")]
-    public string DocumentPassword { get; set; }
 
 
     /// <summary>
@@ -35,7 +29,6 @@ namespace IO.Swagger.Model {
       var sb = new StringBuilder();
       sb.Append("class WebapiMetadataBody {\n");
       sb.Append("  Files: ").Append(Files).Append("\n");
-      sb.Append("  DocumentPassword: ").Append(DocumentPassword).Append("\n");
       sb.Append("}\n");
       return sb.ToString();
     }

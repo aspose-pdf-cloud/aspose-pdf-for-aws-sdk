@@ -51,7 +51,6 @@ namespace Example
 
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
             var vAlignment = new PageNumberVerticalAlign(); // PageNumberVerticalAlign | The vertical alignment of the page numbers. (optional) 
             var hAlignment = new PageNumberHorizontalAlign(); // PageNumberHorizontalAlign | The horizontal alignment of the page numbers. (optional) 
             var startingNumber = 56;  // int? | The starting number for the page numbers. (optional) 
@@ -63,8 +62,8 @@ namespace Example
 
             try
             {
-                // Add Page Numbers to Document.
-                FileResponse result = apiInstance.PdfWebapiAddnumberPost(files, documentPassword, vAlignment, hAlignment, startingNumber, sNumber, fNumber, margin, fontSize, format);
+                // Add page numbers to document.
+                FileResponse result = apiInstance.PdfWebapiAddnumberPost(files, vAlignment, hAlignment, startingNumber, sNumber, fNumber, margin, fontSize, format);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -77,12 +76,11 @@ namespace Example
             var apiInstance = new ApiApi();
             var fontReplacementsJson = fontReplacementsJson_example;  // string |  (optional) 
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
 
             try
             {
-                // Change Fonts in Provided Files.
-                FileResponse result = apiInstance.PdfWebapiChangeFontsPost(fontReplacementsJson, files, documentPassword);
+                // Changes the fonts of the provided files using the specified font replacements.
+                FileResponse result = apiInstance.PdfWebapiChangeFontsPost(fontReplacementsJson, files);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -94,12 +92,12 @@ namespace Example
 }
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
+            var compareType = new CompareType(); // CompareType |  (optional) 
 
             try
             {
                 // Compare documents text.
-                FileResponse result = apiInstance.PdfWebapiComparisonPost(files, documentPassword);
+                FileResponse result = apiInstance.PdfWebapiComparisonPost(files, compareType);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -111,13 +109,12 @@ namespace Example
 }
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
             var compressType = new CompressType(); // CompressType | The level of compression to use. (optional) 
 
             try
             {
-                // Compress Document.
-                FileResponse result = apiInstance.PdfWebapiCompressPost(files, documentPassword, compressType);
+                // Compress document.
+                FileResponse result = apiInstance.PdfWebapiCompressPost(files, compressType);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -129,7 +126,6 @@ namespace Example
 }
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
             var inputType = inputType_example;  // string | The format of the input files. (optional) 
             var outputType = outputType_example;  // string | The desired format for the output files. (optional) 
             var xmlType = new XmlType(); // XmlType | The type of XML conversion to perform, if applicable. (optional) 
@@ -137,11 +133,12 @@ namespace Example
             var fontSise = 56;  // int? |  (optional) 
             var isToSingle = true;  // bool? | Indicates whether the conversion should result in a single file, if applicable. (optional) 
             var separator = separator_example;  // string | The separator to use when converting, if applicable. (optional) 
+            var interval = 1.2;  // double? | The interval between frames for convert to video. (optional) 
 
             try
             {
-                // Convert Document to Another Format.
-                FileResponse result = apiInstance.PdfWebapiConvertPost(files, documentPassword, inputType, outputType, xmlType, xmlTag, fontSise, isToSingle, separator);
+                // Convert document to another format.
+                FileResponse result = apiInstance.PdfWebapiConvertPost(files, inputType, outputType, xmlType, xmlTag, fontSise, isToSingle, separator, interval);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -153,13 +150,12 @@ namespace Example
 }
             var apiInstance = new ApiApi();
             var webPage = webPage_example;  // string |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
             var outputType = outputType_example;  // string | The desired format for the output file. (optional) 
 
             try
             {
-                // Convert Web Page to Document.
-                FileResponse result = apiInstance.PdfWebapiConvertWebpagePost(webPage, documentPassword, outputType);
+                // Convert web page to document.
+                FileResponse result = apiInstance.PdfWebapiConvertWebpagePost(webPage, outputType);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -171,7 +167,21 @@ namespace Example
 }
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
+
+            try
+            {
+                FileResponse result = apiInstance.PdfWebapiCreatorPost(files);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiCreatorPost: " + e.Message );
+            }
+        }
+    }
+}
+            var apiInstance = new ApiApi();
+            var files = new List<byte[]>(); // List<byte[]> |  (optional) 
             var inputType = inputType_example;  // string | The format of the input files. (optional) 
             var top = 56;  // int? | The number of pixels to crop from the top. (optional) 
             var right = 56;  // int? | The number of pixels to crop from the right. (optional) 
@@ -181,8 +191,8 @@ namespace Example
 
             try
             {
-                // Crop Document.
-                FileResponse result = apiInstance.PdfWebapiCropPost(files, documentPassword, inputType, top, right, bottom, left, outputType);
+                // Crop document.
+                FileResponse result = apiInstance.PdfWebapiCropPost(files, inputType, top, right, bottom, left, outputType);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -209,36 +219,30 @@ namespace Example
     }
 }
             var apiInstance = new ApiApi();
-            var passw = passw_example;  // string |  (optional) 
-            var initials = initials_example;  // string |  (optional) 
-            var invite = invite_example;  // string |  (optional) 
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
-            var inputType = inputType_example;  // string | The format of the input files. (optional) 
+            var message = message_example;  // string |  (optional) 
 
             try
             {
-                // Sign Document with Certificate.
-                FileResponse result = apiInstance.PdfWebapiEsignPost(passw, initials, invite, files, documentPassword, inputType);
+                FileResponse result = apiInstance.PdfWebapiEditorPost(files, message);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ApiApi.PdfWebapiEsignPost: " + e.Message );
+                Debug.Print("Exception when calling ApiApi.PdfWebapiEditorPost: " + e.Message );
             }
         }
     }
 }
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
             var inputType = inputType_example;  // string | The format of the input files. (optional) 
             var outputType = outputType_example;  // string | The desired format for the output files. (optional) 
 
             try
             {
-                // Extract Tables from Document.
-                FileResponse result = apiInstance.PdfWebapiExtractPost(files, documentPassword, inputType, outputType);
+                // Extract tables from document.
+                FileResponse result = apiInstance.PdfWebapiExtractPost(files, inputType, outputType);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -250,7 +254,21 @@ namespace Example
 }
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
+
+            try
+            {
+                FileResponse result = apiInstance.PdfWebapiFormatDetectorPost(files);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiFormatDetectorPost: " + e.Message );
+            }
+        }
+    }
+}
+            var apiInstance = new ApiApi();
+            var files = new List<byte[]>(); // List<byte[]> |  (optional) 
             var keepImagesAsIs = true;  // bool? | Indicates whether the images should be kept as is. (optional) 
             var resizeToImage = 56;  // int? | The index of the image to resize the other images to. (optional) 
             var streched = true;  // bool? |  (optional) 
@@ -261,7 +279,7 @@ namespace Example
             try
             {
                 // Make GIF.
-                FileResponse result = apiInstance.PdfWebapiGifPost(files, documentPassword, keepImagesAsIs, resizeToImage, streched, width, height, frameTimes);
+                FileResponse result = apiInstance.PdfWebapiGifPost(files, keepImagesAsIs, resizeToImage, streched, width, height, frameTimes);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -273,15 +291,31 @@ namespace Example
 }
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
+            var language = language_example;  // string | The language of the source file or text (optional) 
+
+            try
+            {
+                // Checks the grammar of text, pdf files and plain text.
+                FileResponse result = apiInstance.PdfWebapiGrammarCheckerPost(files, language);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiGrammarCheckerPost: " + e.Message );
+            }
+        }
+    }
+}
+            var apiInstance = new ApiApi();
+            var files = new List<byte[]>(); // List<byte[]> |  (optional) 
             var inputType = inputType_example;  // string | The format of the input files. (optional) 
             var outputType = outputType_example;  // string | The desired format for the output files. (optional) 
             var alg = new HashAlgorithm(); // HashAlgorithm | The hashing algorithm to use. (optional) 
 
             try
             {
-                // Calculate Document Hash.
-                FileResponse result = apiInstance.PdfWebapiHashPost(files, documentPassword, inputType, outputType, alg);
+                // Calculate document hash.
+                FileResponse result = apiInstance.PdfWebapiHashPost(files, inputType, outputType, alg);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -292,13 +326,47 @@ namespace Example
     }
 }
             var apiInstance = new ApiApi();
-            var password = password_example;  // string |  (optional) 
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
+            var language = language_example;  // string | The language code in which ai must read the text. (optional) 
+
+            try
+            {
+                // Make speech synthesizer.
+                FileResponse result = apiInstance.PdfWebapiImageDescriptionPost(files, language);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiImageDescriptionPost: " + e.Message );
+            }
+        }
+    }
+}
+            var apiInstance = new ApiApi();
+            var question = question_example;  // string |  (optional) 
+            var count = 56;  // int? |  (optional) 
+            var size = size_example;  // string |  (optional) 
+
+            try
+            {
+                FileResponse result = apiInstance.PdfWebapiImageGeneratorPost(question, count, size);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiImageGeneratorPost: " + e.Message );
+            }
+        }
+    }
+}
+            var apiInstance = new ApiApi();
+            var files = new List<byte[]>(); // List<byte[]> |  (optional) 
+            var passw = passw_example;  // string | The password required to lock the resource. (optional) 
 
             try
             {
                 // Lock document.
-                FileResponse result = apiInstance.PdfWebapiLockPost(password, files);
+                FileResponse result = apiInstance.PdfWebapiLockPost(files, passw);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -310,7 +378,6 @@ namespace Example
 }
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
             var inputType = inputType_example;  // string | The format of the input files. (optional) 
             var outputType = outputType_example;  // string | The desired format for the output file. (optional) 
             var mergeType = new MergeImageType(); // MergeImageType | Type of merger operation. (optional) 
@@ -321,8 +388,8 @@ namespace Example
 
             try
             {
-                // Merge Documents.
-                FileResponse result = apiInstance.PdfWebapiMergePost(files, documentPassword, inputType, outputType, mergeType, horizontal, vertical, pageSize, dcIsLandscape);
+                // Merge documents.
+                FileResponse result = apiInstance.PdfWebapiMergePost(files, inputType, outputType, mergeType, horizontal, vertical, pageSize, dcIsLandscape);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -334,15 +401,14 @@ namespace Example
 }
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
             var operation = new MetadataOperation(); // MetadataOperation | The operation to perform on the metadata. (optional) 
             var folder = folder_example;  // string | The folder where the files are located. (optional) 
             var name = name_example;  // string | The name of the file to perform the operation on. (optional) 
 
             try
             {
-                // Read and Change Document Metadata.
-                FileResponse result = apiInstance.PdfWebapiMetadataPost(files, documentPassword, operation, folder, name);
+                // Read and change document metadata.
+                FileResponse result = apiInstance.PdfWebapiMetadataPost(files, operation, folder, name);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -354,15 +420,14 @@ namespace Example
 }
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
             var inputType = inputType_example;  // string | The format of the input files. (optional) 
             var remove = remove_example;  // string | The pages to remove from the document. (optional) 
             var move = move_example;  // string | The pages to move within the document. (optional) 
 
             try
             {
-                // Organize Document Pages.
-                FileResponse result = apiInstance.PdfWebapiOrganizePost(files, documentPassword, inputType, remove, move);
+                // Organize document pages.
+                FileResponse result = apiInstance.PdfWebapiOrganizePost(files, inputType, remove, move);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -374,12 +439,29 @@ namespace Example
 }
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
+            var source = source_example;  // string | The Source language. (optional) 
+            var paraphraseSource = new ParaphraseSource(); // ParaphraseSource | Upload file or text. (optional) 
 
             try
             {
-                // Parse Document.
-                FileResponse result = apiInstance.PdfWebapiParsePost(files, documentPassword);
+                // Paraphrase document.
+                FileResponse result = apiInstance.PdfWebapiParaphrasePost(files, source, paraphraseSource);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiParaphrasePost: " + e.Message );
+            }
+        }
+    }
+}
+            var apiInstance = new ApiApi();
+            var files = new List<byte[]>(); // List<byte[]> |  (optional) 
+
+            try
+            {
+                // Parse document.
+                FileResponse result = apiInstance.PdfWebapiParsePost(files);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -391,7 +473,27 @@ namespace Example
 }
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
+            var content = content_example;  // string | Textual content used to generate quiz questions (optional if files are provided). (optional) 
+            var questionNumber = 56;  // int? | The total number of questions to generate. (optional) 
+            var includeAnswers = true;  // bool? | Generating questions with answers (optional) 
+            var questionType = new QuestionType(); // QuestionType | The type of questions to generate: ShortAnswer, TrueFalse, or McQs (multiple choice). (optional) 
+            var difficultyLevel = new DifficultyLevel(); // DifficultyLevel | The desired difficulty level of the quiz. (optional) 
+
+            try
+            {
+                // Generates a list of quiz questions using AI based on the provided content or uploaded files,  and stores the resulting quiz into a document.
+                FileResponse result = apiInstance.PdfWebapiQuizMakerPost(files, content, questionNumber, includeAnswers, questionType, difficultyLevel);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiQuizMakerPost: " + e.Message );
+            }
+        }
+    }
+}
+            var apiInstance = new ApiApi();
+            var files = new List<byte[]>(); // List<byte[]> |  (optional) 
             var searchQuery = searchQuery_example;  // string | The text to search for and redact. (optional) 
             var replaceText = replaceText_example;  // string | The text to replace the found text with. (optional) 
             var caseSensitive = true;  // bool? | Indicates whether the search should be case-sensitive. (optional) 
@@ -401,8 +503,8 @@ namespace Example
 
             try
             {
-                // Redact Document Text.
-                FileResponse result = apiInstance.PdfWebapiRedactPost(files, documentPassword, searchQuery, replaceText, caseSensitive, text, comments, metadata);
+                // Redact document text.
+                FileResponse result = apiInstance.PdfWebapiRedactPost(files, searchQuery, replaceText, caseSensitive, text, comments, metadata);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -430,17 +532,34 @@ namespace Example
 }
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
 
             try
             {
-                // Remove Document Annotations.
-                FileResponse result = apiInstance.PdfWebapiRemovePost(files, documentPassword);
+                // Remove document annotations.
+                FileResponse result = apiInstance.PdfWebapiRemovePost(files);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
                 Debug.Print("Exception when calling ApiApi.PdfWebapiRemovePost: " + e.Message );
+            }
+        }
+    }
+}
+            var apiInstance = new ApiApi();
+            var ids = new List<string>(); // List<string> |  (optional) 
+            var files = new List<byte[]>(); // List<byte[]> |  (optional) 
+            var watermarkAction = new WatermarkAction(); // WatermarkAction |  (optional) 
+
+            try
+            {
+                // Removes document watermark.
+                FileResponse result = apiInstance.PdfWebapiRemoveWatermarkBlazorPost(ids, files, watermarkAction);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiRemoveWatermarkBlazorPost: " + e.Message );
             }
         }
     }
@@ -452,15 +571,14 @@ namespace Example
             var bottom = 56;  // int? |  (optional) 
             var right = 56;  // int? |  (optional) 
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
             var isAllPages = true;  // bool? | Indicates whether the watermark should be removed from all pages. (optional) 
             var watermarkType = new WatermarkType(); // WatermarkType | The type of watermark to remove. (optional) 
             var removeRange = removeRange_example;  // string | The range of pages to remove the watermark from. (optional) 
 
             try
             {
-                // Remove Document Watermark.
-                FileResponse result = apiInstance.PdfWebapiRemoveWatermarkPost(watermarkText, top, left, bottom, right, files, documentPassword, isAllPages, watermarkType, removeRange);
+                // Removes document watermark.
+                FileResponse result = apiInstance.PdfWebapiRemoveWatermarkPost(watermarkText, top, left, bottom, right, files, isAllPages, watermarkType, removeRange);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -472,13 +590,12 @@ namespace Example
 }
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
             var removeRange = removeRange_example;  // string | The range of pages to remove from the files. (optional) 
 
             try
             {
-                // Remove Pages from Document.
-                FileResponse result = apiInstance.PdfWebapiRemovepagesPost(files, documentPassword, removeRange);
+                // Remove pages from document.
+                FileResponse result = apiInstance.PdfWebapiRemovepagesPost(files, removeRange);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -490,12 +607,11 @@ namespace Example
 }
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
 
             try
             {
-                // Repair Document.
-                FileResponse result = apiInstance.PdfWebapiRepairPost(files, documentPassword);
+                // Repair document.
+                FileResponse result = apiInstance.PdfWebapiRepairPost(files);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -507,7 +623,6 @@ namespace Example
 }
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
             var inputType = inputType_example;  // string | The format of the input files. (optional) 
             var outputType = outputType_example;  // string | The desired format for the output files. (optional) 
             var resizeType = new ResizeType(); // ResizeType | The type of resizing to apply. (optional) 
@@ -521,8 +636,8 @@ namespace Example
 
             try
             {
-                // Resize Document.
-                FileResponse result = apiInstance.PdfWebapiResizePost(files, documentPassword, inputType, outputType, resizeType, presetType, presetSize, width, height, percentage, useProportions, pageSize);
+                // Resize document.
+                FileResponse result = apiInstance.PdfWebapiResizePost(files, inputType, outputType, resizeType, presetType, presetSize, width, height, percentage, useProportions, pageSize);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -534,15 +649,15 @@ namespace Example
 }
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
             var angle = new RotateAngle(); // RotateAngle | The angle by which to rotate the files. (optional) 
+            var customAngle = 56;  // int? | The angle by which to rotate the files in case angle set to custom state. (optional) 
             var rotateType = new RotateType(); // RotateType | The type of rotation to perform. (optional) 
             var pageNum = pageNum_example;  // string | The page number to rotate, if applicable. (optional) 
 
             try
             {
-                // Rotate Document.
-                FileResponse result = apiInstance.PdfWebapiRotatePost(files, documentPassword, angle, rotateType, pageNum);
+                // Rotate document.
+                FileResponse result = apiInstance.PdfWebapiRotatePost(files, angle, customAngle, rotateType, pageNum);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -554,13 +669,12 @@ namespace Example
 }
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
             var query = query_example;  // string | The text to search for within the files. (optional) 
 
             try
             {
-                // Search Document Text.
-                FileResponse result = apiInstance.PdfWebapiSearchPost(files, documentPassword, query);
+                // Search document text.
+                FileResponse result = apiInstance.PdfWebapiSearchPost(files, query);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -576,7 +690,7 @@ namespace Example
 
             try
             {
-                // Make Scanned PDF Searchable.
+                // Make scanned pdf searchable.
                 FileResponse result = apiInstance.PdfWebapiSearchablePost(files, lang);
                 Debug.WriteLine(result);
             }
@@ -592,15 +706,14 @@ namespace Example
             var text = text_example;  // string |  (optional) 
             var textColor = textColor_example;  // string |  (optional) 
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
             var inputType = inputType_example;  // string | The format of the input files. (optional) 
             var outputType = outputType_example;  // string | The desired format for the output files. (optional) 
             var signatureType = new SignatureType(); // SignatureType | The type of signature to add. (optional) 
 
             try
             {
-                // Add Signature to Document.
-                FileResponse result = apiInstance.PdfWebapiSignaturePost(image, text, textColor, files, documentPassword, inputType, outputType, signatureType);
+                // Add signature to document.
+                FileResponse result = apiInstance.PdfWebapiSignaturePost(image, text, textColor, files, inputType, outputType, signatureType);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -612,15 +725,14 @@ namespace Example
 }
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
             var inputType = inputType_example;  // string | The format of the input files. (optional) 
             var splitType = new SplitDocType(); // SplitDocType | The type of splitting to be performed. (optional) 
-            var pairs = pairs_example;  // string | Optional page rage for the splitting operation. (optional) 
+            var pars = pars_example;  // string | Optional page rage for the splitting operation. (optional) 
 
             try
             {
-                // Split Document.
-                FileResponse result = apiInstance.PdfWebapiSplitdocPost(files, documentPassword, inputType, splitType, pairs);
+                // Split document.
+                FileResponse result = apiInstance.PdfWebapiSplitdocPost(files, inputType, splitType, pars);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -632,7 +744,6 @@ namespace Example
 }
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
             var splitType = new SplitImageType(); // SplitImageType | The type of splitting to be performed. (optional) 
             var vertical = 56;  // int? | The number of vertical splits to create. (optional) 
             var horizontal = 56;  // int? | The number of horizontal splits to create. (optional) 
@@ -640,8 +751,8 @@ namespace Example
 
             try
             {
-                // Split Image.
-                FileResponse result = apiInstance.PdfWebapiSplitimagePost(files, documentPassword, splitType, vertical, horizontal, outputType);
+                // Split image.
+                FileResponse result = apiInstance.PdfWebapiSplitimagePost(files, splitType, vertical, horizontal, outputType);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -668,13 +779,100 @@ namespace Example
     }
 }
             var apiInstance = new ApiApi();
-            var password = password_example;  // string |  (optional) 
+            var files = new List<byte[]>(); // List<byte[]> |  (optional) 
+            var question = question_example;  // string |  (optional) 
+
+            try
+            {
+                FileResponse result = apiInstance.PdfWebapiSummaryPost(files, question);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiSummaryPost: " + e.Message );
+            }
+        }
+    }
+}
+            var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
 
             try
             {
-                // Unlock Document.
-                FileResponse result = apiInstance.PdfWebapiUnlockPost(password, files);
+                FileResponse result = apiInstance.PdfWebapiTableOfContentsPost(files);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiTableOfContentsPost: " + e.Message );
+            }
+        }
+    }
+}
+            var apiInstance = new ApiApi();
+            var subject = subject_example;  // string | Text description of the subject of the tests (optional) 
+            var number = 56;  // int? | Questions number (optional) 
+            var complexity = complexity_example;  // string | The complexity level of generated questions (optional) 
+            var language = language_example;  // string | Language in which questions are written (optional) 
+            var outputType = outputType_example;  // string | The format of result file (optional) 
+
+            try
+            {
+                // Creates the list of test questions using ai and stores it to the document
+                FileResponse result = apiInstance.PdfWebapiTestGeneratorPost(subject, number, complexity, language, outputType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiTestGeneratorPost: " + e.Message );
+            }
+        }
+    }
+}
+            var apiInstance = new ApiApi();
+            var files = new List<byte[]>(); // List<byte[]> |  (optional) 
+
+            try
+            {
+                FileResponse result = apiInstance.PdfWebapiTranscribeAudioPost(files);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiTranscribeAudioPost: " + e.Message );
+            }
+        }
+    }
+}
+            var apiInstance = new ApiApi();
+            var files = new List<byte[]>(); // List<byte[]> |  (optional) 
+            var languages = new List<string>(); // List<string> | The language code in which will make the resource files to be translated. (optional) 
+            var source = source_example;  // string | The Source language. (optional) 
+            var target = target_example;  // string | The target language. (optional) 
+            var aiService = aiService_example;  // string | Choosing an AI service for developers (optional) 
+            var translationSource = new TranslationSource(); // TranslationSource | Upload file or text. (optional) 
+
+            try
+            {
+                // Translate document.
+                FileResponse result = apiInstance.PdfWebapiTranslatePost(files, languages, source, target, aiService, translationSource);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiTranslatePost: " + e.Message );
+            }
+        }
+    }
+}
+            var apiInstance = new ApiApi();
+            var files = new List<byte[]>(); // List<byte[]> |  (optional) 
+            var passw = passw_example;  // string | The password used in locked document. (optional) 
+
+            try
+            {
+                // Unlock document.
+                FileResponse result = apiInstance.PdfWebapiUnlockPost(files, passw);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -686,13 +884,12 @@ namespace Example
 }
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
             var inputType = inputType_example;  // string | The format of the input files. (optional) 
 
             try
             {
-                // Verify Document Certificate.
-                FileResponse result = apiInstance.PdfWebapiVerifyEsignPost(files, documentPassword, inputType);
+                // Verify document certificate.
+                FileResponse result = apiInstance.PdfWebapiVerifyEsignPost(files, inputType);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -704,7 +901,24 @@ namespace Example
 }
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
+            var voiceModel = new VoiceModel(); // VoiceModel | The TTS model (Quick/Quality) in which AI must read the text. (optional) 
+            var genderVoice = new VoiceGender(); // VoiceGender | The TTS voice gender (Man/Woman) in which AI must read the text. (optional) 
+
+            try
+            {
+                // Make speech synthesizer.
+                FileResponse result = apiInstance.PdfWebapiVoiceGeneratorPost(files, voiceModel, genderVoice);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiVoiceGeneratorPost: " + e.Message );
+            }
+        }
+    }
+}
+            var apiInstance = new ApiApi();
+            var files = new List<byte[]>(); // List<byte[]> |  (optional) 
             var inputType = inputType_example;  // string | The format of the input files. (optional) 
             var outputType = outputType_example;  // string | The desired format for the output files. (optional) 
             var isColored = true;  // bool? | Indicate is watermark will be in color or grayscale. (optional) 
@@ -725,8 +939,8 @@ namespace Example
 
             try
             {
-                // Add Watermark to Document.
-                FileResponse result = apiInstance.PdfWebapiWatermarkPost(files, documentPassword, inputType, outputType, isColored, isText, text, name, size, bold, italic, underlined, color, isBackground, rotation, transparency, layer, pageFrom, pageTo);
+                // Add watermark to document.
+                FileResponse result = apiInstance.PdfWebapiWatermarkPost(files, inputType, outputType, isColored, isText, text, name, size, bold, italic, underlined, color, isBackground, rotation, transparency, layer, pageFrom, pageTo);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -738,13 +952,12 @@ namespace Example
 }
             var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
             var pageRange = pageRange_example;  // string | The range of pages to count words in. (optional) 
 
             try
             {
-                // Count Words and Characters in Document.
-                FileResponse result = apiInstance.PdfWebapiWordcounterPost(files, documentPassword, pageRange);
+                // Count words and chars in document.
+                FileResponse result = apiInstance.PdfWebapiWordcounterPost(files, pageRange);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -755,14 +968,28 @@ namespace Example
     }
 }
             var apiInstance = new ApiApi();
+
+            try
+            {
+                // Generates words for crossword using AI Mistral
+                FileResponse result = apiInstance.PdfWebapiWordsGeneratorPost();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ApiApi.PdfWebapiWordsGeneratorPost: " + e.Message );
+            }
+        }
+    }
+}
+            var apiInstance = new ApiApi();
             var files = new List<byte[]>(); // List<byte[]> |  (optional) 
-            var documentPassword = documentPassword_example;  // string |  (optional) 
             var inputType = inputType_example;  // string | The format of the input files. (optional) 
 
             try
             {
-                // Convert XFA Format to Another Format.
-                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, documentPassword, inputType);
+                // Convert XFA format to a another format.
+                FileResponse result = apiInstance.PdfWebapiXfaconvertPost(files, inputType);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -781,47 +1008,64 @@ All URIs are relative to */*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*ApiApi* | [**PdfWebapiAddnumberPost**](docs/ApiApi.md#pdfwebapiaddnumberpost) | **POST** /pdf/webapi/addnumber | Add Page Numbers to Document.
-*ApiApi* | [**PdfWebapiChangeFontsPost**](docs/ApiApi.md#pdfwebapichangefontspost) | **POST** /pdf/webapi/change-fonts | Change Fonts in Provided Files.
+*ApiApi* | [**PdfWebapiAddnumberPost**](docs/ApiApi.md#pdfwebapiaddnumberpost) | **POST** /pdf/webapi/addnumber | Add page numbers to document.
+*ApiApi* | [**PdfWebapiChangeFontsPost**](docs/ApiApi.md#pdfwebapichangefontspost) | **POST** /pdf/webapi/change-fonts | Changes the fonts of the provided files using the specified font replacements.
 *ApiApi* | [**PdfWebapiComparisonPost**](docs/ApiApi.md#pdfwebapicomparisonpost) | **POST** /pdf/webapi/comparison | Compare documents text.
-*ApiApi* | [**PdfWebapiCompressPost**](docs/ApiApi.md#pdfwebapicompresspost) | **POST** /pdf/webapi/compress | Compress Document.
-*ApiApi* | [**PdfWebapiConvertPost**](docs/ApiApi.md#pdfwebapiconvertpost) | **POST** /pdf/webapi/convert | Convert Document to Another Format.
-*ApiApi* | [**PdfWebapiConvertWebpagePost**](docs/ApiApi.md#pdfwebapiconvertwebpagepost) | **POST** /pdf/webapi/convert-webpage | Convert Web Page to Document.
-*ApiApi* | [**PdfWebapiCropPost**](docs/ApiApi.md#pdfwebapicroppost) | **POST** /pdf/webapi/crop | Crop Document.
+*ApiApi* | [**PdfWebapiCompressPost**](docs/ApiApi.md#pdfwebapicompresspost) | **POST** /pdf/webapi/compress | Compress document.
+*ApiApi* | [**PdfWebapiConvertPost**](docs/ApiApi.md#pdfwebapiconvertpost) | **POST** /pdf/webapi/convert | Convert document to another format.
+*ApiApi* | [**PdfWebapiConvertWebpagePost**](docs/ApiApi.md#pdfwebapiconvertwebpagepost) | **POST** /pdf/webapi/convert-webpage | Convert web page to document.
+*ApiApi* | [**PdfWebapiCreatorPost**](docs/ApiApi.md#pdfwebapicreatorpost) | **POST** /pdf/webapi/creator | 
+*ApiApi* | [**PdfWebapiCropPost**](docs/ApiApi.md#pdfwebapicroppost) | **POST** /pdf/webapi/crop | Crop document.
 *ApiApi* | [**PdfWebapiDownloadIdGet**](docs/ApiApi.md#pdfwebapidownloadidget) | **GET** /pdf/webapi/download/{id} | File download.
-*ApiApi* | [**PdfWebapiEsignPost**](docs/ApiApi.md#pdfwebapiesignpost) | **POST** /pdf/webapi/esign | Sign Document with Certificate.
-*ApiApi* | [**PdfWebapiExtractPost**](docs/ApiApi.md#pdfwebapiextractpost) | **POST** /pdf/webapi/extract | Extract Tables from Document.
+*ApiApi* | [**PdfWebapiEditorPost**](docs/ApiApi.md#pdfwebapieditorpost) | **POST** /pdf/webapi/editor | 
+*ApiApi* | [**PdfWebapiExtractPost**](docs/ApiApi.md#pdfwebapiextractpost) | **POST** /pdf/webapi/extract | Extract tables from document.
+*ApiApi* | [**PdfWebapiFormatDetectorPost**](docs/ApiApi.md#pdfwebapiformatdetectorpost) | **POST** /pdf/webapi/format-detector | 
 *ApiApi* | [**PdfWebapiGifPost**](docs/ApiApi.md#pdfwebapigifpost) | **POST** /pdf/webapi/gif | Make GIF.
-*ApiApi* | [**PdfWebapiHashPost**](docs/ApiApi.md#pdfwebapihashpost) | **POST** /pdf/webapi/hash | Calculate Document Hash.
+*ApiApi* | [**PdfWebapiGrammarCheckerPost**](docs/ApiApi.md#pdfwebapigrammarcheckerpost) | **POST** /pdf/webapi/grammar-checker | Checks the grammar of text, pdf files and plain text.
+*ApiApi* | [**PdfWebapiHashPost**](docs/ApiApi.md#pdfwebapihashpost) | **POST** /pdf/webapi/hash | Calculate document hash.
+*ApiApi* | [**PdfWebapiImageDescriptionPost**](docs/ApiApi.md#pdfwebapiimagedescriptionpost) | **POST** /pdf/webapi/image-description | Make speech synthesizer.
+*ApiApi* | [**PdfWebapiImageGeneratorPost**](docs/ApiApi.md#pdfwebapiimagegeneratorpost) | **POST** /pdf/webapi/image-generator | 
 *ApiApi* | [**PdfWebapiLockPost**](docs/ApiApi.md#pdfwebapilockpost) | **POST** /pdf/webapi/lock | Lock document.
-*ApiApi* | [**PdfWebapiMergePost**](docs/ApiApi.md#pdfwebapimergepost) | **POST** /pdf/webapi/merge | Merge Documents.
-*ApiApi* | [**PdfWebapiMetadataPost**](docs/ApiApi.md#pdfwebapimetadatapost) | **POST** /pdf/webapi/metadata | Read and Change Document Metadata.
-*ApiApi* | [**PdfWebapiOrganizePost**](docs/ApiApi.md#pdfwebapiorganizepost) | **POST** /pdf/webapi/organize | Organize Document Pages.
-*ApiApi* | [**PdfWebapiParsePost**](docs/ApiApi.md#pdfwebapiparsepost) | **POST** /pdf/webapi/parse | Parse Document.
-*ApiApi* | [**PdfWebapiRedactPost**](docs/ApiApi.md#pdfwebapiredactpost) | **POST** /pdf/webapi/redact | Redact Document Text.
+*ApiApi* | [**PdfWebapiMergePost**](docs/ApiApi.md#pdfwebapimergepost) | **POST** /pdf/webapi/merge | Merge documents.
+*ApiApi* | [**PdfWebapiMetadataPost**](docs/ApiApi.md#pdfwebapimetadatapost) | **POST** /pdf/webapi/metadata | Read and change document metadata.
+*ApiApi* | [**PdfWebapiOrganizePost**](docs/ApiApi.md#pdfwebapiorganizepost) | **POST** /pdf/webapi/organize | Organize document pages.
+*ApiApi* | [**PdfWebapiParaphrasePost**](docs/ApiApi.md#pdfwebapiparaphrasepost) | **POST** /pdf/webapi/paraphrase | Paraphrase document.
+*ApiApi* | [**PdfWebapiParsePost**](docs/ApiApi.md#pdfwebapiparsepost) | **POST** /pdf/webapi/parse | Parse document.
+*ApiApi* | [**PdfWebapiQuizMakerPost**](docs/ApiApi.md#pdfwebapiquizmakerpost) | **POST** /pdf/webapi/quiz-maker | Generates a list of quiz questions using AI based on the provided content or uploaded files,  and stores the resulting quiz into a document.
+*ApiApi* | [**PdfWebapiRedactPost**](docs/ApiApi.md#pdfwebapiredactpost) | **POST** /pdf/webapi/redact | Redact document text.
 *ApiApi* | [**PdfWebapiRemoveIdPost**](docs/ApiApi.md#pdfwebapiremoveidpost) | **POST** /pdf/webapi/remove/{id} | Remove stored files.
-*ApiApi* | [**PdfWebapiRemovePost**](docs/ApiApi.md#pdfwebapiremovepost) | **POST** /pdf/webapi/remove | Remove Document Annotations.
-*ApiApi* | [**PdfWebapiRemoveWatermarkPost**](docs/ApiApi.md#pdfwebapiremovewatermarkpost) | **POST** /pdf/webapi/remove-watermark | Remove Document Watermark.
-*ApiApi* | [**PdfWebapiRemovepagesPost**](docs/ApiApi.md#pdfwebapiremovepagespost) | **POST** /pdf/webapi/removepages | Remove Pages from Document.
-*ApiApi* | [**PdfWebapiRepairPost**](docs/ApiApi.md#pdfwebapirepairpost) | **POST** /pdf/webapi/repair | Repair Document.
-*ApiApi* | [**PdfWebapiResizePost**](docs/ApiApi.md#pdfwebapiresizepost) | **POST** /pdf/webapi/resize | Resize Document.
-*ApiApi* | [**PdfWebapiRotatePost**](docs/ApiApi.md#pdfwebapirotatepost) | **POST** /pdf/webapi/rotate | Rotate Document.
-*ApiApi* | [**PdfWebapiSearchPost**](docs/ApiApi.md#pdfwebapisearchpost) | **POST** /pdf/webapi/search | Search Document Text.
-*ApiApi* | [**PdfWebapiSearchablePost**](docs/ApiApi.md#pdfwebapisearchablepost) | **POST** /pdf/webapi/searchable | Make Scanned PDF Searchable.
-*ApiApi* | [**PdfWebapiSignaturePost**](docs/ApiApi.md#pdfwebapisignaturepost) | **POST** /pdf/webapi/signature | Add Signature to Document.
-*ApiApi* | [**PdfWebapiSplitdocPost**](docs/ApiApi.md#pdfwebapisplitdocpost) | **POST** /pdf/webapi/splitdoc | Split Document.
-*ApiApi* | [**PdfWebapiSplitimagePost**](docs/ApiApi.md#pdfwebapisplitimagepost) | **POST** /pdf/webapi/splitimage | Split Image.
+*ApiApi* | [**PdfWebapiRemovePost**](docs/ApiApi.md#pdfwebapiremovepost) | **POST** /pdf/webapi/remove | Remove document annotations.
+*ApiApi* | [**PdfWebapiRemoveWatermarkBlazorPost**](docs/ApiApi.md#pdfwebapiremovewatermarkblazorpost) | **POST** /pdf/webapi/remove-watermark-blazor | Removes document watermark.
+*ApiApi* | [**PdfWebapiRemoveWatermarkPost**](docs/ApiApi.md#pdfwebapiremovewatermarkpost) | **POST** /pdf/webapi/remove-watermark | Removes document watermark.
+*ApiApi* | [**PdfWebapiRemovepagesPost**](docs/ApiApi.md#pdfwebapiremovepagespost) | **POST** /pdf/webapi/removepages | Remove pages from document.
+*ApiApi* | [**PdfWebapiRepairPost**](docs/ApiApi.md#pdfwebapirepairpost) | **POST** /pdf/webapi/repair | Repair document.
+*ApiApi* | [**PdfWebapiResizePost**](docs/ApiApi.md#pdfwebapiresizepost) | **POST** /pdf/webapi/resize | Resize document.
+*ApiApi* | [**PdfWebapiRotatePost**](docs/ApiApi.md#pdfwebapirotatepost) | **POST** /pdf/webapi/rotate | Rotate document.
+*ApiApi* | [**PdfWebapiSearchPost**](docs/ApiApi.md#pdfwebapisearchpost) | **POST** /pdf/webapi/search | Search document text.
+*ApiApi* | [**PdfWebapiSearchablePost**](docs/ApiApi.md#pdfwebapisearchablepost) | **POST** /pdf/webapi/searchable | Make scanned pdf searchable.
+*ApiApi* | [**PdfWebapiSignaturePost**](docs/ApiApi.md#pdfwebapisignaturepost) | **POST** /pdf/webapi/signature | Add signature to document.
+*ApiApi* | [**PdfWebapiSplitdocPost**](docs/ApiApi.md#pdfwebapisplitdocpost) | **POST** /pdf/webapi/splitdoc | Split document.
+*ApiApi* | [**PdfWebapiSplitimagePost**](docs/ApiApi.md#pdfwebapisplitimagepost) | **POST** /pdf/webapi/splitimage | Split image.
 *ApiApi* | [**PdfWebapiStatusIdPost**](docs/ApiApi.md#pdfwebapistatusidpost) | **POST** /pdf/webapi/status/{id} | Processing status.
-*ApiApi* | [**PdfWebapiUnlockPost**](docs/ApiApi.md#pdfwebapiunlockpost) | **POST** /pdf/webapi/unlock | Unlock Document.
-*ApiApi* | [**PdfWebapiVerifyEsignPost**](docs/ApiApi.md#pdfwebapiverifyesignpost) | **POST** /pdf/webapi/verify_esign | Verify Document Certificate.
-*ApiApi* | [**PdfWebapiWatermarkPost**](docs/ApiApi.md#pdfwebapiwatermarkpost) | **POST** /pdf/webapi/watermark | Add Watermark to Document.
-*ApiApi* | [**PdfWebapiWordcounterPost**](docs/ApiApi.md#pdfwebapiwordcounterpost) | **POST** /pdf/webapi/wordcounter | Count Words and Characters in Document.
-*ApiApi* | [**PdfWebapiXfaconvertPost**](docs/ApiApi.md#pdfwebapixfaconvertpost) | **POST** /pdf/webapi/xfaconvert | Convert XFA Format to Another Format.
+*ApiApi* | [**PdfWebapiSummaryPost**](docs/ApiApi.md#pdfwebapisummarypost) | **POST** /pdf/webapi/summary | 
+*ApiApi* | [**PdfWebapiTableOfContentsPost**](docs/ApiApi.md#pdfwebapitableofcontentspost) | **POST** /pdf/webapi/table-of-contents | 
+*ApiApi* | [**PdfWebapiTestGeneratorPost**](docs/ApiApi.md#pdfwebapitestgeneratorpost) | **POST** /pdf/webapi/test-generator | Creates the list of test questions using ai and stores it to the document
+*ApiApi* | [**PdfWebapiTranscribeAudioPost**](docs/ApiApi.md#pdfwebapitranscribeaudiopost) | **POST** /pdf/webapi/transcribe-audio | 
+*ApiApi* | [**PdfWebapiTranslatePost**](docs/ApiApi.md#pdfwebapitranslatepost) | **POST** /pdf/webapi/translate | Translate document.
+*ApiApi* | [**PdfWebapiUnlockPost**](docs/ApiApi.md#pdfwebapiunlockpost) | **POST** /pdf/webapi/unlock | Unlock document.
+*ApiApi* | [**PdfWebapiVerifyEsignPost**](docs/ApiApi.md#pdfwebapiverifyesignpost) | **POST** /pdf/webapi/verify-esign | Verify document certificate.
+*ApiApi* | [**PdfWebapiVoiceGeneratorPost**](docs/ApiApi.md#pdfwebapivoicegeneratorpost) | **POST** /pdf/webapi/voice-generator | Make speech synthesizer.
+*ApiApi* | [**PdfWebapiWatermarkPost**](docs/ApiApi.md#pdfwebapiwatermarkpost) | **POST** /pdf/webapi/watermark | Add watermark to document.
+*ApiApi* | [**PdfWebapiWordcounterPost**](docs/ApiApi.md#pdfwebapiwordcounterpost) | **POST** /pdf/webapi/wordcounter | Count words and chars in document.
+*ApiApi* | [**PdfWebapiWordsGeneratorPost**](docs/ApiApi.md#pdfwebapiwordsgeneratorpost) | **POST** /pdf/webapi/words-generator | Generates words for crossword using AI Mistral
+*ApiApi* | [**PdfWebapiXfaconvertPost**](docs/ApiApi.md#pdfwebapixfaconvertpost) | **POST** /pdf/webapi/xfaconvert | Convert XFA format to a another format.
 
 <a name="documentation-for-models"></a>
 ## Documentation for Models
 
+ - [IO.Swagger.Model.CompareType](docs/CompareType.md)
  - [IO.Swagger.Model.CompressType](docs/CompressType.md)
+ - [IO.Swagger.Model.DifficultyLevel](docs/DifficultyLevel.md)
  - [IO.Swagger.Model.DocProperty](docs/DocProperty.md)
  - [IO.Swagger.Model.FileProcessingErrorCode](docs/FileProcessingErrorCode.md)
  - [IO.Swagger.Model.FileResponse](docs/FileResponse.md)
@@ -832,17 +1076,23 @@ Class | Method | HTTP request | Description
  - [IO.Swagger.Model.PageNumberHorizontalAlign](docs/PageNumberHorizontalAlign.md)
  - [IO.Swagger.Model.PageNumberVerticalAlign](docs/PageNumberVerticalAlign.md)
  - [IO.Swagger.Model.PageSize](docs/PageSize.md)
+ - [IO.Swagger.Model.ParaphraseSource](docs/ParaphraseSource.md)
  - [IO.Swagger.Model.PropertyType](docs/PropertyType.md)
+ - [IO.Swagger.Model.QuestionType](docs/QuestionType.md)
  - [IO.Swagger.Model.ResizePageSize](docs/ResizePageSize.md)
  - [IO.Swagger.Model.ResizePresetSize](docs/ResizePresetSize.md)
  - [IO.Swagger.Model.ResizePresetType](docs/ResizePresetType.md)
  - [IO.Swagger.Model.ResizeType](docs/ResizeType.md)
+ - [IO.Swagger.Model.ResourceMessage](docs/ResourceMessage.md)
  - [IO.Swagger.Model.RotateAngle](docs/RotateAngle.md)
  - [IO.Swagger.Model.RotateType](docs/RotateType.md)
  - [IO.Swagger.Model.SignatureType](docs/SignatureType.md)
  - [IO.Swagger.Model.SplitDocType](docs/SplitDocType.md)
  - [IO.Swagger.Model.SplitImageType](docs/SplitImageType.md)
  - [IO.Swagger.Model.TranslationSource](docs/TranslationSource.md)
+ - [IO.Swagger.Model.VoiceGender](docs/VoiceGender.md)
+ - [IO.Swagger.Model.VoiceModel](docs/VoiceModel.md)
+ - [IO.Swagger.Model.WatermarkAction](docs/WatermarkAction.md)
  - [IO.Swagger.Model.WatermarkType](docs/WatermarkType.md)
  - [IO.Swagger.Model.WebapiAddnumberBody](docs/WebapiAddnumberBody.md)
  - [IO.Swagger.Model.WebapiChangefontsBody](docs/WebapiChangefontsBody.md)
@@ -850,20 +1100,27 @@ Class | Method | HTTP request | Description
  - [IO.Swagger.Model.WebapiCompressBody](docs/WebapiCompressBody.md)
  - [IO.Swagger.Model.WebapiConvertBody](docs/WebapiConvertBody.md)
  - [IO.Swagger.Model.WebapiConvertwebpageBody](docs/WebapiConvertwebpageBody.md)
+ - [IO.Swagger.Model.WebapiCreatorBody](docs/WebapiCreatorBody.md)
  - [IO.Swagger.Model.WebapiCropBody](docs/WebapiCropBody.md)
- - [IO.Swagger.Model.WebapiEsignBody](docs/WebapiEsignBody.md)
+ - [IO.Swagger.Model.WebapiEditorBody](docs/WebapiEditorBody.md)
  - [IO.Swagger.Model.WebapiExtractBody](docs/WebapiExtractBody.md)
+ - [IO.Swagger.Model.WebapiFormatdetectorBody](docs/WebapiFormatdetectorBody.md)
  - [IO.Swagger.Model.WebapiGifBody](docs/WebapiGifBody.md)
+ - [IO.Swagger.Model.WebapiGrammarcheckerBody](docs/WebapiGrammarcheckerBody.md)
  - [IO.Swagger.Model.WebapiHashBody](docs/WebapiHashBody.md)
+ - [IO.Swagger.Model.WebapiImagedescriptionBody](docs/WebapiImagedescriptionBody.md)
  - [IO.Swagger.Model.WebapiLockBody](docs/WebapiLockBody.md)
  - [IO.Swagger.Model.WebapiMergeBody](docs/WebapiMergeBody.md)
  - [IO.Swagger.Model.WebapiMetadataBody](docs/WebapiMetadataBody.md)
  - [IO.Swagger.Model.WebapiOrganizeBody](docs/WebapiOrganizeBody.md)
+ - [IO.Swagger.Model.WebapiParaphraseBody](docs/WebapiParaphraseBody.md)
  - [IO.Swagger.Model.WebapiParseBody](docs/WebapiParseBody.md)
+ - [IO.Swagger.Model.WebapiQuizmakerBody](docs/WebapiQuizmakerBody.md)
  - [IO.Swagger.Model.WebapiRedactBody](docs/WebapiRedactBody.md)
  - [IO.Swagger.Model.WebapiRemoveBody](docs/WebapiRemoveBody.md)
  - [IO.Swagger.Model.WebapiRemovepagesBody](docs/WebapiRemovepagesBody.md)
  - [IO.Swagger.Model.WebapiRemovewatermarkBody](docs/WebapiRemovewatermarkBody.md)
+ - [IO.Swagger.Model.WebapiRemovewatermarkblazorBody](docs/WebapiRemovewatermarkblazorBody.md)
  - [IO.Swagger.Model.WebapiRepairBody](docs/WebapiRepairBody.md)
  - [IO.Swagger.Model.WebapiResizeBody](docs/WebapiResizeBody.md)
  - [IO.Swagger.Model.WebapiRotateBody](docs/WebapiRotateBody.md)
@@ -872,8 +1129,13 @@ Class | Method | HTTP request | Description
  - [IO.Swagger.Model.WebapiSignatureBody](docs/WebapiSignatureBody.md)
  - [IO.Swagger.Model.WebapiSplitdocBody](docs/WebapiSplitdocBody.md)
  - [IO.Swagger.Model.WebapiSplitimageBody](docs/WebapiSplitimageBody.md)
+ - [IO.Swagger.Model.WebapiSummaryBody](docs/WebapiSummaryBody.md)
+ - [IO.Swagger.Model.WebapiTableofcontentsBody](docs/WebapiTableofcontentsBody.md)
+ - [IO.Swagger.Model.WebapiTranscribeaudioBody](docs/WebapiTranscribeaudioBody.md)
+ - [IO.Swagger.Model.WebapiTranslateBody](docs/WebapiTranslateBody.md)
  - [IO.Swagger.Model.WebapiUnlockBody](docs/WebapiUnlockBody.md)
- - [IO.Swagger.Model.WebapiVerifyEsignBody](docs/WebapiVerifyEsignBody.md)
+ - [IO.Swagger.Model.WebapiVerifyesignBody](docs/WebapiVerifyesignBody.md)
+ - [IO.Swagger.Model.WebapiVoicegeneratorBody](docs/WebapiVoicegeneratorBody.md)
  - [IO.Swagger.Model.WebapiWatermarkBody](docs/WebapiWatermarkBody.md)
  - [IO.Swagger.Model.WebapiWordcounterBody](docs/WebapiWordcounterBody.md)
  - [IO.Swagger.Model.WebapiXfaconvertBody](docs/WebapiXfaconvertBody.md)

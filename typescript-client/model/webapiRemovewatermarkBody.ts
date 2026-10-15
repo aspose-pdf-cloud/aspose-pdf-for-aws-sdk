@@ -1,6 +1,6 @@
 /**
- * Aspose.Pdf RestApi
- * Aspose.Pdf RestApi provides a comprehensive set of endpoints for various PDF-related tasks, enabling efficient document processing and manipulation. Users can retrieve processing status, download files, manage file locks, parse documents, redact sensitive information, convert between formats, merge files, add watermarks, perform text searches, and much more. With endpoints for tasks like electronic signing, document comparison, and form filling, the API offers extensive functionality to cater to diverse PDF requirements.
+ * Aspose.PDF for AWS
+ * Aspose.Pdf for AWS provides a comprehensive set of endpoints for various PDF-related tasks, enabling efficient document processing and manipulation. Users can retrieve processing status, download files, manage file locks, parse documents, redact sensitive information, convert between formats, merge files, add watermarks, perform text searches, and much more. With endpoints for tasks like electronic signing, document comparison, and form filling, the API offers extensive functionality to cater to diverse PDF requirements.
  *
  * OpenAPI spec version: v1
  * Contact: Evgeny.Pirogov@aspose.com
@@ -11,10 +11,28 @@
  */
 
 export interface WebapiRemovewatermarkBody { 
+    /**
+     * The text of the watermark to remove.
+     */
     watermarkText?: string;
+    /**
+     * The top position of the watermark.
+     */
     top?: number;
+    /**
+     * The left position of the watermark.
+     */
     left?: number;
+    /**
+     * The bottom position of the watermark.
+     */
     bottom?: number;
+    /**
+     * The right position of the watermark.
+     */
     right?: number;
+    /**
+     * The files to remove the watermark from.
+     */
     files?: Array<Blob>;
 }

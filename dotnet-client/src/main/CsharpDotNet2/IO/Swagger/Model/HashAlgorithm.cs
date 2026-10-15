@@ -8,33 +8,29 @@ using Newtonsoft.Json;
 namespace IO.Swagger.Model {
 
   /// <summary>
-/// Specifies the hash algorithm to use.
-/// </summary>
-public enum HashAlgorithm
-{
-	/// <summary>
-	/// The SHA-1 hash algorithm.
-	/// </summary>
-	SHA1,
+  /// Specifies the hash algorithm to use.
+  /// </summary>
+  [DataContract]
+  public class HashAlgorithm {
 
-	/// <summary>
-	/// The SHA-256 hash algorithm.
-	/// </summary>
-	SHA256,
+    /// <summary>
+    /// Get the string presentation of the object
+    /// </summary>
+    /// <returns>String presentation of the object</returns>
+    public override string ToString()  {
+      var sb = new StringBuilder();
+      sb.Append("class HashAlgorithm {\n");
+      sb.Append("}\n");
+      return sb.ToString();
+    }
 
-	/// <summary>
-	/// The SHA-384 hash algorithm.
-	/// </summary>
-	SHA384,
+    /// <summary>
+    /// Get the JSON string presentation of the object
+    /// </summary>
+    /// <returns>JSON string presentation of the object</returns>
+    public string ToJson() {
+      return JsonConvert.SerializeObject(this, Formatting.Indented);
+    }
 
-	/// <summary>
-	/// The SHA-512 hash algorithm.
-	/// </summary>
-	SHA512,
-
-	/// <summary>
-	/// The MD5 hash algorithm.
-	/// </summary>
-	MD5
 }
 }

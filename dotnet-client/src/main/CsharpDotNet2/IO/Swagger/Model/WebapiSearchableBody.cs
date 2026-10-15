@@ -13,8 +13,9 @@ namespace IO.Swagger.Model {
   [DataContract]
   public class WebapiSearchableBody {
     /// <summary>
-    /// Gets or Sets Files
+    /// The files to convert to a searchable PDF.
     /// </summary>
+    /// <value>The files to convert to a searchable PDF.</value>
     [DataMember(Name="files", EmitDefaultValue=false)]
     [JsonProperty(PropertyName = "files")]
     public List<byte[]> Files { get; set; }

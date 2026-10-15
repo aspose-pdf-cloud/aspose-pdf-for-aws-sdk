@@ -13,53 +13,52 @@ namespace IO.Swagger.Model {
   [DataContract]
   public class WebapiRemovewatermarkBody {
     /// <summary>
-    /// Gets or Sets WatermarkText
+    /// The text of the watermark to remove.
     /// </summary>
+    /// <value>The text of the watermark to remove.</value>
     [DataMember(Name="watermarkText", EmitDefaultValue=false)]
     [JsonProperty(PropertyName = "watermarkText")]
     public string WatermarkText { get; set; }
 
     /// <summary>
-    /// Gets or Sets Top
+    /// The top position of the watermark.
     /// </summary>
+    /// <value>The top position of the watermark.</value>
     [DataMember(Name="top", EmitDefaultValue=false)]
     [JsonProperty(PropertyName = "top")]
     public int? Top { get; set; }
 
     /// <summary>
-    /// Gets or Sets Left
+    /// The left position of the watermark.
     /// </summary>
+    /// <value>The left position of the watermark.</value>
     [DataMember(Name="left", EmitDefaultValue=false)]
     [JsonProperty(PropertyName = "left")]
     public int? Left { get; set; }
 
     /// <summary>
-    /// Gets or Sets Bottom
+    /// The bottom position of the watermark.
     /// </summary>
+    /// <value>The bottom position of the watermark.</value>
     [DataMember(Name="bottom", EmitDefaultValue=false)]
     [JsonProperty(PropertyName = "bottom")]
     public int? Bottom { get; set; }
 
     /// <summary>
-    /// Gets or Sets Right
+    /// The right position of the watermark.
     /// </summary>
+    /// <value>The right position of the watermark.</value>
     [DataMember(Name="right", EmitDefaultValue=false)]
     [JsonProperty(PropertyName = "right")]
     public int? Right { get; set; }
 
     /// <summary>
-    /// Gets or Sets Files
+    /// The files to remove the watermark from.
     /// </summary>
+    /// <value>The files to remove the watermark from.</value>
     [DataMember(Name="files", EmitDefaultValue=false)]
     [JsonProperty(PropertyName = "files")]
     public List<byte[]> Files { get; set; }
-
-    /// <summary>
-    /// Gets or Sets DocumentPassword
-    /// </summary>
-    [DataMember(Name="documentPassword", EmitDefaultValue=false)]
-    [JsonProperty(PropertyName = "documentPassword")]
-    public string DocumentPassword { get; set; }
 
 
     /// <summary>
@@ -75,7 +74,6 @@ namespace IO.Swagger.Model {
       sb.Append("  Bottom: ").Append(Bottom).Append("\n");
       sb.Append("  Right: ").Append(Right).Append("\n");
       sb.Append("  Files: ").Append(Files).Append("\n");
-      sb.Append("  DocumentPassword: ").Append(DocumentPassword).Append("\n");
       sb.Append("}\n");
       return sb.ToString();
     }

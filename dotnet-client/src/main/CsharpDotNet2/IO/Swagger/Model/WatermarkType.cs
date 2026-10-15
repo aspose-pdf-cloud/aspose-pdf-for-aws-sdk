@@ -8,28 +8,29 @@ using Newtonsoft.Json;
 namespace IO.Swagger.Model {
 
   /// <summary>
-/// Specifies the type of watermark.
-/// </summary>
-public enum WatermarkType
-{
-	/// <summary>
-	/// No watermark.
-	/// </summary>
-	None,
+  /// Specifies the type of watermark.
+  /// </summary>
+  [DataContract]
+  public class WatermarkType {
 
-	/// <summary>
-	/// Artifact watermark.
-	/// </summary>
-	Artifact,
+    /// <summary>
+    /// Get the string presentation of the object
+    /// </summary>
+    /// <returns>String presentation of the object</returns>
+    public override string ToString()  {
+      var sb = new StringBuilder();
+      sb.Append("class WatermarkType {\n");
+      sb.Append("}\n");
+      return sb.ToString();
+    }
 
-	/// <summary>
-	/// Text watermark.
-	/// </summary>
-	Text,
+    /// <summary>
+    /// Get the JSON string presentation of the object
+    /// </summary>
+    /// <returns>JSON string presentation of the object</returns>
+    public string ToJson() {
+      return JsonConvert.SerializeObject(this, Formatting.Indented);
+    }
 
-	/// <summary>
-	/// Image watermark.
-	/// </summary>
-	Image
 }
 }

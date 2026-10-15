@@ -13,18 +13,12 @@ namespace IO.Swagger.Model {
   [DataContract]
   public class WebapiConvertwebpageBody {
     /// <summary>
-    /// Gets or Sets WebPage
+    /// The URL of the web page to convert.
     /// </summary>
+    /// <value>The URL of the web page to convert.</value>
     [DataMember(Name="webPage", EmitDefaultValue=false)]
     [JsonProperty(PropertyName = "webPage")]
     public string WebPage { get; set; }
-
-    /// <summary>
-    /// Gets or Sets DocumentPassword
-    /// </summary>
-    [DataMember(Name="documentPassword", EmitDefaultValue=false)]
-    [JsonProperty(PropertyName = "documentPassword")]
-    public string DocumentPassword { get; set; }
 
 
     /// <summary>
@@ -35,7 +29,6 @@ namespace IO.Swagger.Model {
       var sb = new StringBuilder();
       sb.Append("class WebapiConvertwebpageBody {\n");
       sb.Append("  WebPage: ").Append(WebPage).Append("\n");
-      sb.Append("  DocumentPassword: ").Append(DocumentPassword).Append("\n");
       sb.Append("}\n");
       return sb.ToString();
     }

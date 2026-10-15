@@ -8,23 +8,29 @@ using Newtonsoft.Json;
 namespace IO.Swagger.Model {
 
   /// <summary>
-/// Specifies the type of image merging.
-/// </summary>
-public enum MergeImageType
-{
-	/// <summary>
-	/// The images are merged vertically.
-	/// </summary>
-	Vertical = 1,
+  /// Specifies the type of image merging.
+  /// </summary>
+  [DataContract]
+  public class MergeImageType {
 
-	/// <summary>
-	/// The images are merged horizontally.
-	/// </summary>
-	Horizontal = 2,
+    /// <summary>
+    /// Get the string presentation of the object
+    /// </summary>
+    /// <returns>String presentation of the object</returns>
+    public override string ToString()  {
+      var sb = new StringBuilder();
+      sb.Append("class MergeImageType {\n");
+      sb.Append("}\n");
+      return sb.ToString();
+    }
 
-	/// <summary>
-	/// The images are merged both vertically and horizontally.
-	/// </summary>
-	Both = 3
+    /// <summary>
+    /// Get the JSON string presentation of the object
+    /// </summary>
+    /// <returns>JSON string presentation of the object</returns>
+    public string ToJson() {
+      return JsonConvert.SerializeObject(this, Formatting.Indented);
+    }
+
 }
 }

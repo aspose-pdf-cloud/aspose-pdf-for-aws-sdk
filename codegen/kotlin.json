@@ -1,0 +1,6 @@
+{
+  "groupId": "io.swagger",
+  "artifactId": "kotlin-client",
+  "artifactVersion": "1.0.0",
+  "packageName": "io.swagger.client"
+}

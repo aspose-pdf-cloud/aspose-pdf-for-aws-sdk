@@ -3,5 +3,6 @@
 ## Enum
 
 * `NONE` (value: `"None"`)
-* `FILE` (value: `"File"`)
+* `PDF` (value: `"Pdf"`)
 * `TEXT` (value: `"Text"`)
+* `RESOURCEFILE` (value: `"ResourceFile"`)

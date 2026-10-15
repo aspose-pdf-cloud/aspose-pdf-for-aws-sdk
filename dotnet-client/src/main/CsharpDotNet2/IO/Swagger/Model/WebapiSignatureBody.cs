@@ -13,39 +13,36 @@ namespace IO.Swagger.Model {
   [DataContract]
   public class WebapiSignatureBody {
     /// <summary>
-    /// Gets or Sets Image
+    /// The base64 representation of image signature.
     /// </summary>
+    /// <value>The base64 representation of image signature.</value>
     [DataMember(Name="image", EmitDefaultValue=false)]
     [JsonProperty(PropertyName = "image")]
     public string Image { get; set; }
 
     /// <summary>
-    /// Gets or Sets Text
+    /// The text of signature.
     /// </summary>
+    /// <value>The text of signature.</value>
     [DataMember(Name="text", EmitDefaultValue=false)]
     [JsonProperty(PropertyName = "text")]
     public string Text { get; set; }
 
     /// <summary>
-    /// Gets or Sets TextColor
+    /// The text color of signature.
     /// </summary>
+    /// <value>The text color of signature.</value>
     [DataMember(Name="textColor", EmitDefaultValue=false)]
     [JsonProperty(PropertyName = "textColor")]
     public string TextColor { get; set; }
 
     /// <summary>
-    /// Gets or Sets Files
+    /// The files to add a signature to.
     /// </summary>
+    /// <value>The files to add a signature to.</value>
     [DataMember(Name="files", EmitDefaultValue=false)]
     [JsonProperty(PropertyName = "files")]
     public List<byte[]> Files { get; set; }
-
-    /// <summary>
-    /// Gets or Sets DocumentPassword
-    /// </summary>
-    [DataMember(Name="documentPassword", EmitDefaultValue=false)]
-    [JsonProperty(PropertyName = "documentPassword")]
-    public string DocumentPassword { get; set; }
 
 
     /// <summary>
@@ -59,7 +56,6 @@ namespace IO.Swagger.Model {
       sb.Append("  Text: ").Append(Text).Append("\n");
       sb.Append("  TextColor: ").Append(TextColor).Append("\n");
       sb.Append("  Files: ").Append(Files).Append("\n");
-      sb.Append("  DocumentPassword: ").Append(DocumentPassword).Append("\n");
       sb.Append("}\n");
       return sb.ToString();
     }
